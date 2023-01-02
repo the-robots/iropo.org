@@ -11,3 +11,4 @@ column_names = df.columns.tolist()
 # Extract the second column from the DataFrame as a list (assuming the ORI column is the second column)
 identifiers = df[column_names[1]].tolist()
 
+print(column_names)
