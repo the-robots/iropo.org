@@ -3,16 +3,17 @@ import pandas as pd
 import requests
 
 # Read the Excel file into a DataFrame and skip the first two rows
-df = pd.read_excel('localAndStateAgencies-NC.xlsx', skiprows=2)
+df = pd.read_excel('localAndStateAgencies-NC.xlsx')
 
 # Get a list of all the column names in the DataFrame
 column_names = df.columns.tolist()
+print(column_names)
 
 # Extract the second column from the DataFrame as a list (assuming the ORI column is the second column)
-identifiers = df[column_names[1]].tolist()
+ identifiers = df[column_names[1]].tolist()
 
-# Extract the ORI column from the DataFrame as a list
-identifiers = df['ORI'].tolist()
+# Extract the fourth column from the DataFrame as a list
+ identifiers = df[column_names[3]].tolist()
 
 # Set the base URL for the API endpoint
 api_endpoint = "https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/animal-cruelty/offender/agencies/{}/count?API_KEY=46pdC8k9DkXmNtyAMPHobBPCZ2cXHgs0grLnRc31"
