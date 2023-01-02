@@ -16,7 +16,7 @@ print(column_names)
 identifiers = df[column_names[3]].tolist()
 
 # Set the base URL for the API endpoint
-api_endpoint = "https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/animal-cruelty/offender/agencies/{}/count?API_KEY=${ fbiapi.secret }"
+api_endpoint = "https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/animal-cruelty/offender/agencies/{}/count?API_KEY=${{ secrets.fbiapi }}"
 
 # Initialize an empty string to hold the HTML for the table rows
 rows = ''
