@@ -1,0 +1,17 @@
+name: test API 
+
+on: workflow_dispatch
+
+jobs:
+
+  start_server:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - uses: actions/checkout@v3
+
+      - name: server start
+        run: python3 -m http.server 9000 &
+     
+      - name: run python script
+        run: python3 api-test.py
