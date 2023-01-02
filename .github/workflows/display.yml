@@ -1,4 +1,4 @@
-name: test API 
+name: Testing calls 
 
 on: workflow_dispatch
 
