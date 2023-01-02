@@ -1,4 +1,3 @@
-# Import the necessary libraries
 import os
 import requests
 
