@@ -33,11 +33,12 @@ for identifier in identifiers:
   if response.status_code == 200:
     # Extract the data from the response object
     data = response.json()
-    agency_name = data['agency_name']
-    animal_cruelty_offenders = data['animal_cruelty_offenders']
+    pages = data['pages']
+    agency = data['agency']
+
 
     # Use the extracted data to build the HTML for a table row
-    row = f"<tr><td>{agency_name}</td><td>{animal_cruelty_offenders}</td></tr>"
+    row = f"<tr><td>{agency}</td><td>{pages}</td></tr>"
 
     # Append the row HTML to the rows string
     rows += row
