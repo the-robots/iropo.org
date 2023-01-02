@@ -1,15 +1,12 @@
-import os
+# Import the necessary libraries
+import pandas as pd
 import requests
 
-# Check if the file exists
-if os.path.exists('localAndStateAgencies-NC.xlsx'):
-  # Open the file in read mode
-  with open('localAndStateAgencies-NC.xlsx', 'r') as f:
-    # Read the contents of the file into a list of strings
-    identifiers = f.readlines()
-else:
-  # If the file does not exist, print an error message
-  print("Error: File not found")
+# Read the Excel file into a DataFrame
+df = pd.read_excel('localAndStateAgencies-NC.xlsx')
+
+# Extract the ORI column from the DataFrame as a list
+identifiers = df['ORI'].tolist()
 
 # Set the base URL for the API endpoint
 api_endpoint = "https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/animal-cruelty/offender/agencies/{}/count?API_KEY=46pdC8k9DkXmNtyAMPHobBPCZ2cXHgs0grLnRc31"
@@ -20,7 +17,7 @@ rows = ''
 # Iterate through the list of identifiers
 for identifier in identifiers:
   # Construct the full API endpoint URL
-  url = api_endpoint.format(identifier.strip())
+  url = api_endpoint.format(identifier)
 
   # Send a GET request to the API endpoint
   response = requests.get(url)
@@ -33,15 +30,5 @@ for identifier in identifiers:
     animal_cruelty_offenders = data['animal_cruelty_offenders']
 
     # Use the extracted data to build the HTML for a table row
-    row = f"<tr><td>{agency_name}</td><td>{animal_cruelty_offenders}</td></tr>"
-
-    # Append the row HTML to the rows string
-    rows += row
-  else:
-    # If the request was not successful, print an error message
-    print(f"Error: {response.status_code}")
-
-# Use JavaScript or a library like jQuery to append the rows to the table on the web page
-# Assume that the table body has an ID of "table-body"
-document.getElementById("table-body").innerHTML = rows
+    row = f"<tr><td>{agency_name}</td
 
