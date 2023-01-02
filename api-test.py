@@ -2,8 +2,8 @@
 import pandas as pd
 import requests
 
-# Read the Excel file into a DataFrame
-df = pd.read_excel('localAndStateAgencies-NC.xlsx')
+# Read the Excel file into a DataFrame and skip the first two rows
+df = pd.read_excel('localAndStateAgencies-NC.xlsx', skiprows=2)
 
 # Get a list of all the column names in the DataFrame
 column_names = df.columns.tolist()
