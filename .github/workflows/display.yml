@@ -4,11 +4,14 @@ on: workflow_dispatch
 
 jobs:
 
-  start_server:
+  test_calls:
     runs-on: ubuntu-latest
 
     steps: 
       - uses: actions/checkout@v3
+      
+      - name: install pandas
+        run: pip install pandas
 
       - name: run python script
         run: python3 api-test.py
