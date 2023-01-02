@@ -1,0 +1,17 @@
+name: show excel file columns 
+
+on: workflow_dispatch
+
+jobs:
+
+  test_calls:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - uses: actions/checkout@v3
+      
+      - name: install pandas
+        run: pip install pandas openpyxl
+
+      - name: run python script
+        run: python3 api-test-columns.py
