@@ -10,21 +10,13 @@ Example: The ORI Number for the New York City Police Department is NY0303000. If
 
 ---
 
-noreply@api.data.gov
-9:59 PM (15 minutes ago)
-to me
+API keys and account identifiers must never be committed to the repository.
 
-Hi,
+- API key: `[REDACTED — use FBI_API_KEY from a local .env or other environment variable]`
+- Account email: `[REDACTED]`
+- Account ID: `[REDACTED]`
 
-You are receiving this email to confirm the creation of an API key. If you did not request this, please disregard this email. Your API key for melanie.stewart@gmail.com is:
-
-46pdC8k9DkXmNtyAMPHobBPCZ2cXHgs0grLnRc31
-You can start using this key to make web service requests by referring to the relevant agency's API documentation. This API key is for your use and should not be shared.
-
-For additional support, please contact us. When contacting us, please tell us what API you're accessing and provide the following account details so we can quickly find you:
-
-Account Email: melanie.stewart@gmail.com
-Account ID: eaa6d222-d9c9-4aa1-ba4b-18cfac894d5b
+If a key was ever committed to a public branch, treat it as compromised and revoke or regenerate it with the issuing service.
 
 does not seem to work
 
