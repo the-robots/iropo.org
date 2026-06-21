@@ -1,51 +1,53 @@
-# Import the necessary libraries
+import os
+from pathlib import Path
+
 import pandas as pd
 import requests
 
-# Read the Excel file into a DataFrame and skip the first two rows
-df = pd.read_excel('localAndStateAgencies-NC.xlsx')
-
-# Get a list of all the column names in the DataFrame
-column_names = df.columns.tolist()
-print(column_names)
-
-# Extract the second column from the DataFrame as a list (assuming the ORI column is the second column)
-# identifiers = df[column_names[1]].tolist()
-
-# Extract the fourth column from the DataFrame as a list
-identifiers = df[column_names[3]].tolist()
-
-# Set the base URL for the API endpoint
-api_endpoint = "https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/animal-cruelty/offender/agencies/{}/count?API_KEY=${{ secrets.fbiapi }}"
-
-# Initialize an empty string to hold the HTML for the table rows
-rows = ''
-
-# Iterate through the list of identifiers
-for identifier in identifiers:
-  # Construct the full API endpoint URL
-  url = api_endpoint.format(identifier)
-
-  # Send a GET request to the API endpoint
-  response = requests.get(url)
-
-  # Check if the request was successful
-  if response.status_code == 200:
-    # Extract the data from the response object
-    data = response.json()
-    pages = data['pages']
-    agency = data['agency']
+SCRIPT_DIR = Path(__file__).resolve().parent
+STATE_AGENCIES_FILE = SCRIPT_DIR / "localAndStateAgencies-NC.xlsx"
+API_ENDPOINT = "https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/animal-cruelty/offender/agencies/{}/count"
 
 
-    # Use the extracted data to build the HTML for a table row
-    row = f"<tr><td>{agency}</td><td>{pages}</td></tr>"
+def get_api_key():
+    try:
+        return os.environ["FBI_API_KEY"]
+    except KeyError as exc:
+        raise RuntimeError(
+            "Set FBI_API_KEY in your environment before running api-test.py."
+        ) from exc
 
-    # Append the row HTML to the rows string
-    rows += row
-  else:
-    # If the request was not successful, print an error message
-    print(f"Error: {response.status_code}")
 
-# Use JavaScript or a library like jQuery to append the rows to the table on the web page
-# Assume that the table body has an ID of "table-body"
-document.getElementById("table-body").innerHTML = rows
+def load_identifiers():
+    df = pd.read_excel(STATE_AGENCIES_FILE)
+    column_names = df.columns.tolist()
+    print(column_names)
+
+    identifiers = [
+        str(identifier).strip()
+        for identifier in df[column_names[3]].dropna().tolist()
+        if str(identifier).strip()
+    ]
+    return identifiers
+
+
+def main():
+    api_key = get_api_key()
+    identifiers = load_identifiers()
+
+    for identifier in identifiers:
+        response = requests.get(
+            API_ENDPOINT.format(identifier),
+            params={"API_KEY": api_key},
+            timeout=30,
+        )
+        response.raise_for_status()
+
+        data = response.json()
+        agency = data.get("agency", identifier)
+        pages = data.get("pages", 0)
+        print(f"{agency}: {pages}")
+
+
+if __name__ == "__main__":
+    main()
