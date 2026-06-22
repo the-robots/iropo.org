@@ -53,6 +53,8 @@ An **ORI** is a nine-character **Originating Agency Identifier** used in NCIC an
 | --- | --- |
 | `README.md` | Project overview, status, and roadmap |
 | `CONTRIBUTING.md` | Contributor guidance for this repository |
+| `CNAME` | Custom domain declaration consumed by GitHub Pages |
+| `DNS_SETUP.md` | DNS configuration guide for iropo.org (registrar steps, GitHub Pages A records) |
 | `iropo.org.md` | Working notes about sources, ORIs, and API research |
 | `api-test.py` | Script that reads an agency spreadsheet and queries the FBI API by ORI (in development) |
 | `api-test-columns.py` | Script for inspecting spreadsheet columns (in development) |
