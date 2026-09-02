@@ -120,6 +120,10 @@ flowchart TD
     FUND -.->|enables| P5
 ```
 
+## Business plan
+
+A working [`BUSINESS_PLAN.md`](BUSINESS_PLAN.md) lays out the full scope of the project as a business: what IROPO will offer, how it will be implemented, and — critically — how it will be funded and how funding will be raised. It expands on the "Mission and goals" and "Roadmap / TODO" sections below and should be kept in sync with them as the plan evolves.
+
 ## Roadmap / TODO
 
 The following checklist tracks the work based on the current objectives and the repository's present state.
