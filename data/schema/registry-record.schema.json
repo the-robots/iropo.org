@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iropo.org/schema/registry-record.schema.json",
+  "title": "IROPO registry record",
+  "description": "Canonical record for one adjudicated animal-cruelty case about an identifiable subject. Records are only published when status is 'verified', the disposition is an adjudication of guilt, at least one court record or official registry is cited, and the record has not been removed. Unverified records must never be committed to the public repository.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "status", "subject", "case", "sources", "provenance"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^iropo-[a-z0-9]{8,}$",
+      "description": "Stable IROPO identifier, never reused."
+    },
+    "status": {
+      "enum": ["draft", "in_review", "verified", "disputed", "removed"],
+      "description": "Workflow state. Only 'verified' records are eligible for publication."
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "name"],
+      "properties": {
+        "kind": { "enum": ["person", "organization"] },
+        "name": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["full"],
+          "properties": {
+            "full": { "type": "string", "minLength": 1 },
+            "given": { "type": "string" },
+            "family": { "type": "string" },
+            "aliases": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "birth_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "description": "Only when printed in the cited official source; used to avoid mistaken identity."
+        }
+      }
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["jurisdiction", "offense", "disposition"],
+      "properties": {
+        "jurisdiction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["country", "state"],
+          "properties": {
+            "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+            "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+            "county": { "type": "string" },
+            "city": { "type": "string" }
+          }
+        },
+        "agency_ori": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}[A-Z0-9]{7}$",
+          "description": "Nine-character NCIC Originating Agency Identifier of the investigating agency."
+        },
+        "court": { "type": "string" },
+        "case_number": { "type": "string" },
+        "offense": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["description"],
+          "properties": {
+            "nibrs_code": { "const": "720", "description": "NIBRS Animal Cruelty." },
+            "statute": { "type": "string", "description": "Citation such as 'N.C. Gen. Stat. 14-360'." },
+            "description": { "type": "string" },
+            "level": { "enum": ["felony", "misdemeanor", "infraction", "unknown"] },
+            "nibrs_subtype": {
+              "enum": ["simple_gross_neglect", "intentional_abuse_torture", "organized_abuse", "animal_sexual_abuse"],
+              "description": "NIBRS animal cruelty type of criminal activity (organized abuse covers dog and cock fighting)."
+            }
+          }
+        },
+        "animals": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "species": { "type": "array", "items": { "type": "string" } },
+            "count": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "dates": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "offense": { "type": "string", "format": "date" },
+            "charged": { "type": "string", "format": "date" },
+            "adjudicated": { "type": "string", "format": "date" },
+            "sentenced": { "type": "string", "format": "date" }
+          }
+        },
+        "disposition": {
+          "enum": ["convicted", "pleaded_guilty", "no_contest", "charged", "dismissed", "acquitted", "deferred", "unknown"]
+        },
+        "sentence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "summary": { "type": "string" },
+            "animal_ownership_ban_until": { "type": "string", "format": "date" }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "url", "retrieved_at"],
+        "properties": {
+          "type": { "enum": ["court_record", "official_registry", "agency_release", "news_report"] },
+          "title": { "type": "string" },
+          "publisher": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "archived_url": { "type": "string", "format": "uri" },
+          "retrieved_at": { "type": "string", "format": "date-time" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reviewers": { "type": "array", "minItems": 2, "items": { "type": "string" }, "description": "Two independent reviewers are required before verification." },
+        "verified_at": { "type": "string", "format": "date-time" },
+        "method": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "listing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "published_at": { "type": "string", "format": "date-time" },
+        "expires_at": { "type": "string", "format": "date", "description": "Mirrors the retention rule of the source jurisdiction where one exists." },
+        "removed_at": { "type": "string", "format": "date-time" },
+        "removal_reason": { "enum": ["expunged", "overturned", "source_removed", "mistaken_identity", "retention_expired", "other"] }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["created_at", "updated_at", "created_by"],
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "created_by": { "type": "string", "description": "Importer name or contributor handle." },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["at", "change"],
+            "properties": {
+              "at": { "type": "string", "format": "date-time" },
+              "by": { "type": "string" },
+              "change": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

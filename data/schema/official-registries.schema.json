@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iropo.org/schema/official-registries.schema.json",
+  "title": "Official animal abuser registries",
+  "description": "Curated catalog of animal abuser registries operated by governments. IROPO links to these registries and never copies their listings.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verified_on", "registries"],
+  "properties": {
+    "verified_on": { "type": "string", "format": "date" },
+    "notes": { "type": "string" },
+    "registries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "jurisdiction", "level", "state", "name", "operator", "url", "access", "status", "sources"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "jurisdiction": { "type": "string" },
+          "level": { "enum": ["state", "county", "city"] },
+          "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+          "name": { "type": "string" },
+          "operator": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "access": { "enum": ["public", "restricted", "unknown"] },
+          "established": { "type": ["string", "null"] },
+          "legal_citation": { "type": ["string", "null"] },
+          "retention": { "type": ["string", "null"] },
+          "status": { "enum": ["active", "defunct", "unknown"] },
+          "verified_on": { "type": "string", "format": "date" },
+          "notes": { "type": ["string", "null"] },
+          "sources": { "type": "array", "minItems": 1, "items": { "type": "string", "format": "uri" } }
+        }
+      }
+    }
+  }
+}

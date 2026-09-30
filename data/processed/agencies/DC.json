@@ -1,0 +1,10 @@
+{
+  "state": "DC",
+  "name": "District of Columbia",
+  "table_years": [2020,2021,2022,2023,2024,2025],
+  "agencies": [
+    {"ori":"DC0011300","name":"District of Columbia Fire and Emergency Medical Services Arson Investigation Unit","type":"other","lat":38.9041,"lon":-77.01723,"nibrs":false},
+    {"ori":"DCMTP0000","name":"Metro Transit Police","type":"other","lat":38.89739,"lon":-77.01894,"nibrs":true,"nibrs_since":"2000-01-01","table_name":"Metro Transit Police","animal_cruelty":{"2020":1,"2021":0,"2022":0,"2023":0,"2024":1,"2025":2},"total_offenses":{"2020":2535,"2021":2574,"2022":3310,"2023":5555,"2024":4620,"2025":3726},"match":"exact"},
+    {"ori":"DCMPD0000","name":"Washington Police Department","type":"city","lat":38.89476,"lon":-77.0152,"nibrs":true,"nibrs_since":"2021-08-01","table_name":"Washington","population":693645,"animal_cruelty":{"2022":16,"2023":5,"2024":0,"2025":0},"total_offenses":{"2022":69093,"2023":81345,"2024":73744,"2025":66377},"match":"normalized"}
+  ]
+}
