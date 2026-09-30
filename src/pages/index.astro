@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Sparkline from "../components/charts/Sparkline.astro";
 import TileMap from "../components/charts/TileMap.astro";
 import SourceNote from "../components/SourceNote.astro";
-import { LATEST_TABLE_YEAR, national, registry, states } from "../lib/data";
+import { LATEST_TABLE_YEAR, national, officialRegistries, registry, states } from "../lib/data";
 import { fmt, fmtPct, fmtRate, fmtShare, listJoin } from "../lib/format";
 import { binner, comparable, latest, offenderHighlights, point, rankStates } from "../lib/stats";
 import { SITE } from "../lib/site";
@@ -208,7 +208,8 @@ const jsonLd = [
         <strong>No individuals are listed yet ({registry.published} published records).</strong>
         Publishing names carries real legal and ethical risk. IROPO will only list adjudicated cases
         backed by court records or official registries, after two-person review, with a working
-        correction and removal process. <a href="/registry/">Read the registry policy</a>.
+        correction and removal process. Until then, IROPO links to {officialRegistries.registries.length}
+        <a href="/registry/#official">official government registries</a>.
       </div>
     </div>
   </section>

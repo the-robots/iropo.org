@@ -5,10 +5,18 @@ import { officialRegistries, registry, stateByAbbr } from "../../lib/data";
 import { fmtDate } from "../../lib/format";
 import { ISSUE_FORM, REPO_FILE } from "../../lib/site";
 
-const byState = [...officialRegistries.registries].sort(
-  (a, b) => a.state.localeCompare(b.state) || a.level.localeCompare(b.level) || a.jurisdiction.localeCompare(b.jurisdiction),
-);
-const publicCount = byState.filter((r) => r.access === "public" && r.status === "active").length;
+const all = officialRegistries.registries;
+const statewide = all.filter((r) => r.level === "state").sort((a, b) => a.state.localeCompare(b.state));
+const local = all
+  .filter((r) => r.level !== "state")
+  .sort((a, b) => a.state.localeCompare(b.state) || a.jurisdiction.localeCompare(b.jurisdiction));
+const localStates = [...new Set(local.map((r) => r.state))].sort();
+const publicCount = all.filter((r) => r.access === "public" && r.status === "active").length;
+const proposals = officialRegistries.proposals ?? [];
+const period = (text: string | null | undefined) =>
+  text ? text.replace(/\byrs\b/g, "years").replace(/\byr\b/g, "year") : null;
+const accessLabel = (access: string) =>
+  access === "public" ? "Public search" : access === "restricted" ? "Restricted access" : "Access unclear";
 
 const criteria = [
   { title: "Adjudicated cases only", text: "A conviction, guilty plea or no-contest plea for an animal cruelty offense. Arrests, charges, dismissed and pending cases are never listed." },
@@ -71,7 +79,7 @@ const fields = [
     </div>
   </section>
 
-  <section class="section section--alt" aria-labelledby="official">
+  <section class="section section--alt" aria-labelledby="official" id="official">
     <div class="container">
       <div class="section-head">
         <div>
@@ -79,38 +87,100 @@ const fields = [
           <h2 id="official">Official government animal abuser registries</h2>
         </div>
         <p>
-          {byState.length > 0
-            ? `${byState.length} registries run by state and local governments, ${publicCount} of them searchable by the public. IROPO links to them and never copies their listings. Last verified ${fmtDate(officialRegistries.verified_on)}.`
-            : "We are compiling a verified list of registries run by state and local governments."}
+          {`${all.length} registries run by or for state and local governments, ${publicCount} of them searchable by the public. IROPO links to them and never copies their listings. Last verified ${fmtDate(officialRegistries.verified_on)}.`}
         </p>
       </div>
+
+      <h3>Statewide</h3>
       <div class="grid grid--2">
         {
-          byState.map((r) => (
+          statewide.map((r) => (
             <article class="card registry">
               <div class="registry__top">
                 <span class="badge">{stateByAbbr(r.state)?.name ?? r.state}</span>
-                <span class="badge">{r.level === "state" ? "Statewide" : r.level === "county" ? "County" : "City"}</span>
-                <span class:list={["badge", r.access === "public" ? "badge--brand" : "badge--accent"]}>
-                  {r.access === "public" ? "Public search" : r.access === "restricted" ? "Restricted access" : "Access unclear"}
-                </span>
-                {r.status !== "active" && <span class="badge">{r.status === "defunct" ? "Defunct" : "Status unclear"}</span>}
+                <span class:list={["badge", r.access === "public" ? "badge--brand" : "badge--accent"]}>{accessLabel(r.access)}</span>
               </div>
-              <h3><a href={r.url}>{r.name}</a></h3>
-              <p class="muted small">{r.jurisdiction} · {r.operator}</p>
+              <h4><a href={r.url}>{r.name}</a></h4>
+              <p class="muted small">{r.operator}</p>
               <dl class="kv small">
                 {r.established && (<><dt>Established</dt><dd>{r.established}</dd></>)}
                 {r.legal_citation && (<><dt>Law</dt><dd>{r.legal_citation}</dd></>)}
-                {r.retention && (<><dt>Listing period</dt><dd>{r.retention}</dd></>)}
+                {r.retention && (<><dt>Listing period</dt><dd>{period(r.retention)}</dd></>)}
               </dl>
               {r.notes && <p class="small">{r.notes}</p>}
             </article>
           ))
         }
       </div>
+
+      <div data-table-tools id="local" style="margin-top: var(--space-6)">
+        <h3>County and city</h3>
+        <div class="table-tools">
+          <div class="field">
+            <label for="registry-filter">Search</label>
+            <input id="registry-filter" type="search" placeholder="County, city or operator" data-filter-text autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="registry-state">State</label>
+            <select id="registry-state" data-filter-attr="state">
+              <option value="">All states</option>
+              {localStates.map((abbr) => <option value={abbr}>{stateByAbbr(abbr)?.name ?? abbr}</option>)}
+            </select>
+          </div>
+          <span class="status" data-filter-status aria-live="polite"></span>
+        </div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="County and city registries">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" data-sort="text"><button type="button">Jurisdiction</button></th>
+                <th scope="col">Registry</th>
+                <th scope="col" data-sort="text"><button type="button">Access</button></th>
+                <th scope="col">Listing period</th>
+                <th scope="col" data-sort="text"><button type="button">Established</button></th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                local.map((r) => (
+                  <tr data-state={r.state}>
+                    <th scope="row">{r.jurisdiction}</th>
+                    <td>
+                      <a href={r.url}>{r.name}</a>
+                      <span class="cell-sub">{r.operator}</span>
+                      {r.notes && <span class="cell-sub">{r.notes}</span>}
+                    </td>
+                    <td class="nowrap">{accessLabel(r.access)}</td>
+                    <td>{period(r.retention) ?? "—"}</td>
+                    <td>{r.established ?? "—"}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {
+        proposals.length > 0 && (
+          <details class="proposals">
+            <summary>Proposed registries that were not enacted ({proposals.length})</summary>
+            <ul>
+              {proposals.map((p) => (
+                <li>
+                  <strong>{p.jurisdiction}:</strong> {p.bill}. {p.detail}{" "}
+                  <a href={p.sources[0]}>Source</a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        )
+      }
+
       <p class="small muted" style="margin-top: var(--space-4)">
         Know of a registry we are missing, or one that has changed?
-        <a href={ISSUE_FORM("data-source")}>Open an issue</a>. The catalog lives in
+        <a href={ISSUE_FORM("data-source")}>Tell us</a>. The catalog, including leads that still need
+        verification, lives in
         <a href={REPO_FILE("data/curated/official-registries.json")}><code>official-registries.json</code></a>.
       </p>
     </div>
@@ -172,6 +242,10 @@ const fields = [
   </section>
 </BaseLayout>
 
+<script>
+  import "../../scripts/table-tools";
+</script>
+
 <style>
   .status {
     text-align: center;
@@ -195,9 +269,21 @@ const fields = [
     gap: 0.4rem;
     margin-bottom: var(--space-3);
   }
-  .registry h3 {
+  .registry h4 {
     font-size: var(--step-1);
     margin-bottom: 0.25rem;
+  }
+  .proposals {
+    margin-top: var(--space-5);
+  }
+  .proposals summary {
+    cursor: pointer;
+    font-weight: 650;
+    color: var(--brand);
+  }
+  .proposals ul {
+    margin-top: var(--space-3);
+    font-size: var(--step--1);
   }
   .registry .kv {
     margin-top: var(--space-3);

@@ -5,5 +5,5 @@
   "cde_max_data_date": "09/2026",
   "last_full_year": 2025,
   "table_years": [2020,2021,2022,2023,2024,2025],
-  "counts": {"states":51,"directory_agencies":19636,"agency_year_rows":64306,"linked_rows":63643,"published_registry_records":0,"official_registries":0}
+  "counts": {"states":51,"directory_agencies":19636,"agency_year_rows":64306,"linked_rows":63643,"published_registry_records":0,"official_registries":43}
 }

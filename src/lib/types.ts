@@ -157,10 +157,22 @@ export interface OfficialRegistry {
   sources: string[];
 }
 
+export interface RegistryProposal {
+  id: string;
+  jurisdiction: string;
+  level: "state" | "county" | "city";
+  state: string;
+  bill: string;
+  detail: string;
+  sources: string[];
+}
+
 export interface RegistriesFile {
   verified_on: string;
   notes?: string;
   registries: OfficialRegistry[];
+  proposals?: RegistryProposal[];
+  leads?: { id: string; jurisdiction: string; state: string; finding: string; reason: string; sources: string[] }[];
 }
 
 export interface RegistryFile {

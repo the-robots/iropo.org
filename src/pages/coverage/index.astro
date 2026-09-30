@@ -108,7 +108,12 @@ const legacy = rows.filter((r) => r.state.legacy).length;
                   <td>{r.state.legacy ? <span class="badge badge--done">1977 NLETS list</span> : <span class="muted">—</span>}</td>
                   <td>
                     {r.registries.length ? (
-                      <span class="badge badge--brand">{r.registries.length === 1 ? (r.registries[0].level === "state" ? "Statewide" : "1 local") : `${r.registries.length} local`}</span>
+                      <span class="badge badge--brand">
+                        {[
+                          r.registries.some((x) => x.level === "state") && "Statewide",
+                          r.registries.some((x) => x.level !== "state") && `${r.registries.filter((x) => x.level !== "state").length} local`,
+                        ].filter(Boolean).join(" + ")}
+                      </span>
                     ) : (
                       <span class="muted">—</span>
                     )}

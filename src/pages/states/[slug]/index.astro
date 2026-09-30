@@ -250,16 +250,25 @@ const lede =
               <a href="/get-involved/#sources">Tell us</a>.
             </p>
           ) : (
-            <ul class="plain">
-              {registries.map((r) => (
-                <li>
-                  <a href={r.url}>{r.name}</a>
-                  <span class="cell-sub">
-                    {r.jurisdiction} · {r.operator} · {r.access === "public" ? "Public search" : r.access === "restricted" ? "Restricted access" : "Access unknown"}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <>
+              <p class="small">
+                {registries.some((r) => r.level === "state") ? "A statewide registry" : "No statewide registry"}
+                {registries.some((r) => r.level !== "state") && ` and ${registries.filter((r) => r.level !== "state").length} local ${registries.filter((r) => r.level !== "state").length === 1 ? "registry" : "registries"}`}.
+              </p>
+              <ul class="plain">
+                {registries.slice(0, 6).map((r) => (
+                  <li>
+                    <a href={r.url}>{r.name}</a>
+                    <span class="cell-sub">
+                      {r.jurisdiction} · {r.operator} · {r.access === "public" ? "Public search" : r.access === "restricted" ? "Restricted access" : "Access unknown"}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              {registries.length > 6 && (
+                <p class="small"><a href={`/registry/?state=${state.abbr}#local`}>See all {registries.length} registries in {state.name}</a></p>
+              )}
+            </>
           )
         }
         <p class="small muted">IROPO links to these registries and does not copy their listings.</p>

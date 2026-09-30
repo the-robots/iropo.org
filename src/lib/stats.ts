@@ -152,7 +152,9 @@ export function topAgencies(abbr: string, limit = 15, year = LATEST_TABLE_YEAR):
 }
 
 export function registriesFor(abbr: string) {
-  return officialRegistries.registries.filter((r) => r.state === abbr);
+  return officialRegistries.registries
+    .filter((r) => r.state === abbr)
+    .sort((a, b) => Number(b.level === "state") - Number(a.level === "state") || a.jurisdiction.localeCompare(b.jurisdiction));
 }
 
 export interface QualityNote {

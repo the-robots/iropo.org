@@ -83,6 +83,10 @@ function initTable(root: HTMLElement) {
   const params = new URLSearchParams(location.search);
   const q = params.get("q");
   if (text && q) text.value = q;
+  for (const select of selects) {
+    const value = params.get(select.dataset.filterAttr!);
+    if (value && [...select.options].some((o) => o.value === value)) select.value = value;
+  }
   apply();
 }
 

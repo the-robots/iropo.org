@@ -2,35 +2,216 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://iropo.org/schema/official-registries.schema.json",
   "title": "Official animal abuser registries",
-  "description": "Curated catalog of animal abuser registries operated by governments. IROPO links to these registries and never copies their listings.",
+  "description": "Curated catalog of animal abuser registries operated by or under the authority of governments, plus proposals that were not enacted and leads awaiting verification. IROPO links to these registries and never copies their listings.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["verified_on", "registries"],
+  "required": [
+    "verified_on",
+    "registries"
+  ],
   "properties": {
-    "verified_on": { "type": "string", "format": "date" },
-    "notes": { "type": "string" },
+    "verified_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    },
     "registries": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "jurisdiction", "level", "state", "name", "operator", "url", "access", "status", "sources"],
+        "required": [
+          "id",
+          "jurisdiction",
+          "level",
+          "state",
+          "name",
+          "operator",
+          "url",
+          "access",
+          "status",
+          "sources"
+        ],
         "properties": {
-          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
-          "jurisdiction": { "type": "string" },
-          "level": { "enum": ["state", "county", "city"] },
-          "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
-          "name": { "type": "string" },
-          "operator": { "type": "string" },
-          "url": { "type": "string", "format": "uri" },
-          "access": { "enum": ["public", "restricted", "unknown"] },
-          "established": { "type": ["string", "null"] },
-          "legal_citation": { "type": ["string", "null"] },
-          "retention": { "type": ["string", "null"] },
-          "status": { "enum": ["active", "defunct", "unknown"] },
-          "verified_on": { "type": "string", "format": "date" },
-          "notes": { "type": ["string", "null"] },
-          "sources": { "type": "array", "minItems": 1, "items": { "type": "string", "format": "uri" } }
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "jurisdiction": {
+            "type": "string"
+          },
+          "level": {
+            "enum": [
+              "state",
+              "county",
+              "city"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "access": {
+            "enum": [
+              "public",
+              "restricted",
+              "unknown"
+            ]
+          },
+          "established": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "legal_citation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "retention": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "active",
+              "defunct",
+              "unknown"
+            ]
+          },
+          "verified_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Short, public-facing note shown on iropo.org."
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "verification_notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Maintainer notes from verification (not shown on the site)."
+          }
+        }
+      }
+    },
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "jurisdiction",
+          "level",
+          "state",
+          "bill",
+          "detail",
+          "sources"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "jurisdiction": {
+            "type": "string"
+          },
+          "level": {
+            "enum": [
+              "state",
+              "county",
+              "city"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "bill": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      }
+    },
+    "leads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "jurisdiction",
+          "state",
+          "finding",
+          "reason",
+          "sources"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "jurisdiction": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "finding": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
         }
       }
     }

@@ -1,4 +1,1100 @@
 {
   "verified_on": "2026-09-29",
-  "registries": []
+  "notes": "Registries run by or under the authority of state and local governments in the United States, each checked against the operator's live page and, where available, the law that created it. IROPO links to these registries and never copies their listings. New York and Florida have the most local registries; Florida added a statewide list in 2026. 'proposals' lists bills that were not enacted; 'leads' lists candidates that still need verification.",
+  "registries": [
+    {
+      "id": "tn-statewide-tbi",
+      "jurisdiction": "Tennessee",
+      "level": "state",
+      "state": "TN",
+      "name": "Tennessee Animal Abuse Registry",
+      "operator": "Tennessee Bureau of Investigation",
+      "url": "https://www.tn.gov/tbi/tennessee-animal-abuse-registry.html",
+      "access": "public",
+      "established": "2015 law; posting began Jan. 1, 2016",
+      "legal_citation": "Tenn. Code Ann. §§ 40-39-401 to -404 (2015 Pub. Ch. 413)",
+      "retention": "2 yrs first conviction; 5 yrs subsequent (as enacted)",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Posted expiration dates suggest listing periods have changed since the 2015 law; check the registry for current terms.",
+      "verification_notes": "Some listings expire after 3, 5 or 10 yrs; check § 40-39-403 for amendments before quoting retention.",
+      "sources": [
+        "https://www.tn.gov/tbi/tennessee-animal-abuse-registry.html",
+        "https://www.tn.gov/content/dam/tn/tbi/documents/PC0413_-_Tennessee_Animal_Abuser_Registration_Act.pdf"
+      ]
+    },
+    {
+      "id": "fl-statewide-fdle",
+      "jurisdiction": "Florida",
+      "level": "state",
+      "state": "FL",
+      "name": "Animal Cruelty Offender List (Dexter's Law)",
+      "operator": "Florida Department of Law Enforcement",
+      "url": "https://dexter.fdle.state.fl.us/dexter",
+      "access": "public",
+      "established": "2025 (ch. 2025-102); online Jan. 1, 2026",
+      "legal_citation": "§ 828.12(7), Fla. Stat. (2025); now § 828.12(9) (chs. 2026-76, 2026-78)",
+      "retention": "From Oct. 1, 2026: 3 yrs first misdemeanor, 5 yrs first felony, 10 yrs subsequent",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Covers any § 828.12 conviction or guilty/no-contest plea. FDLE must add photos and case data by Jan. 1, 2027.",
+      "sources": [
+        "https://dexter.fdle.state.fl.us/dexter",
+        "https://www.flsenate.gov/Session/Bill/2025/255"
+      ]
+    },
+    {
+      "id": "ny-new-york-city",
+      "jurisdiction": "New York City, NY",
+      "level": "city",
+      "state": "NY",
+      "name": "NYC Animal Abuse Registry",
+      "operator": "NYC Department of Health and Mental Hygiene",
+      "url": "https://www.nyc.gov/site/doh/health/health-topics/animal-abuse-registry.page",
+      "access": "restricted",
+      "established": "2014 (Local Law 4 of 2014); convictions after Oct. 2, 2014",
+      "legal_citation": "NYC Admin. Code §§ 17-1601 to 17-1608",
+      "retention": "5 yrs; 10 yrs after most recent conviction for repeat offenders",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Only law enforcement and registered shelters, pet shops, rescues and vets can query it. Int. 0782-2026 to make it public is in committee.",
+      "sources": [
+        "https://www.nyc.gov/site/doh/health/health-topics/animal-abuse-registry.page",
+        "https://github.com/jehiah/nyc_code_archive/tree/main/administrative-code/title-17/chapter-16"
+      ]
+    },
+    {
+      "id": "ny-suffolk-county",
+      "jurisdiction": "Suffolk County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Animal Abuse Offender Registry",
+      "operator": "Suffolk County Police Department",
+      "url": "https://suffolkpd.org/Alerts/Animal-Abuse-Offender-Registry",
+      "access": "public",
+      "established": "2010 (L.L. No. 55-2010, adopted Oct. 12, 2010)",
+      "legal_citation": "Suffolk County Code ch. 299, art. IV, §§ 299-25 to 299-33",
+      "retention": "10 yrs; 20 yrs after most recent conviction for repeat offenders",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "The first county registry in the United States, according to the police department. $50 annual fee.",
+      "verification_notes": "Police say it was the first in the nation. $50 annual fee. Posted list PDF is dated May 6, 2025.",
+      "sources": [
+        "https://suffolkpd.org/Alerts/Animal-Abuse-Offender-Registry",
+        "https://ecode360.com/14944149"
+      ]
+    },
+    {
+      "id": "ny-albany-county",
+      "jurisdiction": "Albany County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Albany County Animal Abuse Registry",
+      "operator": "Albany County Sheriff's Office; hosted by Mohawk Hudson Humane Society",
+      "url": "https://mohawkhumane.org/abuser-registry",
+      "access": "public",
+      "established": "2011 (L.L. No. 6-2011, adopted Oct. 27, 2011)",
+      "legal_citation": "Albany County Code ch. 110, art. II, §§ 110-11 to 110-18",
+      "retention": "10 yrs; life after a subsequent conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Hosted by the Mohawk Hudson Humane Society under county law.",
+      "verification_notes": "A nonprofit hosts the list under county law. The county's own registry page now returns 404. 2026 listings present.",
+      "sources": [
+        "https://mohawkhumane.org/abuser-registry",
+        "https://ecode360.com/34959527"
+      ]
+    },
+    {
+      "id": "ny-rockland-county",
+      "jurisdiction": "Rockland County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Rockland County Animal Abuser Registry",
+      "operator": "Rockland County Sheriff's Office",
+      "url": "https://www.rocklandsheriffny.gov/pdanimalregistry.html",
+      "access": "public",
+      "established": "2011 (L.L. No. 2-2011, adopted May 17, 2011)",
+      "legal_citation": "Rockland County Code ch. 230, art. II, §§ 230-4 et seq.",
+      "retention": "4 yrs; repeat offenders 4 yrs after most recent conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$50 annual fee. At the last check the registry listed no one.",
+      "verification_notes": "$50 annual fee. The page read 'No registered individuals at this time.' Old rocklandcountysheriffoffice.com URLs are dead.",
+      "sources": [
+        "https://www.rocklandsheriffny.gov/pdanimalregistry.html",
+        "https://ecode360.com/15306523"
+      ]
+    },
+    {
+      "id": "ny-westchester-county",
+      "jurisdiction": "Westchester County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Westchester County Animal Abuse Registry",
+      "operator": "Westchester County Department of Public Safety",
+      "url": "https://animalabuse.westchestercountyny.gov/",
+      "access": "public",
+      "established": "2012 (L.L. No. 14-2012); rewritten by L.L. No. 6-2019 (June 5, 2019)",
+      "legal_citation": "Laws of Westchester County ch. 680, §§ 680.01 to 680.10",
+      "retention": "10 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$50 initial fee plus an annual fee.",
+      "verification_notes": "$50 initial plus annual fee. The old host animalabuse.westchestergov.com redirects here.",
+      "sources": [
+        "https://animalabuse.westchestercountyny.gov/",
+        "https://api.municode.com/search?clientId=11117&contentTypeId=CODES&searchText=%22abuser%20registry%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "ny-nassau-county",
+      "jurisdiction": "Nassau County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Nassau County Animal Abuse Registry",
+      "operator": "Nassau County Police Department (registration); hosted by Nassau County SPCA",
+      "url": "https://www.nassaucountyspca.org/animal-abuse-registry",
+      "access": "public",
+      "established": "2014 (county local law; convictions after May 2014)",
+      "legal_citation": "Nassau County local law (Clerk Item 149-14, 2014); law number not verified",
+      "retention": "Per fiscal impact statement: 5 yrs; 10 yrs after a subsequent conviction (enacted text not reviewed)",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Maintained by the Nassau County SPCA; the Police Commissioner is responsible under the law.",
+      "verification_notes": "The fiscal impact statement lists a $100 annual fee, says the SPCA maintains the database, and makes the Police Commissioner responsible.",
+      "sources": [
+        "https://www.nassaucountyspca.org/animal-abuse-registry",
+        "https://www.nassaucountyny.gov/DocumentCenter/View/9955/Animal-Abuse-Registry-May-2014-Final?bidId="
+      ]
+    },
+    {
+      "id": "ny-orange-county",
+      "jurisdiction": "Orange County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Orange County Animal Abuser Registry (Rocky's Law)",
+      "operator": "Orange County Sheriff's Office",
+      "url": "https://www.orangecountyny.gov/934/Animal-Abuser-Registry",
+      "access": "public",
+      "established": "2015 (filed and effective June 16, 2015)",
+      "legal_citation": "Orange County local law 'Rocky's Law' (2015); law number not verified",
+      "retention": "15 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": null,
+      "verification_notes": "The old orangecountygov.com URL redirects here.",
+      "sources": [
+        "https://www.orangecountyny.gov/934/Animal-Abuser-Registry",
+        "https://www.orangecountyny.gov/DocumentCenter/View/5784"
+      ]
+    },
+    {
+      "id": "ny-niagara-county",
+      "jurisdiction": "Niagara County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Niagara County Animal Abuser Registry",
+      "operator": "Niagara County Sheriff's Office",
+      "url": "https://www.niagarasheriff.gov/animalAbuseRegistry",
+      "access": "public",
+      "established": "2015 (act of the Niagara County Legislature, per Sheriff's page)",
+      "legal_citation": "Niagara County local law (2015); number not verified",
+      "retention": "not verified",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": null,
+      "verification_notes": "Listings present. The old niagarasheriff.com registry page now goes to the homepage.",
+      "sources": [
+        "https://www.niagarasheriff.gov/animalAbuseRegistry",
+        "http://web.archive.org/web/20171203163526/http://www.niagarasheriff.com:80/animal-abuse-registry.html"
+      ]
+    },
+    {
+      "id": "ny-ulster-county",
+      "jurisdiction": "Ulster County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Ulster County Animal Abuse Registry",
+      "operator": "Ulster County District Attorney's Office",
+      "url": "https://da.ulstercountyny.gov/animal-abuse-registry/",
+      "access": "public",
+      "established": "2015 law (L.L. No. 12-2015, adopted Sept. 15, 2015); the DA's page says the registry was created in 2016",
+      "legal_citation": "Ulster County Code ch. 152, art. II (§§ 152-7 et seq.)",
+      "retention": "15 yrs; permanent after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$100 fee.",
+      "verification_notes": "$100 fee. The old ulstercountyny.gov/district-attorney URL returns 403/404.",
+      "sources": [
+        "https://da.ulstercountyny.gov/animal-abuse-registry/",
+        "https://ecode360.com/30731719"
+      ]
+    },
+    {
+      "id": "ny-putnam-county",
+      "jurisdiction": "Putnam County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Putnam County Animal Cruelty Registry",
+      "operator": "Putnam County Sheriff with Putnam County SPCA (law requires the public list on the SPCA website)",
+      "url": "https://putnamcountyspca.org/animal-cruelty-registry/",
+      "access": "public",
+      "established": "2016 (L.L. No. 6-2016, adopted July 6, 2016)",
+      "legal_citation": "Putnam County Code ch. 115 (Animal Cruelty Registry Law)",
+      "retention": "10 yrs; repeat offenders 10 yrs after most recent conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Published on the Putnam County SPCA website, as the county law requires. $50 initial fee plus an annual fee.",
+      "verification_notes": "$50 initial plus annual fee. The old spcaputnam.org address redirects here. Whether listings are present was not checked.",
+      "sources": [
+        "https://putnamcountyspca.org/animal-cruelty-registry/",
+        "https://ecode360.com/32081009"
+      ]
+    },
+    {
+      "id": "ny-cattaraugus-county",
+      "jurisdiction": "Cattaraugus County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Cattaraugus County Animal Abuser Registry",
+      "operator": "Cattaraugus County Sheriff's Office",
+      "url": "https://www.cattco.gov/sheriffs-office/animal-abuser",
+      "access": "public",
+      "established": "2016 (Local Law No. 1-2016; convictions on or after Mar. 18, 2016)",
+      "legal_citation": "Cattaraugus County Local Law No. 1-2016",
+      "retention": "not stated on the registry page",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": null,
+      "verification_notes": "Listings through 2025. The old cattco.org URL redirects here.",
+      "sources": [
+        "https://www.cattco.gov/sheriffs-office/animal-abuser"
+      ]
+    },
+    {
+      "id": "ny-sullivan-county",
+      "jurisdiction": "Sullivan County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Sullivan County Animal Abuser Registry (Dean's Law)",
+      "operator": "Sullivan County Sheriff's Office",
+      "url": "https://www.sullivanny.gov/Departments/Sheriff/AnimalAbuserRegistry",
+      "access": "public",
+      "established": "2016 (L.L. No. 2-2016, adopted Aug. 18, 2016)",
+      "legal_citation": "Sullivan County Code ch. 85, art. II, §§ 85-4 to 85-9",
+      "retention": "7 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Covers convictions on or after August 26, 2017, according to the Sheriff's page.",
+      "verification_notes": "Sheriff's page says it covers convictions on or after Aug. 26, 2017, which doesn't match the 2016 adoption. Old sullivanny.us URL is dead.",
+      "sources": [
+        "https://www.sullivanny.gov/Departments/Sheriff/AnimalAbuserRegistry",
+        "https://ecode360.com/6835726"
+      ]
+    },
+    {
+      "id": "ny-onondaga-county",
+      "jurisdiction": "Onondaga County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Onondaga County Animal Abuser Registry",
+      "operator": "Onondaga County Sheriff's Office",
+      "url": "https://sheriff.onondaga.gov/animal-abuser-registry/",
+      "access": "public",
+      "established": "2017 (L.L. No. 3-2017, adopted June 6, 2017; effective Aug. 1, 2017)",
+      "legal_citation": "Onondaga County Local Law No. 3-2017",
+      "retention": "15 yrs (repeat-offender clause illegible in the scanned law)",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": null,
+      "verification_notes": "A listing with an Aug. 2026 conviction is present. The law PDF is image-only and was read by OCR.",
+      "sources": [
+        "https://sheriff.onondaga.gov/animal-abuser-registry/",
+        "https://sheriff.onondaga.gov/wp-content/uploads/2017/08/Local-Law.pdf"
+      ]
+    },
+    {
+      "id": "ny-broome-county",
+      "jurisdiction": "Broome County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Broome County Animal Abuser Registry",
+      "operator": "Broome County Sheriff's Office",
+      "url": "https://broomecountyny.gov/sheriff/animal-abuser-registry",
+      "access": "public",
+      "established": "Law 2017 (Local Law Permanent 6 of 2017); registry created 2018",
+      "legal_citation": "Broome County Charter and Code ch. 243, art. III",
+      "retention": "15 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$125 fee.",
+      "sources": [
+        "https://broomecountyny.gov/sheriff/animal-abuser-registry",
+        "https://broomecountyny.gov/sites/default/files/dept/sheriff/pdfs/LOCAL%20LAW%20PERMANENT%206%20OF%202017.pdf"
+      ]
+    },
+    {
+      "id": "ny-chautauqua-county",
+      "jurisdiction": "Chautauqua County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Chautauqua County Animal Abuse Registry",
+      "operator": "Chautauqua County Sheriff's Office",
+      "url": "https://www.sheriff.us/animal-abuse-registery",
+      "access": "public",
+      "established": "2018 (Local Law 9-18, adopted Apr. 25, 2018; effective May 16, 2018)",
+      "legal_citation": "Chautauqua County Local Law 9-18",
+      "retention": "15 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": null,
+      "verification_notes": "Listings present. The misspelling 'registery' in the URL is correct.",
+      "sources": [
+        "https://www.sheriff.us/animal-abuse-registery",
+        "https://www.sheriff.us/_files/ugd/25425d_26fa1b9685e74e7c93d75d0793a02622.pdf"
+      ]
+    },
+    {
+      "id": "ny-dutchess-county",
+      "jurisdiction": "Dutchess County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Dutchess County Animal Abuse Registry",
+      "operator": "Dutchess County Sheriff's Office",
+      "url": "https://www.dutchessny.gov/Departments/Sheriff/Dutchess-County-Animal-Abuse-Registry.htm",
+      "access": "public",
+      "established": "2019 (L.L. No. 4 of 2019, adopted Aug. 12, 2019; effective Sept. 16, 2019)",
+      "legal_citation": "Dutchess County Code ch. 130, art. I",
+      "retention": "15 yrs; life after a subsequent conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$125 fee. The page also links to other New York county registries.",
+      "verification_notes": "$125 fee. The page also links to other NY county registries. A 2026 posting is present.",
+      "sources": [
+        "https://www.dutchessny.gov/Departments/Sheriff/Dutchess-County-Animal-Abuse-Registry.htm",
+        "https://ecode360.com/35508657"
+      ]
+    },
+    {
+      "id": "ny-oneida-county",
+      "jurisdiction": "Oneida County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Oneida County Animal Abuse Registry",
+      "operator": "Oneida County Sheriff's Office",
+      "url": "https://sheriff.oneidacountyny.gov/quick-links/animal-abuse-registry/",
+      "access": "public",
+      "established": "2019 (Local Law 2 of 2019; effective on filing)",
+      "legal_citation": "Oneida County Local Law No. 2 of 2019",
+      "retention": "15 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$125 fee. The list is posted on the county's document portal, linked from this page.",
+      "verification_notes": "$125 fee. The list itself is on the county's Laserfiche document portal, linked from this page.",
+      "sources": [
+        "https://sheriff.oneidacountyny.gov/quick-links/animal-abuse-registry/",
+        "https://sheriff.oneidacountyny.gov/assets/Documents/OneidaCountyAnimalAbuseAnimalAbuseLocalLaw2of2019.pdf"
+      ]
+    },
+    {
+      "id": "ny-greene-county",
+      "jurisdiction": "Greene County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Greene County Animal Abuse Registry",
+      "operator": "Greene County Sheriff's Office",
+      "url": "https://www.greenesheriffny.gov/animalAbuseRegistry",
+      "access": "public",
+      "established": "2021 (Local Law No. 2 of 2021, effective July 21, 2021)",
+      "legal_citation": "Greene County Local Law No. 2 of 2021",
+      "retention": "15 yrs (per county page)",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": null,
+      "verification_notes": "The Sheriff's page renders in the browser; listings were not checked.",
+      "sources": [
+        "https://www.greenesheriffny.gov/animalAbuseRegistry",
+        "https://greenecountyny.gov/animal-abuse/"
+      ]
+    },
+    {
+      "id": "ny-delaware-county",
+      "jurisdiction": "Delaware County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Delaware County Animal Abuser Registry",
+      "operator": "Delaware County Sheriff's Office",
+      "url": "https://www.delawarecountysheriffny.gov/animalAbuseRegistry",
+      "access": "public",
+      "established": "2021 (Local Law No. 15 of 2021)",
+      "legal_citation": "Delaware County Local Law No. 15 of 2021",
+      "retention": "7 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$125 one-time fee.",
+      "verification_notes": "$125 one-time fee. The page renders in the browser.",
+      "sources": [
+        "https://www.delawarecountysheriffny.gov/animalAbuseRegistry",
+        "https://www.delcony.gov/wp-content/uploads/2021/06/2021-Local-Law-15-Animal-Abuser-Registry.pdf"
+      ]
+    },
+    {
+      "id": "ny-rensselaer-county",
+      "jurisdiction": "Rensselaer County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Rensselaer County Animal Abuse Registry",
+      "operator": "Rensselaer County District Attorney's Office",
+      "url": "https://www.rensco.com/592/Animal-Abuse-Registry",
+      "access": "public",
+      "established": "2021 (Rensselaer County Animal Abuse Registration Act, adopted July 2021)",
+      "legal_citation": "Rensselaer County Animal Abuse Registration Act (2021); local law number not verified",
+      "retention": "15 yrs; life after a subsequent conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Applies to people 16 and older.",
+      "verification_notes": "Applies to persons 16+.",
+      "sources": [
+        "https://www.rensco.com/592/Animal-Abuse-Registry",
+        "http://web.archive.org/web/20210728194355/https://www.rensco.com/press/14-21-animal-abuse-legislation-passes-legislature/"
+      ]
+    },
+    {
+      "id": "ny-herkimer-county",
+      "jurisdiction": "Herkimer County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Herkimer County Animal Abuse Registry",
+      "operator": "Herkimer County Sheriff's Office (per law); posted on the county website",
+      "url": "https://www.herkimercountyny.gov/programs/animal-abuse-registry/",
+      "access": "public",
+      "established": "not verified (listings date from 2023)",
+      "legal_citation": "Herkimer County local law establishing an Animal Abuser Registry; number and year not verified",
+      "retention": "15 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$150 fee.",
+      "sources": [
+        "https://www.herkimercountyny.gov/programs/animal-abuse-registry/",
+        "https://www.herkimercountyny.gov/download/document.php?docid=4156"
+      ]
+    },
+    {
+      "id": "ny-columbia-county",
+      "jurisdiction": "Columbia County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Columbia County Animal Abuse Registry",
+      "operator": "Columbia County Sheriff's Office",
+      "url": "https://www.columbiacountysheriff.us/animal-abuse-registry.html",
+      "access": "public",
+      "established": "2024 (Local Law No. 3 of 2024, effective Sept. 11, 2024)",
+      "legal_citation": "Columbia County Local Law No. 3 of 2024",
+      "retention": "7 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$125 one-time fee.",
+      "sources": [
+        "https://www.columbiacountysheriff.us/animal-abuse-registry.html",
+        "https://www.columbiacountysheriff.us/uploads/1/0/6/8/106827239/local_law_3-2024_-_protecting_animals_from_abuse_by_establishing_a_registry_for_animal_abusers.pdf"
+      ]
+    },
+    {
+      "id": "ny-hamilton-county",
+      "jurisdiction": "Hamilton County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Hamilton County Animal Abuser Registry",
+      "operator": "Hamilton County Sheriff's Office",
+      "url": "https://www.hamiltoncountyny.gov/sheriff/animal-abuse-registry",
+      "access": "public",
+      "established": "2025 (Local Law No. 4 of 2025)",
+      "legal_citation": "Hamilton County Local Law No. 4 of 2025",
+      "retention": "7 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "This is Hamilton County, New York, not Ohio.",
+      "sources": [
+        "https://www.hamiltoncountyny.gov/sheriff/animal-abuse-registry",
+        "https://www.hamiltoncountyny.gov/sites/default/files/2025-10/Local_Law_No._4_of_2025.pdf"
+      ]
+    },
+    {
+      "id": "ny-saratoga-county",
+      "jurisdiction": "Saratoga County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Saratoga County Animal Abuser Registry",
+      "operator": "Saratoga County District Attorney",
+      "url": "https://www.saratogacountyny.gov/county-initiatives/animal-crimes/registry/",
+      "access": "public",
+      "established": "2025 (L.L. No. 2-2025, adopted Sept. 16, 2025; effective 90 days after filing)",
+      "legal_citation": "Saratoga County Code ch. 143, art. III, §§ 143-11 to 143-22",
+      "retention": "15 yrs; permanent after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$100 fee.",
+      "verification_notes": "$100 fee. The site returns 403 to scripted requests, but the page loaded through a standard fetch.",
+      "sources": [
+        "https://www.saratogacountyny.gov/county-initiatives/animal-crimes/registry/",
+        "https://ecode360.com/49275841"
+      ]
+    },
+    {
+      "id": "ny-cayuga-county",
+      "jurisdiction": "Cayuga County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Cayuga County Animal Abuse Registry",
+      "operator": "Cayuga County Sheriff's Office",
+      "url": "https://www.cayugacounty.gov/1852/Sheriff",
+      "access": "public",
+      "established": "2025 (L.L. No. 5-2025, adopted Nov. 25, 2025)",
+      "legal_citation": "Cayuga County Code ch. 125, art. II",
+      "retention": "15 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Open the “Animal Abuse Registry” tab on the Sheriff's page. $125 fee.",
+      "verification_notes": "The registry is under the 'Animal Abuse Registry' tab on the Sheriff's page. $125 fee. 2026 listings present.",
+      "sources": [
+        "https://www.cayugacounty.gov/1852/Sheriff",
+        "https://ecode360.com/34162068"
+      ]
+    },
+    {
+      "id": "ny-allegany-county",
+      "jurisdiction": "Allegany County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Allegany County Animal Abuser Registry",
+      "operator": "Allegany County Sheriff's Office",
+      "url": "https://www.alleganyco.gov/departments/sheriffs-office/allegany-county-animal-abuser-registry/",
+      "access": "public",
+      "established": "2025 law; applies to convictions on or after Jan. 1, 2026",
+      "legal_citation": "Allegany County Local Law No. 5-2025, per the Sheriff's page (the linked PDF's filename says No. 4-2025)",
+      "retention": "Not verified from the law text; listings show end dates 20 yrs after conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": null,
+      "verification_notes": "The site returns 403 to scripted requests, but the page loaded through a standard fetch.",
+      "sources": [
+        "https://www.alleganyco.gov/departments/sheriffs-office/allegany-county-animal-abuser-registry/"
+      ]
+    },
+    {
+      "id": "ny-livingston-county",
+      "jurisdiction": "Livingston County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Livingston County Animal Abuser Registry",
+      "operator": "Livingston County Sheriff's Office",
+      "url": "https://www.livingstonsheriffny.gov/animalabuserregistry",
+      "access": "public",
+      "established": "2026 (Local Law No. 1-2026, adopted Jan. 28, 2026)",
+      "legal_citation": "Livingston County Local Law No. 1-2026",
+      "retention": "15 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "$150 initial fee.",
+      "sources": [
+        "https://www.livingstonsheriffny.gov/animalabuserregistry",
+        "https://www.livingstonsheriffny.gov/_files/ugd/178609_fcaebad5810a458ba3fcc2d6eb51ef54.pdf"
+      ]
+    },
+    {
+      "id": "ny-steuben-county",
+      "jurisdiction": "Steuben County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Steuben County Animal Abuser Registry",
+      "operator": "Steuben County Sheriff's Office",
+      "url": "https://www.sheriff.steubencountyny.gov/animalRegistry",
+      "access": "public",
+      "established": "2026 (Local Law 2026 (1), per the Sheriff's site)",
+      "legal_citation": "Steuben County Local Law No. 1 of 2026 (per the Sheriff's site); text not reviewed",
+      "retention": "not verified",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "New in 2026.",
+      "verification_notes": "The page renders in the browser; listings were not verified.",
+      "sources": [
+        "https://www.sheriff.steubencountyny.gov/animalRegistry"
+      ]
+    },
+    {
+      "id": "ny-wyoming-county",
+      "jurisdiction": "Wyoming County, NY",
+      "level": "county",
+      "state": "NY",
+      "name": "Wyoming County Animal Abuser Registry (Ziggy's Law)",
+      "operator": "Wyoming County Sheriff's Office",
+      "url": "https://www.wyomingcountyny.gov/926/Animal-Abuser-Registry---Ziggys-Law",
+      "access": "public",
+      "established": "2026 (Local Law No. 3 of 2026, passed Sept. 8, 2026)",
+      "legal_citation": "Wyoming County Local Law No. 3 of 2026",
+      "retention": "15 yrs; life after a second conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "New in 2026; takes effect when filed with the New York Secretary of State. $150 one-time fee.",
+      "verification_notes": "New. It takes effect when filed with the NY Secretary of State (filing date not verified). The registry table had no listings. $150 one-time fee.",
+      "sources": [
+        "https://www.wyomingcountyny.gov/926/Animal-Abuser-Registry---Ziggys-Law",
+        "https://www.wyomingcountyny.gov/DocumentCenter/View/23434/Local-Law-3-2026---Adopted"
+      ]
+    },
+    {
+      "id": "fl-hillsborough-county",
+      "jurisdiction": "Hillsborough County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Hillsborough County Animal Abuser Registry",
+      "operator": "Hillsborough County (Code Enforcement registry manager)",
+      "url": "https://hcfl.gov/residents/animals-and-pets/animal-abuser-registry/search-the-registry",
+      "access": "public",
+      "established": "2016 (Ord. No. 16-18, approved Sept. 8, 2016; effective Nov. 1, 2016)",
+      "legal_citation": "Hillsborough County Code ch. 6, art. IV, §§ 6-171 et seq.",
+      "retention": "3 yrs first misdemeanor; 5 yrs first felony; 10 yrs second or subsequent",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Offenders register themselves within 10 business days and may not own or live with animals. Covers county residents, including Tampa.",
+      "sources": [
+        "https://hcfl.gov/residents/animals-and-pets/animal-abuser-registry/about-the-animal-abuser-registry",
+        "https://api.municode.com/search?clientId=6247&contentTypeId=CODES&searchText=%22animal%20abuser%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "fl-miami-dade-county",
+      "jurisdiction": "Miami-Dade County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Miami-Dade County Animal Abuser Registry",
+      "operator": "Miami-Dade Animal Services Department",
+      "url": "https://www.miamidade.gov/Apps/ASD/crueltyweb/",
+      "access": "public",
+      "established": "By Dec. 2019 (earliest archived copy)",
+      "legal_citation": "Miami-Dade County Code § 5-5(b)(2) (bars offenders from acquiring animals; section history runs through Ord. No. 18-09, eff. Feb. 17, 2018); the ordinance that created the registry was not identified",
+      "retention": "Ban periods: 3 yrs first misdemeanor, 5 yrs first felony, 10 yrs subsequent. Listed expirations were 3 or 5 yrs after disposition",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": null,
+      "verification_notes": "The app says the registry is for public access and awareness. 2026 dispositions present.",
+      "sources": [
+        "https://www.miamidade.gov/Apps/ASD/crueltyweb/",
+        "https://api.municode.com/search?clientId=11719&contentTypeId=CODES&searchText=%22prohibition%20on%20acquisition%20by%20offender%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "fl-volusia-county",
+      "jurisdiction": "Volusia County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Volusia County Animal Abuse Database",
+      "operator": "Volusia County Animal Services (data from the Clerk of Court)",
+      "url": "https://www.volusia.org/services/public-protection/animal-services/animal-abuse-listing.stml",
+      "access": "public",
+      "established": "By Oct. 2020 (earliest archived PDF)",
+      "legal_citation": "None found; an administrative listing (no ordinance located in the county code)",
+      "retention": "Listed for an indefinite period",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Covers convictions with an animal victim in Volusia County, plus pets forfeited under Fla. Stat. 828.073. Updated daily.",
+      "verification_notes": "Covers convictions with an animal victim in Volusia County, plus pets forfeited under F.S. 828.073. The PDF is regenerated daily.",
+      "sources": [
+        "https://www.volusia.org/services/public-protection/animal-services/animal-abuse-listing.stml",
+        "https://vcservices.vcgov.org/AnimalControlAttachments/VolusiaAnimalAbuse.pdf"
+      ]
+    },
+    {
+      "id": "fl-pasco-county",
+      "jurisdiction": "Pasco County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Pasco County Animal Abuser Search",
+      "operator": "Pasco County Clerk & Comptroller",
+      "url": "https://www.pascoclerk.com/153/Animal-Abuser-Search",
+      "access": "public",
+      "established": "2017 (Ord. No. 17-01, adopted Jan. 10, 2017; convictions on or after Mar. 1, 2017)",
+      "legal_citation": "Pasco County Code §§ 14-115, 14-116 (amended by Ord. 22-32)",
+      "retention": "The transfer ban stops applying once the conviction is more than 5 yrs old",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "The search itself is at https://app.pascoclerk.com/animalabusersearch/. Shelters and sellers must check it before transferring a dog, cat or rabbit.",
+      "sources": [
+        "https://www.pascoclerk.com/153/Animal-Abuser-Search",
+        "https://api.municode.com/search?clientId=7229&contentTypeId=CODES&searchText=%22animal%20abuser%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "fl-osceola-county",
+      "jurisdiction": "Osceola County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Osceola County Animal Cruelty Report",
+      "operator": "Osceola County Clerk of the Circuit Court & Comptroller",
+      "url": "https://courts.osceolaclerk.com/reports/AnimalCrueltyReportWeb.pdf",
+      "access": "public",
+      "established": "2018 (Ord. No. 2018-69, adopted Nov. 5, 2018)",
+      "legal_citation": "Osceola County Code §§ 4-3, 4-41",
+      "retention": "The transfer ban stops applying once the conviction is more than 5 yrs old",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "A PDF report maintained by the Clerk of Court and named in the county code.",
+      "verification_notes": "This PDF is the 'animal abuser link' named in the county code; it was regenerated on the check date. The Clerk, not the county, maintains it.",
+      "sources": [
+        "https://courts.osceolaclerk.com/reports/AnimalCrueltyReportWeb.pdf",
+        "https://api.municode.com/search?clientId=7166&contentTypeId=CODES&searchText=%22animal%20abuser%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "fl-brevard-county",
+      "jurisdiction": "Brevard County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Brevard County Animal Abuse Database Search",
+      "operator": "Brevard County (Animal Services; data from the Clerk of Courts)",
+      "url": "https://www.brevardfl.gov/AnimalAbuseDatabaseSearch",
+      "access": "public",
+      "established": "2020 (Ord. No. 20-01, adopted Jan. 7, 2020)",
+      "legal_citation": "Brevard County Code ch. 14, art. IV, §§ 14-129 to 14-131",
+      "retention": "10 yrs",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Could not be re-checked on the verification date; last confirmed November 15, 2025.",
+      "verification_notes": "Live check blocked: the site returns 403 to automated requests. The last successful archived copy is from Nov. 15, 2025.",
+      "sources": [
+        "http://web.archive.org/web/20251115231725/https://www.brevardfl.gov/AnimalAbuseDatabaseSearch",
+        "https://api.municode.com/search?clientId=683&contentTypeId=CODES&searchText=%22animal%20abuse%20registry%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "fl-collier-county",
+      "jurisdiction": "Collier County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Collier County Animal Abuser Registry (Animal Abuse Search)",
+      "operator": "Collier County Sheriff's Office",
+      "url": "https://www2.colliersheriff.org/animalabusesearch",
+      "access": "public",
+      "established": "2024 (Ord. No. 2024-24, adopted May 28, 2024)",
+      "legal_citation": "Collier County Code §§ 14-106 et seq.",
+      "retention": "3 yrs first misdemeanor; 5 yrs first felony; 10 yrs subsequent; 3 more yrs for any violation",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Also lists people barred by court order from having animals. Applies countywide unless a city opts out.",
+      "sources": [
+        "https://www2.colliersheriff.org/animalabusesearch",
+        "https://www2.colliersheriff.org/AnimalAbuseSearch/content/ordinance.pdf"
+      ]
+    },
+    {
+      "id": "fl-lee-county",
+      "jurisdiction": "Lee County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Lee County Animal Abuser Registry",
+      "operator": "Lee County Sheriff's Office",
+      "url": "https://www.sheriffleefl.org/animal-abuser-registry/",
+      "access": "public",
+      "established": "2023 (Ord. No. 23-30, adopted Dec. 5, 2023)",
+      "legal_citation": "Lee County Code ch. 4, art. III, §§ 4-70 et seq.",
+      "retention": "3 yrs first misdemeanor; 5 yrs first felony; 10 yrs subsequent",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "The page also lists people barred by court order from having animals.",
+      "sources": [
+        "https://www.sheriffleefl.org/animal-abuser-registry/",
+        "https://api.municode.com/search?clientId=11749&contentTypeId=CODES&searchText=%22animal%20abuser%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "fl-leon-county",
+      "jurisdiction": "Leon County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Leon County Animal Abuse Registry",
+      "operator": "Leon County Animal Control (data via the Leon County Clerk of Court)",
+      "url": "https://cms.leoncountyfl.gov/Government/Departments/Public-Safety/Animal-Control/Report-Animal-Abuse",
+      "access": "public",
+      "established": "2017 (Ord. No. 17-18, Nov. 14, 2017; launched late 2017)",
+      "legal_citation": "Leon County Code § 4-202 (amended by Ord. 23-01)",
+      "retention": "5 yrs after release or judgment",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "The short address leoncountyfl.gov/AnimalAbuse also works.",
+      "verification_notes": "The short URL leoncountyfl.gov/AnimalAbuse redirects here. The embedded Clerk frame blocks automated requests.",
+      "sources": [
+        "https://cms.leoncountyfl.gov/Government/Departments/Public-Safety/Animal-Control/Report-Animal-Abuse",
+        "https://api.municode.com/search?clientId=11247&contentTypeId=CODES&searchText=%22animal%20abuser%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "fl-tallahassee-city",
+      "jurisdiction": "Tallahassee, FL",
+      "level": "city",
+      "state": "FL",
+      "name": "City of Tallahassee Animal Abuser Registry",
+      "operator": "City of Tallahassee Animal Services (data via the Leon County Clerk)",
+      "url": "https://www.talgov.com/animals/asc-abuse",
+      "access": "public",
+      "established": "2017 (Ord. No. 17-O-10AA, Apr. 26, 2017)",
+      "legal_citation": "Tallahassee Code of General Ordinances § 4-13",
+      "retention": "5 yrs after release or judgment",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Uses the Leon County Clerk's registry data.",
+      "verification_notes": "Embeds the Leon County Clerk's registry frame.",
+      "sources": [
+        "https://www.talgov.com/animals/asc-abuse",
+        "https://api.municode.com/search?clientId=4575&contentTypeId=CODES&searchText=%22abuser%20registry%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "fl-marion-county",
+      "jurisdiction": "Marion County, FL",
+      "level": "county",
+      "state": "FL",
+      "name": "Marion County Animal Abuser Registry (Molly's Law)",
+      "operator": "Marion County Animal Services",
+      "url": "https://animalservices.marionfl.org/animal-control/animal-control-and-pet-laws/animal-abuser-registry",
+      "access": "public",
+      "established": "2016 (Ord. No. 16-34, Oct. 4, 2016; amended by Ord. 25-03, Feb. 4, 2025)",
+      "legal_citation": "Marion County Code § 4-15",
+      "retention": "3 yrs first misdemeanor; 5 yrs first felony; 10 yrs subsequent",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "Could not be re-checked on the verification date. In April 2026 the page pointed visitors to the FDLE statewide list, so the county may no longer keep its own.",
+      "verification_notes": "Live check blocked (403). An Apr. 13, 2026 archived copy sends users to the FDLE statewide search; the county may no longer keep its own list.",
+      "sources": [
+        "http://web.archive.org/web/20260413032757/https://animalservices.marionfl.org/animal-control/animal-control-and-pet-laws/animal-abuser-registry",
+        "https://api.municode.com/search?clientId=11253&contentTypeId=CODES&searchText=%22animal%20abuser%22&pageNum=1&pageSize=10"
+      ]
+    },
+    {
+      "id": "il-cook-county",
+      "jurisdiction": "Cook County, IL",
+      "level": "county",
+      "state": "IL",
+      "name": "Cook County Animal Abuser Registry",
+      "operator": "Cook County Sheriff's Office",
+      "url": "https://cookcountysheriffil.gov/animal-abuser-registry/",
+      "access": "public",
+      "established": "2016 (Ord. No. 16-2631, adopted May 11, 2016)",
+      "legal_citation": "Cook County Code ch. 46, art. II, div. 1, subdiv. II, §§ 46-38 et seq.",
+      "retention": "15 yrs from the judgment of conviction; life after a subsequent conviction",
+      "status": "active",
+      "verified_on": "2026-09-29",
+      "notes": "The search itself is at https://animalabuserregistry.ccsheriff.org/. $125 fee. Reported to cover all Cook County municipalities, including Chicago.",
+      "sources": [
+        "https://cookcountysheriffil.gov/animal-abuser-registry/",
+        "https://cookcountysheriffil.gov/wp-content/uploads/2021/01/Animal_Abuser_Registry.pdf"
+      ]
+    }
+  ],
+  "proposals": [
+    {
+      "id": "ny-statewide-bills-2025",
+      "jurisdiction": "New York (statewide)",
+      "level": "state",
+      "state": "NY",
+      "bill": "A2194 (would add Agriculture and Markets Law § 353-g; earlier version A5809-2023), S8084/S8084A, A9024 and A10119/A10119A, 2025–26 session",
+      "detail": "All still in committee; last actions January–February 2026.",
+      "sources": [
+        "https://www.nysenate.gov/legislation/bills/2025/A2194"
+      ]
+    },
+    {
+      "id": "nyc-int-0782-2026",
+      "jurisdiction": "New York City, NY",
+      "level": "city",
+      "state": "NY",
+      "bill": "Int. 0782-2026",
+      "detail": "Would make the city health department's restricted Animal Abuse Registry publicly searchable. Referred to committee March 26, 2026.",
+      "sources": [
+        "https://legistar.council.nyc.gov/LegislationDetail.aspx?ID=78523&GUID=1EF5E2EC-E177-4C95-B930-28CDF51C2C57"
+      ]
+    },
+    {
+      "id": "wv-hb2204-2025",
+      "jurisdiction": "West Virginia (statewide)",
+      "level": "state",
+      "state": "WV",
+      "bill": "HB 2204 (2025)",
+      "detail": "'Establishing an animal abuser registry'. Referred to the House Judiciary Committee February 12, 2025.",
+      "sources": [
+        "https://www.wvlegislature.gov/Bill_Status/bills_history.cfm?input=2204&year=2025&sessiontype=RS&btype=bill"
+      ]
+    },
+    {
+      "id": "la-hb161-2019",
+      "jurisdiction": "Louisiana (statewide)",
+      "level": "state",
+      "state": "LA",
+      "bill": "HB 161 (2019)",
+      "detail": "Would have required registration with the Department of Agriculture and Forestry for 10 years (life for repeat offenders). Pulled from committee in May 2019.",
+      "sources": [
+        "https://www.theadvocate.com/gambit/new_orleans/news/article_9320f6e0-7dac-11e9-8008-fb5ffc69bfdd.html"
+      ]
+    },
+    {
+      "id": "pa-hb351-2015",
+      "jurisdiction": "Pennsylvania (statewide)",
+      "level": "state",
+      "state": "PA",
+      "bill": "HB 351 (2015–16), following HB 265 (2013)",
+      "detail": "Referred to the House Judiciary Committee February 9, 2015; no further action.",
+      "sources": [
+        "https://www.palegis.us/legislation/bills/2015/hb351"
+      ]
+    },
+    {
+      "id": "ny-erie-county-2015",
+      "jurisdiction": "Erie County, NY",
+      "level": "county",
+      "state": "NY",
+      "bill": "Local Law Intro 5-1 (about 2014–15)",
+      "detail": "Sat in committee; no enacted law or registry found.",
+      "sources": [
+        "http://web.archive.org/web/20171204015037/http://www2.erie.gov/burke/index.php?q=legislator-pat-burke-requests-hearing-animal-abuse-registry-0"
+      ]
+    },
+    {
+      "id": "wa-sb5144-hb1786",
+      "jurisdiction": "Washington (statewide)",
+      "level": "state",
+      "state": "WA",
+      "bill": "SB 5144 (2011–12; companion HB 1800) and HB 1786 (2013–14)",
+      "detail": "'Requiring registration of animal abusers'. Referred to Judiciary committees; not enacted.",
+      "sources": [
+        "https://app.leg.wa.gov/billsummary?BillNumber=5144&Year=2011",
+        "https://app.leg.wa.gov/billsummary?BillNumber=1786&Year=2013"
+      ]
+    },
+    {
+      "id": "fl-statewide-2012",
+      "jurisdiction": "Florida (statewide)",
+      "level": "state",
+      "state": "FL",
+      "bill": "Earlier 'Dexter's Law' effort (2012)",
+      "detail": "Failed in 2012. Florida enacted a statewide list in 2025 (see the FDLE registry).",
+      "sources": [
+        "https://aldf.org/article/animal-abuser-registry-created-in-florida-county/"
+      ]
+    },
+    {
+      "id": "va-2011-proposal",
+      "jurisdiction": "Virginia (statewide)",
+      "level": "state",
+      "state": "VA",
+      "bill": "2011 proposal (bill number not verified)",
+      "detail": "The ASPCA cites a $1 million cost estimate among proposals dropped over cost.",
+      "sources": [
+        "https://www.aspca.org/about-us/aspca-policy-and-position-statements/position-statement-animal-abuser-registries"
+      ]
+    },
+    {
+      "id": "ca-proposal",
+      "jurisdiction": "California (statewide)",
+      "level": "state",
+      "state": "CA",
+      "bill": "Statewide proposal (bill number and year not verified)",
+      "detail": "The ASPCA cites cost estimates of $750,000 to $2 million among proposals dropped over cost.",
+      "sources": [
+        "https://www.aspca.org/about-us/aspca-policy-and-position-statements/position-statement-animal-abuser-registries"
+      ]
+    }
+  ],
+  "leads": [
+    {
+      "id": "ny-fulton-county",
+      "jurisdiction": "Fulton County, NY",
+      "state": "NY",
+      "finding": "Local Law 2 of 2025 adopted; the Sheriff's page links to nysanimalabuseregistry.org.",
+      "reason": "The list is on a non-government domain built with a third-party tool; operator and enacted text not confirmed.",
+      "sources": [
+        "https://www.fultoncountyny.gov/sheriffs-office",
+        "https://www.nysanimalabuseregistry.org/"
+      ]
+    },
+    {
+      "id": "ny-otsego-county",
+      "jurisdiction": "Otsego County, NY",
+      "state": "NY",
+      "finding": "Local Law No. 3 of 2025 adopted and a Sheriff's registry page exists.",
+      "reason": "Page unfinished (blank effective date); no working registry confirmed.",
+      "sources": [
+        "https://www.otsegocounty.com/departments/s-y/sheriff_s_office/animal_abuse_registry.php"
+      ]
+    },
+    {
+      "id": "fl-manatee-county",
+      "jurisdiction": "Manatee County, FL",
+      "state": "FL",
+      "finding": "The Clerk publishes a 10-year list of civil and criminal animal cases.",
+      "reason": "A court-case report, not an offender registry: includes civil cases and is not limited to convictions.",
+      "sources": [
+        "https://www.manateeclerk.com/online-searches/animal-cases/"
+      ]
+    },
+    {
+      "id": "fl-other-counties",
+      "jurisdiction": "Florida counties",
+      "state": "FL",
+      "finding": "Leon County's 2017 launch notice said 20 Florida counties had registries; 10 plus Tallahassee are confirmed here.",
+      "reason": "Remaining county registries not located; some may have been replaced by the FDLE statewide list.",
+      "sources": [
+        "https://aldf.org/article/animal-abuser-registry-created-in-florida-county/"
+      ]
+    },
+    {
+      "id": "pr-puerto-rico",
+      "jurisdiction": "Puerto Rico",
+      "state": "PR",
+      "finding": "No registry provision in the original text of Ley Núm. 154 de 2008.",
+      "reason": "Later amendments not reviewed.",
+      "sources": [
+        "https://www.lexjuris.com/lexlex/Leyes2008/lexl2008154.htm"
+      ]
+    },
+    {
+      "id": "il-statewide",
+      "jurisdiction": "Illinois (statewide)",
+      "state": "IL",
+      "finding": "No statewide registry or bill verified.",
+      "reason": "The Illinois General Assembly site could not be checked.",
+      "sources": [
+        "https://cookcountysheriffil.gov/animal-abuser-registry/"
+      ]
+    },
+    {
+      "id": "oh-hamilton-county",
+      "jurisdiction": "Hamilton County, OH",
+      "state": "OH",
+      "finding": "No registry found on county or Sheriff sites.",
+      "reason": "Probably confused with Hamilton County, NY, which has one.",
+      "sources": [
+        "https://www.hcso.org/"
+      ]
+    },
+    {
+      "id": "tn-knox-county",
+      "jurisdiction": "Knox County, TN",
+      "state": "TN",
+      "finding": "No county registry in the Knox County Code.",
+      "reason": "Tennessee's statewide TBI registry covers Knox County convictions.",
+      "sources": [
+        "https://www.tn.gov/tbi/tennessee-animal-abuse-registry.html"
+      ]
+    },
+    {
+      "id": "az-2014-proposal",
+      "jurisdiction": "Arizona (statewide)",
+      "state": "AZ",
+      "finding": "A 2014 proposal by two legislators was reported in the press.",
+      "reason": "Bill number and outcome not verified; no Arizona registry found.",
+      "sources": [
+        "http://www.phoenixnewtimes.com/news/animal-abuse-registry-proposed-by-a-pair-of-arizona-lawmakers-6626981"
+      ]
+    }
+  ]
 }
