@@ -12,8 +12,8 @@ body:
     id: jurisdiction
     attributes:
       label: Jurisdiction
-      description: State, county or city the source covers.
-      placeholder: e.g. Tennessee, or Suffolk County, NY
+      description: Country, state, county or city the source covers. IROPO covers the United States, China and India.
+      placeholder: e.g. Tennessee; Suffolk County, NY; or Maharashtra, India
     validations:
       required: true
   - type: input

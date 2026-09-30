@@ -50,8 +50,15 @@
           "additionalProperties": false,
           "required": ["country", "state"],
           "properties": {
-            "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
-            "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+            "country": {
+              "enum": ["US", "CN", "IN"],
+              "description": "ISO 3166-1 alpha-2 code. IROPO covers the United States and, beyond it, only the countries with more people: China and India."
+            },
+            "state": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$",
+              "description": "US state or DC postal abbreviation, or the ISO 3166-2 subdivision code without the country prefix, such as 'GD' for Guangdong or 'MH' for Maharashtra."
+            },
             "county": { "type": "string" },
             "city": { "type": "string" }
           }
@@ -59,7 +66,7 @@
         "agency_ori": {
           "type": "string",
           "pattern": "^[A-Z]{2}[A-Z0-9]{7}$",
-          "description": "Nine-character NCIC Originating Agency Identifier of the investigating agency."
+          "description": "Nine-character NCIC Originating Agency Identifier of the investigating agency (US cases only)."
         },
         "court": { "type": "string" },
         "case_number": { "type": "string" },

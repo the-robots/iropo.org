@@ -1,6 +1,6 @@
 # IROPO — International Registry of Pet Offenders
 
-IROPO is an animal-welfare advocacy project that documents animal cruelty using public and official data sources, with the long-term goal of a trustworthy registry of people who have harmed animals.
+IROPO is an animal-welfare advocacy project that documents animal cruelty in the United States and beyond using public and official data sources, with the long-term goal of a trustworthy registry of people who have harmed animals.
 
 **Live site: [iropo.org](https://iropo.org)**
 
@@ -18,6 +18,12 @@ Today the project:
 - **tracks coverage and data quality** for every state, including reporting gaps;
 - **links to official, government-run animal abuser registries** instead of copying their listings;
 - **defines the record format and publication rules** for a future registry of adjudicated cases.
+
+### Scope: the United States and beyond
+
+IROPO covers the United States today. Beyond the US, the scope is deliberately limited to the only countries with more people than the United States: **China** and **India**. Together with the US, they are the world's three most populous countries.
+
+Laws on animal cruelty, court records and personal data differ from country to country, and many are much stricter than in the US. Each country needs its own legal review and source evaluation, including its data protection law (China's Personal Information Protection Law and India's Digital Personal Data Protection Act, 2023), before any of its data is published. Keeping the list short keeps that work manageable. Other countries are out of scope. See [Beyond the United States](#beyond-the-united-states) in the roadmap.
 
 ## The website
 
@@ -215,6 +221,14 @@ The [roadmap page](https://iropo.org/roadmap/) tracks the same milestones.
 - [ ] Establish an ongoing maintenance plan for reviews, corrections and archival decisions (the monthly data refresh is automated).
 - [x] Publish clear expectations for what has and has not been verified.
 
+### Beyond the United States
+
+- [x] Limit the scope beyond the US to the only countries with more people: China and India ([iropo.org/about](https://iropo.org/about/#scope)).
+- [ ] Obtain a legal review for each country covering animal cruelty, court record and personal data law.
+- [ ] Catalog and evaluate official animal cruelty data and court record sources in China and India.
+- [ ] Recruit volunteers and partners with legal and language expertise in each country.
+- [ ] Extend the schemas, pipeline and site to jurisdictions outside the US. The registry record schema already accepts only `US`, `CN` and `IN` as countries.
+
 ## How to contribute
 
 Contributions are welcome, especially:
@@ -234,6 +248,7 @@ Because this project concerns information about identifiable people and alleged 
 - data should come from public, official or otherwise reviewable records;
 - accuracy, verification and provenance matter more than speed;
 - any eventual public listing must have a correction or removal path;
+- each country in scope (the United States, China and India) needs its own legal review, because privacy and records laws differ by country;
 - contributors should be mindful of privacy, defamation and jurisdiction-specific legal risks when handling or publishing information.
 
 These points are not legal advice; they must be addressed before any public registry is treated as authoritative.
