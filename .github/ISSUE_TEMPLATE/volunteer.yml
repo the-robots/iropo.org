@@ -1,0 +1,24 @@
+name: Volunteer
+description: Offer your time or expertise.
+title: "Volunteer: "
+labels: ["help wanted"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: How would you like to help?
+      multiple: true
+      options:
+        - Data research
+        - Engineering (pipeline or website)
+        - Legal expertise
+        - Design or writing
+        - Animal welfare partnership
+        - Outreach
+        - In-kind support or sponsorship
+    validations:
+      required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: Tell us a little about yourself and what you'd like to work on

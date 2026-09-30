@@ -1,0 +1,26 @@
+name: Report a correction
+description: Something on iropo.org looks wrong.
+title: "Correction: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Issues are public. Please do not include personal information.
+  - type: input
+    id: page
+    attributes:
+      label: Page address
+      placeholder: https://iropo.org/states/nc/
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong, and what should it say?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source (optional)
+      description: A link that supports the correction.

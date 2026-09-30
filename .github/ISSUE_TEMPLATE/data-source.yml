@@ -1,0 +1,41 @@
+name: Suggest a data source
+description: Point us to an official public source of animal cruelty records.
+title: "Data source: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping IROPO find reliable public records. Please share **sources**, not names
+        or allegations about individual people.
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+      description: State, county or city the source covers.
+      placeholder: e.g. Tennessee, or Suffolk County, NY
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link to the source
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of source
+      options:
+        - Official animal abuser registry
+        - Court records portal
+        - Law enforcement agency data or press releases
+        - Open data portal
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What does it contain and how can it be accessed?
+      description: Searchable or downloadable? Any terms of use that limit reuse?
