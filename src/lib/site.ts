@@ -3,7 +3,7 @@ export const SITE = {
   longName: "International Registry of Pet Offenders",
   url: "https://iropo.org",
   description:
-    "IROPO turns official FBI crime data and public records into one verifiable source of truth on animal cruelty in the United States.",
+    "IROPO turns official crime data and public records into one verifiable source of truth on animal cruelty in the United States and beyond.",
   repo: "https://github.com/the-robots/iropo.org",
 };
 

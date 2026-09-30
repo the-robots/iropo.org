@@ -5,7 +5,7 @@ import pytest
 
 from iropo_pipeline import config
 from iropo_pipeline.build import _dumps, publishable
-from iropo_pipeline.validate import validate_all
+from iropo_pipeline.validate import _schema, validate_all
 
 
 def record(**overrides):
@@ -36,6 +36,39 @@ def test_publication_gate_requires_two_reviewers_and_unexpired_listing():
     assert not publishable(record(verification={"reviewers": ["alice", "Alice"]}), today)
     assert not publishable(record(listing={"expires_at": "2026-09-30"}), today)
     assert publishable(record(listing={"expires_at": "2027-01-01"}), today)
+
+
+def test_registry_records_are_limited_to_countries_in_scope():
+    validator = _schema("registry-record.schema.json")
+
+    def full_record(country, state):
+        return {
+            "id": "iropo-test0001",
+            "status": "draft",
+            "subject": {"kind": "person", "name": {"full": "Test Subject"}},
+            "case": {
+                "jurisdiction": {"country": country, "state": state},
+                "offense": {"description": "Animal cruelty"},
+                "disposition": "convicted",
+            },
+            "sources": [
+                {
+                    "type": "court_record",
+                    "url": "https://example.org/case",
+                    "retrieved_at": "2026-09-30T00:00:00Z",
+                }
+            ],
+            "provenance": {
+                "created_at": "2026-09-30T00:00:00Z",
+                "updated_at": "2026-09-30T00:00:00Z",
+                "created_by": "test",
+            },
+        }
+
+    for country, state in (("US", "NC"), ("CN", "GD"), ("IN", "MH")):
+        assert list(validator.iter_errors(full_record(country, state))) == []
+    for country in ("CA", "GB", "BR"):
+        assert list(validator.iter_errors(full_record(country, "ON")))
 
 
 def test_dumps_keeps_scalar_arrays_on_one_line():

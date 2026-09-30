@@ -14,7 +14,8 @@ improvement to its sources, code or documentation helps.
 ## Ways to help
 
 - **Data sources** — document public or official sources such as court portals, government animal
-  abuser registries and agency data. Use the [data source form](https://github.com/the-robots/iropo.org/issues/new?template=data-source.yml).
+  abuser registries and agency data in the United States, China or India, the countries in
+  [IROPO's scope](README.md#scope-the-united-states-and-beyond). Use the [data source form](https://github.com/the-robots/iropo.org/issues/new?template=data-source.yml).
 - **Corrections** — report wrong numbers, names or ORI links with the
   [correction form](https://github.com/the-robots/iropo.org/issues/new?template=correction.yml).
 - **Pipeline** — add importers, improve parsing and matching, or extend validation in [`pipeline/`](pipeline).

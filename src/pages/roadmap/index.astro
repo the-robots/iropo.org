@@ -70,6 +70,18 @@ const phases: Phase[] = [
       { text: "Long-term maintenance plan for updates, reviews and corrections", status: "progress" },
     ],
   },
+  {
+    name: "Phase 4: Beyond the United States",
+    summary: "Expansion limited to the only countries with more people than the US: China and India.",
+    status: "planned",
+    items: [
+      { text: "Limit the scope beyond the US to China and India", status: "done", link: "/about/#scope" },
+      { text: "Legal review of each country's animal cruelty, court record and personal data laws", status: "planned" },
+      { text: "Catalog and evaluate official animal cruelty data and court records in China and India", status: "planned" },
+      { text: "Recruit volunteers and partners with legal and language expertise in each country", status: "planned" },
+      { text: "Extend the schemas, pipeline and site to jurisdictions outside the US", status: "planned" },
+    ],
+  },
 ];
 
 const LABEL: Record<Status, string> = { done: "Done", progress: "In progress", planned: "Planned" };
@@ -86,7 +98,7 @@ const flow = [
 ];
 ---
 
-<BaseLayout title="Roadmap" description="IROPO's phased plan: foundation, data aggregation, platform and launch, with what is done and what comes next.">
+<BaseLayout title="Roadmap" description="IROPO's phased plan: foundation, data aggregation, platform, launch and expansion beyond the United States, with what is done and what comes next.">
   <PageHeader
     eyebrow="Roadmap"
     title="Where the project is headed"
