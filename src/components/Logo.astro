@@ -1,0 +1,27 @@
+---
+interface Props {
+  size?: number;
+  class?: string;
+}
+const { size = 32, class: className } = Astro.props;
+---
+
+<svg
+  class={className}
+  width={size}
+  height={size}
+  viewBox="0 0 64 64"
+  aria-hidden="true"
+  focusable="false"
+>
+  <rect width="64" height="64" rx="15" fill="var(--brand, #0e6e67)"></rect>
+  <g fill="var(--logo-ink, #fdf0e1)">
+    <ellipse cx="17.5" cy="28" rx="5" ry="6.4" transform="rotate(-20 17.5 28)"></ellipse>
+    <ellipse cx="26.5" cy="19" rx="5.2" ry="6.8" transform="rotate(-8 26.5 19)"></ellipse>
+    <ellipse cx="37.5" cy="19" rx="5.2" ry="6.8" transform="rotate(8 37.5 19)"></ellipse>
+    <ellipse cx="46.5" cy="28" rx="5" ry="6.4" transform="rotate(20 46.5 28)"></ellipse>
+    <path
+      d="M32 33c-6.6 0-13.2 6.6-14.6 12.2-1.1 4.7 2.2 8 6.6 7.5 3-.3 5-1.7 8-1.7s5 1.4 8 1.7c4.4.5 7.7-2.8 6.6-7.5C45.2 39.6 38.6 33 32 33z"
+    ></path>
+  </g>
+</svg>

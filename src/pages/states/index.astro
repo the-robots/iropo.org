@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import TileMap from "../../components/charts/TileMap.astro";
+import Sparkline from "../../components/charts/Sparkline.astro";
+import SourceNote from "../../components/SourceNote.astro";
+import { LATEST_TABLE_YEAR, LATEST_YEAR } from "../../lib/data";
+import { fmt, fmtPct, fmtRate, fmtShare } from "../../lib/format";
+import { binner, comparable, qualityNotes, rankStates } from "../../lib/stats";
+
+const ranked = rankStates(50).sort((a, b) => a.state.name.localeCompare(b.state.name));
+const items = ranked.map(({ state, latest }) => ({
+  abbr: state.abbr,
+  name: state.name,
+  slug: state.slug,
+  value: comparable(latest) ? latest.rate_per_100k : null,
+  display: fmtRate(latest.rate_per_100k),
+}));
+const scale = binner(items.map((i) => i.value).filter((v): v is number => v !== null));
+---
+
+<BaseLayout
+  title="Animal cruelty by state"
+  description={`Compare reported animal cruelty offenses, rates, clearances and NIBRS coverage for all 50 states and DC in ${LATEST_YEAR}.`}
+>
+  <PageHeader
+    eyebrow="States"
+    title="Animal cruelty by state"
+    lede={`Reported offenses, rates and reporting coverage for all 50 states and the District of Columbia in ${LATEST_YEAR}. Select a state for its full history and the agencies behind the numbers.`}
+    crumbs={[{ label: "States" }]}
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="stack">
+          <h2>Offenses per 100,000 residents, {LATEST_YEAR}</h2>
+          <p>
+            Rates use the population served by agencies that report to NIBRS. Hatched states are not
+            comparable: NIBRS covers less than half their residents, or agencies report almost no
+            cruelty despite broad coverage.
+          </p>
+          <SourceNote />
+        </div>
+        <TileMap items={items} thresholds={scale.thresholds} legendTitle="Per 100,000" emptyLabel="Not comparable" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="table-title">
+    <div class="container" data-table-tools>
+      <div class="section-head">
+        <h2 id="table-title">All states</h2>
+        <p>Select a column heading to sort.</p>
+      </div>
+      <div class="table-tools">
+        <div class="field">
+          <label for="state-filter">Filter states</label>
+          <input id="state-filter" type="search" placeholder="e.g. Texas" data-filter-text autocomplete="off" />
+        </div>
+        <span class="status" data-filter-status aria-live="polite"></span>
+      </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="States table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" data-sort="text"><button type="button">State</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Offenses {LATEST_YEAR}</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Per 100,000</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Rank</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Cleared</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Coverage</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Agencies with cases</button></th>
+              <th scope="col">Since {ranked[0].state.annual[0].year}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              ranked.map(({ state, latest, rank }) => {
+                const notes = qualityNotes(state);
+                return (
+                  <tr data-search={`${state.name} ${state.abbr}`}>
+                    <th scope="row">
+                      <a href={`/states/${state.slug}/`}>{state.name}</a>
+                      {notes.length > 0 && <span class="cell-sub">{notes.map((n) => n.kind === "gap" ? "Reporting gap" : n.kind === "coverage" ? "Low coverage" : n.kind === "welfare" ? "Includes animal welfare agencies" : "Recent NIBRS coverage").join(" · ")}</span>}
+                    </th>
+                    <td class="num" data-value={latest.offenses ?? ""}>{fmt(latest.offenses)}</td>
+                    <td class="num" data-value={latest.rate_per_100k ?? ""}>{fmtRate(latest.rate_per_100k)}</td>
+                    <td class="num" data-value={rank ?? ""}>{rank ?? "—"}</td>
+                    <td class="num" data-value={latest.clearance_rate ?? ""}>{fmtShare(latest.clearance_rate)}</td>
+                    <td class="num" data-value={latest.coverage_pct}>{fmtPct(latest.coverage_pct)}</td>
+                    <td class="num" data-value={state.agencies.with_cases[String(LATEST_TABLE_YEAR)] ?? 0}>
+                      {fmt(state.agencies.with_cases[String(LATEST_TABLE_YEAR)] ?? 0)}
+                      <span class="cell-sub">of {fmt(state.agencies.reporting[String(LATEST_TABLE_YEAR)] ?? 0)}</span>
+                    </td>
+                    <td>
+                      <Sparkline values={state.annual.map((p) => p.offenses)} label={`${state.name} offenses by year`} />
+                    </td>
+                  </tr>
+                );
+              })
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin-top: var(--space-3)">
+        Rank compares rates among states with at least 50% NIBRS coverage and no apparent reporting
+        gap. "Agencies with cases" counts agencies in the FBI's {LATEST_TABLE_YEAR} agency tables that
+        recorded at least one animal cruelty offense.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import "../../scripts/table-tools";
+</script>

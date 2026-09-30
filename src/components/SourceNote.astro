@@ -1,0 +1,41 @@
+---
+import { meta } from "../lib/data";
+import { fmtDate } from "../lib/format";
+
+interface Props {
+  children?: unknown;
+}
+---
+
+<p class="source-note">
+  <span class="source-note__label">Source</span>
+  <span>
+    <slot>
+      FBI Uniform Crime Reporting Program, National Incident-Based Reporting System (NIBRS), via the
+      <a href="https://cde.ucr.cjis.gov/">Crime Data Explorer</a>.
+    </slot>
+    Retrieved {fmtDate(meta.data_retrieved_at)}. <a href="/sources/">Methodology &amp; downloads</a>.
+  </span>
+</p>
+
+<style>
+  .source-note {
+    display: flex;
+    gap: 0.6rem;
+    align-items: baseline;
+    font-size: var(--step--1);
+    color: var(--muted);
+    margin: var(--space-4) 0 0;
+  }
+  .source-note__label {
+    flex: none;
+    font-size: 0.7rem;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-2);
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    padding: 0.05rem 0.35rem;
+  }
+</style>

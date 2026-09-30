@@ -1,0 +1,184 @@
+---
+import Logo from "./Logo.astro";
+import { NAV } from "../lib/site";
+
+const path = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/">
+      <Logo size={36} />
+      <span class="brand__text">
+        <strong>IROPO</strong>
+        <span class="brand__sub">International Registry of Pet Offenders</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        ></path>
+      </svg>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        {
+          NAV.map((item) => (
+            <li>
+              <a href={item.href} aria-current={path.startsWith(item.href) ? "page" : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="btn btn--primary site-nav__cta" href="/get-involved/">Get involved</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    -webkit-backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    min-height: 4.25rem;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--text);
+    text-decoration: none;
+    margin-right: auto;
+  }
+  .brand__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  .brand strong {
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+  }
+  .brand__sub {
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+  }
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .site-nav ul {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .site-nav li {
+    margin: 0;
+  }
+  .site-nav ul a {
+    display: block;
+    padding: 0.45rem 0.7rem;
+    border-radius: 999px;
+    color: var(--text-2);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .site-nav ul a:hover {
+    background: var(--surface-2);
+    color: var(--text);
+  }
+  .site-nav ul a[aria-current="page"] {
+    background: var(--brand-soft);
+    color: var(--brand-strong);
+  }
+  .site-nav__cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+  .nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  @media (max-width: 62rem) {
+    .nav-toggle {
+      display: inline-flex;
+    }
+    .site-nav {
+      display: none;
+      position: absolute;
+      inset: 100% 0 auto 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--space-3);
+      padding: var(--space-4) 1.25rem var(--space-5);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .site-nav[data-open="true"] {
+      display: flex;
+    }
+    .site-nav ul {
+      flex-direction: column;
+    }
+    .site-nav ul a {
+      padding: 0.7rem 0.8rem;
+      border-radius: var(--radius-sm);
+      font-size: 1.05rem;
+    }
+    .site-nav__cta {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 26rem) {
+    .brand__sub {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
+  const nav = document.getElementById("site-nav");
+  if (toggle && nav) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute("aria-expanded", String(open));
+      nav.dataset.open = String(open);
+    };
+    toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.dataset.open === "true") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+  }
+</script>

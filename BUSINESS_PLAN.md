@@ -49,6 +49,8 @@ Before any funding or public launch, IROPO needs a formal legal footing:
 
 This maps directly onto the existing README roadmap, sequenced into phases with funding gates.
 
+> **Status (September 2026):** the canonical record schema and draft publication, correction and dispute policies are done (Phase 0). The automated FBI importer covers all 50 states and DC with provenance and a coverage matrix (Phase 1). The framework decision is made and the public site, search and open-data downloads are live at `iropo.org` on free GitHub Pages hosting (Phase 2). Legal structure, legal review, court-record sources and the individual-record verification workflow remain open. See the [roadmap](https://iropo.org/roadmap/).
+
 ### Phase 0 — Foundation (pre-funding)
 - Formalize legal structure (fiscal sponsorship or nonprofit filing).
 - Define the canonical offender/case record schema (fields, identifiers, source references, dates).

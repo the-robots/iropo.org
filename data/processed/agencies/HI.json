@@ -1,0 +1,20 @@
+{
+  "state": "HI",
+  "name": "Hawaii",
+  "table_years": [2020,2021,2022,2023,2024,2025],
+  "agencies": [
+    {"ori":"HI0024700","name":"Department of Law Enforcement: Criminal Investigations Division","type":"other_state","county":"Honolulu","nibrs":false},
+    {"ori":"HI0021200","name":"Department of Law Enforcement: Executive Protection Section","type":"other_state","county":"Honolulu","nibrs":false},
+    {"ori":"HI0021100","name":"Department of Law Enforcement: Harbors Enforcement","type":"other_state","county":"Honolulu","nibrs":false},
+    {"ori":"HI0010200","name":"Department of Law Enforcement: Hawaii Island","type":"other_state","county":"Hawaii","nibrs":false},
+    {"ori":"HI0040300","name":"Department of Law Enforcement: Kauai","type":"other_state","county":"Kauai","nibrs":false},
+    {"ori":"HI0050700","name":"Department of Law Enforcement: Maui","type":"other_state","county":"Maui","nibrs":false},
+    {"ori":"HI0020200","name":"Department of Law Enforcement: Narcotics Enforcement Division","type":"other_state","county":"Honolulu","nibrs":false},
+    {"ori":"HI0020400","name":"Department of Law Enforcement: Oahu","type":"other_state","county":"Honolulu","nibrs":false},
+    {"ori":"HI0020900","name":"Department of Law Enforcement: Office of Inspector General","type":"other_state","county":"Honolulu","nibrs":false},
+    {"ori":"HI0010000","name":"Hawaii Police Department","type":"county","county":"Hawaii","lat":19.7167,"lon":-155.08688,"nibrs":true,"nibrs_since":"2021-01-01","table_name":"Hawaii Police Department","animal_cruelty":{"2025":33},"total_offenses":{"2025":11102},"match":"exact"},
+    {"ori":"HI0020000","name":"Honolulu Police Department","type":"city","county":"Honolulu","lat":21.30432,"lon":-157.85077,"nibrs":true,"nibrs_since":"2018-01-01","table_name":"Honolulu","population":987000,"animal_cruelty":{"2021":43,"2022":68,"2023":64,"2024":55,"2025":74},"total_offenses":{"2021":46933,"2022":45779,"2023":36338,"2024":34964,"2025":28825},"match":"normalized"},
+    {"ori":"HI0040000","name":"Kauai Police Department","type":"county","county":"Kauai","lat":22.01204,"lon":-159.70596,"nibrs":true,"nibrs_since":"2021-01-01","table_name":"Kauai Police Department","animal_cruelty":{"2021":6,"2022":10,"2023":8,"2024":12,"2025":11},"total_offenses":{"2021":3125,"2022":3483,"2023":3623,"2024":3588,"2025":3353},"match":"exact"},
+    {"ori":"HI0050000","name":"Maui Police Department","type":"county","county":"Maui","lat":20.88732,"lon":-156.48763,"nibrs":true,"nibrs_since":"2020-12-01","table_name":"Maui Police Department","animal_cruelty":{"2025":26},"total_offenses":{"2025":9218},"match":"exact"}
+  ]
+}

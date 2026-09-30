@@ -1,0 +1,58 @@
+---
+interface Crumb {
+  href?: string;
+  label: string;
+}
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lede?: string;
+  crumbs?: Crumb[];
+}
+const { eyebrow, title, lede, crumbs } = Astro.props;
+---
+
+<header class="page-header">
+  <div class="container">
+    {
+      crumbs && (
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            {crumbs.map((c, i) => (
+              <li>
+                {c.href && i < crumbs.length - 1 ? (
+                  <a href={c.href}>{c.label}</a>
+                ) : (
+                  <span aria-current="page">{c.label}</span>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    {lede && <p class="lede">{lede}</p>}
+    <slot />
+  </div>
+</header>
+
+<style>
+  .page-header {
+    padding-block: var(--space-7) var(--space-6);
+    background:
+      radial-gradient(60rem 18rem at 85% -20%, color-mix(in srgb, var(--accent-soft) 70%, transparent), transparent),
+      radial-gradient(40rem 16rem at 0% 0%, color-mix(in srgb, var(--brand-soft) 70%, transparent), transparent);
+    border-bottom: 1px solid var(--border);
+  }
+  h1 {
+    max-width: 52rem;
+  }
+  .lede {
+    margin-bottom: 0;
+  }
+</style>

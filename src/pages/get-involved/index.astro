@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { ISSUE_FORM, REPO_FILE, REPO_TREE, SITE } from "../../lib/site";
+
+const roles = [
+  { title: "Data and research", text: "Find and evaluate court portals, state registries and agency records; document how each can be accessed and reused." },
+  { title: "Engineering", text: "Improve the Python data pipeline, build importers for new sources, and extend the Astro site." },
+  { title: "Legal", text: "Attorneys and law students can help scope privacy, defamation and records-law questions for each jurisdiction." },
+  { title: "Design and writing", text: "Make complex data understandable, improve accessibility, and write clear explanations for the public." },
+  { title: "Animal welfare partners", text: "Shelters, rescues and humane societies can tell us what they need to screen adopters responsibly." },
+  { title: "Outreach", text: "Share the project with communities who care about animals and help us reach volunteers and funders." },
+];
+---
+
+<BaseLayout title="Get involved" description="Help build IROPO: share data sources, contribute code, lend legal or design expertise, or partner with the project.">
+  <PageHeader
+    eyebrow="Get involved"
+    title="Help build a trustworthy registry"
+    lede="IROPO is a volunteer-driven, open-source project. Every contribution, from a single data source to a code change, moves it forward."
+    crumbs={[{ label: "Get involved" }]}
+  >
+    <div class="btn-row" style="margin-top: var(--space-5)">
+      <a class="btn btn--primary" href={SITE.repo}>View on GitHub</a>
+      <a class="btn btn--ghost" href={REPO_FILE("CONTRIBUTING.md")}>Contributing guide</a>
+    </div>
+  </PageHeader>
+
+  <section class="section" id="sources" aria-labelledby="sources-title">
+    <div class="container split">
+      <div class="prose">
+        <p class="eyebrow">Most needed</p>
+        <h2 id="sources-title" style="margin-top: 0">Share a data source</h2>
+        <p>
+          The next phase of the project depends on finding reliable public records: court case
+          portals, state or county animal abuser registries, agency press releases and open data
+          portals. If you know of one, tell us:
+        </p>
+        <ul>
+          <li>what jurisdiction it covers and who publishes it</li>
+          <li>its web address and whether it can be searched or downloaded</li>
+          <li>any terms of use that limit how it can be reused</li>
+        </ul>
+        <p class="callout callout--warn small">
+          Please share <strong>sources</strong>, not names or allegations about individuals. Tips about
+          specific people cannot be accepted. To report suspected cruelty, contact local animal
+          control or police.
+        </p>
+        <a class="btn btn--primary" href={ISSUE_FORM("data-source")}>Suggest a source</a>
+      </div>
+      <div class="card">
+        <h3>Good first contributions</h3>
+        <ul class="small">
+          <li>Check your state's page for errors and <a href="/corrections/">report corrections</a></li>
+          <li>Review the <a href="/data/legacy-ori-crosswalk.csv">legacy ORI crosswalk</a> entries flagged for review</li>
+          <li>Research whether your state's courts publish animal cruelty case records</li>
+          <li>Improve documentation in the <a href={REPO_TREE("pipeline")}>pipeline</a> or site</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="build" aria-labelledby="build-title">
+    <div class="container">
+      <h2 id="build-title">Volunteer your skills</h2>
+      <div class="grid grid--3">
+        {roles.map((r) => (<div class="card"><h3>{r.title}</h3><p class="muted small">{r.text}</p></div>))}
+      </div>
+      <p style="margin-top: var(--space-5)">
+        Introduce yourself by <a href={ISSUE_FORM("volunteer")}>opening an issue</a> with
+        what you would like to work on.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="dev-title">
+    <div class="container split">
+      <div class="prose">
+        <h2 id="dev-title" style="margin-top: 0">For developers</h2>
+        <p>The site is built with Astro and the data pipeline with Python. To run both locally:</p>
+        <pre class="code"><code>git clone {SITE.repo}.git
+cd iropo.org
+npm install &amp;&amp; npm run dev        # website at localhost:4321
+
+cd pipeline
+uv sync &amp;&amp; uv run iropo-data all   # refresh data/processed
+uv run pytest</code></pre>
+        <p class="small muted">
+          No API key is required. Read the <a href={REPO_FILE("CONTRIBUTING.md")}>contributing guide</a> and
+          the <a href={REPO_FILE("CODE_OF_CONDUCT.md")}>code of conduct</a> before opening a pull request.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Spread the word</h3>
+        <p class="small">
+          Share iropo.org with animal-welfare groups, shelters, rescues and journalists. Linking to a
+          specific state page is the fastest way to show people what the data says where they live.
+        </p>
+        <a class="btn btn--ghost" href="/states/">Find your state</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .code {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-4);
+    overflow-x: auto;
+    font-size: var(--step--1);
+    line-height: 1.5;
+  }
+  .code code {
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+</style>

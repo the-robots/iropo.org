@@ -1,8 +1,25 @@
+# Secrets
 .env
 .env.*
 !.env.example
+
+# Python
 .venv/
 venv/
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node / Astro
+node_modules/
+dist/
+.astro/
+
+# Pipeline download cache (raw FBI files are re-downloadable; processed data is committed)
+data/cache/
+
+# OS / editor noise
+.DS_Store
 ~$*.xlsx

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "fbi-cde-agency-directory",
+    "title": "FBI Crime Data Explorer: law enforcement agency directory",
+    "publisher": "Federal Bureau of Investigation, Uniform Crime Reporting Program",
+    "url": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi",
+    "endpoint": "/agency/byStateAbbr/{state}",
+    "used_for": "ORIs, agency names and types, counties, coordinates and NIBRS status",
+    "coverage": "51 jurisdictions (50 states and DC)",
+    "license": "Public domain (U.S. federal government work)",
+    "retrieved_at": "2026-09-30T03:28:44Z",
+    "files": 51
+  },
+  {
+    "id": "fbi-cde-nibrs-animal-cruelty-series",
+    "title": "FBI Crime Data Explorer: NIBRS animal cruelty (offense 720) monthly series",
+    "publisher": "Federal Bureau of Investigation, Uniform Crime Reporting Program",
+    "url": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/crime-trend",
+    "endpoint": "/nibrs/{national|state/{state}}/720?type=counts",
+    "used_for": "Offenses, clearances, population coverage and rates by month and year",
+    "coverage": "2016 onward, national and 51 jurisdictions",
+    "license": "Public domain (U.S. federal government work)",
+    "retrieved_at": "2026-09-30T03:29:23Z",
+    "files": 52
+  },
+  {
+    "id": "fbi-nibrs-offense-type-by-agency",
+    "title": "FBI NIBRS Tables: Offense Type by Agency",
+    "publisher": "Federal Bureau of Investigation, Uniform Crime Reporting Program",
+    "url": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads",
+    "used_for": "Animal cruelty and total offenses reported by each agency, per year",
+    "coverage": "2020-2025",
+    "license": "Public domain (U.S. federal government work)",
+    "retrieved_at": "2026-09-30T03:29:40Z",
+    "checksums": {
+      "2020-agencies.zip": "874cd7984276fb80f6476b029c966a826b14020abff73fcd717ced4611ce765b",
+      "2021-agencies.zip": "e79732020cda3fd251b6016291017722bff65ae84b883b0290fa30cdc150f8ec",
+      "2022-agencies.zip": "bfa98d5a54c8470d3ae567d9b06f46a1e4ed0017f0f8df4cd71c48e9b5cd3a27",
+      "2023-agencies.zip": "d71dbed48f27dcd7fa17ad3fb16dfdd8664e624a6fe1da64558d0208cf0f5b03",
+      "2024-agencies.zip": "8c2be7442b18291fc97b391aad3eb11ebb0e76a9c6b3c1aeea7d3743773709af",
+      "2025-agencies.zip": "17694c64d7d364928de54f3bd9a0f3a73ec0dd024a727a1dc47d3866933d15b1"
+    }
+  },
+  {
+    "id": "fbi-nibrs-offenders",
+    "title": "FBI NIBRS Tables: Offenders by age, sex, race and age category",
+    "publisher": "Federal Bureau of Investigation, Uniform Crime Reporting Program",
+    "url": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads",
+    "used_for": "Demographics of known animal cruelty offenders compared with all offenses",
+    "coverage": "2020-2025",
+    "license": "Public domain (U.S. federal government work)",
+    "retrieved_at": "2026-09-30T03:29:41Z",
+    "checksums": {
+      "2020-offenders.zip": "87535c2077783cbaf41a76eef264d231f91f0b54bbf06b6c9dcc505a59ba6806",
+      "2021-offenders.zip": "1dc3ca5bc9c4e82ea4523de027cee4f6ae82a0659653f735dce5af2ca324b521",
+      "2022-offenders.zip": "1448f7bb0aba1c510cf755413544c684ff5098678af022ab8774cfa491bbfa80",
+      "2023-offenders.zip": "554de285ab70de35db58e52cdde4211848d53dffc97011768f3c0143e9792e53",
+      "2024-offenders.zip": "c19f115ad318e60b2ffeacedcf27f29e9aa642f2a5ae1907b3945b894a05a0a4",
+      "2025-offenders.zip": "66128307a8c28207823e2bb45a45c757ac4c7bb42f3f52c7b58c6e4c0d92cc7d"
+    }
+  },
+  {
+    "id": "official-animal-abuser-registries",
+    "title": "Official government animal abuser registries (curated catalog)",
+    "publisher": "IROPO contributors",
+    "url": "https://github.com/the-robots/iropo.org/blob/main/data/curated/official-registries.json",
+    "used_for": "Links to registries run by state and local governments",
+    "coverage": "43 registries",
+    "license": "CC0-1.0",
+    "retrieved_at": "2026-09-29"
+  },
+  {
+    "id": "legacy-nlets-directory-1977",
+    "title": "NLETS directory of criminal justice agency ORIs (LEAA grant 75-SS-99-6018)",
+    "publisher": "Law Enforcement Assistance Administration / NCJRS (document 75873)",
+    "url": "https://github.com/the-robots/iropo.org/tree/main/docs/reference",
+    "used_for": "Historical ORIs for NC, ND and NY (legacy spreadsheets), cross-checked against the current FBI directory",
+    "coverage": "North Carolina, North Dakota (partial), New York",
+    "license": "Public domain (U.S. federal government work)",
+    "retrieved_at": null
+  }
+]

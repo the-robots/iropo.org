@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import PageHeader from "../../../../components/PageHeader.astro";
+import SourceNote from "../../../../components/SourceNote.astro";
+import { TABLE_YEARS, agenciesFor, states, stateBySlug } from "../../../../lib/data";
+import { TYPE_LABELS, fmt } from "../../../../lib/format";
+import { agencyAnchor, agencyTotal } from "../../../../lib/stats";
+import { REPO_FILE } from "../../../../lib/site";
+import type { AgencyType } from "../../../../lib/types";
+
+export function getStaticPaths() {
+  return states.map((s) => ({ params: { slug: s.slug } }));
+}
+
+const state = stateBySlug(Astro.params.slug!)!;
+const { agencies } = agenciesFor(state.abbr);
+const types = [...new Set(agencies.map((a) => a.type))].sort((a, b) => TYPE_LABELS[a].localeCompare(TYPE_LABELS[b])) as AgencyType[];
+const withCases = agencies.filter((a) => agencyTotal(a) > 0).length;
+const unlinked = agencies.filter((a) => !a.ori).length;
+---
+
+<BaseLayout
+  title={`${state.name} law enforcement agencies`}
+  description={`All ${fmt(agencies.length)} law enforcement agencies in ${state.name} with ORI codes, NIBRS status and yearly animal cruelty offenses.`}
+>
+  <PageHeader
+    eyebrow="Agency directory"
+    title={`${state.name} law enforcement agencies`}
+    lede={`${fmt(agencies.length)} agencies with their ORI codes, NIBRS status and the animal cruelty offenses each reported to the FBI from ${TABLE_YEARS[0]} to ${TABLE_YEARS[TABLE_YEARS.length - 1]}. ${fmt(withCases)} recorded at least one case.`}
+    crumbs={[{ href: "/states/", label: "States" }, { href: `/states/${state.slug}/`, label: state.name }, { label: "Agencies" }]}
+  />
+
+  <section class="section">
+    <div class="container" data-table-tools>
+      <div class="table-tools">
+        <div class="field">
+          <label for="agency-filter">Search agencies</label>
+          <input id="agency-filter" type="search" placeholder="Name, ORI or county" data-filter-text autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="type-filter">Type</label>
+          <select id="type-filter" data-filter-attr="type">
+            <option value="">All types</option>
+            {types.map((t) => <option value={t}>{TYPE_LABELS[t]}</option>)}
+          </select>
+        </div>
+        <label class="check"><input type="checkbox" data-filter-flag="cases" /> Recorded animal cruelty</label>
+        <span class="status" data-filter-status aria-live="polite"></span>
+      </div>
+
+      <div class="table-wrap directory" tabindex="0" role="region" aria-label={`${state.name} agencies`}>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" data-sort="text"><button type="button">Agency</button></th>
+              <th scope="col" data-sort="text"><button type="button">ORI</button></th>
+              <th scope="col" data-sort="text"><button type="button">Type</button></th>
+              <th scope="col" data-sort="text"><button type="button">County</button></th>
+              <th scope="col" data-sort="text"><button type="button">NIBRS</button></th>
+              {TABLE_YEARS.map((y) => <th scope="col" class="num" data-sort="num"><button type="button">{y}</button></th>)}
+              <th scope="col" class="num" data-sort="num"><button type="button">Total</button></th>
+            </tr>
+          </thead>
+          <tbody>
+{agencies.map((a) => {
+const total = agencyTotal(a);
+const hasTable = a.animal_cruelty !== undefined;
+return (
+<tr id={agencyAnchor(a)} data-type={a.type} data-cases={total > 0 ? "1" : "0"}>
+<td>{a.name}{a.table_name && a.table_name !== a.name && <span class="cell-sub">FBI tables: {a.table_name}</span>}{a.legacy_status === "likely_ocr_error" && <span class="cell-sub">1977 directory listed ORI {a.legacy_ori}</span>}{!a.ori && <span class="cell-sub">Not linked to the FBI directory</span>}</td>
+<td class="mono nowrap">{a.ori ?? "—"}</td><td>{TYPE_LABELS[a.type]}</td><td>{a.county ?? "—"}</td>
+<td class="nowrap">{a.nibrs === undefined ? "—" : a.nibrs ? `Since ${a.nibrs_since?.slice(0, 4) ?? "?"}` : "No"}</td>
+{hasTable ? TABLE_YEARS.map((y) => { const v = a.animal_cruelty?.[String(y)]; return <td class={v ? "num" : "num zero"}>{v === undefined || v === null ? "—" : fmt(v)}</td>; }) : <td colspan={TABLE_YEARS.length} class="muted small">Not in FBI agency tables</td>}
+<td class={total ? "num" : "num zero"}>{hasTable ? fmt(total) : "—"}</td>
+</tr>
+);
+})}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid grid--2" style="margin-top: var(--space-5)">
+        <div class="small muted stack">
+          <p>
+            <strong>How rows are built.</strong> Agency names, types, counties and ORIs come from the FBI's
+            agency directory. Yearly counts come from the FBI's <em>Offense Type by Agency</em> tables,
+            which list agencies by name only; IROPO links them to ORIs by state, agency type and
+            normalized name.{unlinked > 0 && ` ${fmt(unlinked)} table rows could not be linked and are shown without an ORI.`}
+          </p>
+          <p>
+            A dash means the agency did not appear in that year's tables (for example, it had not yet
+            transitioned to NIBRS or did not meet the FBI's publication criteria).
+          </p>
+        </div>
+        <div class="small muted stack">
+          <p>
+            <strong>Downloads.</strong> <a href="/data/agencies.csv">All agencies (CSV)</a> ·
+            <a href="/data/animal-cruelty-by-agency.csv">Animal cruelty by agency and year (CSV)</a> ·
+            <a href={REPO_FILE(`data/processed/agencies/${state.abbr}.json`)}>{state.abbr}.json</a>
+          </p>
+          <p>
+            Spotted a wrong link or name? <a href="/corrections/">Report a correction</a>.
+          </p>
+        </div>
+      </div>
+      <SourceNote>FBI agency directory and NIBRS Tables: Offense Type by Agency, {TABLE_YEARS[0]}–{TABLE_YEARS[TABLE_YEARS.length - 1]}.</SourceNote>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import "../../../../scripts/table-tools";
+</script>
+
+<style>
+  .directory {
+    max-height: 75vh;
+    overflow: auto;
+  }
+  .directory td:first-child {
+    min-width: 14rem;
+  }
+</style>

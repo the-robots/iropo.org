@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iropo.org/schema/series.schema.json",
+  "title": "Animal cruelty series (national and state summaries)",
+  "description": "Shared definitions for national.json and states.json.",
+  "$defs": {
+    "year": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["year", "months_reported", "offenses", "clearances", "coverage_pct", "rate_per_100k"],
+      "properties": {
+        "year": { "type": "integer", "minimum": 2016 },
+        "months_reported": { "type": "integer", "minimum": 0, "maximum": 12 },
+        "offenses": { "type": ["integer", "null"], "minimum": 0 },
+        "clearances": { "type": ["integer", "null"], "minimum": 0 },
+        "coverage_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "population": { "type": ["integer", "null"] },
+        "covered_population": { "type": ["integer", "null"] },
+        "rate_per_100k": { "type": ["number", "null"], "minimum": 0 },
+        "clearance_rate": { "type": ["number", "null"], "minimum": 0 }
+      }
+    },
+    "monthly": {
+      "type": "object",
+      "required": ["start", "offenses", "clearances"],
+      "properties": {
+        "start": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}$" },
+        "offenses": { "type": "array", "items": { "type": ["integer", "null"] } },
+        "clearances": { "type": "array", "items": { "type": ["integer", "null"] } }
+      }
+    },
+    "state": {
+      "type": "object",
+      "required": ["abbr", "name", "slug", "fips", "annual", "monthly", "agencies"],
+      "properties": {
+        "abbr": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "fips": { "type": "string", "pattern": "^[0-9]{2}$" },
+        "annual": { "type": "array", "items": { "$ref": "#/$defs/year" } },
+        "monthly": { "$ref": "#/$defs/monthly" },
+        "agencies": {
+          "type": "object",
+          "required": ["directory", "directory_nibrs", "reporting", "with_cases", "table_offenses"]
+        },
+        "legacy": { "type": ["object", "null"] }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "title": "states.json",
+      "type": "object",
+      "required": ["last_full_year", "table_years", "states"],
+      "properties": {
+        "states": { "type": "array", "minItems": 51, "items": { "$ref": "#/$defs/state" } }
+      }
+    },
+    {
+      "title": "national.json",
+      "type": "object",
+      "required": ["last_full_year", "annual", "monthly", "tables", "top_agencies", "offenders"],
+      "properties": {
+        "annual": { "type": "array", "items": { "$ref": "#/$defs/year" } },
+        "monthly": { "$ref": "#/$defs/monthly" },
+        "offenders": {
+          "type": "object",
+          "required": ["years", "by_year"],
+          "properties": {
+            "by_year": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object",
+                "required": ["age_category", "age", "sex", "race"]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

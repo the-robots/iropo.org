@@ -1,0 +1,110 @@
+---
+/** Paired horizontal bars comparing animal cruelty offenders with all offenders. */
+import type { ShareRow } from "../../lib/stats";
+
+interface Props {
+  rows: ShareRow[];
+  title: string;
+  caption?: string;
+  digits?: number;
+}
+const { rows, title, caption, digits = 0 } = Astro.props;
+const max = Math.max(0.0001, ...rows.flatMap((r) => [r.cruelty, r.all]));
+const pct = (v: number) => `${(v * 100).toFixed(v > 0 && v < 0.01 ? 1 : digits)}%`;
+---
+
+<figure class="chart compare">
+  <ul class="legend">
+    <li><span class="swatch" style="background:var(--chart-bar)"></span>Animal cruelty offenders</li>
+    <li><span class="swatch" style="background:var(--chart-compare)"></span>All offenders</li>
+  </ul>
+  <div class="compare__rows" aria-hidden="true">
+    {
+      rows.map((row) => (
+        <div class="compare__row">
+          <span class="compare__label">{row.label}</span>
+          <span class="compare__bars">
+            <span class="compare__bar compare__bar--c" style={`width:${(row.cruelty / max) * 100}%`}>
+              <span>{pct(row.cruelty)}</span>
+            </span>
+            <span class="compare__bar compare__bar--a" style={`width:${(row.all / max) * 100}%`}>
+              <span>{pct(row.all)}</span>
+            </span>
+          </span>
+        </div>
+      ))
+    }
+  </div>
+  <div class="visually-hidden">
+  <table>
+    <caption>{title}</caption>
+    <thead><tr><th scope="col">Group</th><th scope="col">Animal cruelty offenders</th><th scope="col">All offenders</th></tr></thead>
+    <tbody>
+      {rows.map((row) => <tr><th scope="row">{row.label}</th><td>{pct(row.cruelty)}</td><td>{pct(row.all)}</td></tr>)}
+    </tbody>
+  </table>
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .compare__rows {
+    display: grid;
+    gap: 0.55rem;
+  }
+  .compare__row {
+    display: grid;
+    grid-template-columns: minmax(6rem, 11rem) 1fr;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .compare__label {
+    font-size: var(--step--1);
+    color: var(--text-2);
+    text-align: right;
+    line-height: 1.2;
+  }
+  .compare__bars {
+    display: grid;
+    gap: 3px;
+    padding-right: 3.2rem;
+  }
+  .compare__bar {
+    position: relative;
+    display: block;
+    height: 0.8rem;
+    border-radius: 0 4px 4px 0;
+    min-width: 2px;
+  }
+  .compare__bar span {
+    position: absolute;
+    left: calc(100% + 0.4rem);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.72rem;
+    font-weight: 650;
+    color: var(--text-2);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .compare__bar--c {
+    background: var(--chart-bar);
+  }
+  .compare__bar--a {
+    background: var(--chart-compare);
+    height: 0.55rem;
+  }
+  .compare__bar--a span {
+    color: var(--muted);
+    font-weight: 500;
+  }
+  @media (max-width: 36rem) {
+    .compare__row {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+    .compare__label {
+      text-align: left;
+    }
+  }
+</style>

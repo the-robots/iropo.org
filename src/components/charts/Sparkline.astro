@@ -1,0 +1,43 @@
+---
+interface Props {
+  values: (number | null)[];
+  width?: number;
+  height?: number;
+  label: string;
+}
+const { values, width = 96, height = 28, label } = Astro.props;
+const pad = 3;
+const max = Math.max(1, ...values.map((v) => v ?? 0));
+const n = values.length;
+const x = (i: number) => pad + (i / Math.max(n - 1, 1)) * (width - pad * 2);
+const y = (v: number) => height - pad - (v / max) * (height - pad * 2);
+const points = values
+  .map((v, i) => (v === null ? null : `${x(i).toFixed(1)},${y(v).toFixed(1)}`))
+  .filter(Boolean)
+  .join(" ");
+const lastIndex = values.map((v) => v !== null).lastIndexOf(true);
+const last = lastIndex >= 0 ? values[lastIndex] : null;
+---
+
+<svg class="sparkline" viewBox={`0 0 ${width} ${height}`} width={width} height={height} role="img" aria-label={label}>
+  <polyline points={points}></polyline>
+  {last !== null && <circle cx={x(lastIndex)} cy={y(last)} r="2.6" />}
+</svg>
+
+<style>
+  .sparkline {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: visible;
+  }
+  polyline {
+    fill: none;
+    stroke: var(--chart-bar);
+    stroke-width: 1.75;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  circle {
+    fill: var(--accent-strong);
+  }
+</style>

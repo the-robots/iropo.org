@@ -1,0 +1,228 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { meta, openDataFiles, sources, states } from "../../lib/data";
+import { fmt, fmtBytes, fmtCdeDate, fmtDate, fmtShare } from "../../lib/format";
+import { REPO_FILE, REPO_TREE, SITE } from "../../lib/site";
+
+const DESCRIPTIONS: Record<string, string> = {
+  "agencies.csv": "Every law enforcement agency in the FBI directory: ORI, name, type, state, counties, coordinates and NIBRS status.",
+  "animal-cruelty-by-agency.csv": "Animal cruelty and total offenses reported by each agency per year, from the FBI's Offense Type by Agency tables, with linked ORIs.",
+  "animal-cruelty-by-state.csv": "Yearly animal cruelty offenses, clearances, rates and NIBRS coverage for the United States and every state.",
+  "animal-cruelty-offenders.csv": "Offender age, sex, race and adult/juvenile counts for animal cruelty and for all offenses, per year.",
+  "legacy-ori-crosswalk.csv": "ORIs from the 1977 NLETS directory spreadsheets (NC, ND, NY) checked against today's FBI directory.",
+};
+const files = openDataFiles();
+const linkedShare = meta.counts.linked_rows / meta.counts.agency_year_rows;
+
+const references = [
+  {
+    title: "National Law Enforcement Telecommunications Systems directory (1977)",
+    detail: "Law Enforcement Assistance Administration grant 75-SS-99-6018, NCJRS document 75873. A cross-referenced list of criminal justice agencies and their ORIs; the source of IROPO's legacy spreadsheets.",
+    files: [["PDF scan", "docs/reference/75873NCJRS.pdf"], ["OCR text (RTF)", "docs/reference/75873NCJRS.rtf"]],
+  },
+  {
+    title: "NCIC 2000 Operating Manual",
+    detail: "FBI Criminal Justice Information Services. Defines ORIs, record types and validation rules for the National Crime Information Center.",
+    files: [["PDF", "docs/reference/NCIC Operating Manual.pdf"]],
+  },
+  {
+    title: "Georgia Crime Information Center Operating Manual (2012)",
+    detail: "An example of how one state's CJIS network documents agency access, validation and hit confirmation.",
+    files: [["PDF", "docs/reference/gcic-operating-manual.pdf"]],
+  },
+  {
+    title: "Nlets: Questions and Answers (2020)",
+    detail: "National Immigration Law Center. Background on the Nlets network that links state and federal criminal justice systems, and its privacy implications.",
+    files: [["PDF", "docs/reference/Nlets-Q-and-A.pdf"]],
+  },
+  {
+    title: "Original 2020 research files",
+    detail: "The FBI's 2020 North Carolina Offense Type by Agency table and national offender tables, used in IROPO's first analysis. Superseded by the automated downloads above.",
+    files: [["NC 2020 table (PDF)", "data/raw/legacy/nibrs-2020/NC.pdf"], ["2020 offender tables", "data/raw/legacy/nibrs-2020/offenders"]],
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: "IROPO open data: animal cruelty in the United States",
+  description: "Law enforcement agency directory and NIBRS animal cruelty offense counts by agency, state and year, with offender demographics, compiled from FBI sources.",
+  url: `${SITE.url}/sources/`,
+  license: "https://creativecommons.org/publicdomain/zero/1.0/",
+  creator: { "@type": "Organization", name: SITE.longName, url: SITE.url },
+  isBasedOn: "https://cde.ucr.cjis.gov/",
+  dateModified: meta.data_retrieved_at,
+  spatialCoverage: "United States",
+  distribution: files.map((f) => ({
+    "@type": "DataDownload",
+    encodingFormat: "text/csv",
+    contentUrl: `${SITE.url}/data/${f.name}`,
+  })),
+};
+---
+
+<BaseLayout
+  title="Sources, methods and open data"
+  description="Where IROPO's data comes from, how it is processed and verified, and free CSV and JSON downloads."
+  jsonLd={jsonLd}
+>
+  <PageHeader
+    eyebrow="Sources"
+    title="Sources, methods and open data"
+    lede="Every number on this site traces back to an official public source. Here is where the data comes from, how it is processed, and how to download it."
+    crumbs={[{ label: "Sources" }]}
+  >
+    <dl class="kv" style="margin-top: var(--space-5)">
+      <dt>Last retrieved</dt><dd>{fmtDate(meta.data_retrieved_at)}</dd>
+      <dt>FBI data refreshed</dt><dd>{fmtCdeDate(meta.cde_last_refresh)} (monthly data through {fmtCdeDate(meta.cde_max_data_date)})</dd>
+      <dt>Pipeline</dt><dd>v{meta.pipeline_version} · <a href={REPO_TREE("pipeline")}>source code</a></dd>
+    </dl>
+  </PageHeader>
+
+  <section class="section" aria-labelledby="datasets">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="datasets">Datasets</h2>
+        <p>All FBI data is a U.S. government work in the public domain.</p>
+      </div>
+      <div class="grid grid--2">
+        {
+          sources.map((s) => (
+            <article class="card source" id={s.id}>
+              <h3><a href={s.url}>{s.title}</a></h3>
+              <p class="muted small">{s.publisher}</p>
+              <p>{s.used_for}.</p>
+              <dl class="kv small">
+                <dt>Coverage</dt><dd>{s.coverage}</dd>
+                {s.endpoint && (<><dt>Endpoint</dt><dd><code>{s.endpoint}</code></dd></>)}
+                <dt>Retrieved</dt><dd>{s.retrieved_at ? fmtDate(s.retrieved_at) : "Archived in this repository"}</dd>
+                <dt>License</dt><dd>{s.license}</dd>
+              </dl>
+              {s.checksums && (
+                <details class="small">
+                  <summary>SHA-256 checksums</summary>
+                  <ul class="checksums">
+                    {Object.entries(s.checksums).map(([file, sum]) => (<li><code>{file}</code> <span class="mono">{sum.slice(0, 16)}…</span></li>))}
+                  </ul>
+                </details>
+              )}
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="downloads-title" id="downloads">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="downloads-title">Downloads</h2>
+        <p>Free to use for any purpose under CC0. Please cite the FBI as the original source.</p>
+      </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Downloadable files">
+        <table>
+          <thead><tr><th scope="col">File</th><th scope="col">Contents</th><th scope="col" class="num">Rows</th><th scope="col" class="num">Size</th></tr></thead>
+          <tbody>
+            {files.map((f) => (<tr><th scope="row"><a href={`/data/${f.name}`} download>{f.name}</a></th><td>{DESCRIPTIONS[f.name] ?? ""}</td><td class="num">{fmt(f.rows)}</td><td class="num">{fmtBytes(f.bytes)}</td></tr>))}
+          </tbody>
+        </table>
+      </div>
+      <h3 style="margin-top: var(--space-6)">JSON</h3>
+      <p>The same data powers this site and is available as static JSON:</p>
+      <ul class="json-list">
+        <li><a href="/data/national.json"><code>/data/national.json</code></a> national series, top agencies and offender demographics</li>
+        <li><a href="/data/states.json"><code>/data/states.json</code></a> yearly and monthly series for every state</li>
+        <li><code>/data/agencies/&#123;STATE&#125;.json</code> every agency in a state, for example <a href="/data/agencies/NC.json"><code>NC.json</code></a></li>
+        <li><a href="/data/official-registries.json"><code>/data/official-registries.json</code></a> official registry catalog</li>
+        <li><a href="/data/sources.json"><code>/data/sources.json</code></a> provenance, retrieval times and checksums</li>
+      </ul>
+      <p class="small muted">JSON Schemas for these files live in <a href={REPO_TREE("data/schema")}><code>data/schema</code></a>.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="methods">
+    <div class="container prose">
+      <h2 id="methods">Methodology</h2>
+      <h3>How the data flows</h3>
+      <ol>
+        <li><strong>Collect.</strong> A Python pipeline downloads the FBI agency directory for {states.length} jurisdictions, monthly NIBRS animal cruelty series, and the annual NIBRS tables, recording the URL, retrieval time and checksum of every file.</li>
+        <li><strong>Normalize.</strong> Spreadsheets from six publication years, in several layouts, are parsed into one consistent format and linked to agency ORIs.</li>
+        <li><strong>Validate.</strong> Every output is checked against a JSON Schema and unit-tested before it is published.</li>
+        <li><strong>Publish.</strong> This static site is rebuilt from the validated data. A scheduled job checks for new FBI data every month and proposes updates for review.</li>
+      </ol>
+
+      <h3>Linking agencies to ORIs</h3>
+      <p>
+        The FBI's agency tables name agencies but do not include their ORI codes. IROPO links each
+        row to the FBI agency directory within the same state, first by exact name, then after
+        removing generic words such as "Police Department", then by word order. Each ORI can be
+        claimed only once per state and year, and ambiguous matches are left unlinked. {fmtShare(linkedShare, 1)} of
+        {fmt(meta.counts.agency_year_rows)} agency-year rows are linked.
+      </p>
+
+      <h3>Rates and coverage</h3>
+      <p>
+        Rates divide offenses by the average population served by agencies that reported to NIBRS
+        that year, per 100,000 residents. Coverage is the share of all residents served by those
+        agencies. States with under 50% coverage, or with almost no reported cruelty despite broad
+        coverage, are excluded from state rankings.
+      </p>
+
+      <h3>The 1977 agency directory</h3>
+      <p>
+        IROPO's first agency spreadsheets for North Carolina, North Dakota and New York were
+        transcribed by OCR from a 1977 directory. The pipeline checks each legacy ORI against today's
+        FBI directory, flags look-alike character errors (such as <code>I</code> for <code>1</code>),
+        and publishes the results as a <a href="/data/legacy-ori-crosswalk.csv">crosswalk</a>.
+      </p>
+
+      <h3 id="ori">What is an ORI?</h3>
+      <p>
+        An ORI, or Originating Agency Identifier, is the nine-character code the FBI's National Crime
+        Information Center assigns to each criminal justice agency. The first two letters are the
+        state. For example, the New York City Police Department is <code>NY0303000</code>. Every
+        NIBRS incident report carries the ORI of the agency that submitted it, which makes ORIs the
+        natural key for joining agency data.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="library">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="library">Reference library</h2>
+        <p>Background documents kept in the project repository.</p>
+      </div>
+      <div class="grid grid--2">
+        {
+          references.map((r) => (
+            <div class="card">
+              <h3>{r.title}</h3>
+              <p class="small">{r.detail}</p>
+              <p class="small">{r.files.map(([label, path], i) => (<>{i > 0 && " · "}<a href={path.endsWith(".pdf") || path.endsWith(".rtf") ? REPO_FILE(path) : REPO_TREE(path)}>{label}</a></>))}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .source h3 {
+    font-size: var(--step-1);
+    margin-bottom: 0.2rem;
+  }
+  .source .kv {
+    margin-bottom: var(--space-3);
+  }
+  .checksums {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-2);
+  }
+  .json-list li {
+    margin-bottom: 0.4rem;
+  }
+</style>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iropo.org/sitemap-index.xml

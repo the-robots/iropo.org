@@ -1,0 +1,133 @@
+---
+/** Tile-grid choropleth of the 50 states and DC. Each tile links to that state's page. */
+import { SCALE } from "../../lib/stats";
+
+export interface TileDatum {
+  abbr: string;
+  name: string;
+  slug: string;
+  value: number | null;
+  display: string;
+  note?: string;
+}
+interface Props {
+  items: TileDatum[];
+  thresholds: number[];
+  legendTitle: string;
+  format?: (v: number) => string;
+  emptyLabel?: string;
+}
+
+const { items, thresholds, legendTitle, format = (v: number) => v.toFixed(1), emptyLabel = "No data" } =
+  Astro.props;
+
+const POSITIONS: Record<string, [number, number]> = {
+  AK: [0, 0], ME: [11, 0],
+  WI: [6, 1], VT: [10, 1], NH: [11, 1],
+  WA: [1, 2], ID: [2, 2], MT: [3, 2], ND: [4, 2], MN: [5, 2], IL: [6, 2], MI: [7, 2], NY: [9, 2], MA: [10, 2],
+  OR: [1, 3], NV: [2, 3], WY: [3, 3], SD: [4, 3], IA: [5, 3], IN: [6, 3], OH: [7, 3], PA: [8, 3], NJ: [9, 3], CT: [10, 3], RI: [11, 3],
+  CA: [1, 4], UT: [2, 4], CO: [3, 4], NE: [4, 4], MO: [5, 4], KY: [6, 4], WV: [7, 4], VA: [8, 4], MD: [9, 4], DE: [10, 4],
+  AZ: [2, 5], NM: [3, 5], KS: [4, 5], AR: [5, 5], TN: [6, 5], NC: [7, 5], SC: [8, 5], DC: [9, 5],
+  OK: [4, 6], LA: [5, 6], MS: [6, 6], AL: [7, 6], GA: [8, 6],
+  HI: [0, 7], TX: [4, 7], FL: [9, 7],
+};
+
+function bin(value: number | null): number | null {
+  if (value === null) return null;
+  const index = thresholds.findIndex((t) => value < t);
+  return index === -1 ? SCALE.length - 1 : index;
+}
+
+const legend = SCALE.map((color, i) => {
+  const lo = i === 0 ? null : thresholds[i - 1];
+  const hi = i === SCALE.length - 1 ? null : thresholds[i];
+  const label = lo === null ? `under ${format(hi!)}` : hi === null ? `${format(lo)}+` : `${format(lo)}–${format(hi)}`;
+  return { color, label };
+});
+---
+
+<figure class="chart tile-map">
+  <ul class="legend" aria-label={legendTitle}>
+    <li><strong>{legendTitle}</strong></li>
+    {legend.map((l) => <li><span class="swatch" style={`background:${l.color}`} />{l.label}</li>)}
+    <li><span class="swatch swatch--empty" />{emptyLabel}</li>
+  </ul>
+  <div class="tile-map__grid">
+    {
+      items.map((item) => {
+        const [col, row] = POSITIONS[item.abbr] ?? [0, 0];
+        const b = bin(item.value);
+        const label = `${item.name}: ${item.value === null ? emptyLabel : item.display}${item.note ? ` (${item.note})` : ""}`;
+        return (
+          <a
+            class:list={["tile", { "tile--empty": b === null, "tile--dark": b !== null && b >= 5 }]}
+            href={`/states/${item.slug}/`}
+            style={`grid-column:${col + 1};grid-row:${row + 1};${b !== null ? `background:${SCALE[b]}` : ""}`}
+            aria-label={label}
+            title={label}
+          >
+            <span class="tile__abbr">{item.abbr}</span>
+            <span class="tile__value">{item.value === null ? "–" : item.display}</span>
+          </a>
+        );
+      })
+    }
+  </div>
+  <slot />
+</figure>
+
+<style>
+  .tile-map__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(8, auto);
+    gap: clamp(2px, 0.5vw, 5px);
+    max-width: 52rem;
+  }
+  .tile {
+    aspect-ratio: 1;
+    border-radius: clamp(3px, 0.8vw, 8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #2a1a10;
+    line-height: 1.05;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    min-width: 0;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 9%);
+  }
+  .tile:hover {
+    transform: scale(1.08);
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 9%), var(--shadow);
+    z-index: 2;
+    color: #2a1a10;
+  }
+  .tile--dark,
+  .tile--dark:hover {
+    color: #fff;
+  }
+  .tile--empty {
+    background: repeating-linear-gradient(45deg, var(--surface-3), var(--surface-3) 4px, var(--surface-2) 4px, var(--surface-2) 8px);
+    color: var(--muted);
+  }
+  .tile__abbr {
+    font-weight: 750;
+    font-size: clamp(0.58rem, 1.7vw, 0.95rem);
+    letter-spacing: 0.02em;
+  }
+  .tile__value {
+    font-size: clamp(0.5rem, 1.3vw, 0.72rem);
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 30rem) {
+    .tile__value {
+      display: none;
+    }
+  }
+  .swatch--empty {
+    background: repeating-linear-gradient(45deg, var(--surface-3), var(--surface-3) 3px, var(--surface-2) 3px, var(--surface-2) 6px);
+    border: 1px solid var(--border);
+  }
+</style>

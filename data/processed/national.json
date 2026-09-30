@@ -1,0 +1,135 @@
+{
+  "last_full_year": 2025,
+  "series_first_year": 2016,
+  "table_years": [2020,2021,2022,2023,2024,2025],
+  "annual": [
+    {"year":2016,"months_reported":12,"offenses":379,"clearances":139,"coverage_pct":38.4,"population":323127513,"covered_population":124165259,"rate_per_100k":0.31,"clearance_rate":0.367},
+    {"year":2017,"months_reported":12,"offenses":3487,"clearances":1077,"coverage_pct":39.5,"population":329056355,"covered_population":129903119,"rate_per_100k":2.68,"clearance_rate":0.309},
+    {"year":2018,"months_reported":12,"offenses":5453,"clearances":1576,"coverage_pct":43.9,"population":330362587,"covered_population":144960982,"rate_per_100k":3.76,"clearance_rate":0.289},
+    {"year":2019,"months_reported":12,"offenses":11026,"clearances":2991,"coverage_pct":51.8,"population":331433049,"covered_population":171830909,"rate_per_100k":6.42,"clearance_rate":0.271},
+    {"year":2020,"months_reported":12,"offenses":12246,"clearances":3020,"coverage_pct":60.8,"population":332726731,"covered_population":202335372,"rate_per_100k":6.05,"clearance_rate":0.247},
+    {"year":2021,"months_reported":12,"offenses":18318,"clearances":4687,"coverage_pct":74.7,"population":335395039,"covered_population":250537948,"rate_per_100k":7.31,"clearance_rate":0.256},
+    {"year":2022,"months_reported":12,"offenses":21583,"clearances":5699,"coverage_pct":80.8,"population":336746447,"covered_population":272168627,"rate_per_100k":7.93,"clearance_rate":0.264},
+    {"year":2023,"months_reported":12,"offenses":23791,"clearances":6454,"coverage_pct":84.9,"population":338357687,"covered_population":287098614,"rate_per_100k":8.29,"clearance_rate":0.271},
+    {"year":2024,"months_reported":12,"offenses":26170,"clearances":7597,"coverage_pct":87.4,"population":343551384,"covered_population":300270744,"rate_per_100k":8.72,"clearance_rate":0.29},
+    {"year":2025,"months_reported":12,"offenses":26799,"clearances":8089,"coverage_pct":88.7,"population":345206793,"covered_population":306234939,"rate_per_100k":8.75,"clearance_rate":0.302}
+  ],
+  "monthly": {
+    "start": "2016-01",
+    "offenses": [17,14,19,19,17,41,37,51,48,33,43,40,224,204,258,239,283,348,423,363,286,284,262,313,382,311,380,337,447,591,629,583,496,461,407,429,731,584,692,698,839,1037,1408,1217,1059,974,934,853,1038,979,939,763,981,1124,1347,1154,991,978,930,1022,1184,1311,1355,1377,1568,1918,1938,1908,1539,1427,1405,1388,1614,1373,1649,1523,1906,2215,2290,2106,1780,1682,1641,1804,1825,1604,1814,1862,2085,2277,2596,2400,1980,1881,1775,1692,2043,1870,1894,2026,2310,2552,2744,2635,2253,2187,1831,1825,2172,1772,2090,2054,2295,2587,2944,2498,2220,2244,1934,1989],
+    "clearances": [6,6,6,9,11,13,14,19,17,9,15,14,72,58,90,62,96,127,131,99,105,85,73,79,101,102,104,99,135,185,194,180,151,113,113,99,194,160,163,171,218,288,459,410,291,232,213,192,259,232,198,183,250,310,393,316,234,216,200,229,250,317,355,322,408,561,543,548,374,350,306,353,361,330,436,393,513,624,672,601,503,442,378,446,462,385,499,448,558,618,803,743,515,489,487,447,564,512,520,569,655,757,901,829,683,590,484,533,614,546,633,604,687,853,948,790,657,662,558,537]
+  },
+  "tables": {
+    "2020": {"agencies":7382,"with_cases":1741,"offenses":10750,"states":45},
+    "2021": {"agencies":9111,"with_cases":2739,"offenses":15962,"states":51},
+    "2022": {"agencies":10915,"with_cases":3528,"offenses":19889,"states":51},
+    "2023": {"agencies":11594,"with_cases":3888,"offenses":21839,"states":51},
+    "2024": {"agencies":12400,"with_cases":4180,"offenses":24570,"states":51},
+    "2025": {"agencies":12904,"with_cases":4394,"offenses":25652,"states":51}
+  },
+  "top_agencies": [
+    {"ori":"DE002500X","name":"Animal Welfare: New Castle County","table_name":"Animal Welfare, New Castle County","state":"DE","type":"other","offenses":606},
+    {"ori":"DE003500X","name":"Animal Welfare: Sussex County","table_name":"Animal Welfare, Sussex County","state":"DE","type":"other","offenses":427},
+    {"ori":"TX2270100","name":"Austin Police Department","table_name":"Austin","state":"TX","type":"city","offenses":407,"population":1000639},
+    {"ori":"TXHPD0000","name":"Houston Police Department","table_name":"Houston","state":"TX","type":"city","offenses":395,"population":2413559},
+    {"ori":"GA0330200","name":"Cobb County Police Department","table_name":"Cobb County Police Department","state":"GA","type":"county","offenses":391},
+    {"ori":"DE001500X","name":"Animal Welfare: Kent County","table_name":"Animal Welfare, Kent County","state":"DE","type":"other","offenses":383},
+    {"ori":"MD0030100","name":"Baltimore County Police Department","table_name":"Baltimore County Police Department","state":"MD","type":"county","offenses":321},
+    {"ori":"ILCPD0000","name":"Chicago Police Department","table_name":"Chicago","state":"IL","type":"city","offenses":247,"population":2715488},
+    {"ori":"VA1280000","name":"Virginia Beach Police Department","table_name":"Virginia Beach","state":"VA","type":"city","offenses":215,"population":454805},
+    {"ori":"TX1013100","name":"Harris County Constable: Precinct 1","table_name":"Harris County Constable, Precinct 1","state":"TX","type":"other","offenses":195},
+    {"ori":"TX0710200","name":"El Paso Police Department","table_name":"El Paso","state":"TX","type":"city","offenses":188,"population":682310},
+    {"ori":"TX1080000","name":"Hidalgo County Sheriff's Office","table_name":"Hidalgo","state":"TX","type":"county","offenses":180},
+    {"ori":"NV0020100","name":"Las Vegas Metropolitan Police Department","table_name":"Las Vegas Metropolitan Police Department","state":"NV","type":"city","offenses":152,"population":1712136},
+    {"ori":"VA0210100","name":"Chesterfield County Police Department","table_name":"Chesterfield County Police Department","state":"VA","type":"county","offenses":152},
+    {"ori":"TX2270000","name":"Travis County Sheriff's Office","table_name":"Travis","state":"TX","type":"county","offenses":151},
+    {"ori":"IN0020100","name":"Fort Wayne Police Department","table_name":"Fort Wayne","state":"IN","type":"city","offenses":150,"population":275451},
+    {"ori":"OK0550600","name":"Oklahoma City Police Department","table_name":"Oklahoma City","state":"OK","type":"city","offenses":146,"population":720580},
+    {"ori":"TXDPD0000","name":"Dallas Police Department","table_name":"Dallas","state":"TX","type":"city","offenses":143,"population":1331217},
+    {"ori":"CO0300400","name":"Lakewood Police Department","table_name":"Lakewood","state":"CO","type":"city","offenses":138,"population":157016},
+    {"ori":"CA0194200","name":"Los Angeles Police Department","table_name":"Los Angeles","state":"CA","type":"city","offenses":132,"population":3874484},
+    {"ori":"TXSPD0000","name":"San Antonio Police Department","table_name":"San Antonio","state":"TX","type":"city","offenses":130,"population":1549306},
+    {"ori":"OK0720500","name":"Tulsa Police Department","table_name":"Tulsa","state":"OK","type":"city","offenses":107,"population":415528},
+    {"ori":"TNMPD0000","name":"Memphis Police Department","table_name":"Memphis","state":"TN","type":"city","offenses":102,"population":606629},
+    {"ori":"LA0320000","name":"Livingston Parish Sheriff's Office","table_name":"Livingston","state":"LA","type":"county","offenses":100},
+    {"ori":"CO0070100","name":"Boulder Police Department","table_name":"Boulder","state":"CO","type":"city","offenses":93,"population":106426}
+  ],
+  "offenders": {
+    "years": [2020,2021,2022,2023,2024,2025],
+    "dimensions": ["age_category","age","sex","race"],
+    "by_year": {
+      "2020": {
+        "age_category": {"all_offenses":{"total":7173072,"adult":5350030,"juvenile":494379,"unknown":1328663},"animal_cruelty":{"total":10414,"adult":8834,"juvenile":335,"unknown":1245}},
+        "age": {
+          "all_offenses": {"total":7173072,"0-10":18067,"11-15":230476,"16-20":792384,"21-25":917511,"26-30":972769,"31-35":850807,"36-40":684825,"41-45":452126,"46-50":331436,"51-55":234695,"56-60":202295,"61-65":84548,"66+":72470,"unknown":1328663},
+          "animal_cruelty": {"total":10414,"0-10":41,"11-15":159,"16-20":672,"21-25":1092,"26-30":1285,"31-35":1227,"36-40":1073,"41-45":793,"46-50":642,"51-55":587,"56-60":590,"61-65":401,"66+":607,"unknown":1245}
+        },
+        "race": {
+          "all_offenses": {"total":7173072,"white":3642932,"black":2122038,"american_indian_alaska_native":83161,"asian":58063,"native_hawaiian_pacific_islander":15391,"unknown":1251487},
+          "animal_cruelty": {"total":10414,"white":6442,"black":2468,"american_indian_alaska_native":76,"asian":117,"native_hawaiian_pacific_islander":25,"unknown":1286}
+        },
+        "sex": {"all_offenses":{"total":7173072,"male":4451194,"female":1737987,"unknown":983891},"animal_cruelty":{"total":10414,"male":5964,"female":3609,"unknown":841}}
+      },
+      "2021": {
+        "age_category": {"all_offenses":{"total":8536946,"adult":6507799,"juvenile":631763,"unknown":1397384},"animal_cruelty":{"total":14890,"adult":12846,"juvenile":470,"unknown":1574}},
+        "age": {
+          "all_offenses": {"total":8536946,"0-10":28128,"11-15":322060,"16-20":881678,"21-25":1055968,"26-30":1153649,"31-35":1069120,"36-40":866467,"41-45":593288,"46-50":415008,"51-55":296048,"56-60":245323,"61-65":110879,"66+":101946,"unknown":1397384},
+          "animal_cruelty": {"total":14890,"0-10":57,"11-15":243,"16-20":871,"21-25":1708,"26-30":1858,"31-35":1709,"36-40":1508,"41-45":1233,"46-50":1010,"51-55":858,"56-60":817,"61-65":593,"66+":851,"unknown":1574}
+        },
+        "race": {
+          "all_offenses": {"total":8536946,"white":4337471,"black":2646696,"american_indian_alaska_native":121995,"asian":74639,"native_hawaiian_pacific_islander":17569,"unknown":1338576},
+          "animal_cruelty": {"total":14890,"white":9103,"black":3627,"american_indian_alaska_native":163,"asian":197,"native_hawaiian_pacific_islander":26,"unknown":1774}
+        },
+        "sex": {"all_offenses":{"total":8536946,"male":5439941,"female":2097858,"unknown":999147},"animal_cruelty":{"total":14890,"male":8425,"female":5412,"unknown":1053}}
+      },
+      "2022": {
+        "age_category": {"all_offenses":{"total":9873871,"adult":7514328,"juvenile":869027,"unknown":1490516},"animal_cruelty":{"total":18864,"adult":16514,"juvenile":626,"unknown":1724}},
+        "age": {
+          "all_offenses": {"total":9873871,"0-10":34134,"11-15":468142,"16-20":1021838,"21-25":1174529,"26-30":1249461,"31-35":1236536,"36-40":1005725,"41-45":733718,"46-50":510528,"51-55":385262,"56-60":294124,"61-65":144525,"66+":124833,"unknown":1490516},
+          "animal_cruelty": {"total":18864,"0-10":92,"11-15":327,"16-20":1064,"21-25":2109,"26-30":2295,"31-35":2326,"36-40":2044,"41-45":1643,"46-50":1236,"51-55":1116,"56-60":1001,"61-65":763,"66+":1124,"unknown":1724}
+        },
+        "race": {
+          "all_offenses": {"total":9873871,"white":5015610,"black":3143747,"american_indian_alaska_native":131512,"asian":95463,"native_hawaiian_pacific_islander":27292,"unknown":1460247},
+          "animal_cruelty": {"total":18864,"white":11664,"black":4634,"american_indian_alaska_native":214,"asian":211,"native_hawaiian_pacific_islander":59,"unknown":2082}
+        },
+        "sex": {"all_offenses":{"total":9873871,"male":6365860,"female":2483772,"unknown":1024239},"animal_cruelty":{"total":18864,"male":10916,"female":6820,"unknown":1128}}
+      },
+      "2023": {
+        "age_category": {"all_offenses":{"total":11120557,"adult":8244186,"juvenile":1031541,"unknown":1844830},"animal_cruelty":{"total":20924,"adult":18580,"juvenile":702,"unknown":1642}},
+        "age": {
+          "all_offenses": {"total":11120557,"0-10":40788,"11-15":563817,"16-20":1122972,"21-25":1235634,"26-30":1298756,"31-35":1356094,"36-40":1120566,"41-45":843957,"46-50":597692,"51-55":415552,"56-60":344258,"61-65":178695,"66+":156946,"unknown":1844830},
+          "animal_cruelty": {"total":20924,"0-10":78,"11-15":375,"16-20":1141,"21-25":2271,"26-30":2556,"31-35":2670,"36-40":2306,"41-45":1923,"46-50":1428,"51-55":1288,"56-60":1107,"61-65":871,"66+":1268,"unknown":1642}
+        },
+        "race": {
+          "all_offenses": {"total":11120557,"white":5375917,"black":3623623,"american_indian_alaska_native":134604,"asian":128407,"native_hawaiian_pacific_islander":27477,"unknown":1830529},
+          "animal_cruelty": {"total":20924,"white":13083,"black":5252,"american_indian_alaska_native":271,"asian":246,"native_hawaiian_pacific_islander":42,"unknown":2030}
+        },
+        "sex": {"all_offenses":{"total":11120557,"male":7122000,"female":2806012,"unknown":1192545},"animal_cruelty":{"total":20924,"male":12209,"female":7700,"unknown":1015}}
+      },
+      "2024": {
+        "age": {
+          "all_offenses": {"total":11264265,"0-10":41838,"11-15":544149,"16-20":1105480,"21-25":1220182,"26-30":1297903,"31-35":1404352,"36-40":1199755,"41-45":915573,"46-50":630565,"51-55":439179,"56-60":364096,"61-65":202793,"66+":183490,"unknown":1714910},
+          "animal_cruelty": {"total":23449,"0-10":86,"11-15":352,"16-20":1287,"21-25":2445,"26-30":2663,"31-35":3060,"36-40":2640,"41-45":2273,"46-50":1676,"51-55":1540,"56-60":1230,"61-65":1027,"66+":1550,"unknown":1620}
+        },
+        "sex": {"all_offenses":{"total":11264265,"male":7363030,"female":2893796,"unknown":1007439},"animal_cruelty":{"total":23449,"male":13736,"female":8747,"unknown":966}},
+        "race": {
+          "all_offenses": {"total":11264265,"white":5616383,"black":3737005,"american_indian_alaska_native":135674,"asian":142990,"native_hawaiian_pacific_islander":30373,"unknown":1601840},
+          "animal_cruelty": {"total":23449,"white":14774,"black":6002,"american_indian_alaska_native":296,"asian":277,"native_hawaiian_pacific_islander":50,"unknown":2050}
+        },
+        "age_category": {"all_offenses":{"total":11264265,"adult":8538628,"juvenile":1010727,"unknown":1714910},"animal_cruelty":{"total":23449,"adult":21116,"juvenile":713,"unknown":1620}}
+      },
+      "2025": {
+        "age": {
+          "all_offenses": {"total":11109924,"0-10":42906,"11-15":505447,"16-20":1072849,"21-25":1165002,"26-30":1236616,"31-35":1378165,"36-40":1230475,"41-45":949475,"46-50":673259,"51-55":447917,"56-60":375607,"61-65":226875,"66+":208887,"unknown":1596444},
+          "animal_cruelty": {"total":24853,"0-10":85,"11-15":346,"16-20":1288,"21-25":2545,"26-30":2811,"31-35":3166,"36-40":3032,"41-45":2396,"46-50":1933,"51-55":1582,"56-60":1313,"61-65":1170,"66+":1786,"unknown":1400}
+        },
+        "sex": {"all_offenses":{"total":11109924,"male":7238302,"female":2880651,"unknown":990971},"animal_cruelty":{"total":24853,"male":14486,"female":9508,"unknown":859}},
+        "race": {
+          "all_offenses": {"total":11109924,"white":5564755,"black":3722220,"american_indian_alaska_native":133770,"asian":147656,"native_hawaiian_pacific_islander":34712,"unknown":1506811},
+          "animal_cruelty": {"total":24853,"white":16235,"black":6028,"american_indian_alaska_native":304,"asian":273,"native_hawaiian_pacific_islander":60,"unknown":1953}
+        },
+        "age_category": {"all_offenses":{"total":11109924,"adult":8560198,"juvenile":953282,"unknown":1596444},"animal_cruelty":{"total":24853,"adult":22772,"juvenile":681,"unknown":1400}}
+      }
+    }
+  }
+}

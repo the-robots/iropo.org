@@ -1,0 +1,1588 @@
+{
+  "last_full_year": 2025,
+  "series_first_year": 2016,
+  "table_years": [2020,2021,2022,2023,2024,2025],
+  "states": [
+    {
+      "abbr": "AL",
+      "name": "Alabama",
+      "slug": "al",
+      "fips": "01",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":20.9,"population":4863300,"covered_population":1014069,"rate_per_100k":0.1,"clearance_rate":0.0},
+        {"year":2017,"months_reported":12,"offenses":2,"clearances":1,"coverage_pct":22.0,"population":4874747,"covered_population":1073068,"rate_per_100k":0.19,"clearance_rate":0.5},
+        {"year":2018,"months_reported":12,"offenses":3,"clearances":1,"coverage_pct":27.2,"population":4887871,"covered_population":1328706,"rate_per_100k":0.23,"clearance_rate":0.333},
+        {"year":2019,"months_reported":12,"offenses":5,"clearances":4,"coverage_pct":34.4,"population":4903185,"covered_population":1688642,"rate_per_100k":0.3,"clearance_rate":0.8},
+        {"year":2020,"months_reported":12,"offenses":53,"clearances":11,"coverage_pct":50.8,"population":4921532,"covered_population":2502195,"rate_per_100k":2.12,"clearance_rate":0.208},
+        {"year":2021,"months_reported":12,"offenses":411,"clearances":70,"coverage_pct":89.0,"population":5039877,"covered_population":4483939,"rate_per_100k":9.17,"clearance_rate":0.17},
+        {"year":2022,"months_reported":12,"offenses":670,"clearances":131,"coverage_pct":96.3,"population":5074296,"covered_population":4885128,"rate_per_100k":13.72,"clearance_rate":0.196},
+        {"year":2023,"months_reported":12,"offenses":709,"clearances":156,"coverage_pct":96.7,"population":5108468,"covered_population":4939153,"rate_per_100k":14.35,"clearance_rate":0.22},
+        {"year":2024,"months_reported":12,"offenses":626,"clearances":150,"coverage_pct":99.0,"population":5157699,"covered_population":5105057,"rate_per_100k":12.26,"clearance_rate":0.24},
+        {"year":2025,"months_reported":12,"offenses":705,"clearances":167,"coverage_pct":99.3,"population":5193088,"covered_population":5154774,"rate_per_100k":13.68,"clearance_rate":0.237}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,1,0,6,12,10,10,7,0,2,0,1,0,2,3,22,19,37,20,39,33,39,31,40,42,36,53,57,41,47,39,50,83,74,60,39,58,63,59,64,56,63,50,66,55,71,75,55,50,55,49,48,45,43,36,48,63,59,66,62,68,42,46,54,58,66,53,62,75,61,57,54,57,58,50],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,1,0,4,1,3,0,0,0,1,0,0,1,3,1,8,6,10,5,7,3,5,9,4,9,9,9,7,12,10,14,17,8,8,14,13,10,11,9,14,14,15,16,19,18,13,10,10,7,16,9,12,8,9,15,20,19,10,16,7,9,12,14,11,13,14,17,18,12,17,14,16,9]
+      },
+      "agencies": {
+        "directory": 448,
+        "directory_nibrs": 434,
+        "reporting": {"2020":0,"2021":186,"2022":333,"2023":313,"2024":355,"2025":310},
+        "with_cases": {"2020":0,"2021":89,"2022":154,"2023":174,"2024":162,"2025":170},
+        "table_offenses": {"2020":0,"2021":212,"2022":594,"2023":640,"2024":576,"2025":674}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "AK",
+      "name": "Alaska",
+      "slug": "ak",
+      "fips": "02",
+      "annual": [
+        {"year":2016,"months_reported":1,"offenses":0,"clearances":0,"coverage_pct":0.4,"population":741894,"covered_population":36302,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":2,"offenses":0,"clearances":0,"coverage_pct":0.7,"population":739795,"covered_population":32937,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":8,"offenses":0,"clearances":0,"coverage_pct":2.3,"population":737438,"covered_population":25935,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":9,"offenses":0,"clearances":0,"coverage_pct":6.7,"population":731545,"covered_population":65167,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2020,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":20.0,"population":731158,"covered_population":145933,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2021,"months_reported":12,"offenses":22,"clearances":11,"coverage_pct":56.1,"population":732673,"covered_population":410910,"rate_per_100k":5.35,"clearance_rate":0.5},
+        {"year":2022,"months_reported":12,"offenses":27,"clearances":17,"coverage_pct":57.4,"population":733583,"covered_population":421419,"rate_per_100k":6.41,"clearance_rate":0.63},
+        {"year":2023,"months_reported":12,"offenses":25,"clearances":11,"coverage_pct":60.5,"population":733406,"covered_population":443799,"rate_per_100k":5.63,"clearance_rate":0.44},
+        {"year":2024,"months_reported":12,"offenses":49,"clearances":18,"coverage_pct":60.9,"population":740133,"covered_population":450712,"rate_per_100k":10.87,"clearance_rate":0.367},
+        {"year":2025,"months_reported":12,"offenses":32,"clearances":14,"coverage_pct":60.7,"population":737270,"covered_population":447331,"rate_per_100k":7.15,"clearance_rate":0.438}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,null,null,null,null,null,0,0,null,null,0,0,0,0,0,null,null,0,0,null,null,0,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,1,0,1,1,2,3,2,0,4,2,2,1,0,3,3,2,5,3,1,1,2,2,4,2,3,1,1,2,3,3,2,2,1,2,3,3,4,4,4,5,4,5,4,7,6,1,2,3,2,5,2,5,1,2,2,3,3,0,4],
+        "clearances": [0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,null,null,null,null,null,0,0,null,null,0,0,0,0,0,null,null,0,0,null,null,0,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0,1,1,1,1,1,0,1,0,1,0,0,3,3,2,1,3,0,1,2,1,1,1,1,0,0,0,1,2,2,0,0,1,3,3,1,3,1,3,1,0,1,1,2,0,2,0,2,2,1,1,0,1,1,2,1,0,3]
+      },
+      "agencies": {
+        "directory": 37,
+        "directory_nibrs": 32,
+        "reporting": {"2020":0,"2021":28,"2022":26,"2023":31,"2024":29,"2025":31},
+        "with_cases": {"2020":0,"2021":7,"2022":8,"2023":7,"2024":9,"2025":8},
+        "table_offenses": {"2020":0,"2021":20,"2022":27,"2023":24,"2024":48,"2025":32}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "AZ",
+      "name": "Arizona",
+      "slug": "az",
+      "fips": "04",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":10.4,"population":6931071,"covered_population":719853,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":9.8,"population":7016270,"covered_population":687532,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":6,"clearances":3,"coverage_pct":9.5,"population":7171646,"covered_population":682216,"rate_per_100k":0.88,"clearance_rate":0.5},
+        {"year":2019,"months_reported":12,"offenses":47,"clearances":17,"coverage_pct":16.9,"population":7278717,"covered_population":1227921,"rate_per_100k":3.83,"clearance_rate":0.362},
+        {"year":2020,"months_reported":12,"offenses":187,"clearances":66,"coverage_pct":32.3,"population":7421401,"covered_population":2395410,"rate_per_100k":7.81,"clearance_rate":0.353},
+        {"year":2021,"months_reported":12,"offenses":409,"clearances":126,"coverage_pct":58.4,"population":7276316,"covered_population":4247666,"rate_per_100k":9.63,"clearance_rate":0.308},
+        {"year":2022,"months_reported":12,"offenses":517,"clearances":148,"coverage_pct":62.1,"population":7359197,"covered_population":4570477,"rate_per_100k":11.31,"clearance_rate":0.286},
+        {"year":2023,"months_reported":12,"offenses":610,"clearances":156,"coverage_pct":69.3,"population":7431344,"covered_population":5151777,"rate_per_100k":11.84,"clearance_rate":0.256},
+        {"year":2024,"months_reported":12,"offenses":736,"clearances":208,"coverage_pct":69.7,"population":7582384,"covered_population":5285451,"rate_per_100k":13.93,"clearance_rate":0.283},
+        {"year":2025,"months_reported":12,"offenses":858,"clearances":255,"coverage_pct":80.9,"population":7623818,"covered_population":6164877,"rate_per_100k":13.92,"clearance_rate":0.297}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,1,1,1,1,3,4,3,4,6,8,3,4,4,6,12,12,19,13,19,15,20,25,18,14,14,6,21,25,31,33,42,45,46,48,40,26,25,27,26,25,47,46,46,51,57,55,48,38,42,36,43,48,47,57,48,58,70,52,55,41,46,45,51,51,58,74,65,85,88,66,54,62,49,33,57,41,71,72,75,78,87,71,88,73,68,77],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,2,0,0,3,4,3,1,1,1,2,3,2,4,3,8,8,11,10,6,4,3,4,2,8,6,8,17,18,15,18,8,11,8,7,9,4,17,20,14,18,17,12,11,10,8,8,12,12,18,13,16,19,8,15,14,10,7,12,13,16,15,17,18,25,27,19,18,18,17,5,17,11,20,14,29,25,29,27,24,25,20,14]
+      },
+      "agencies": {
+        "directory": 127,
+        "directory_nibrs": 104,
+        "reporting": {"2020":21,"2021":67,"2022":73,"2023":76,"2024":83,"2025":85},
+        "with_cases": {"2020":10,"2021":36,"2022":42,"2023":41,"2024":51,"2025":48},
+        "table_offenses": {"2020":182,"2021":390,"2022":459,"2023":591,"2024":690,"2025":688}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "AR",
+      "name": "Arkansas",
+      "slug": "ar",
+      "fips": "05",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":98.7,"population":2988248,"covered_population":2948785,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":97.5,"population":3004279,"covered_population":2927997,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":96.8,"population":3013825,"covered_population":2917804,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":6,"clearances":1,"coverage_pct":96.0,"population":3017804,"covered_population":2896645,"rate_per_100k":0.21,"clearance_rate":0.167},
+        {"year":2020,"months_reported":12,"offenses":13,"clearances":3,"coverage_pct":96.3,"population":3030522,"covered_population":2917843,"rate_per_100k":0.45,"clearance_rate":0.231},
+        {"year":2021,"months_reported":12,"offenses":33,"clearances":7,"coverage_pct":97.0,"population":3025891,"covered_population":2935509,"rate_per_100k":1.12,"clearance_rate":0.212},
+        {"year":2022,"months_reported":12,"offenses":83,"clearances":37,"coverage_pct":98.5,"population":3045637,"covered_population":2999305,"rate_per_100k":2.77,"clearance_rate":0.446},
+        {"year":2023,"months_reported":12,"offenses":113,"clearances":32,"coverage_pct":97.8,"population":3067732,"covered_population":3000883,"rate_per_100k":3.77,"clearance_rate":0.283},
+        {"year":2024,"months_reported":12,"offenses":145,"clearances":52,"coverage_pct":98.5,"population":3088354,"covered_population":3041532,"rate_per_100k":4.77,"clearance_rate":0.359},
+        {"year":2025,"months_reported":12,"offenses":137,"clearances":29,"coverage_pct":98.4,"population":3114791,"covered_population":3066074,"rate_per_100k":4.47,"clearance_rate":0.212}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,2,1,1,0,0,0,0,1,1,1,1,0,1,1,2,1,3,1,1,1,2,5,5,5,4,0,4,1,3,2,4,9,4,7,6,7,9,9,12,6,7,3,5,7,6,5,9,15,13,11,15,8,10,9,8,10,7,10,7,22,11,18,12,18,12,10,6,7,9,12,11,21,22,8,16,14,6,5],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,1,0,1,0,1,2,0,0,1,1,0,2,2,3,2,1,4,7,6,4,3,2,1,0,2,1,1,4,6,6,3,3,2,1,3,3,3,4,4,4,11,4,4,4,7,3,1,1,0,4,2,0,4,9,2,2,2,0,3]
+      },
+      "agencies": {
+        "directory": 380,
+        "directory_nibrs": 378,
+        "reporting": {"2020":249,"2021":252,"2022":270,"2023":288,"2024":349,"2025":347},
+        "with_cases": {"2020":6,"2021":6,"2022":14,"2023":28,"2024":30,"2025":34},
+        "table_offenses": {"2020":11,"2021":30,"2022":81,"2023":112,"2024":144,"2025":136}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "CA",
+      "name": "California",
+      "slug": "ca",
+      "fips": "06",
+      "annual": [
+        {"year":2016,"months_reported":9,"offenses":0,"clearances":0,"coverage_pct":1.0,"population":39250017,"covered_population":546090,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":11,"offenses":0,"clearances":0,"coverage_pct":1.3,"population":39536653,"covered_population":573489,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":10,"offenses":0,"clearances":0,"coverage_pct":1.2,"population":39557045,"covered_population":572695,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":2.2,"population":39512223,"covered_population":866204,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2020,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":10.3,"population":39368078,"covered_population":4066021,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2021,"months_reported":12,"offenses":210,"clearances":62,"coverage_pct":26.2,"population":39237836,"covered_population":10298311,"rate_per_100k":2.04,"clearance_rate":0.295},
+        {"year":2022,"months_reported":12,"offenses":650,"clearances":218,"coverage_pct":46.6,"population":39029342,"covered_population":18169820,"rate_per_100k":3.58,"clearance_rate":0.335},
+        {"year":2023,"months_reported":12,"offenses":1202,"clearances":406,"coverage_pct":63.6,"population":38965193,"covered_population":24777112,"rate_per_100k":4.85,"clearance_rate":0.338},
+        {"year":2024,"months_reported":12,"offenses":1476,"clearances":532,"coverage_pct":75.0,"population":39431263,"covered_population":29558903,"rate_per_100k":4.99,"clearance_rate":0.36},
+        {"year":2025,"months_reported":12,"offenses":1526,"clearances":521,"coverage_pct":79.3,"population":39355309,"covered_population":31208568,"rate_per_100k":4.89,"clearance_rate":0.341}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,null,0,0,null,null,0,0,0,0,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,null,0,0,0,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,8,9,18,17,11,26,34,19,22,22,23,20,28,42,45,66,56,87,65,68,59,59,55,79,73,104,99,104,119,140,105,107,94,90,88,84,107,108,134,153,124,150,129,131,154,98,104,111,105,119,126,137,138,148,171,131,119,114,107],
+        "clearances": [0,0,0,0,null,0,0,null,null,0,0,0,0,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,null,0,0,0,0,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,6,4,3,9,6,6,8,6,10,8,9,15,12,17,18,25,25,26,23,21,19,24,19,45,24,27,32,48,45,31,33,39,39,31,37,38,42,55,41,63,49,47,51,30,48,40,33,46,43,46,46,55,62,36,32,39,43]
+      },
+      "agencies": {
+        "directory": 867,
+        "directory_nibrs": 768,
+        "reporting": {"2020":0,"2021":14,"2022":372,"2023":589,"2024":641,"2025":712},
+        "with_cases": {"2020":0,"2021":8,"2022":121,"2023":230,"2024":259,"2025":257},
+        "table_offenses": {"2020":0,"2021":40,"2022":449,"2023":983,"2024":1361,"2025":1480}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "CO",
+      "name": "Colorado",
+      "slug": "co",
+      "fips": "08",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":4,"clearances":3,"coverage_pct":99.0,"population":5540545,"covered_population":5485186,"rate_per_100k":0.07,"clearance_rate":0.75},
+        {"year":2017,"months_reported":12,"offenses":570,"clearances":294,"coverage_pct":99.2,"population":5607154,"covered_population":5564751,"rate_per_100k":10.24,"clearance_rate":0.516},
+        {"year":2018,"months_reported":12,"offenses":817,"clearances":367,"coverage_pct":98.8,"population":5695564,"covered_population":5628219,"rate_per_100k":14.52,"clearance_rate":0.449},
+        {"year":2019,"months_reported":12,"offenses":927,"clearances":420,"coverage_pct":98.9,"population":5758736,"covered_population":5697810,"rate_per_100k":16.27,"clearance_rate":0.453},
+        {"year":2020,"months_reported":12,"offenses":779,"clearances":339,"coverage_pct":99.3,"population":5807719,"covered_population":5766575,"rate_per_100k":13.51,"clearance_rate":0.435},
+        {"year":2021,"months_reported":12,"offenses":880,"clearances":349,"coverage_pct":99.5,"population":5812069,"covered_population":5782991,"rate_per_100k":15.22,"clearance_rate":0.397},
+        {"year":2022,"months_reported":12,"offenses":823,"clearances":353,"coverage_pct":99.2,"population":5839926,"covered_population":5793750,"rate_per_100k":14.2,"clearance_rate":0.429},
+        {"year":2023,"months_reported":12,"offenses":1000,"clearances":401,"coverage_pct":99.0,"population":5877610,"covered_population":5817068,"rate_per_100k":17.19,"clearance_rate":0.401},
+        {"year":2024,"months_reported":12,"offenses":1038,"clearances":494,"coverage_pct":99.2,"population":5957493,"covered_population":5911687,"rate_per_100k":17.56,"clearance_rate":0.476},
+        {"year":2025,"months_reported":12,"offenses":996,"clearances":408,"coverage_pct":99.1,"population":6012561,"covered_population":5960854,"rate_per_100k":16.71,"clearance_rate":0.41}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,2,0,0,0,0,0,0,1,1,37,33,52,40,47,59,68,56,49,40,42,47,50,42,64,50,80,103,120,89,70,53,38,58,62,69,68,71,66,89,118,142,97,48,42,55,53,56,40,39,90,92,101,91,67,47,47,56,57,65,75,59,75,107,102,84,77,57,56,66,60,67,65,67,76,85,93,86,64,50,54,56,82,55,48,67,97,77,136,144,95,75,61,63,98,59,69,82,88,107,123,109,99,81,55,68,77,63,76,77,83,98,112,116,92,82,61,59],
+        "clearances": [0,0,0,2,0,0,0,0,0,0,0,1,15,17,24,20,27,29,41,35,30,13,23,20,16,21,28,13,40,57,60,36,40,20,19,17,20,31,27,38,29,45,55,72,38,22,21,22,27,28,24,12,40,42,41,38,28,20,17,22,12,27,32,19,27,43,55,31,36,20,21,26,24,27,31,25,32,35,41,41,31,19,14,33,38,23,19,26,35,27,63,64,33,32,20,21,41,26,34,45,36,58,63,55,46,36,26,28,32,28,34,23,27,40,46,58,45,34,23,18]
+      },
+      "agencies": {
+        "directory": 253,
+        "directory_nibrs": 241,
+        "reporting": {"2020":199,"2021":203,"2022":175,"2023":173,"2024":195,"2025":212},
+        "with_cases": {"2020":74,"2021":69,"2022":69,"2023":64,"2024":83,"2025":85},
+        "table_offenses": {"2020":721,"2021":856,"2022":705,"2023":889,"2024":1028,"2025":980}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "CT",
+      "name": "Connecticut",
+      "slug": "ct",
+      "fips": "09",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":81.3,"population":3576452,"covered_population":2908211,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":20,"clearances":14,"coverage_pct":82.3,"population":3588184,"covered_population":2954436,"rate_per_100k":0.68,"clearance_rate":0.7},
+        {"year":2018,"months_reported":12,"offenses":77,"clearances":37,"coverage_pct":87.2,"population":3572665,"covered_population":3115797,"rate_per_100k":2.47,"clearance_rate":0.481},
+        {"year":2019,"months_reported":12,"offenses":132,"clearances":64,"coverage_pct":93.8,"population":3565287,"covered_population":3345648,"rate_per_100k":3.95,"clearance_rate":0.485},
+        {"year":2020,"months_reported":12,"offenses":92,"clearances":47,"coverage_pct":96.9,"population":3557006,"covered_population":3447171,"rate_per_100k":2.67,"clearance_rate":0.511},
+        {"year":2021,"months_reported":12,"offenses":155,"clearances":68,"coverage_pct":100.0,"population":3605597,"covered_population":3605597,"rate_per_100k":4.3,"clearance_rate":0.439},
+        {"year":2022,"months_reported":12,"offenses":133,"clearances":80,"coverage_pct":99.9,"population":3626205,"covered_population":3621215,"rate_per_100k":3.67,"clearance_rate":0.602},
+        {"year":2023,"months_reported":12,"offenses":121,"clearances":67,"coverage_pct":100.0,"population":3617176,"covered_population":3615693,"rate_per_100k":3.35,"clearance_rate":0.554},
+        {"year":2024,"months_reported":12,"offenses":173,"clearances":101,"coverage_pct":100.0,"population":3675069,"covered_population":3675069,"rate_per_100k":4.71,"clearance_rate":0.584},
+        {"year":2025,"months_reported":12,"offenses":161,"clearances":96,"coverage_pct":100.0,"population":3688496,"covered_population":3688496,"rate_per_100k":4.36,"clearance_rate":0.596}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,2,6,4,0,1,2,6,7,1,3,7,5,9,11,7,10,9,7,8,7,4,9,10,21,16,18,9,10,13,8,12,5,5,6,15,10,9,6,7,2,7,7,7,10,16,15,21,16,25,16,8,6,8,13,11,9,9,11,10,20,13,16,8,8,5,8,9,10,12,7,13,18,9,12,8,6,9,14,16,11,11,13,14,19,23,15,13,14,10,12,16,19,13,8,20,19,12,13,11,11,7],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,2,1,4,3,0,1,1,6,3,1,0,4,1,6,7,3,2,3,5,0,1,2,6,6,14,9,9,4,4,4,3,5,2,3,3,10,6,4,4,4,1,2,4,3,3,8,5,10,5,13,7,3,3,4,7,5,7,4,7,8,13,9,8,5,4,3,3,6,4,3,5,8,8,6,6,7,5,6,7,11,4,7,7,7,12,12,9,8,9,8,9,9,11,8,3,19,10,9,4,6,5,3]
+      },
+      "agencies": {
+        "directory": 108,
+        "directory_nibrs": 108,
+        "reporting": {"2020":100,"2021":107,"2022":102,"2023":106,"2024":108,"2025":106},
+        "with_cases": {"2020":32,"2021":41,"2022":46,"2023":40,"2024":54,"2025":51},
+        "table_offenses": {"2020":85,"2021":149,"2022":127,"2023":115,"2024":164,"2025":157}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "DE",
+      "name": "Delaware",
+      "slug": "de",
+      "fips": "10",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":18,"clearances":11,"coverage_pct":100.0,"population":952065,"covered_population":951907,"rate_per_100k":1.89,"clearance_rate":0.611},
+        {"year":2017,"months_reported":12,"offenses":924,"clearances":58,"coverage_pct":100.0,"population":961939,"covered_population":961939,"rate_per_100k":96.06,"clearance_rate":0.063},
+        {"year":2018,"months_reported":12,"offenses":1096,"clearances":58,"coverage_pct":100.0,"population":967171,"covered_population":966831,"rate_per_100k":113.36,"clearance_rate":0.053},
+        {"year":2019,"months_reported":12,"offenses":1297,"clearances":69,"coverage_pct":99.9,"population":973764,"covered_population":973006,"rate_per_100k":133.3,"clearance_rate":0.053},
+        {"year":2020,"months_reported":12,"offenses":1155,"clearances":50,"coverage_pct":100.0,"population":986809,"covered_population":986619,"rate_per_100k":117.07,"clearance_rate":0.043},
+        {"year":2021,"months_reported":12,"offenses":1285,"clearances":58,"coverage_pct":100.0,"population":1003384,"covered_population":1003238,"rate_per_100k":128.09,"clearance_rate":0.045},
+        {"year":2022,"months_reported":12,"offenses":1378,"clearances":107,"coverage_pct":99.9,"population":1018396,"covered_population":1016900,"rate_per_100k":135.51,"clearance_rate":0.078},
+        {"year":2023,"months_reported":12,"offenses":1659,"clearances":93,"coverage_pct":100.0,"population":1031890,"covered_population":1031578,"rate_per_100k":160.82,"clearance_rate":0.056},
+        {"year":2024,"months_reported":12,"offenses":1605,"clearances":108,"coverage_pct":100.0,"population":1051917,"covered_population":1051804,"rate_per_100k":152.59,"clearance_rate":0.067},
+        {"year":2025,"months_reported":12,"offenses":1439,"clearances":113,"coverage_pct":100.0,"population":1059952,"covered_population":1059907,"rate_per_100k":135.77,"clearance_rate":0.079}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [2,1,3,0,1,5,0,0,3,1,2,0,70,58,64,81,73,66,112,106,69,65,63,97,118,52,71,69,74,122,115,112,109,77,83,94,137,97,82,95,93,131,167,109,99,110,104,73,114,92,87,80,46,100,138,102,91,96,97,112,105,84,82,85,108,129,132,142,109,104,117,88,131,81,83,67,113,130,134,124,123,104,124,164,141,111,123,118,153,183,202,128,117,115,134,134,163,116,114,118,115,169,179,142,134,117,119,119,151,105,88,87,117,147,149,130,104,105,121,135],
+        "clearances": [2,1,2,0,1,1,0,0,1,1,2,0,7,6,3,7,5,10,5,4,4,3,1,3,5,4,3,5,2,7,4,11,5,5,2,5,9,5,6,6,3,6,10,6,5,8,2,3,5,7,4,5,2,6,5,0,3,5,3,5,2,3,3,1,8,11,7,8,3,7,3,2,4,8,7,6,10,8,12,12,10,9,11,10,4,5,5,3,15,10,16,6,6,7,7,9,15,6,11,5,15,6,17,8,6,7,5,7,5,8,5,7,12,10,14,9,7,9,10,17]
+      },
+      "agencies": {
+        "directory": 63,
+        "directory_nibrs": 63,
+        "reporting": {"2020":54,"2021":53,"2022":52,"2023":55,"2024":58,"2025":58},
+        "with_cases": {"2020":11,"2021":15,"2022":13,"2023":16,"2024":11,"2025":9},
+        "table_offenses": {"2020":1154,"2021":1279,"2022":1370,"2023":1650,"2024":1601,"2025":1438}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "DC",
+      "name": "District of Columbia",
+      "slug": "dc",
+      "fips": "11",
+      "annual": [
+        {"year":2016,"months_reported":0,"offenses":null,"clearances":null,"coverage_pct":0.0,"population":681170,"covered_population":null,"rate_per_100k":null,"clearance_rate":null},
+        {"year":2017,"months_reported":2,"offenses":0,"clearances":0,"coverage_pct":16.7,"population":693972,"covered_population":693972,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":4,"offenses":0,"clearances":0,"coverage_pct":33.3,"population":702455,"covered_population":702455,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":5,"offenses":0,"clearances":0,"coverage_pct":41.7,"population":705749,"covered_population":705749,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2020,"months_reported":7,"offenses":1,"clearances":0,"coverage_pct":58.3,"population":712816,"covered_population":712816,"rate_per_100k":0.14,"clearance_rate":0.0},
+        {"year":2021,"months_reported":12,"offenses":7,"clearances":4,"coverage_pct":100.0,"population":670050,"covered_population":670050,"rate_per_100k":1.04,"clearance_rate":0.571},
+        {"year":2022,"months_reported":12,"offenses":17,"clearances":7,"coverage_pct":100.0,"population":671803,"covered_population":671803,"rate_per_100k":2.53,"clearance_rate":0.412},
+        {"year":2023,"months_reported":12,"offenses":5,"clearances":3,"coverage_pct":100.0,"population":678972,"covered_population":678972,"rate_per_100k":0.74,"clearance_rate":0.6},
+        {"year":2024,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":100.0,"population":702250,"covered_population":702250,"rate_per_100k":0.14,"clearance_rate":0.0},
+        {"year":2025,"months_reported":12,"offenses":2,"clearances":2,"coverage_pct":100.0,"population":693645,"covered_population":693645,"rate_per_100k":0.29,"clearance_rate":1.0}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,null,null,null,0,null,null,0,null,null,null,null,0,null,0,0,null,null,null,0,null,null,null,null,0,null,0,null,0,0,null,0,0,null,null,0,0,null,null,0,1,0,0,0,0,0,0,0,0,0,2,2,1,2,1,2,1,1,0,1,2,2,2,3,2,0,0,1,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0],
+        "clearances": [null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,null,null,null,0,null,null,0,null,null,null,null,0,null,0,0,null,null,null,0,null,null,null,null,0,null,0,null,0,0,null,0,0,null,null,0,0,null,null,0,0,0,0,0,0,0,0,0,0,0,2,1,1,0,0,2,1,0,0,0,1,1,2,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0]
+      },
+      "agencies": {
+        "directory": 3,
+        "directory_nibrs": 2,
+        "reporting": {"2020":1,"2021":1,"2022":2,"2023":2,"2024":2,"2025":2},
+        "with_cases": {"2020":1,"2021":0,"2022":1,"2023":1,"2024":1,"2025":1},
+        "table_offenses": {"2020":1,"2021":0,"2022":16,"2023":5,"2024":1,"2025":2}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "FL",
+      "name": "Florida",
+      "slug": "fl",
+      "fips": "12",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":15.3,"population":20612439,"covered_population":3161343,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":17.4,"population":20984400,"covered_population":3644093,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":20.4,"population":21299325,"covered_population":4354699,"rate_per_100k":0.02,"clearance_rate":0.0},
+        {"year":2019,"months_reported":12,"offenses":2,"clearances":1,"coverage_pct":22.3,"population":21477737,"covered_population":4784778,"rate_per_100k":0.04,"clearance_rate":0.5},
+        {"year":2020,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":26.9,"population":21733312,"covered_population":5847499,"rate_per_100k":0.02,"clearance_rate":0.0},
+        {"year":2021,"months_reported":12,"offenses":238,"clearances":110,"coverage_pct":46.9,"population":21781128,"covered_population":10218636,"rate_per_100k":2.33,"clearance_rate":0.462},
+        {"year":2022,"months_reported":12,"offenses":452,"clearances":192,"coverage_pct":60.2,"population":22244823,"covered_population":13399512,"rate_per_100k":3.37,"clearance_rate":0.425},
+        {"year":2023,"months_reported":12,"offenses":570,"clearances":252,"coverage_pct":66.5,"population":22610726,"covered_population":15032076,"rate_per_100k":3.79,"clearance_rate":0.442},
+        {"year":2024,"months_reported":12,"offenses":687,"clearances":295,"coverage_pct":69.7,"population":23372215,"covered_population":16285057,"rate_per_100k":4.22,"clearance_rate":0.429},
+        {"year":2025,"months_reported":12,"offenses":893,"clearances":404,"coverage_pct":73.2,"population":23462518,"covered_population":17168296,"rate_per_100k":5.2,"clearance_rate":0.452}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,15,17,15,16,22,25,27,21,18,13,15,34,38,35,30,32,41,41,51,36,27,43,41,37,44,31,42,44,49,59,57,57,43,46,52,46,41,52,45,51,68,53,61,72,65,57,58,64,64,61,76,68,96,72,97,81,72,57,84,65],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,9,10,6,11,12,14,10,7,6,3,17,9,17,14,14,17,19,23,15,15,15,18,16,24,14,24,21,20,19,30,21,17,21,24,17,15,18,15,21,38,23,28,36,27,21,24,29,27,31,40,33,52,30,41,47,28,24,29,22]
+      },
+      "agencies": {
+        "directory": 834,
+        "directory_nibrs": 299,
+        "reporting": {"2020":0,"2021":2,"2022":35,"2023":103,"2024":108,"2025":152},
+        "with_cases": {"2020":0,"2021":1,"2022":22,"2023":52,"2024":58,"2025":89},
+        "table_offenses": {"2020":0,"2021":2,"2022":232,"2023":396,"2024":496,"2025":798}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "GA",
+      "name": "Georgia",
+      "slug": "ga",
+      "fips": "13",
+      "annual": [
+        {"year":2016,"months_reported":11,"offenses":0,"clearances":0,"coverage_pct":6.8,"population":10310371,"covered_population":765677,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":6.8,"population":10429379,"covered_population":705930,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":13.8,"population":10519475,"covered_population":1447243,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":311,"clearances":63,"coverage_pct":45.0,"population":10617423,"covered_population":4774273,"rate_per_100k":6.51,"clearance_rate":0.203},
+        {"year":2020,"months_reported":12,"offenses":917,"clearances":98,"coverage_pct":86.2,"population":10710017,"covered_population":9232439,"rate_per_100k":9.93,"clearance_rate":0.107},
+        {"year":2021,"months_reported":12,"offenses":1212,"clearances":147,"coverage_pct":91.0,"population":10799596,"covered_population":9823671,"rate_per_100k":12.34,"clearance_rate":0.121},
+        {"year":2022,"months_reported":12,"offenses":1095,"clearances":139,"coverage_pct":91.2,"population":10912876,"covered_population":9955826,"rate_per_100k":11.0,"clearance_rate":0.127},
+        {"year":2023,"months_reported":12,"offenses":1132,"clearances":147,"coverage_pct":91.5,"population":11029227,"covered_population":10088496,"rate_per_100k":11.22,"clearance_rate":0.13},
+        {"year":2024,"months_reported":12,"offenses":1053,"clearances":181,"coverage_pct":92.7,"population":11180878,"covered_population":10365746,"rate_per_100k":10.16,"clearance_rate":0.172},
+        {"year":2025,"months_reported":12,"offenses":922,"clearances":197,"coverage_pct":90.5,"population":11302748,"covered_population":10234426,"rate_per_100k":9.01,"clearance_rate":0.214}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,6,4,3,21,47,57,68,43,59,81,59,66,56,80,77,95,87,82,75,69,90,87,99,100,105,100,127,116,119,88,96,89,86,95,61,86,87,104,127,108,97,78,69,82,101,83,89,93,102,101,108,122,121,93,81,63,76,108,104,71,67,93,98,113,119,87,81,53,59,97,63,63,77,72,82,116,66,88,89,65,44],
+        "clearances": [0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,1,15,9,5,9,9,11,12,7,4,7,9,10,15,14,4,6,6,4,8,12,12,16,10,15,14,17,14,12,6,11,8,8,14,12,10,18,16,6,14,10,9,14,9,9,9,13,10,17,14,22,13,11,9,11,25,14,9,11,10,21,20,31,13,14,7,6,20,10,13,20,11,29,26,9,21,21,9,8]
+      },
+      "agencies": {
+        "directory": 664,
+        "directory_nibrs": 516,
+        "reporting": {"2020":289,"2021":380,"2022":388,"2023":333,"2024":361,"2025":375},
+        "with_cases": {"2020":116,"2021":143,"2022":132,"2023":125,"2024":130,"2025":139},
+        "table_offenses": {"2020":849,"2021":1168,"2022":1041,"2023":1015,"2024":972,"2025":896}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "HI",
+      "name": "Hawaii",
+      "slug": "hi",
+      "fips": "15",
+      "annual": [
+        {"year":2016,"months_reported":2,"offenses":0,"clearances":0,"coverage_pct":11.6,"population":1428557,"covered_population":995572,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":11,"clearances":0,"coverage_pct":70.5,"population":1427538,"covered_population":1006970,"rate_per_100k":1.09,"clearance_rate":0.0},
+        {"year":2018,"months_reported":12,"offenses":52,"clearances":12,"coverage_pct":69.1,"population":1420491,"covered_population":982019,"rate_per_100k":5.3,"clearance_rate":0.231},
+        {"year":2019,"months_reported":12,"offenses":51,"clearances":7,"coverage_pct":68.9,"population":1415872,"covered_population":974902,"rate_per_100k":5.23,"clearance_rate":0.137},
+        {"year":2020,"months_reported":12,"offenses":47,"clearances":9,"coverage_pct":69.7,"population":1407006,"covered_population":980370,"rate_per_100k":4.79,"clearance_rate":0.191},
+        {"year":2021,"months_reported":12,"offenses":108,"clearances":17,"coverage_pct":100.0,"population":1441553,"covered_population":1441553,"rate_per_100k":7.49,"clearance_rate":0.157},
+        {"year":2022,"months_reported":12,"offenses":135,"clearances":26,"coverage_pct":100.0,"population":1440196,"covered_population":1440196,"rate_per_100k":9.37,"clearance_rate":0.193},
+        {"year":2023,"months_reported":12,"offenses":126,"clearances":27,"coverage_pct":100.0,"population":1435138,"covered_population":1435138,"rate_per_100k":8.78,"clearance_rate":0.214},
+        {"year":2024,"months_reported":12,"offenses":147,"clearances":38,"coverage_pct":100.0,"population":1446146,"covered_population":1446146,"rate_per_100k":10.16,"clearance_rate":0.259},
+        {"year":2025,"months_reported":12,"offenses":147,"clearances":30,"coverage_pct":100.0,"population":1432820,"covered_population":1432820,"rate_per_100k":10.26,"clearance_rate":0.204}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [null,null,null,null,null,null,null,null,null,null,0,0,5,6,0,0,0,0,0,0,0,0,0,0,5,3,7,2,7,6,2,2,5,2,7,4,7,5,7,6,8,6,4,3,0,2,2,1,4,9,1,3,1,6,4,6,3,5,3,2,11,4,7,12,9,7,11,7,5,18,7,10,4,16,12,12,11,9,11,16,15,4,14,11,13,8,7,12,13,17,11,10,8,9,7,11,10,9,16,15,12,16,8,13,8,13,10,17,10,10,13,14,16,18,17,14,15,7,3,10],
+        "clearances": [null,null,null,null,null,null,null,null,null,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,2,1,2,0,1,2,1,1,0,1,1,1,1,1,0,0,0,1,0,0,1,0,0,1,0,0,0,2,2,3,0,1,0,1,1,2,0,1,0,3,4,1,3,0,3,2,5,4,0,4,1,1,1,3,2,2,2,1,2,4,4,2,3,2,3,1,1,1,1,4,1,4,5,3,4,3,3,3,6,2,0,4,5,2,3,5,3,2,2,0,2]
+      },
+      "agencies": {
+        "directory": 13,
+        "directory_nibrs": 4,
+        "reporting": {"2020":0,"2021":2,"2022":2,"2023":2,"2024":2,"2025":4},
+        "with_cases": {"2020":0,"2021":2,"2022":2,"2023":2,"2024":2,"2025":4},
+        "table_offenses": {"2020":0,"2021":49,"2022":78,"2023":72,"2024":67,"2025":144}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "ID",
+      "name": "Idaho",
+      "slug": "id",
+      "fips": "16",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":99.9,"population":1683140,"covered_population":1680830,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":3,"clearances":2,"coverage_pct":100.0,"population":1716943,"covered_population":1716106,"rate_per_100k":0.17,"clearance_rate":0.667},
+        {"year":2018,"months_reported":12,"offenses":10,"clearances":3,"coverage_pct":99.9,"population":1754208,"covered_population":1752918,"rate_per_100k":0.57,"clearance_rate":0.3},
+        {"year":2019,"months_reported":12,"offenses":39,"clearances":11,"coverage_pct":99.8,"population":1787065,"covered_population":1784014,"rate_per_100k":2.19,"clearance_rate":0.282},
+        {"year":2020,"months_reported":12,"offenses":62,"clearances":26,"coverage_pct":98.5,"population":1826913,"covered_population":1800224,"rate_per_100k":3.44,"clearance_rate":0.419},
+        {"year":2021,"months_reported":12,"offenses":70,"clearances":27,"coverage_pct":97.5,"population":1900923,"covered_population":1853652,"rate_per_100k":3.78,"clearance_rate":0.386},
+        {"year":2022,"months_reported":12,"offenses":97,"clearances":48,"coverage_pct":99.9,"population":1939033,"covered_population":1937011,"rate_per_100k":5.01,"clearance_rate":0.495},
+        {"year":2023,"months_reported":12,"offenses":105,"clearances":65,"coverage_pct":99.8,"population":1964726,"covered_population":1960706,"rate_per_100k":5.36,"clearance_rate":0.619},
+        {"year":2024,"months_reported":12,"offenses":101,"clearances":44,"coverage_pct":99.6,"population":2001619,"covered_population":1994351,"rate_per_100k":5.06,"clearance_rate":0.436},
+        {"year":2025,"months_reported":12,"offenses":92,"clearances":47,"coverage_pct":98.6,"population":2029733,"covered_population":2002228,"rate_per_100k":4.59,"clearance_rate":0.511}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,0,1,2,0,0,2,0,1,0,0,2,2,0,0,2,4,4,5,8,4,3,4,3,2,2,4,9,2,10,7,5,10,6,3,3,1,1,7,4,7,6,7,4,9,8,2,11,4,3,8,6,10,9,5,14,10,11,5,11,5,9,6,9,6,10,11,14,13,3,9,12,3,10,5,9,7,4,8,12,11,9,9,7,10,8,6,5,8,1,11,12,8,9,12,5,7],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,2,2,2,3,0,0,1,1,0,1,3,3,0,4,3,4,3,3,1,1,0,1,2,2,1,3,6,3,2,1,1,3,2,3,3,2,5,7,2,10,4,4,3,3,2,4,4,3,4,8,7,10,10,2,5,7,1,6,2,3,1,2,3,9,4,3,3,5,3,3,4,1,3,0,8,8,5,4,7,2,2]
+      },
+      "agencies": {
+        "directory": 113,
+        "directory_nibrs": 113,
+        "reporting": {"2020":94,"2021":80,"2022":105,"2023":97,"2024":95,"2025":94},
+        "with_cases": {"2020":15,"2021":20,"2022":23,"2023":26,"2024":20,"2025":29},
+        "table_offenses": {"2020":52,"2021":56,"2022":93,"2023":104,"2024":97,"2025":92}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "IL",
+      "name": "Illinois",
+      "slug": "il",
+      "fips": "17",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":1.6,"population":12801539,"covered_population":201013,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":1.7,"population":12802023,"covered_population":215657,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":1.7,"population":12741080,"covered_population":211866,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":2.0,"population":12671821,"covered_population":254335,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2020,"months_reported":12,"offenses":3,"clearances":0,"coverage_pct":4.0,"population":12587530,"covered_population":497425,"rate_per_100k":0.6,"clearance_rate":0.0},
+        {"year":2021,"months_reported":12,"offenses":107,"clearances":40,"coverage_pct":54.0,"population":12670797,"covered_population":6845517,"rate_per_100k":1.56,"clearance_rate":0.374},
+        {"year":2022,"months_reported":12,"offenses":251,"clearances":72,"coverage_pct":76.3,"population":12582032,"covered_population":9597117,"rate_per_100k":2.62,"clearance_rate":0.287},
+        {"year":2023,"months_reported":12,"offenses":334,"clearances":106,"coverage_pct":90.9,"population":12549689,"covered_population":11408110,"rate_per_100k":2.93,"clearance_rate":0.317},
+        {"year":2024,"months_reported":12,"offenses":610,"clearances":151,"coverage_pct":94.4,"population":12710158,"covered_population":11991926,"rate_per_100k":5.09,"clearance_rate":0.248},
+        {"year":2025,"months_reported":12,"offenses":734,"clearances":236,"coverage_pct":94.7,"population":12719141,"covered_population":12042456,"rate_per_100k":6.1,"clearance_rate":0.322}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,4,14,6,9,2,11,12,18,5,8,9,9,17,11,17,13,29,32,32,27,21,23,13,16,30,13,18,31,32,35,35,39,25,21,31,24,51,34,36,43,53,65,73,64,62,49,38,42,63,44,48,55,54,77,106,74,49,63,36,65],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,4,4,2,4,5,5,1,0,6,3,4,1,3,4,7,9,10,9,5,10,5,5,6,6,1,11,9,9,17,16,12,6,7,6,8,11,7,14,15,15,20,21,14,9,8,9,14,12,15,16,18,28,43,24,17,19,9,21]
+      },
+      "agencies": {
+        "directory": 925,
+        "directory_nibrs": 744,
+        "reporting": {"2020":1,"2021":118,"2022":423,"2023":601,"2024":650,"2025":638},
+        "with_cases": {"2020":1,"2021":22,"2022":95,"2023":150,"2024":179,"2025":183},
+        "table_offenses": {"2020":1,"2021":54,"2022":204,"2023":302,"2024":565,"2025":692}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "IN",
+      "name": "Indiana",
+      "slug": "in",
+      "fips": "18",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":3.1,"population":6633053,"covered_population":202571,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":4.5,"population":6666818,"covered_population":298556,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":2,"clearances":0,"coverage_pct":8.9,"population":6691878,"covered_population":597188,"rate_per_100k":0.33,"clearance_rate":0.0},
+        {"year":2019,"months_reported":12,"offenses":562,"clearances":156,"coverage_pct":35.8,"population":6732219,"covered_population":2407422,"rate_per_100k":23.34,"clearance_rate":0.278},
+        {"year":2020,"months_reported":12,"offenses":534,"clearances":145,"coverage_pct":62.0,"population":6754953,"covered_population":4189652,"rate_per_100k":12.75,"clearance_rate":0.272},
+        {"year":2021,"months_reported":12,"offenses":676,"clearances":86,"coverage_pct":80.6,"population":6805985,"covered_population":5488402,"rate_per_100k":12.32,"clearance_rate":0.127},
+        {"year":2022,"months_reported":12,"offenses":580,"clearances":103,"coverage_pct":83.1,"population":6833037,"covered_population":5679457,"rate_per_100k":10.21,"clearance_rate":0.178},
+        {"year":2023,"months_reported":12,"offenses":550,"clearances":92,"coverage_pct":85.8,"population":6862199,"covered_population":5888336,"rate_per_100k":9.34,"clearance_rate":0.167},
+        {"year":2024,"months_reported":12,"offenses":488,"clearances":105,"coverage_pct":87.2,"population":6924275,"covered_population":6040588,"rate_per_100k":8.08,"clearance_rate":0.215},
+        {"year":2025,"months_reported":12,"offenses":545,"clearances":124,"coverage_pct":87.6,"population":6973333,"covered_population":6110158,"rate_per_100k":8.92,"clearance_rate":0.228}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,7,2,5,6,3,7,124,59,92,97,86,74,84,56,46,22,40,45,38,48,37,40,42,36,45,56,57,50,55,73,74,76,59,52,39,40,48,40,37,38,43,72,66,65,48,40,42,41,44,35,30,42,55,40,57,53,60,58,39,37,32,31,34,43,51,59,52,41,38,37,35,35,50,33,34,37,49,49,77,46,56,42,41,31],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,1,3,44,38,20,16,16,15,19,21,11,5,13,16,16,19,7,5,7,6,8,5,8,6,4,11,7,7,9,9,3,9,5,8,10,3,13,14,9,8,11,8,6,8,6,2,11,4,10,9,12,11,8,3,9,7,5,9,8,12,11,14,13,8,8,4,6,7,9,9,6,9,6,11,16,15,15,14,10,4]
+      },
+      "agencies": {
+        "directory": 360,
+        "directory_nibrs": 291,
+        "reporting": {"2020":83,"2021":129,"2022":144,"2023":160,"2024":167,"2025":175},
+        "with_cases": {"2020":37,"2021":78,"2022":75,"2023":83,"2024":88,"2025":97},
+        "table_offenses": {"2020":306,"2021":615,"2022":550,"2023":518,"2024":456,"2025":504}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "IA",
+      "name": "Iowa",
+      "slug": "ia",
+      "fips": "19",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":97.0,"population":3134693,"covered_population":3041084,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":97.8,"population":3145711,"covered_population":3075880,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":95.5,"population":3156145,"covered_population":3014578,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":1,"clearances":1,"coverage_pct":97.3,"population":3155070,"covered_population":3070110,"rate_per_100k":0.03,"clearance_rate":1.0},
+        {"year":2020,"months_reported":12,"offenses":6,"clearances":2,"coverage_pct":96.9,"population":3163561,"covered_population":3064511,"rate_per_100k":0.2,"clearance_rate":0.333},
+        {"year":2021,"months_reported":12,"offenses":160,"clearances":68,"coverage_pct":94.1,"population":3193079,"covered_population":3006076,"rate_per_100k":5.32,"clearance_rate":0.425},
+        {"year":2022,"months_reported":12,"offenses":251,"clearances":88,"coverage_pct":94.0,"population":3200517,"covered_population":3007905,"rate_per_100k":8.34,"clearance_rate":0.351},
+        {"year":2023,"months_reported":12,"offenses":285,"clearances":100,"coverage_pct":95.2,"population":3207004,"covered_population":3052250,"rate_per_100k":9.34,"clearance_rate":0.351},
+        {"year":2024,"months_reported":12,"offenses":263,"clearances":110,"coverage_pct":96.7,"population":3241488,"covered_population":3133741,"rate_per_100k":8.39,"clearance_rate":0.418},
+        {"year":2025,"months_reported":12,"offenses":250,"clearances":97,"coverage_pct":97.1,"population":3238387,"covered_population":3142904,"rate_per_100k":7.95,"clearance_rate":0.388}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,2,7,16,7,10,18,24,17,14,13,14,11,9,14,13,16,11,23,30,26,28,23,24,23,20,29,10,22,20,22,22,32,34,26,18,26,24,24,25,18,19,17,24,28,26,21,29,16,16,25,20,17,18,13,31,24,20,19,22,18,23],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,4,7,3,5,7,11,7,8,5,5,2,4,5,5,7,4,9,10,10,10,4,9,9,6,7,5,6,6,10,11,10,11,11,5,8,10,7,11,8,10,8,12,14,13,10,5,7,5,14,13,6,7,6,6,7,5,6,8,8,11]
+      },
+      "agencies": {
+        "directory": 284,
+        "directory_nibrs": 280,
+        "reporting": {"2020":223,"2021":178,"2022":189,"2023":249,"2024":259,"2025":266},
+        "with_cases": {"2020":0,"2021":72,"2022":98,"2023":96,"2024":104,"2025":95},
+        "table_offenses": {"2020":0,"2021":146,"2022":211,"2023":275,"2024":259,"2025":247}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "KS",
+      "name": "Kansas",
+      "slug": "ks",
+      "fips": "20",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":71.6,"population":2907289,"covered_population":2081259,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":71.9,"population":2913123,"covered_population":2093120,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":71.0,"population":2911505,"covered_population":2068100,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":84.1,"population":2913314,"covered_population":2449153,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2020,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":87.7,"population":2913805,"covered_population":2555732,"rate_per_100k":0.04,"clearance_rate":0.0},
+        {"year":2021,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":90.7,"population":2934582,"covered_population":2662474,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2022,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":92.5,"population":2937150,"covered_population":2715717,"rate_per_100k":0.04,"clearance_rate":0.0},
+        {"year":2023,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":95.0,"population":2940546,"covered_population":2793846,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2024,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":96.1,"population":2970606,"covered_population":2855099,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2025,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":94.8,"population":2977220,"covered_population":2822530,"rate_per_100k":0.0,"clearance_rate":null}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      },
+      "agencies": {
+        "directory": 413,
+        "directory_nibrs": 411,
+        "reporting": {"2020":217,"2021":192,"2022":194,"2023":182,"2024":222,"2025":195},
+        "with_cases": {"2020":1,"2021":0,"2022":1,"2023":0,"2024":0,"2025":0},
+        "table_offenses": {"2020":1,"2021":0,"2022":1,"2023":0,"2024":0,"2025":0}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "KY",
+      "name": "Kentucky",
+      "slug": "ky",
+      "fips": "21",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":22,"clearances":10,"coverage_pct":100.0,"population":4436974,"covered_population":4436336,"rate_per_100k":0.5,"clearance_rate":0.455},
+        {"year":2017,"months_reported":12,"offenses":152,"clearances":37,"coverage_pct":99.8,"population":4454189,"covered_population":4445697,"rate_per_100k":3.42,"clearance_rate":0.243},
+        {"year":2018,"months_reported":12,"offenses":192,"clearances":69,"coverage_pct":99.7,"population":4468402,"covered_population":4453459,"rate_per_100k":4.31,"clearance_rate":0.359},
+        {"year":2019,"months_reported":12,"offenses":273,"clearances":86,"coverage_pct":99.8,"population":4467673,"covered_population":4459878,"rate_per_100k":6.12,"clearance_rate":0.315},
+        {"year":2020,"months_reported":12,"offenses":185,"clearances":61,"coverage_pct":99.9,"population":4477251,"covered_population":4472403,"rate_per_100k":4.14,"clearance_rate":0.33},
+        {"year":2021,"months_reported":12,"offenses":229,"clearances":73,"coverage_pct":99.9,"population":4509394,"covered_population":4505682,"rate_per_100k":5.08,"clearance_rate":0.319},
+        {"year":2022,"months_reported":12,"offenses":296,"clearances":73,"coverage_pct":99.9,"population":4512310,"covered_population":4507220,"rate_per_100k":6.57,"clearance_rate":0.247},
+        {"year":2023,"months_reported":12,"offenses":305,"clearances":88,"coverage_pct":100.0,"population":4526154,"covered_population":4526154,"rate_per_100k":6.74,"clearance_rate":0.289},
+        {"year":2024,"months_reported":12,"offenses":254,"clearances":101,"coverage_pct":100.0,"population":4588372,"covered_population":4588372,"rate_per_100k":5.54,"clearance_rate":0.398},
+        {"year":2025,"months_reported":12,"offenses":257,"clearances":104,"coverage_pct":100.0,"population":4606864,"covered_population":4606486,"rate_per_100k":5.58,"clearance_rate":0.405}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,2,1,1,1,4,1,1,5,2,2,2,7,6,10,8,15,16,22,21,13,13,13,8,16,19,10,13,18,14,30,17,11,19,12,13,22,11,17,30,18,24,24,28,36,27,19,17,18,21,10,16,14,22,23,19,19,6,8,9,13,19,23,18,25,26,28,18,16,11,20,12,14,24,22,17,26,40,40,32,28,14,16,23,24,17,20,24,32,27,42,31,24,22,27,15,18,15,11,17,26,21,17,38,26,18,27,20,19,16,20,19,26,25,32,26,24,20,17,13],
+        "clearances": [0,2,0,1,1,3,1,0,1,1,0,0,5,1,2,0,1,6,6,4,4,3,2,3,6,11,5,4,7,3,6,8,4,6,4,5,8,3,6,8,4,7,13,8,8,8,7,6,8,6,1,8,4,4,9,5,8,1,2,5,4,8,6,7,8,9,8,6,5,4,3,5,3,7,3,4,7,13,12,3,6,4,2,9,4,6,1,9,6,10,8,11,9,10,7,7,3,6,2,6,10,6,8,22,11,9,7,11,11,5,10,7,13,16,10,7,6,5,9,5]
+      },
+      "agencies": {
+        "directory": 465,
+        "directory_nibrs": 458,
+        "reporting": {"2020":336,"2021":426,"2022":417,"2023":422,"2024":450,"2025":447},
+        "with_cases": {"2020":80,"2021":86,"2022":89,"2023":100,"2024":111,"2025":110},
+        "table_offenses": {"2020":169,"2021":215,"2022":264,"2023":297,"2024":238,"2025":251}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "LA",
+      "name": "Louisiana",
+      "slug": "la",
+      "fips": "22",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":22.8,"population":4681666,"covered_population":1068292,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":28.3,"population":4684333,"covered_population":1326040,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":2,"clearances":1,"coverage_pct":29.9,"population":4659978,"covered_population":1395270,"rate_per_100k":0.14,"clearance_rate":0.5},
+        {"year":2019,"months_reported":12,"offenses":117,"clearances":32,"coverage_pct":41.8,"population":4648794,"covered_population":1944972,"rate_per_100k":6.02,"clearance_rate":0.274},
+        {"year":2020,"months_reported":12,"offenses":122,"clearances":55,"coverage_pct":59.4,"population":4645318,"covered_population":2760769,"rate_per_100k":4.42,"clearance_rate":0.451},
+        {"year":2021,"months_reported":12,"offenses":328,"clearances":122,"coverage_pct":77.7,"population":4624047,"covered_population":3594188,"rate_per_100k":9.13,"clearance_rate":0.372},
+        {"year":2022,"months_reported":12,"offenses":415,"clearances":166,"coverage_pct":80.2,"population":4590241,"covered_population":3682775,"rate_per_100k":11.27,"clearance_rate":0.4},
+        {"year":2023,"months_reported":12,"offenses":549,"clearances":204,"coverage_pct":83.4,"population":4573749,"covered_population":3815865,"rate_per_100k":14.39,"clearance_rate":0.372},
+        {"year":2024,"months_reported":12,"offenses":656,"clearances":274,"coverage_pct":82.0,"population":4597740,"covered_population":3771756,"rate_per_100k":17.39,"clearance_rate":0.418},
+        {"year":2025,"months_reported":12,"offenses":657,"clearances":268,"coverage_pct":78.0,"population":4618189,"covered_population":3602609,"rate_per_100k":18.24,"clearance_rate":0.408}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,13,11,12,14,10,5,7,7,13,9,11,5,13,6,11,11,7,9,12,11,13,8,7,14,26,34,16,29,29,19,31,27,37,29,24,27,33,21,41,25,38,43,38,42,35,30,31,38,49,49,45,36,39,49,60,64,51,39,32,36,55,41,73,52,63,51,62,53,51,50,51,54,48,46,61,52,56,56,71,49,61,60,47,50],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,3,3,3,4,0,4,1,6,2,4,0,6,4,6,3,4,2,3,6,7,4,3,7,9,16,6,13,8,7,13,15,12,6,9,8,15,9,16,10,13,18,18,13,15,9,12,18,13,19,18,12,15,22,21,26,22,14,9,13,23,17,26,20,20,23,34,24,23,20,17,27,25,16,29,30,17,18,27,18,27,25,19,17]
+      },
+      "agencies": {
+        "directory": 233,
+        "directory_nibrs": 176,
+        "reporting": {"2020":31,"2021":113,"2022":122,"2023":128,"2024":126,"2025":120},
+        "with_cases": {"2020":1,"2021":48,"2022":52,"2023":56,"2024":73,"2025":72},
+        "table_offenses": {"2020":2,"2021":285,"2022":408,"2023":402,"2024":613,"2025":640}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "ME",
+      "name": "Maine",
+      "slug": "me",
+      "fips": "23",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":28.2,"population":1331479,"covered_population":375536,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":3,"clearances":3,"coverage_pct":28.6,"population":1335907,"covered_population":381656,"rate_per_100k":0.79,"clearance_rate":1.0},
+        {"year":2018,"months_reported":12,"offenses":13,"clearances":11,"coverage_pct":31.4,"population":1338404,"covered_population":420385,"rate_per_100k":3.09,"clearance_rate":0.846},
+        {"year":2019,"months_reported":12,"offenses":8,"clearances":5,"coverage_pct":39.4,"population":1344212,"covered_population":529302,"rate_per_100k":1.51,"clearance_rate":0.625},
+        {"year":2020,"months_reported":12,"offenses":27,"clearances":16,"coverage_pct":62.1,"population":1350141,"covered_population":838863,"rate_per_100k":3.22,"clearance_rate":0.593},
+        {"year":2021,"months_reported":12,"offenses":50,"clearances":24,"coverage_pct":100.0,"population":1372247,"covered_population":1371612,"rate_per_100k":3.65,"clearance_rate":0.48},
+        {"year":2022,"months_reported":12,"offenses":50,"clearances":20,"coverage_pct":99.9,"population":1385340,"covered_population":1384006,"rate_per_100k":3.61,"clearance_rate":0.4},
+        {"year":2023,"months_reported":12,"offenses":63,"clearances":34,"coverage_pct":100.0,"population":1395722,"covered_population":1395722,"rate_per_100k":4.51,"clearance_rate":0.54},
+        {"year":2024,"months_reported":12,"offenses":74,"clearances":34,"coverage_pct":99.4,"population":1405012,"covered_population":1396149,"rate_per_100k":5.3,"clearance_rate":0.459},
+        {"year":2025,"months_reported":12,"offenses":58,"clearances":35,"coverage_pct":98.6,"population":1414874,"covered_population":1395506,"rate_per_100k":4.16,"clearance_rate":0.603}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,3,0,1,0,1,0,2,1,2,1,1,1,1,0,0,0,1,1,2,2,1,0,0,0,0,1,2,1,2,2,6,5,1,1,5,1,2,7,3,8,5,5,5,4,2,3,5,1,2,5,4,3,4,5,6,7,6,0,3,5,8,0,5,1,5,5,13,10,7,4,3,2,4,1,7,8,8,11,1,10,9,6,3,6,2,4,3,4,6,9,9,7,6,4,1,3],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,1,0,1,0,1,0,2,1,2,1,1,1,0,0,0,0,1,0,2,1,1,0,0,0,0,1,2,0,1,0,3,4,0,1,4,0,1,5,2,3,2,2,1,2,2,0,4,0,1,2,2,1,2,1,1,2,3,0,2,3,3,0,3,0,2,4,7,5,4,3,2,1,1,0,4,3,2,4,0,4,6,4,1,5,1,3,2,1,4,5,7,3,4,3,0,2]
+      },
+      "agencies": {
+        "directory": 129,
+        "directory_nibrs": 129,
+        "reporting": {"2020":55,"2021":127,"2022":125,"2023":131,"2024":126,"2025":122},
+        "with_cases": {"2020":14,"2021":21,"2022":24,"2023":28,"2024":30,"2025":25},
+        "table_offenses": {"2020":26,"2021":46,"2022":48,"2023":64,"2024":70,"2025":56}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "MD",
+      "name": "Maryland",
+      "slug": "md",
+      "fips": "24",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":26.7,"population":6016447,"covered_population":1606829,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":28.7,"population":6052177,"covered_population":1737982,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":28.9,"population":6042718,"covered_population":1748800,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":8,"clearances":7,"coverage_pct":29.2,"population":6045680,"covered_population":1767934,"rate_per_100k":0.45,"clearance_rate":0.875},
+        {"year":2020,"months_reported":12,"offenses":5,"clearances":1,"coverage_pct":30.9,"population":6055802,"covered_population":1870071,"rate_per_100k":0.27,"clearance_rate":0.2},
+        {"year":2021,"months_reported":12,"offenses":353,"clearances":49,"coverage_pct":58.7,"population":6165129,"covered_population":3620685,"rate_per_100k":9.75,"clearance_rate":0.139},
+        {"year":2022,"months_reported":12,"offenses":589,"clearances":98,"coverage_pct":92.2,"population":6164660,"covered_population":5680992,"rate_per_100k":10.37,"clearance_rate":0.166},
+        {"year":2023,"months_reported":12,"offenses":577,"clearances":79,"coverage_pct":97.0,"population":6180253,"covered_population":5992542,"rate_per_100k":9.63,"clearance_rate":0.137},
+        {"year":2024,"months_reported":12,"offenses":622,"clearances":105,"coverage_pct":99.6,"population":6263220,"covered_population":6238344,"rate_per_100k":9.97,"clearance_rate":0.169},
+        {"year":2025,"months_reported":12,"offenses":561,"clearances":99,"coverage_pct":100.0,"population":6265347,"covered_population":6265347,"rate_per_100k":8.95,"clearance_rate":0.176}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,3,1,0,0,0,1,0,1,2,0,0,1,1,0,0,0,0,0,11,16,19,25,29,26,43,53,38,32,40,21,44,22,35,43,51,57,63,63,49,51,49,62,48,48,42,49,51,58,56,55,43,47,36,44,44,51,46,52,52,62,96,53,49,37,42,38,56,29,35,43,53,80,74,38,37,42,36,38],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,2,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,4,4,1,4,5,4,4,7,2,4,6,4,6,2,3,9,10,9,11,17,6,8,9,8,5,7,7,3,10,8,6,8,6,2,6,11,8,4,8,10,13,8,22,8,7,6,5,6,12,5,5,7,9,21,10,4,6,10,6,4]
+      },
+      "agencies": {
+        "directory": 154,
+        "directory_nibrs": 152,
+        "reporting": {"2020":2,"2021":16,"2022":59,"2023":120,"2024":138,"2025":149},
+        "with_cases": {"2020":0,"2021":6,"2022":16,"2023":30,"2024":34,"2025":38},
+        "table_offenses": {"2020":0,"2021":284,"2022":506,"2023":509,"2024":612,"2025":553}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "MA",
+      "name": "Massachusetts",
+      "slug": "ma",
+      "fips": "25",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":4,"clearances":2,"coverage_pct":86.7,"population":6811779,"covered_population":5905380,"rate_per_100k":0.07,"clearance_rate":0.5},
+        {"year":2017,"months_reported":12,"offenses":19,"clearances":10,"coverage_pct":87.1,"population":6859819,"covered_population":5972366,"rate_per_100k":0.32,"clearance_rate":0.526},
+        {"year":2018,"months_reported":12,"offenses":45,"clearances":16,"coverage_pct":87.1,"population":6902149,"covered_population":6009474,"rate_per_100k":0.75,"clearance_rate":0.356},
+        {"year":2019,"months_reported":12,"offenses":93,"clearances":30,"coverage_pct":90.0,"population":6892503,"covered_population":6201259,"rate_per_100k":1.5,"clearance_rate":0.323},
+        {"year":2020,"months_reported":12,"offenses":119,"clearances":29,"coverage_pct":99.1,"population":6893574,"covered_population":6832076,"rate_per_100k":1.74,"clearance_rate":0.244},
+        {"year":2021,"months_reported":12,"offenses":209,"clearances":51,"coverage_pct":99.6,"population":6984723,"covered_population":6958769,"rate_per_100k":3.0,"clearance_rate":0.244},
+        {"year":2022,"months_reported":12,"offenses":202,"clearances":61,"coverage_pct":99.6,"population":6981974,"covered_population":6957406,"rate_per_100k":2.9,"clearance_rate":0.302},
+        {"year":2023,"months_reported":12,"offenses":184,"clearances":43,"coverage_pct":99.7,"population":7001399,"covered_population":6978479,"rate_per_100k":2.64,"clearance_rate":0.234},
+        {"year":2024,"months_reported":12,"offenses":231,"clearances":62,"coverage_pct":99.7,"population":7136171,"covered_population":7111694,"rate_per_100k":3.25,"clearance_rate":0.268},
+        {"year":2025,"months_reported":12,"offenses":194,"clearances":57,"coverage_pct":99.8,"population":7154084,"covered_population":7138553,"rate_per_100k":2.72,"clearance_rate":0.294}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,1,0,0,0,1,1,0,0,0,1,2,0,1,2,2,0,1,1,1,5,1,3,2,4,2,4,8,7,6,2,4,5,0,1,7,4,3,9,10,5,17,10,5,8,5,10,11,7,10,4,10,9,15,15,8,16,8,6,13,8,16,19,14,26,26,24,19,16,18,10,15,19,13,18,15,16,30,20,20,13,10,13,6,13,10,12,14,14,25,24,11,17,18,20,18,11,10,16,23,26,27,33,23,22,5,17,9,23,27,10,18,25,19,14,18,11,10,10],
+        "clearances": [0,0,1,0,0,0,0,1,0,0,0,0,2,0,0,0,1,0,0,1,0,3,1,2,1,1,0,3,3,4,1,0,2,1,0,0,5,3,1,2,5,0,7,2,1,1,0,3,4,3,1,1,1,2,4,4,3,4,2,0,7,0,2,7,3,11,5,3,7,3,0,3,4,6,4,3,6,1,9,6,9,4,7,2,3,3,1,2,2,2,5,6,5,2,7,5,3,2,2,7,5,8,8,7,11,6,0,3,5,4,8,1,5,5,10,3,6,1,4,5]
+      },
+      "agencies": {
+        "directory": 423,
+        "directory_nibrs": 414,
+        "reporting": {"2020":322,"2021":368,"2022":378,"2023":382,"2024":394,"2025":392},
+        "with_cases": {"2020":33,"2021":55,"2022":59,"2023":54,"2024":60,"2025":55},
+        "table_offenses": {"2020":114,"2021":206,"2022":192,"2023":174,"2024":223,"2025":191}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "MI",
+      "name": "Michigan",
+      "slug": "mi",
+      "fips": "26",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":66,"clearances":15,"coverage_pct":99.2,"population":9928300,"covered_population":9853798,"rate_per_100k":0.67,"clearance_rate":0.227},
+        {"year":2017,"months_reported":12,"offenses":285,"clearances":68,"coverage_pct":99.7,"population":9962311,"covered_population":9929194,"rate_per_100k":2.87,"clearance_rate":0.239},
+        {"year":2018,"months_reported":12,"offenses":408,"clearances":104,"coverage_pct":99.3,"population":9995915,"covered_population":9930257,"rate_per_100k":4.11,"clearance_rate":0.255},
+        {"year":2019,"months_reported":12,"offenses":533,"clearances":141,"coverage_pct":98.5,"population":9986857,"covered_population":9838301,"rate_per_100k":5.42,"clearance_rate":0.265},
+        {"year":2020,"months_reported":12,"offenses":513,"clearances":146,"coverage_pct":98.3,"population":9966555,"covered_population":9792113,"rate_per_100k":5.24,"clearance_rate":0.285},
+        {"year":2021,"months_reported":12,"offenses":709,"clearances":184,"coverage_pct":97.8,"population":10050811,"covered_population":9824869,"rate_per_100k":7.22,"clearance_rate":0.26},
+        {"year":2022,"months_reported":12,"offenses":927,"clearances":183,"coverage_pct":98.0,"population":10034113,"covered_population":9828917,"rate_per_100k":9.43,"clearance_rate":0.197},
+        {"year":2023,"months_reported":12,"offenses":1056,"clearances":240,"coverage_pct":97.8,"population":10037261,"covered_population":9814424,"rate_per_100k":10.76,"clearance_rate":0.227},
+        {"year":2024,"months_reported":12,"offenses":1109,"clearances":278,"coverage_pct":98.0,"population":10140459,"covered_population":9934790,"rate_per_100k":11.16,"clearance_rate":0.251},
+        {"year":2025,"months_reported":12,"offenses":1031,"clearances":263,"coverage_pct":96.9,"population":10127884,"covered_population":9809107,"rate_per_100k":10.51,"clearance_rate":0.255}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [1,1,1,2,4,6,12,10,6,9,6,8,17,15,13,18,17,28,41,33,30,24,20,29,31,19,28,29,43,51,51,38,34,33,32,19,41,40,30,29,44,51,72,75,50,29,36,36,33,39,33,30,41,61,81,60,35,33,31,36,25,37,49,57,63,72,68,101,64,67,56,50,70,59,82,66,89,94,72,98,84,69,63,81,76,65,89,97,101,111,107,93,77,91,75,74,70,79,79,94,103,113,105,115,114,102,76,59,93,67,66,78,85,94,102,105,92,85,71,93],
+        "clearances": [0,1,0,0,1,1,3,3,2,0,1,3,6,4,3,2,6,8,5,5,8,8,5,8,10,6,4,6,13,18,4,12,7,6,11,7,5,13,7,6,11,13,19,30,14,8,6,9,12,11,11,9,11,23,21,21,6,3,9,9,10,9,14,13,15,22,13,27,17,24,11,9,5,12,21,10,15,19,14,21,13,17,13,23,25,12,24,13,19,32,22,21,15,17,25,15,14,19,21,25,21,27,24,36,32,20,24,15,21,16,15,20,19,30,26,31,19,25,24,17]
+      },
+      "agencies": {
+        "directory": 654,
+        "directory_nibrs": 651,
+        "reporting": {"2020":621,"2021":611,"2022":582,"2023":549,"2024":554,"2025":568},
+        "with_cases": {"2020":175,"2021":216,"2022":218,"2023":220,"2024":241,"2025":236},
+        "table_offenses": {"2020":473,"2021":675,"2022":891,"2023":978,"2024":1048,"2025":1019}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "MN",
+      "name": "Minnesota",
+      "slug": "mn",
+      "fips": "27",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":1,"clearances":1,"coverage_pct":18.7,"population":5519952,"covered_population":1031608,"rate_per_100k":0.1,"clearance_rate":1.0},
+        {"year":2017,"months_reported":12,"offenses":5,"clearances":3,"coverage_pct":26.3,"population":5576606,"covered_population":1466022,"rate_per_100k":0.34,"clearance_rate":0.6},
+        {"year":2018,"months_reported":12,"offenses":79,"clearances":18,"coverage_pct":36.2,"population":5611179,"covered_population":2030974,"rate_per_100k":3.89,"clearance_rate":0.228},
+        {"year":2019,"months_reported":12,"offenses":278,"clearances":48,"coverage_pct":53.0,"population":5639632,"covered_population":2986699,"rate_per_100k":9.31,"clearance_rate":0.173},
+        {"year":2020,"months_reported":12,"offenses":267,"clearances":61,"coverage_pct":85.3,"population":5657342,"covered_population":4827848,"rate_per_100k":5.53,"clearance_rate":0.228},
+        {"year":2021,"months_reported":12,"offenses":379,"clearances":113,"coverage_pct":99.7,"population":5707390,"covered_population":5688109,"rate_per_100k":6.66,"clearance_rate":0.298},
+        {"year":2022,"months_reported":12,"offenses":340,"clearances":97,"coverage_pct":99.8,"population":5717184,"covered_population":5708385,"rate_per_100k":5.96,"clearance_rate":0.285},
+        {"year":2023,"months_reported":12,"offenses":379,"clearances":146,"coverage_pct":99.8,"population":5737915,"covered_population":5728694,"rate_per_100k":6.62,"clearance_rate":0.385},
+        {"year":2024,"months_reported":12,"offenses":417,"clearances":132,"coverage_pct":99.9,"population":5793151,"covered_population":5786491,"rate_per_100k":7.21,"clearance_rate":0.317},
+        {"year":2025,"months_reported":12,"offenses":457,"clearances":165,"coverage_pct":99.8,"population":5830405,"covered_population":5818662,"rate_per_100k":7.85,"clearance_rate":0.361}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,2,0,0,1,0,1,1,2,5,3,15,19,15,7,10,1,14,8,10,20,21,24,32,51,24,20,28,26,12,14,12,15,22,29,51,32,20,25,15,20,20,25,17,27,36,69,60,25,26,28,25,21,34,27,20,17,36,53,38,33,26,16,17,23,29,24,25,29,34,28,44,37,26,44,33,26,36,28,36,27,40,36,54,41,49,22,23,25,48,28,30,29,33,40,54,37,44,45,33,36],
+        "clearances": [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,1,3,3,4,3,1,1,2,0,3,0,0,6,4,3,7,6,4,7,6,2,4,2,3,0,5,3,13,7,7,5,3,9,5,6,5,8,13,19,19,6,5,8,14,5,11,10,4,4,12,12,12,12,5,4,3,8,10,10,11,6,10,10,21,14,12,16,15,11,12,15,9,11,11,11,18,14,14,4,7,6,12,14,11,13,9,18,19,13,10,16,15,15]
+      },
+      "agencies": {
+        "directory": 400,
+        "directory_nibrs": 398,
+        "reporting": {"2020":147,"2021":361,"2022":397,"2023":382,"2024":390,"2025":375},
+        "with_cases": {"2020":43,"2021":125,"2022":115,"2023":138,"2024":142,"2025":147},
+        "table_offenses": {"2020":195,"2021":374,"2022":338,"2023":367,"2024":410,"2025":450}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "MS",
+      "name": "Mississippi",
+      "slug": "ms",
+      "fips": "28",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":7.7,"population":2988726,"covered_population":229064,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":10.7,"population":2984100,"covered_population":320445,"rate_per_100k":0.31,"clearance_rate":0.0},
+        {"year":2018,"months_reported":12,"offenses":48,"clearances":2,"coverage_pct":17.5,"population":2986530,"covered_population":522998,"rate_per_100k":9.18,"clearance_rate":0.042},
+        {"year":2019,"months_reported":12,"offenses":195,"clearances":27,"coverage_pct":24.4,"population":2976149,"covered_population":726101,"rate_per_100k":26.86,"clearance_rate":0.138},
+        {"year":2020,"months_reported":12,"offenses":220,"clearances":28,"coverage_pct":43.3,"population":2966786,"covered_population":1284820,"rate_per_100k":17.12,"clearance_rate":0.127},
+        {"year":2021,"months_reported":12,"offenses":197,"clearances":22,"coverage_pct":59.5,"population":2949965,"covered_population":1756411,"rate_per_100k":11.22,"clearance_rate":0.112},
+        {"year":2022,"months_reported":12,"offenses":266,"clearances":28,"coverage_pct":62.5,"population":2940057,"covered_population":1838898,"rate_per_100k":14.47,"clearance_rate":0.105},
+        {"year":2023,"months_reported":12,"offenses":167,"clearances":17,"coverage_pct":63.7,"population":2939690,"covered_population":1873590,"rate_per_100k":8.91,"clearance_rate":0.102},
+        {"year":2024,"months_reported":12,"offenses":177,"clearances":31,"coverage_pct":65.1,"population":2943045,"covered_population":1915720,"rate_per_100k":9.24,"clearance_rate":0.175},
+        {"year":2025,"months_reported":12,"offenses":219,"clearances":35,"coverage_pct":81.5,"population":2954160,"covered_population":2406206,"rate_per_100k":9.1,"clearance_rate":0.16}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,8,4,6,6,3,11,5,5,23,19,23,16,16,20,19,11,16,12,8,12,34,24,26,9,13,22,11,11,16,19,18,17,18,16,15,14,19,21,20,17,19,10,14,14,29,18,24,23,18,17,24,24,25,16,24,24,28,19,13,14,18,8,7,12,13,12,12,11,17,5,14,18,17,14,15,14,21,14,13,15,18,16,19,19,15,17,22,21,17,18,16,21],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,9,9,4,0,0,0,0,2,2,0,1,0,8,2,7,3,1,1,1,1,1,1,1,1,2,0,1,0,5,2,5,2,1,2,1,1,4,1,3,6,2,3,1,4,2,1,0,1,1,2,0,1,6,0,3,1,0,1,0,2,4,0,2,2,2,2,4,2,5,4,3,1,3,4,5,2,5,3,3,1,2,0,3,4]
+      },
+      "agencies": {
+        "directory": 314,
+        "directory_nibrs": 231,
+        "reporting": {"2020":55,"2021":130,"2022":143,"2023":139,"2024":127,"2025":187},
+        "with_cases": {"2020":20,"2021":34,"2022":36,"2023":34,"2024":39,"2025":49},
+        "table_offenses": {"2020":187,"2021":185,"2022":231,"2023":139,"2024":146,"2025":208}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "MO",
+      "name": "Missouri",
+      "slug": "mo",
+      "fips": "29",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":5,"clearances":0,"coverage_pct":13.6,"population":6093000,"covered_population":826974,"rate_per_100k":0.6,"clearance_rate":0.0},
+        {"year":2017,"months_reported":12,"offenses":43,"clearances":12,"coverage_pct":16.2,"population":6113532,"covered_population":987634,"rate_per_100k":4.35,"clearance_rate":0.279},
+        {"year":2018,"months_reported":12,"offenses":44,"clearances":8,"coverage_pct":20.3,"population":6126452,"covered_population":1244625,"rate_per_100k":3.54,"clearance_rate":0.182},
+        {"year":2019,"months_reported":12,"offenses":68,"clearances":17,"coverage_pct":30.7,"population":6137428,"covered_population":1883188,"rate_per_100k":3.61,"clearance_rate":0.25},
+        {"year":2020,"months_reported":12,"offenses":225,"clearances":68,"coverage_pct":62.7,"population":6151548,"covered_population":3856766,"rate_per_100k":5.83,"clearance_rate":0.302},
+        {"year":2021,"months_reported":12,"offenses":423,"clearances":128,"coverage_pct":96.0,"population":6168187,"covered_population":5919214,"rate_per_100k":7.15,"clearance_rate":0.303},
+        {"year":2022,"months_reported":12,"offenses":507,"clearances":159,"coverage_pct":98.0,"population":6177957,"covered_population":6052257,"rate_per_100k":8.38,"clearance_rate":0.314},
+        {"year":2023,"months_reported":12,"offenses":577,"clearances":192,"coverage_pct":98.2,"population":6196156,"covered_population":6085212,"rate_per_100k":9.48,"clearance_rate":0.333},
+        {"year":2024,"months_reported":12,"offenses":603,"clearances":181,"coverage_pct":98.3,"population":6245466,"covered_population":6138947,"rate_per_100k":9.82,"clearance_rate":0.3},
+        {"year":2025,"months_reported":12,"offenses":566,"clearances":163,"coverage_pct":98.7,"population":6270541,"covered_population":6189974,"rate_per_100k":9.14,"clearance_rate":0.288}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [1,0,0,0,0,0,1,0,2,1,0,0,5,2,3,4,0,10,2,4,2,5,3,3,5,2,4,1,8,7,6,2,1,3,0,5,6,3,5,6,4,8,13,6,3,5,4,5,19,15,10,11,12,24,32,18,18,25,23,18,25,33,32,34,39,37,38,42,44,44,28,27,26,28,37,31,45,73,64,43,48,41,35,36,35,29,50,40,43,52,72,65,49,53,56,33,53,42,53,37,59,50,67,58,54,53,39,38,35,33,47,47,47,46,75,59,49,51,33,44],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,2,0,4,1,1,0,0,0,1,0,0,0,0,0,3,3,0,0,1,0,1,2,2,0,1,3,1,3,3,1,0,1,0,8,1,4,4,2,12,11,7,6,6,4,3,11,10,7,5,14,8,14,20,10,17,7,5,6,10,12,6,14,29,30,9,19,9,6,9,10,6,17,12,17,20,29,26,11,15,17,12,15,13,23,7,15,17,23,16,21,7,10,14,9,8,15,13,19,19,22,14,14,11,9,10]
+      },
+      "agencies": {
+        "directory": 604,
+        "directory_nibrs": 575,
+        "reporting": {"2020":108,"2021":326,"2022":389,"2023":398,"2024":377,"2025":431},
+        "with_cases": {"2020":44,"2021":138,"2022":167,"2023":165,"2024":165,"2025":158},
+        "table_offenses": {"2020":149,"2021":362,"2022":461,"2023":531,"2024":544,"2025":519}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "MT",
+      "name": "Montana",
+      "slug": "mt",
+      "fips": "30",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":99.5,"population":1042520,"covered_population":1037236,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":86,"clearances":29,"coverage_pct":99.9,"population":1050493,"covered_population":1048999,"rate_per_100k":8.2,"clearance_rate":0.337},
+        {"year":2018,"months_reported":12,"offenses":93,"clearances":24,"coverage_pct":99.4,"population":1062305,"covered_population":1056252,"rate_per_100k":8.8,"clearance_rate":0.258},
+        {"year":2019,"months_reported":12,"offenses":117,"clearances":32,"coverage_pct":98.6,"population":1068778,"covered_population":1053373,"rate_per_100k":11.11,"clearance_rate":0.274},
+        {"year":2020,"months_reported":12,"offenses":102,"clearances":33,"coverage_pct":99.5,"population":1080577,"covered_population":1074686,"rate_per_100k":9.49,"clearance_rate":0.324},
+        {"year":2021,"months_reported":12,"offenses":161,"clearances":27,"coverage_pct":99.5,"population":1105574,"covered_population":1100482,"rate_per_100k":14.63,"clearance_rate":0.168},
+        {"year":2022,"months_reported":12,"offenses":153,"clearances":36,"coverage_pct":99.2,"population":1122867,"covered_population":1113467,"rate_per_100k":13.74,"clearance_rate":0.235},
+        {"year":2023,"months_reported":12,"offenses":131,"clearances":31,"coverage_pct":99.8,"population":1132812,"covered_population":1130619,"rate_per_100k":11.59,"clearance_rate":0.237},
+        {"year":2024,"months_reported":12,"offenses":166,"clearances":56,"coverage_pct":99.9,"population":1137233,"covered_population":1136348,"rate_per_100k":14.61,"clearance_rate":0.337},
+        {"year":2025,"months_reported":12,"offenses":179,"clearances":60,"coverage_pct":100.0,"population":1144694,"covered_population":1144694,"rate_per_100k":15.64,"clearance_rate":0.335}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,1,5,6,4,4,16,6,15,8,7,6,8,3,7,15,10,8,8,6,13,7,5,4,7,12,7,11,7,6,10,8,13,7,14,6,16,11,4,8,12,9,11,13,9,8,8,5,4,8,8,8,12,16,18,18,11,15,14,16,17,11,9,15,15,31,7,13,9,9,18,8,8,9,11,12,7,11,12,11,9,12,5,18,14,8,14,14,14,8,12,20,26,14,15,7,14,12,11,21,14,13,12,14,20,17,15,14,16],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,1,2,8,2,5,1,1,2,3,1,2,3,3,2,3,2,3,2,1,1,1,2,3,3,1,2,3,4,3,4,7,0,0,2,2,2,4,1,6,7,4,1,2,1,1,1,0,3,2,1,5,2,4,3,1,3,2,1,1,4,1,3,0,5,7,4,4,3,3,0,2,2,2,0,2,5,0,3,2,9,4,2,5,4,1,1,5,11,8,6,6,2,5,2,4,6,4,5,3,6,11,7,4,4,4]
+      },
+      "agencies": {
+        "directory": 114,
+        "directory_nibrs": 114,
+        "reporting": {"2020":94,"2021":98,"2022":98,"2023":97,"2024":108,"2025":108},
+        "with_cases": {"2020":38,"2021":45,"2022":44,"2023":42,"2024":57,"2025":56},
+        "table_offenses": {"2020":100,"2021":148,"2022":139,"2023":123,"2024":166,"2025":177}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "NE",
+      "name": "Nebraska",
+      "slug": "ne",
+      "fips": "31",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":43.7,"population":1907116,"covered_population":834045,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":46.7,"population":1920076,"covered_population":895744,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":3,"clearances":1,"coverage_pct":49.6,"population":1929268,"covered_population":956819,"rate_per_100k":0.31,"clearance_rate":0.333},
+        {"year":2019,"months_reported":12,"offenses":11,"clearances":5,"coverage_pct":54.2,"population":1934408,"covered_population":1048740,"rate_per_100k":1.05,"clearance_rate":0.455},
+        {"year":2020,"months_reported":12,"offenses":57,"clearances":24,"coverage_pct":53.2,"population":1937552,"covered_population":1029878,"rate_per_100k":5.53,"clearance_rate":0.421},
+        {"year":2021,"months_reported":12,"offenses":84,"clearances":20,"coverage_pct":73.3,"population":1963692,"covered_population":1438918,"rate_per_100k":5.84,"clearance_rate":0.238},
+        {"year":2022,"months_reported":12,"offenses":89,"clearances":37,"coverage_pct":71.7,"population":1967923,"covered_population":1411914,"rate_per_100k":6.3,"clearance_rate":0.416},
+        {"year":2023,"months_reported":12,"offenses":126,"clearances":57,"coverage_pct":84.9,"population":1978379,"covered_population":1679880,"rate_per_100k":7.5,"clearance_rate":0.452},
+        {"year":2024,"months_reported":12,"offenses":133,"clearances":46,"coverage_pct":97.3,"population":2005465,"covered_population":1952076,"rate_per_100k":6.81,"clearance_rate":0.346},
+        {"year":2025,"months_reported":12,"offenses":177,"clearances":71,"coverage_pct":99.4,"population":2018006,"covered_population":2006686,"rate_per_100k":8.82,"clearance_rate":0.401}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,1,3,0,0,0,0,1,1,2,3,5,4,2,4,7,7,6,4,3,6,8,1,3,2,9,8,7,9,5,11,6,9,8,7,4,6,5,4,8,10,10,13,5,6,9,9,7,10,13,15,9,11,18,9,11,10,6,7,15,10,5,10,13,9,19,15,10,9,7,11,17,11,11,9,15,16,22,15,17,18,13,13],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,2,4,1,1,1,1,5,3,1,2,1,4,0,0,1,1,3,2,3,2,2,0,2,3,1,2,2,1,3,3,5,2,6,1,3,4,5,3,5,8,7,1,5,6,4,6,4,5,3,4,4,2,3,6,4,6,3,4,2,2,6,7,4,10,4,4,4,6,7,6,8,6,5]
+      },
+      "agencies": {
+        "directory": 286,
+        "directory_nibrs": 284,
+        "reporting": {"2020":65,"2021":131,"2022":119,"2023":120,"2024":98,"2025":180},
+        "with_cases": {"2020":17,"2021":24,"2022":38,"2023":40,"2024":51,"2025":57},
+        "table_offenses": {"2020":39,"2021":72,"2022":83,"2023":93,"2024":119,"2025":177}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "NV",
+      "name": "Nevada",
+      "slug": "nv",
+      "fips": "32",
+      "annual": [
+        {"year":2016,"months_reported":8,"offenses":0,"clearances":0,"coverage_pct":24.6,"population":2940058,"covered_population":1084569,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":9,"offenses":0,"clearances":0,"coverage_pct":13.8,"population":2998039,"covered_population":550250,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":9,"offenses":0,"clearances":0,"coverage_pct":24.2,"population":3034392,"covered_population":979535,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":2,"clearances":0,"coverage_pct":59.8,"population":3080156,"covered_population":1841350,"rate_per_100k":0.11,"clearance_rate":0.0},
+        {"year":2020,"months_reported":12,"offenses":47,"clearances":20,"coverage_pct":87.4,"population":3138259,"covered_population":2742170,"rate_per_100k":1.71,"clearance_rate":0.426},
+        {"year":2021,"months_reported":12,"offenses":282,"clearances":143,"coverage_pct":99.5,"population":3143991,"covered_population":3127857,"rate_per_100k":9.02,"clearance_rate":0.507},
+        {"year":2022,"months_reported":12,"offenses":289,"clearances":144,"coverage_pct":99.6,"population":3177772,"covered_population":3164140,"rate_per_100k":9.13,"clearance_rate":0.498},
+        {"year":2023,"months_reported":12,"offenses":279,"clearances":147,"coverage_pct":99.6,"population":3194176,"covered_population":3181298,"rate_per_100k":8.77,"clearance_rate":0.527},
+        {"year":2024,"months_reported":12,"offenses":288,"clearances":134,"coverage_pct":99.5,"population":3267467,"covered_population":3252048,"rate_per_100k":8.86,"clearance_rate":0.465},
+        {"year":2025,"months_reported":12,"offenses":276,"clearances":147,"coverage_pct":99.6,"population":3282188,"covered_population":3270568,"rate_per_100k":8.44,"clearance_rate":0.533}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,null,null,0,0,null,0,0,0,0,0,null,0,null,0,null,0,0,0,0,0,0,null,0,0,0,0,null,0,0,null,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,0,0,0,0,2,1,4,7,7,10,14,18,9,21,21,23,40,36,38,19,16,25,16,19,16,14,21,25,43,38,27,34,13,20,19,17,16,27,21,33,27,44,29,31,10,12,12,17,23,20,20,21,35,41,31,26,20,23,11,12,12,24,31,26,30,40,34,21,21,11,14],
+        "clearances": [0,null,null,0,0,null,0,0,0,0,0,null,0,null,0,null,0,0,0,0,0,0,null,0,0,0,0,null,0,0,null,0,null,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,4,4,3,6,6,5,8,11,10,22,22,23,9,9,11,7,6,4,7,8,15,25,20,18,19,5,7,10,6,8,11,13,20,15,25,14,17,8,7,3,9,10,8,8,13,20,19,13,8,7,12,7,6,6,15,11,17,17,24,16,9,11,6,9]
+      },
+      "agencies": {
+        "directory": 72,
+        "directory_nibrs": 63,
+        "reporting": {"2020":7,"2021":35,"2022":49,"2023":52,"2024":43,"2025":43},
+        "with_cases": {"2020":2,"2021":17,"2022":18,"2023":18,"2024":23,"2025":20},
+        "table_offenses": {"2020":5,"2021":273,"2022":298,"2023":277,"2024":282,"2025":273}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "NH",
+      "name": "New Hampshire",
+      "slug": "nh",
+      "fips": "33",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":97.3,"population":1334795,"covered_population":1298493,"rate_per_100k":0.08,"clearance_rate":0.0},
+        {"year":2017,"months_reported":12,"offenses":89,"clearances":29,"coverage_pct":97.6,"population":1342795,"covered_population":1310923,"rate_per_100k":6.79,"clearance_rate":0.326},
+        {"year":2018,"months_reported":12,"offenses":177,"clearances":48,"coverage_pct":97.5,"population":1356458,"covered_population":1322800,"rate_per_100k":13.38,"clearance_rate":0.271},
+        {"year":2019,"months_reported":12,"offenses":207,"clearances":69,"coverage_pct":97.8,"population":1359711,"covered_population":1329577,"rate_per_100k":15.57,"clearance_rate":0.333},
+        {"year":2020,"months_reported":12,"offenses":190,"clearances":45,"coverage_pct":97.7,"population":1366275,"covered_population":1335428,"rate_per_100k":14.23,"clearance_rate":0.237},
+        {"year":2021,"months_reported":12,"offenses":190,"clearances":44,"coverage_pct":99.5,"population":1388992,"covered_population":1381861,"rate_per_100k":13.75,"clearance_rate":0.232},
+        {"year":2022,"months_reported":12,"offenses":241,"clearances":75,"coverage_pct":99.5,"population":1395231,"covered_population":1388721,"rate_per_100k":17.35,"clearance_rate":0.311},
+        {"year":2023,"months_reported":12,"offenses":225,"clearances":52,"coverage_pct":99.5,"population":1402054,"covered_population":1394620,"rate_per_100k":16.13,"clearance_rate":0.231},
+        {"year":2024,"months_reported":12,"offenses":267,"clearances":77,"coverage_pct":99.9,"population":1409032,"covered_population":1408213,"rate_per_100k":18.96,"clearance_rate":0.288},
+        {"year":2025,"months_reported":12,"offenses":255,"clearances":87,"coverage_pct":99.9,"population":1415342,"covered_population":1413928,"rate_per_100k":18.03,"clearance_rate":0.341}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,1,0,5,1,1,5,8,10,15,11,9,9,5,10,10,7,14,8,14,19,25,23,15,19,10,13,20,11,8,12,14,21,28,26,20,16,15,16,20,13,21,8,14,13,23,15,14,21,12,16,20,11,9,17,17,23,35,14,15,10,12,7,28,12,23,16,15,23,34,19,18,20,17,16,19,15,11,16,21,21,27,24,17,19,15,20,16,16,20,12,37,18,28,27,29,23,20,21,23,10,14,20,22,26,38,25,16,27,18,16],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,4,0,1,3,2,2,4,1,4,3,2,3,2,3,3,2,3,3,8,12,5,4,2,1,5,5,0,1,3,9,17,6,5,8,4,6,5,4,2,1,2,3,10,2,3,7,1,5,6,2,3,4,3,8,8,3,4,0,1,2,9,7,6,3,5,4,9,8,7,5,8,4,4,2,3,1,3,3,10,7,4,3,9,3,3,4,2,6,11,1,11,9,10,7,5,8,5,4,3,4,10,12,23,5,2,9,6,4]
+      },
+      "agencies": {
+        "directory": 211,
+        "directory_nibrs": 210,
+        "reporting": {"2020":181,"2021":181,"2022":191,"2023":148,"2024":209,"2025":209},
+        "with_cases": {"2020":71,"2021":59,"2022":79,"2023":64,"2024":91,"2025":88},
+        "table_offenses": {"2020":188,"2021":141,"2022":226,"2023":186,"2024":267,"2025":252}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "NJ",
+      "name": "New Jersey",
+      "slug": "nj",
+      "fips": "34",
+      "annual": [
+        {"year":2016,"months_reported":3,"offenses":0,"clearances":0,"coverage_pct":0.1,"population":8944469,"covered_population":30097,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":2,"offenses":0,"clearances":0,"coverage_pct":0.0,"population":9005644,"covered_population":19666,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":5,"offenses":0,"clearances":0,"coverage_pct":0.4,"population":8908520,"covered_population":80191,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":5,"offenses":0,"clearances":0,"coverage_pct":0.2,"population":8882190,"covered_population":36483,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2020,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":2.8,"population":8882371,"covered_population":246974,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2021,"months_reported":12,"offenses":55,"clearances":28,"coverage_pct":44.9,"population":9267130,"covered_population":4163535,"rate_per_100k":1.32,"clearance_rate":0.509},
+        {"year":2022,"months_reported":12,"offenses":117,"clearances":35,"coverage_pct":61.0,"population":9261699,"covered_population":5653745,"rate_per_100k":2.07,"clearance_rate":0.299},
+        {"year":2023,"months_reported":12,"offenses":106,"clearances":32,"coverage_pct":66.6,"population":9290841,"covered_population":6189120,"rate_per_100k":1.71,"clearance_rate":0.302},
+        {"year":2024,"months_reported":12,"offenses":130,"clearances":40,"coverage_pct":72.9,"population":9500851,"covered_population":6922147,"rate_per_100k":1.88,"clearance_rate":0.308},
+        {"year":2025,"months_reported":12,"offenses":127,"clearances":37,"coverage_pct":79.7,"population":9548215,"covered_population":7612045,"rate_per_100k":1.67,"clearance_rate":0.291}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [null,null,0,null,0,null,null,null,null,null,null,0,0,null,null,null,null,null,null,null,null,null,0,null,0,null,null,null,null,0,0,null,null,null,0,0,0,null,0,null,null,null,null,0,0,null,null,0,0,0,0,0,0,0,0,0,0,0,0,0,6,2,1,4,5,6,8,6,5,3,6,3,9,12,12,5,16,8,17,10,10,4,8,6,6,6,13,13,9,14,16,9,4,8,4,4,13,11,7,11,5,11,16,12,7,9,13,15,11,6,9,6,6,15,16,17,9,16,8,8],
+        "clearances": [null,null,0,null,0,null,null,null,null,null,null,0,0,null,null,null,null,null,null,null,null,null,0,null,0,null,null,null,null,0,0,null,null,null,0,0,0,null,0,null,null,null,null,0,0,null,null,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,1,2,2,4,4,3,4,0,2,3,3,6,4,0,7,0,4,1,5,0,3,2,1,1,2,2,6,5,4,4,1,2,2,2,2,4,3,4,3,3,5,3,3,1,3,6,2,2,2,2,2,7,7,6,3,2,1,1]
+      },
+      "agencies": {
+        "directory": 579,
+        "directory_nibrs": 408,
+        "reporting": {"2020":0,"2021":64,"2022":219,"2023":271,"2024":319,"2025":361},
+        "with_cases": {"2020":0,"2021":9,"2022":33,"2023":35,"2024":54,"2025":51},
+        "table_offenses": {"2020":0,"2021":18,"2022":89,"2023":97,"2024":117,"2025":125}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "NM",
+      "name": "New Mexico",
+      "slug": "nm",
+      "fips": "35",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":5.7,"population":2081015,"covered_population":118569,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":5.6,"population":2088070,"covered_population":116721,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":12,"clearances":5,"coverage_pct":40.7,"population":2095428,"covered_population":852416,"rate_per_100k":1.41,"clearance_rate":0.417},
+        {"year":2019,"months_reported":12,"offenses":39,"clearances":10,"coverage_pct":49.4,"population":2096829,"covered_population":1035600,"rate_per_100k":3.77,"clearance_rate":0.256},
+        {"year":2020,"months_reported":12,"offenses":64,"clearances":28,"coverage_pct":64.2,"population":2106319,"covered_population":1351580,"rate_per_100k":4.74,"clearance_rate":0.438},
+        {"year":2021,"months_reported":12,"offenses":121,"clearances":34,"coverage_pct":87.7,"population":2115877,"covered_population":1856484,"rate_per_100k":6.52,"clearance_rate":0.281},
+        {"year":2022,"months_reported":12,"offenses":120,"clearances":47,"coverage_pct":89.5,"population":2113344,"covered_population":1892136,"rate_per_100k":6.34,"clearance_rate":0.392},
+        {"year":2023,"months_reported":12,"offenses":127,"clearances":52,"coverage_pct":89.1,"population":2114371,"covered_population":1884725,"rate_per_100k":6.74,"clearance_rate":0.409},
+        {"year":2024,"months_reported":12,"offenses":156,"clearances":53,"coverage_pct":93.7,"population":2130256,"covered_population":1996098,"rate_per_100k":7.82,"clearance_rate":0.34},
+        {"year":2025,"months_reported":12,"offenses":175,"clearances":59,"coverage_pct":93.9,"population":2125498,"covered_population":1996027,"rate_per_100k":8.77,"clearance_rate":0.337}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,4,1,2,4,5,2,2,3,4,6,3,1,2,4,3,2,4,5,2,5,14,5,10,3,5,5,4,14,11,4,14,12,12,9,15,10,6,11,3,8,7,4,8,13,16,10,17,10,10,7,10,9,6,12,12,10,13,12,8,13,11,13,8,17,19,9,14,10,9,23,12,7,11,7,18,12,9,20,20,8,17,24,21,11,16,7,10],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,1,1,1,0,1,0,1,2,2,0,1,1,0,0,2,2,2,3,6,2,4,0,2,3,2,2,4,2,3,4,5,2,5,3,1,3,0,4,2,0,3,5,7,5,9,3,2,2,5,7,2,9,5,2,7,4,4,2,4,4,2,9,4,5,3,3,2,11,3,1,5,2,5,8,1,8,5,1,6,7,5,6,5,2,5]
+      },
+      "agencies": {
+        "directory": 135,
+        "directory_nibrs": 121,
+        "reporting": {"2020":9,"2021":24,"2022":85,"2023":64,"2024":82,"2025":78},
+        "with_cases": {"2020":4,"2021":10,"2022":26,"2023":20,"2024":27,"2025":33},
+        "table_offenses": {"2020":48,"2021":59,"2022":108,"2023":114,"2024":131,"2025":173}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "NY",
+      "name": "New York",
+      "slug": "ny",
+      "fips": "36",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":48.7,"population":19745289,"covered_population":9620702,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":50.0,"population":19849399,"covered_population":9929496,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":52.0,"population":19542209,"covered_population":10154141,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":57.6,"population":19453561,"covered_population":11209607,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2020,"months_reported":12,"offenses":2,"clearances":1,"coverage_pct":65.1,"population":19336776,"covered_population":12595218,"rate_per_100k":0.02,"clearance_rate":0.5},
+        {"year":2021,"months_reported":12,"offenses":4,"clearances":0,"coverage_pct":68.9,"population":19835913,"covered_population":13666275,"rate_per_100k":0.03,"clearance_rate":0.0},
+        {"year":2022,"months_reported":12,"offenses":10,"clearances":5,"coverage_pct":71.7,"population":19677151,"covered_population":14118222,"rate_per_100k":0.07,"clearance_rate":0.5},
+        {"year":2023,"months_reported":12,"offenses":50,"clearances":42,"coverage_pct":74.8,"population":19571216,"covered_population":14631367,"rate_per_100k":0.34,"clearance_rate":0.84},
+        {"year":2024,"months_reported":12,"offenses":60,"clearances":50,"coverage_pct":78.7,"population":19867248,"covered_population":15637998,"rate_per_100k":0.38,"clearance_rate":0.833},
+        {"year":2025,"months_reported":12,"offenses":261,"clearances":157,"coverage_pct":81.7,"population":20002427,"covered_population":16342797,"rate_per_100k":1.6,"clearance_rate":0.602}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,2,0,1,1,0,0,1,1,0,0,1,2,0,2,2,2,2,4,6,4,7,4,5,2,6,4,4,5,4,5,6,6,1,2,5,7,8,5,6,8,11,7,9,8,19,25,34,33,42,31,34],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,2,1,2,4,6,3,3,4,5,2,6,2,4,5,4,4,3,6,1,1,5,5,8,4,4,5,7,4,5,6,11,16,23,20,25,17,18]
+      },
+      "agencies": {
+        "directory": 537,
+        "directory_nibrs": 260,
+        "reporting": {"2020":25,"2021":93,"2022":122,"2023":147,"2024":174,"2025":198},
+        "with_cases": {"2020":0,"2021":1,"2022":2,"2023":3,"2024":7,"2025":65},
+        "table_offenses": {"2020":0,"2021":1,"2022":2,"2023":8,"2024":16,"2025":206}
+      },
+      "legacy": {"rows":1138,"current":525,"not_found":480,"likely_ocr_error":1,"federal":132,"needs_review":1}
+    },
+    {
+      "abbr": "NC",
+      "name": "North Carolina",
+      "slug": "nc",
+      "fips": "37",
+      "annual": [
+        {"year":2016,"months_reported":1,"offenses":0,"clearances":0,"coverage_pct":0.1,"population":10146788,"covered_population":105253,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":0,"offenses":null,"clearances":null,"coverage_pct":0.0,"population":10273419,"covered_population":null,"rate_per_100k":null,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":2,"clearances":0,"coverage_pct":22.4,"population":10383620,"covered_population":2324616,"rate_per_100k":0.09,"clearance_rate":0.0},
+        {"year":2019,"months_reported":12,"offenses":541,"clearances":166,"coverage_pct":87.7,"population":10488084,"covered_population":9198324,"rate_per_100k":5.88,"clearance_rate":0.307},
+        {"year":2020,"months_reported":12,"offenses":536,"clearances":135,"coverage_pct":95.7,"population":10600823,"covered_population":10145224,"rate_per_100k":5.28,"clearance_rate":0.252},
+        {"year":2021,"months_reported":12,"offenses":620,"clearances":190,"coverage_pct":97.5,"population":10551162,"covered_population":10288154,"rate_per_100k":6.03,"clearance_rate":0.306},
+        {"year":2022,"months_reported":12,"offenses":690,"clearances":186,"coverage_pct":97.5,"population":10698973,"covered_population":10426833,"rate_per_100k":6.62,"clearance_rate":0.27},
+        {"year":2023,"months_reported":12,"offenses":778,"clearances":213,"coverage_pct":97.6,"population":10835491,"covered_population":10573473,"rate_per_100k":7.36,"clearance_rate":0.274},
+        {"year":2024,"months_reported":12,"offenses":813,"clearances":229,"coverage_pct":97.2,"population":11046024,"covered_population":10741949,"rate_per_100k":7.57,"clearance_rate":0.282},
+        {"year":2025,"months_reported":12,"offenses":859,"clearances":281,"coverage_pct":96.6,"population":11197968,"covered_population":10816271,"rate_per_100k":7.94,"clearance_rate":0.327}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,0,0,0,0,0,0,0,1,0,1,38,37,45,28,42,51,66,63,43,45,42,41,33,43,43,32,44,46,57,59,47,40,43,49,48,54,59,39,48,62,78,55,44,48,39,46,48,49,53,55,58,90,68,63,54,47,43,62,50,53,54,63,63,73,75,89,50,74,73,61,60,62,48,63,78,73,81,94,76,62,56,60,63,64,68,73,70,91,102,74,51,77,65,61],
+        "clearances": [null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,0,0,0,0,0,0,0,0,0,0,12,9,12,10,12,12,22,27,9,13,14,14,8,13,10,4,9,13,16,20,9,13,14,6,16,11,23,12,10,15,29,20,11,15,13,15,13,13,17,13,21,30,11,15,21,9,13,10,12,12,15,11,21,21,24,24,11,19,23,20,20,18,16,12,23,21,21,27,21,17,12,21,9,24,17,25,19,37,37,21,22,28,27,15]
+      },
+      "agencies": {
+        "directory": 537,
+        "directory_nibrs": 452,
+        "reporting": {"2020":288,"2021":312,"2022":328,"2023":327,"2024":310,"2025":308},
+        "with_cases": {"2020":101,"2021":127,"2022":143,"2023":141,"2024":137,"2025":144},
+        "table_offenses": {"2020":444,"2021":555,"2022":624,"2023":657,"2024":647,"2025":807}
+      },
+      "legacy": {"rows":681,"current":488,"not_found":135,"likely_ocr_error":5,"federal":53,"needs_review":6}
+    },
+    {
+      "abbr": "ND",
+      "name": "North Dakota",
+      "slug": "nd",
+      "fips": "38",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":2,"clearances":0,"coverage_pct":99.7,"population":757952,"covered_population":755978,"rate_per_100k":0.26,"clearance_rate":0.0},
+        {"year":2017,"months_reported":12,"offenses":46,"clearances":17,"coverage_pct":99.6,"population":755393,"covered_population":752545,"rate_per_100k":6.11,"clearance_rate":0.37},
+        {"year":2018,"months_reported":12,"offenses":81,"clearances":22,"coverage_pct":100.0,"population":760077,"covered_population":759875,"rate_per_100k":10.66,"clearance_rate":0.272},
+        {"year":2019,"months_reported":12,"offenses":102,"clearances":30,"coverage_pct":99.9,"population":761894,"covered_population":761318,"rate_per_100k":13.4,"clearance_rate":0.294},
+        {"year":2020,"months_reported":12,"offenses":89,"clearances":20,"coverage_pct":99.9,"population":765309,"covered_population":764872,"rate_per_100k":11.64,"clearance_rate":0.225},
+        {"year":2021,"months_reported":12,"offenses":122,"clearances":30,"coverage_pct":99.9,"population":774948,"covered_population":773822,"rate_per_100k":15.77,"clearance_rate":0.246},
+        {"year":2022,"months_reported":12,"offenses":145,"clearances":43,"coverage_pct":100.0,"population":779261,"covered_population":778998,"rate_per_100k":18.61,"clearance_rate":0.297},
+        {"year":2023,"months_reported":12,"offenses":138,"clearances":35,"coverage_pct":99.7,"population":783926,"covered_population":781748,"rate_per_100k":17.65,"clearance_rate":0.254},
+        {"year":2024,"months_reported":12,"offenses":162,"clearances":44,"coverage_pct":99.8,"population":796568,"covered_population":795372,"rate_per_100k":20.37,"clearance_rate":0.272},
+        {"year":2025,"months_reported":12,"offenses":168,"clearances":55,"coverage_pct":98.8,"population":799358,"covered_population":789817,"rate_per_100k":21.27,"clearance_rate":0.327}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,1,1,0,0,0,0,0,1,3,1,0,9,5,5,5,2,5,5,5,10,10,4,4,9,9,11,3,5,4,5,7,3,9,4,7,10,11,17,16,9,8,5,3,11,5,10,5,7,9,8,4,9,7,6,8,5,5,11,6,14,12,16,21,4,12,7,9,12,1,15,11,17,18,19,12,9,12,8,11,16,7,10,9,14,13,13,14,8,12,10,12,10,8,9,10,19,15,11,14,20,20,13,13,8,20,7,12,18,15,18,18,19,8,11,14],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,6,0,2,3,1,0,1,0,3,1,3,2,2,3,3,1,1,1,1,1,0,3,0,1,2,5,4,6,4,2,1,2,2,2,1,1,2,3,1,2,1,2,2,1,2,2,4,2,3,4,2,2,2,2,2,3,3,0,3,3,1,5,6,7,4,5,1,5,5,2,4,0,4,4,2,4,1,4,3,2,2,4,3,5,1,3,1,4,6,8,5,2,4,13,2,4,8,4,4,7,5,0,2,2]
+      },
+      "agencies": {
+        "directory": 107,
+        "directory_nibrs": 107,
+        "reporting": {"2020":100,"2021":100,"2022":106,"2023":97,"2024":60,"2025":28},
+        "with_cases": {"2020":28,"2021":33,"2022":43,"2023":35,"2024":30,"2025":15},
+        "table_offenses": {"2020":88,"2021":118,"2022":142,"2023":132,"2024":151,"2025":98}
+      },
+      "legacy": {"rows":111,"not_found":66,"current":45,"needs_review":0}
+    },
+    {
+      "abbr": "OH",
+      "name": "Ohio",
+      "slug": "oh",
+      "fips": "39",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":80.5,"population":11614373,"covered_population":9354360,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":27,"clearances":11,"coverage_pct":81.3,"population":11658609,"covered_population":9482754,"rate_per_100k":0.28,"clearance_rate":0.407},
+        {"year":2018,"months_reported":12,"offenses":109,"clearances":32,"coverage_pct":82.7,"population":11689442,"covered_population":9666322,"rate_per_100k":1.13,"clearance_rate":0.294},
+        {"year":2019,"months_reported":12,"offenses":181,"clearances":63,"coverage_pct":84.5,"population":11689100,"covered_population":9878398,"rate_per_100k":1.83,"clearance_rate":0.348},
+        {"year":2020,"months_reported":12,"offenses":241,"clearances":49,"coverage_pct":86.6,"population":11693217,"covered_population":10126456,"rate_per_100k":2.38,"clearance_rate":0.203},
+        {"year":2021,"months_reported":12,"offenses":353,"clearances":91,"coverage_pct":90.6,"population":11780017,"covered_population":10668961,"rate_per_100k":3.31,"clearance_rate":0.258},
+        {"year":2022,"months_reported":12,"offenses":417,"clearances":123,"coverage_pct":93.1,"population":11756058,"covered_population":10940501,"rate_per_100k":3.81,"clearance_rate":0.295},
+        {"year":2023,"months_reported":12,"offenses":426,"clearances":122,"coverage_pct":94.2,"population":11785935,"covered_population":11107469,"rate_per_100k":3.84,"clearance_rate":0.286},
+        {"year":2024,"months_reported":12,"offenses":625,"clearances":172,"coverage_pct":94.3,"population":11883304,"covered_population":11202009,"rate_per_100k":5.58,"clearance_rate":0.275},
+        {"year":2025,"months_reported":12,"offenses":569,"clearances":156,"coverage_pct":93.2,"population":11900510,"covered_population":11096183,"rate_per_100k":5.13,"clearance_rate":0.274}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,2,1,3,0,1,1,1,2,2,2,8,4,2,2,9,6,6,11,10,12,18,11,14,8,20,6,12,11,10,19,24,20,22,16,9,12,19,21,23,9,18,26,25,22,18,25,20,15,22,20,27,22,34,33,42,40,34,34,23,22,25,23,24,42,46,37,37,53,30,35,33,32,30,33,50,30,33,34,46,41,36,36,32,25,53,37,44,54,72,73,70,58,40,49,30,45,33,41,43,48,46,66,65,63,48,43,29,44],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,1,0,3,0,1,0,1,0,1,1,3,0,0,0,2,0,3,6,4,5,5,2,4,1,8,1,4,4,4,5,11,10,4,3,4,5,2,2,3,1,3,7,9,6,4,3,5,4,3,5,8,4,11,13,9,13,7,7,6,5,6,6,8,10,15,15,12,17,9,8,9,8,7,9,11,8,14,10,19,17,8,5,7,7,12,7,9,19,16,18,24,23,12,15,8,9,8,9,13,16,10,23,16,19,13,12,5,12]
+      },
+      "agencies": {
+        "directory": 863,
+        "directory_nibrs": 831,
+        "reporting": {"2020":355,"2021":356,"2022":417,"2023":430,"2024":428,"2025":437},
+        "with_cases": {"2020":57,"2021":87,"2022":129,"2023":134,"2024":160,"2025":164},
+        "table_offenses": {"2020":217,"2021":293,"2022":364,"2023":340,"2024":523,"2025":527}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "OK",
+      "name": "Oklahoma",
+      "slug": "ok",
+      "fips": "40",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":45.2,"population":3923561,"covered_population":1774386,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":47.3,"population":3930864,"covered_population":1857476,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":50.5,"population":3943079,"covered_population":1991568,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":75,"clearances":17,"coverage_pct":63.8,"population":3956971,"covered_population":2524744,"rate_per_100k":2.97,"clearance_rate":0.227},
+        {"year":2020,"months_reported":12,"offenses":107,"clearances":11,"coverage_pct":70.9,"population":3980783,"covered_population":2822908,"rate_per_100k":3.79,"clearance_rate":0.103},
+        {"year":2021,"months_reported":12,"offenses":269,"clearances":62,"coverage_pct":99.4,"population":3986639,"covered_population":3961667,"rate_per_100k":6.79,"clearance_rate":0.23},
+        {"year":2022,"months_reported":12,"offenses":551,"clearances":103,"coverage_pct":99.9,"population":4019800,"covered_population":4016371,"rate_per_100k":13.72,"clearance_rate":0.187},
+        {"year":2023,"months_reported":12,"offenses":791,"clearances":123,"coverage_pct":100.0,"population":4053824,"covered_population":4052752,"rate_per_100k":19.52,"clearance_rate":0.155},
+        {"year":2024,"months_reported":12,"offenses":863,"clearances":118,"coverage_pct":99.9,"population":4095393,"covered_population":4089788,"rate_per_100k":21.1,"clearance_rate":0.137},
+        {"year":2025,"months_reported":12,"offenses":974,"clearances":153,"coverage_pct":99.9,"population":4123288,"covered_population":4118926,"rate_per_100k":23.65,"clearance_rate":0.157}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,2,2,7,9,9,15,11,6,11,11,11,4,6,11,8,10,9,6,9,11,11,35,23,14,23,20,31,20,28,15,16,17,27,29,27,38,34,39,51,65,60,53,58,46,51,46,63,71,62,64,85,81,86,68,59,50,56,68,61,64,67,74,89,94,88,79,63,61,55,80,65,68,62,88,92,115,83,90,93,65,73],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,2,4,1,4,3,0,1,0,0,0,0,1,2,1,1,3,0,0,3,6,8,1,9,3,9,3,7,1,4,3,8,5,6,3,3,8,13,17,13,16,5,4,10,9,12,6,11,8,20,13,13,6,9,9,7,6,5,8,6,8,11,22,18,10,10,9,5,6,14,11,6,19,13,15,16,16,16,9,12]
+      },
+      "agencies": {
+        "directory": 481,
+        "directory_nibrs": 479,
+        "reporting": {"2020":370,"2021":428,"2022":445,"2023":449,"2024":437,"2025":457},
+        "with_cases": {"2020":27,"2021":44,"2022":140,"2023":194,"2024":205,"2025":208},
+        "table_offenses": {"2020":100,"2021":190,"2022":523,"2023":773,"2024":849,"2025":960}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "OR",
+      "name": "Oregon",
+      "slug": "or",
+      "fips": "41",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":98,"clearances":32,"coverage_pct":89.7,"population":4093465,"covered_population":3673084,"rate_per_100k":2.67,"clearance_rate":0.327},
+        {"year":2017,"months_reported":12,"offenses":170,"clearances":59,"coverage_pct":94.4,"population":4142776,"covered_population":3911602,"rate_per_100k":4.35,"clearance_rate":0.347},
+        {"year":2018,"months_reported":12,"offenses":459,"clearances":147,"coverage_pct":95.4,"population":4190713,"covered_population":3997989,"rate_per_100k":11.48,"clearance_rate":0.32},
+        {"year":2019,"months_reported":12,"offenses":509,"clearances":183,"coverage_pct":95.5,"population":4217737,"covered_population":4028315,"rate_per_100k":12.64,"clearance_rate":0.36},
+        {"year":2020,"months_reported":12,"offenses":423,"clearances":151,"coverage_pct":93.7,"population":4241507,"covered_population":3972510,"rate_per_100k":10.65,"clearance_rate":0.357},
+        {"year":2021,"months_reported":12,"offenses":488,"clearances":182,"coverage_pct":97.5,"population":4246155,"covered_population":4138112,"rate_per_100k":11.79,"clearance_rate":0.373},
+        {"year":2022,"months_reported":12,"offenses":472,"clearances":156,"coverage_pct":98.8,"population":4240137,"covered_population":4191139,"rate_per_100k":11.26,"clearance_rate":0.331},
+        {"year":2023,"months_reported":12,"offenses":522,"clearances":178,"coverage_pct":98.7,"population":4233358,"covered_population":4179791,"rate_per_100k":12.49,"clearance_rate":0.341},
+        {"year":2024,"months_reported":12,"offenses":554,"clearances":193,"coverage_pct":98.4,"population":4272371,"covered_population":4204673,"rate_per_100k":13.18,"clearance_rate":0.348},
+        {"year":2025,"months_reported":12,"offenses":529,"clearances":223,"coverage_pct":98.0,"population":4273586,"covered_population":4188754,"rate_per_100k":12.63,"clearance_rate":0.422}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [7,6,10,11,7,16,6,13,8,3,6,5,7,6,13,10,12,17,30,27,15,13,11,9,13,29,37,32,43,46,55,53,39,35,42,35,50,40,43,24,33,51,60,73,47,34,28,26,43,33,37,35,34,42,44,39,40,31,25,20,29,30,42,35,39,48,55,66,49,31,20,44,38,33,29,29,40,47,45,56,52,46,29,28,44,24,40,44,38,53,57,59,46,52,37,28,41,32,48,47,53,53,62,46,50,39,41,42,41,27,42,36,44,37,49,69,58,47,32,47],
+        "clearances": [2,1,2,5,5,4,3,4,3,1,1,1,3,2,7,4,2,4,15,5,10,4,0,3,3,10,15,11,13,11,20,19,12,8,16,9,13,12,11,8,13,21,26,26,23,10,12,8,18,5,13,16,11,13,19,15,16,7,9,9,8,7,14,13,11,26,17,28,22,11,9,16,12,8,7,9,13,16,20,22,19,15,3,12,11,7,14,14,16,21,20,22,13,17,11,12,13,10,17,14,19,19,23,18,22,13,12,13,19,11,14,16,19,17,25,33,20,21,15,13]
+      },
+      "agencies": {
+        "directory": 240,
+        "directory_nibrs": 233,
+        "reporting": {"2020":171,"2021":149,"2022":180,"2023":189,"2024":180,"2025":175},
+        "with_cases": {"2020":77,"2021":86,"2022":90,"2023":102,"2024":81,"2025":94},
+        "table_offenses": {"2020":355,"2021":445,"2022":439,"2023":491,"2024":523,"2025":510}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "PA",
+      "name": "Pennsylvania",
+      "slug": "pa",
+      "fips": "42",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":10.2,"population":12784227,"covered_population":1303681,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":9.8,"population":12805537,"covered_population":1250492,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":14.5,"population":12807060,"covered_population":1855216,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":1,"clearances":1,"coverage_pct":15.9,"population":12801989,"covered_population":2041695,"rate_per_100k":0.05,"clearance_rate":1.0},
+        {"year":2020,"months_reported":12,"offenses":8,"clearances":2,"coverage_pct":17.6,"population":12783254,"covered_population":2248200,"rate_per_100k":0.36,"clearance_rate":0.25},
+        {"year":2021,"months_reported":12,"offenses":465,"clearances":264,"coverage_pct":39.4,"population":12964004,"covered_population":5103367,"rate_per_100k":9.11,"clearance_rate":0.568},
+        {"year":2022,"months_reported":12,"offenses":448,"clearances":232,"coverage_pct":41.6,"population":12972008,"covered_population":5391951,"rate_per_100k":8.31,"clearance_rate":0.518},
+        {"year":2023,"months_reported":12,"offenses":480,"clearances":247,"coverage_pct":45.4,"population":12961683,"covered_population":5888395,"rate_per_100k":8.15,"clearance_rate":0.515},
+        {"year":2024,"months_reported":12,"offenses":521,"clearances":291,"coverage_pct":50.2,"population":13078751,"covered_population":6564799,"rate_per_100k":7.94,"clearance_rate":0.559},
+        {"year":2025,"months_reported":12,"offenses":538,"clearances":271,"coverage_pct":52.9,"population":13059432,"covered_population":6914287,"rate_per_100k":7.78,"clearance_rate":0.504}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,2,2,1,0,0,1,1,0,27,34,36,35,23,32,52,59,39,40,44,44,33,24,46,28,32,46,48,36,34,36,39,46,36,21,34,45,42,49,59,45,46,39,29,35,40,42,25,29,48,51,51,51,45,47,45,47,56,28,37,42,33,71,58,52,46,37,37,41],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,16,22,21,15,17,22,32,34,24,19,24,18,17,11,22,15,16,20,26,21,20,21,16,27,16,11,19,21,18,29,37,28,18,18,16,16,29,16,11,17,23,28,32,27,30,30,21,27,40,15,14,20,15,38,29,20,26,15,20,19]
+      },
+      "agencies": {
+        "directory": 1439,
+        "directory_nibrs": 245,
+        "reporting": {"2020":2,"2021":23,"2022":107,"2023":136,"2024":100,"2025":192},
+        "with_cases": {"2020":1,"2021":9,"2022":75,"2023":84,"2024":26,"2025":88},
+        "table_offenses": {"2020":1,"2021":41,"2022":429,"2023":458,"2024":488,"2025":517}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "RI",
+      "name": "Rhode Island",
+      "slug": "ri",
+      "fips": "44",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":99.9,"population":1056426,"covered_population":1055380,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":99.9,"population":1059639,"covered_population":1058595,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2018,"months_reported":12,"offenses":5,"clearances":0,"coverage_pct":99.9,"population":1057315,"covered_population":1056281,"rate_per_100k":0.47,"clearance_rate":0.0},
+        {"year":2019,"months_reported":12,"offenses":23,"clearances":9,"coverage_pct":99.9,"population":1059361,"covered_population":1058329,"rate_per_100k":2.17,"clearance_rate":0.391},
+        {"year":2020,"months_reported":12,"offenses":36,"clearances":21,"coverage_pct":99.9,"population":1057125,"covered_population":1056100,"rate_per_100k":3.41,"clearance_rate":0.583},
+        {"year":2021,"months_reported":12,"offenses":43,"clearances":23,"coverage_pct":99.9,"population":1095610,"covered_population":1094546,"rate_per_100k":3.93,"clearance_rate":0.535},
+        {"year":2022,"months_reported":12,"offenses":62,"clearances":32,"coverage_pct":99.9,"population":1093734,"covered_population":1092311,"rate_per_100k":5.68,"clearance_rate":0.516},
+        {"year":2023,"months_reported":12,"offenses":71,"clearances":35,"coverage_pct":99.9,"population":1095962,"covered_population":1094548,"rate_per_100k":6.49,"clearance_rate":0.493},
+        {"year":2024,"months_reported":12,"offenses":77,"clearances":44,"coverage_pct":99.9,"population":1112308,"covered_population":1110883,"rate_per_100k":6.93,"clearance_rate":0.571},
+        {"year":2025,"months_reported":12,"offenses":74,"clearances":23,"coverage_pct":98.8,"population":1114521,"covered_population":1101080,"rate_per_100k":6.72,"clearance_rate":0.311}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,2,0,0,0,1,0,2,2,1,1,1,2,6,2,0,2,1,3,4,1,2,3,3,6,7,2,0,4,2,2,3,4,1,4,4,2,4,6,5,3,3,4,3,2,3,8,4,3,12,8,8,5,3,3,3,2,6,5,9,9,10,9,3,8,5,2,5,7,1,8,3,8,13,5,6,8,5,8,6,4,9,3,12,6,7,9,6,3,2,7],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,2,0,0,2,1,1,3,1,2,3,2,3,3,1,0,1,1,1,0,2,0,3,1,1,3,5,1,2,2,3,0,1,1,4,3,3,6,6,3,2,2,1,2,1,4,2,6,6,3,3,1,4,3,0,3,3,0,6,1,4,8,4,4,5,4,2,1,2,3,1,4,0,3,2,1,1,1,4]
+      },
+      "agencies": {
+        "directory": 49,
+        "directory_nibrs": 48,
+        "reporting": {"2020":45,"2021":46,"2022":46,"2023":47,"2024":45,"2025":44},
+        "with_cases": {"2020":19,"2021":22,"2022":23,"2023":30,"2024":23,"2025":26},
+        "table_offenses": {"2020":34,"2021":43,"2022":61,"2023":72,"2024":76,"2025":71}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "SC",
+      "name": "South Carolina",
+      "slug": "sc",
+      "fips": "45",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":99.5,"population":4961119,"covered_population":4935182,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":208,"clearances":63,"coverage_pct":99.2,"population":5024369,"covered_population":4982152,"rate_per_100k":4.17,"clearance_rate":0.303},
+        {"year":2018,"months_reported":12,"offenses":304,"clearances":121,"coverage_pct":99.0,"population":5084127,"covered_population":5034687,"rate_per_100k":6.04,"clearance_rate":0.398},
+        {"year":2019,"months_reported":12,"offenses":333,"clearances":146,"coverage_pct":98.8,"population":5148714,"covered_population":5088893,"rate_per_100k":6.54,"clearance_rate":0.438},
+        {"year":2020,"months_reported":12,"offenses":323,"clearances":149,"coverage_pct":99.3,"population":5218040,"covered_population":5182358,"rate_per_100k":6.23,"clearance_rate":0.461},
+        {"year":2021,"months_reported":12,"offenses":407,"clearances":166,"coverage_pct":99.5,"population":5190705,"covered_population":5162156,"rate_per_100k":7.88,"clearance_rate":0.408},
+        {"year":2022,"months_reported":12,"offenses":500,"clearances":202,"coverage_pct":99.8,"population":5282634,"covered_population":5270364,"rate_per_100k":9.49,"clearance_rate":0.404},
+        {"year":2023,"months_reported":12,"offenses":630,"clearances":274,"coverage_pct":99.7,"population":5373555,"covered_population":5359023,"rate_per_100k":11.76,"clearance_rate":0.435},
+        {"year":2024,"months_reported":12,"offenses":601,"clearances":261,"coverage_pct":99.7,"population":5478831,"covered_population":5464947,"rate_per_100k":11.0,"clearance_rate":0.434},
+        {"year":2025,"months_reported":12,"offenses":622,"clearances":258,"coverage_pct":96.4,"population":5570274,"covered_population":5367433,"rate_per_100k":11.59,"clearance_rate":0.415}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,7,6,20,13,19,22,29,13,25,17,22,15,24,22,18,15,21,41,29,25,28,36,18,27,26,20,24,25,33,39,41,29,17,18,39,22,25,21,21,14,30,31,36,35,34,33,22,21,19,28,30,22,39,34,42,46,45,36,25,41,37,26,38,35,45,44,58,57,31,49,41,39,50,44,37,50,52,72,67,57,51,52,50,48,41,42,36,41,64,65,68,60,49,42,52,41,57,49,42,51,69,67,78,53,40,46,44,26],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,1,0,4,4,5,8,7,3,10,9,7,5,13,5,5,6,9,16,19,7,14,12,5,10,13,8,8,10,15,23,21,18,6,5,10,9,11,8,8,6,14,15,19,13,15,11,13,16,6,14,8,14,16,21,20,19,15,12,5,16,17,11,11,16,18,21,25,30,11,15,15,12,25,13,18,25,15,26,34,28,25,24,23,18,14,18,18,21,25,27,33,27,25,20,15,18,19,21,16,13,34,40,35,22,15,17,18,8]
+      },
+      "agencies": {
+        "directory": 552,
+        "directory_nibrs": 506,
+        "reporting": {"2020":241,"2021":178,"2022":337,"2023":281,"2024":327,"2025":316},
+        "with_cases": {"2020":57,"2021":70,"2022":89,"2023":99,"2024":105,"2025":102},
+        "table_offenses": {"2020":295,"2021":348,"2022":477,"2023":592,"2024":583,"2025":592}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "SD",
+      "name": "South Dakota",
+      "slug": "sd",
+      "fips": "46",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":3,"clearances":1,"coverage_pct":92.5,"population":865454,"covered_population":800219,"rate_per_100k":0.37,"clearance_rate":0.333},
+        {"year":2017,"months_reported":12,"offenses":12,"clearances":5,"coverage_pct":89.5,"population":869666,"covered_population":778398,"rate_per_100k":1.54,"clearance_rate":0.417},
+        {"year":2018,"months_reported":12,"offenses":26,"clearances":8,"coverage_pct":94.8,"population":882235,"covered_population":836261,"rate_per_100k":3.11,"clearance_rate":0.308},
+        {"year":2019,"months_reported":12,"offenses":35,"clearances":11,"coverage_pct":94.4,"population":884659,"covered_population":835504,"rate_per_100k":4.19,"clearance_rate":0.314},
+        {"year":2020,"months_reported":12,"offenses":20,"clearances":4,"coverage_pct":95.0,"population":892717,"covered_population":847803,"rate_per_100k":2.36,"clearance_rate":0.2},
+        {"year":2021,"months_reported":12,"offenses":37,"clearances":8,"coverage_pct":89.0,"population":895376,"covered_population":796615,"rate_per_100k":4.64,"clearance_rate":0.216},
+        {"year":2022,"months_reported":12,"offenses":48,"clearances":17,"coverage_pct":88.8,"population":909824,"covered_population":807551,"rate_per_100k":5.94,"clearance_rate":0.354},
+        {"year":2023,"months_reported":12,"offenses":27,"clearances":10,"coverage_pct":88.6,"population":919318,"covered_population":814559,"rate_per_100k":3.31,"clearance_rate":0.37},
+        {"year":2024,"months_reported":12,"offenses":45,"clearances":11,"coverage_pct":89.7,"population":924669,"covered_population":828963,"rate_per_100k":5.43,"clearance_rate":0.244},
+        {"year":2025,"months_reported":12,"offenses":52,"clearances":15,"coverage_pct":89.7,"population":935094,"covered_population":839125,"rate_per_100k":6.2,"clearance_rate":0.288}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,1,0,1,0,1,0,0,0,0,1,2,0,1,2,1,1,0,1,1,0,2,1,2,3,6,1,5,3,3,1,1,0,0,4,4,5,3,3,4,2,0,2,3,2,3,1,4,1,3,2,2,3,0,3,0,0,1,3,3,1,3,2,3,8,1,3,1,5,4,7,6,4,3,2,4,2,3,2,2,5,8,1,1,6,4,7,3,2,1,1,0,1,0,1,2,5,6,4,8,2,4,6,3,2,2,5,2,4,2,6,6,3,7,6,5,4,2],
+        "clearances": [0,0,0,0,0,1,0,0,0,0,0,0,1,2,0,0,1,0,0,0,0,0,0,1,0,0,0,3,0,2,1,1,0,1,0,0,2,0,1,2,1,2,0,0,1,0,0,2,0,1,0,2,0,0,1,0,0,0,0,0,1,0,0,0,0,2,3,0,1,1,0,0,3,1,3,2,0,1,0,2,1,1,0,3,0,0,3,2,2,1,1,0,1,0,0,0,0,1,0,3,1,1,0,0,2,0,2,1,1,2,2,0,1,2,0,4,0,1,2,0]
+      },
+      "agencies": {
+        "directory": 141,
+        "directory_nibrs": 141,
+        "reporting": {"2020":113,"2021":61,"2022":63,"2023":70,"2024":89,"2025":92},
+        "with_cases": {"2020":12,"2021":12,"2022":16,"2023":13,"2024":16,"2025":15},
+        "table_offenses": {"2020":21,"2021":29,"2022":48,"2023":24,"2024":45,"2025":51}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "TN",
+      "name": "Tennessee",
+      "slug": "tn",
+      "fips": "47",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":98,"clearances":45,"coverage_pct":100.0,"population":6651194,"covered_population":6650397,"rate_per_100k":1.47,"clearance_rate":0.459},
+        {"year":2017,"months_reported":12,"offenses":475,"clearances":224,"coverage_pct":100.0,"population":6715984,"covered_population":6715984,"rate_per_100k":7.07,"clearance_rate":0.472},
+        {"year":2018,"months_reported":12,"offenses":492,"clearances":228,"coverage_pct":100.0,"population":6770010,"covered_population":6769761,"rate_per_100k":7.27,"clearance_rate":0.463},
+        {"year":2019,"months_reported":12,"offenses":542,"clearances":225,"coverage_pct":100.0,"population":6829174,"covered_population":6829060,"rate_per_100k":7.94,"clearance_rate":0.415},
+        {"year":2020,"months_reported":12,"offenses":476,"clearances":186,"coverage_pct":100.0,"population":6886834,"covered_population":6886834,"rate_per_100k":6.91,"clearance_rate":0.391},
+        {"year":2021,"months_reported":12,"offenses":598,"clearances":246,"coverage_pct":99.6,"population":6975218,"covered_population":6944225,"rate_per_100k":8.61,"clearance_rate":0.411},
+        {"year":2022,"months_reported":12,"offenses":649,"clearances":285,"coverage_pct":99.7,"population":7051339,"covered_population":7027085,"rate_per_100k":9.24,"clearance_rate":0.439},
+        {"year":2023,"months_reported":12,"offenses":683,"clearances":296,"coverage_pct":99.7,"population":7126489,"covered_population":7104842,"rate_per_100k":9.61,"clearance_rate":0.433},
+        {"year":2024,"months_reported":12,"offenses":698,"clearances":334,"coverage_pct":99.6,"population":7227750,"covered_population":7200395,"rate_per_100k":9.69,"clearance_rate":0.479},
+        {"year":2025,"months_reported":12,"offenses":763,"clearances":405,"coverage_pct":99.6,"population":7315076,"covered_population":7285858,"rate_per_100k":10.47,"clearance_rate":0.531}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [1,1,0,0,1,2,11,17,19,13,16,17,31,37,54,30,40,58,51,31,32,44,27,40,41,43,45,39,42,56,39,44,42,35,35,31,34,31,38,36,52,54,48,53,50,49,57,40,41,38,30,35,39,45,59,40,38,34,39,38,40,47,53,39,51,66,63,58,39,49,43,50,61,31,57,44,49,58,58,58,51,60,60,62,38,59,45,50,60,59,80,63,53,65,52,59,61,58,61,56,53,68,80,72,48,47,47,47,57,44,60,48,76,83,90,67,64,56,66,52],
+        "clearances": [1,0,0,0,1,2,7,9,5,4,9,7,13,15,30,10,20,25,22,16,19,20,17,17,21,19,19,23,15,24,23,20,21,15,18,10,15,14,17,12,20,25,23,20,26,18,20,15,14,14,13,14,15,23,31,13,17,7,14,11,8,20,26,11,21,36,30,30,15,18,14,17,22,11,22,22,18,30,33,31,24,26,24,22,16,19,16,23,24,26,40,31,22,29,25,25,35,25,29,20,24,42,42,43,20,21,15,18,29,22,26,25,41,47,51,38,31,30,31,34]
+      },
+      "agencies": {
+        "directory": 412,
+        "directory_nibrs": 410,
+        "reporting": {"2020":456,"2021":273,"2022":305,"2023":293,"2024":300,"2025":295},
+        "with_cases": {"2020":80,"2021":118,"2022":119,"2023":124,"2024":145,"2025":140},
+        "table_offenses": {"2020":422,"2021":563,"2022":626,"2023":654,"2024":677,"2025":748}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "TX",
+      "name": "Texas",
+      "slug": "tx",
+      "fips": "48",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":24.4,"population":27862596,"covered_population":6797982,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":67,"clearances":20,"coverage_pct":29.2,"population":28304596,"covered_population":8255102,"rate_per_100k":0.81,"clearance_rate":0.299},
+        {"year":2018,"months_reported":12,"offenses":416,"clearances":72,"coverage_pct":48.8,"population":28701845,"covered_population":14017376,"rate_per_100k":2.97,"clearance_rate":0.173},
+        {"year":2019,"months_reported":12,"offenses":1436,"clearances":272,"coverage_pct":65.9,"population":28995881,"covered_population":19113490,"rate_per_100k":7.51,"clearance_rate":0.189},
+        {"year":2020,"months_reported":12,"offenses":2183,"clearances":298,"coverage_pct":82.6,"population":29360759,"covered_population":24249116,"rate_per_100k":9.0,"clearance_rate":0.137},
+        {"year":2021,"months_reported":12,"offenses":3031,"clearances":400,"coverage_pct":97.8,"population":29527941,"covered_population":28878324,"rate_per_100k":10.5,"clearance_rate":0.132},
+        {"year":2022,"months_reported":12,"offenses":3473,"clearances":487,"coverage_pct":98.8,"population":30029572,"covered_population":29675490,"rate_per_100k":11.7,"clearance_rate":0.14},
+        {"year":2023,"months_reported":12,"offenses":3383,"clearances":464,"coverage_pct":99.1,"population":30503301,"covered_population":30214011,"rate_per_100k":11.2,"clearance_rate":0.137},
+        {"year":2024,"months_reported":12,"offenses":3797,"clearances":589,"coverage_pct":99.3,"population":31290831,"covered_population":31083196,"rate_per_100k":12.22,"clearance_rate":0.155},
+        {"year":2025,"months_reported":12,"offenses":3987,"clearances":627,"coverage_pct":99.1,"population":31709821,"covered_population":31431874,"rate_per_100k":12.68,"clearance_rate":0.157}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,3,4,3,2,6,5,3,8,5,7,16,5,14,15,20,14,22,26,40,60,45,58,45,57,94,84,109,74,117,110,147,151,124,147,156,123,148,177,191,161,214,172,194,196,169,173,196,192,205,274,227,239,245,324,285,266,259,223,256,228,259,269,285,267,303,338,344,315,286,294,253,260,270,238,272,276,299,339,287,350,278,263,270,241,328,272,275,297,311,379,337,402,301,348,288,259,314,262,330,333,362,344,407,341,316,357,321,300],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,4,4,1,3,1,3,2,0,6,2,3,1,4,3,8,12,7,5,8,13,24,20,21,15,19,28,34,27,23,22,27,12,30,23,17,28,28,23,33,30,20,24,19,23,17,34,33,27,39,47,38,39,32,26,38,30,30,29,45,37,43,50,53,44,44,53,32,27,37,36,48,34,42,34,46,46,37,34,34,36,40,52,35,50,52,67,48,63,46,51,39,46,46,47,47,48,62,57,72,47,61,51,45,44]
+      },
+      "agencies": {
+        "directory": 1757,
+        "directory_nibrs": 1731,
+        "reporting": {"2020":584,"2021":922,"2022":1018,"2023":1074,"2024":1423,"2025":1515},
+        "with_cases": {"2020":168,"2021":288,"2022":343,"2023":363,"2024":390,"2025":408},
+        "table_offenses": {"2020":1998,"2021":2921,"2022":3419,"2023":3349,"2024":3750,"2025":3942}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "UT",
+      "name": "Utah",
+      "slug": "ut",
+      "fips": "49",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":2,"clearances":1,"coverage_pct":77.1,"population":3051217,"covered_population":2352537,"rate_per_100k":0.09,"clearance_rate":0.5},
+        {"year":2017,"months_reported":12,"offenses":3,"clearances":0,"coverage_pct":75.3,"population":3101833,"covered_population":2334332,"rate_per_100k":0.13,"clearance_rate":0.0},
+        {"year":2018,"months_reported":12,"offenses":4,"clearances":0,"coverage_pct":74.7,"population":3161105,"covered_population":2362105,"rate_per_100k":0.17,"clearance_rate":0.0},
+        {"year":2019,"months_reported":12,"offenses":16,"clearances":5,"coverage_pct":77.8,"population":3205958,"covered_population":2495490,"rate_per_100k":0.64,"clearance_rate":0.312},
+        {"year":2020,"months_reported":12,"offenses":76,"clearances":22,"coverage_pct":87.5,"population":3249879,"covered_population":2844636,"rate_per_100k":2.67,"clearance_rate":0.289},
+        {"year":2021,"months_reported":12,"offenses":117,"clearances":37,"coverage_pct":95.4,"population":3337975,"covered_population":3186080,"rate_per_100k":3.67,"clearance_rate":0.316},
+        {"year":2022,"months_reported":12,"offenses":138,"clearances":31,"coverage_pct":99.1,"population":3380800,"covered_population":3350882,"rate_per_100k":4.12,"clearance_rate":0.225},
+        {"year":2023,"months_reported":12,"offenses":158,"clearances":47,"coverage_pct":98.9,"population":3417734,"covered_population":3380074,"rate_per_100k":4.67,"clearance_rate":0.297},
+        {"year":2024,"months_reported":12,"offenses":183,"clearances":52,"coverage_pct":97.1,"population":3503613,"covered_population":3401313,"rate_per_100k":5.38,"clearance_rate":0.284},
+        {"year":2025,"months_reported":12,"offenses":191,"clearances":48,"coverage_pct":98.9,"population":3538904,"covered_population":3500984,"rate_per_100k":5.46,"clearance_rate":0.251}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,2,0,1,0,0,0,0,0,1,1,1,2,1,3,1,1,1,3,1,1,7,7,5,4,9,6,7,10,8,5,7,7,7,8,7,12,11,15,17,10,8,6,9,8,8,10,12,12,10,19,16,17,10,7,9,7,7,13,9,12,16,34,17,14,16,4,9,8,16,11,13,16,22,17,25,18,11,16,10,14,12,12,18,17,23,17,27,12,13,11,15],
+        "clearances": [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,0,1,1,3,2,2,1,1,0,3,3,0,3,3,3,4,3,0,2,5,7,4,3,4,0,2,2,1,3,2,4,1,3,5,2,3,2,3,3,1,3,3,5,3,12,6,4,4,0,3,4,7,3,2,1,7,6,8,4,4,3,3,4,1,4,7,7,4,2,8,2,3,1,5]
+      },
+      "agencies": {
+        "directory": 144,
+        "directory_nibrs": 140,
+        "reporting": {"2020":83,"2021":105,"2022":112,"2023":119,"2024":117,"2025":114},
+        "with_cases": {"2020":14,"2021":22,"2022":27,"2023":22,"2024":32,"2025":35},
+        "table_offenses": {"2020":61,"2021":115,"2022":133,"2023":144,"2024":180,"2025":188}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "VT",
+      "name": "Vermont",
+      "slug": "vt",
+      "fips": "50",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":1,"clearances":0,"coverage_pct":97.6,"population":624594,"covered_population":609306,"rate_per_100k":0.16,"clearance_rate":0.0},
+        {"year":2017,"months_reported":12,"offenses":27,"clearances":20,"coverage_pct":99.7,"population":623657,"covered_population":621817,"rate_per_100k":4.34,"clearance_rate":0.741},
+        {"year":2018,"months_reported":12,"offenses":45,"clearances":24,"coverage_pct":99.9,"population":626299,"covered_population":625388,"rate_per_100k":7.2,"clearance_rate":0.533},
+        {"year":2019,"months_reported":12,"offenses":42,"clearances":31,"coverage_pct":100.0,"population":623989,"covered_population":623912,"rate_per_100k":6.73,"clearance_rate":0.738},
+        {"year":2020,"months_reported":12,"offenses":37,"clearances":27,"coverage_pct":100.0,"population":623347,"covered_population":623035,"rate_per_100k":5.94,"clearance_rate":0.73},
+        {"year":2021,"months_reported":12,"offenses":32,"clearances":17,"coverage_pct":99.8,"population":645570,"covered_population":644595,"rate_per_100k":4.96,"clearance_rate":0.531},
+        {"year":2022,"months_reported":12,"offenses":59,"clearances":36,"coverage_pct":99.7,"population":647064,"covered_population":644954,"rate_per_100k":9.15,"clearance_rate":0.61},
+        {"year":2023,"months_reported":12,"offenses":63,"clearances":40,"coverage_pct":99.9,"population":647464,"covered_population":646649,"rate_per_100k":9.74,"clearance_rate":0.635},
+        {"year":2024,"months_reported":12,"offenses":81,"clearances":57,"coverage_pct":100.0,"population":648493,"covered_population":648493,"rate_per_100k":12.49,"clearance_rate":0.704},
+        {"year":2025,"months_reported":12,"offenses":49,"clearances":37,"coverage_pct":99.8,"population":644663,"covered_population":643242,"rate_per_100k":7.62,"clearance_rate":0.755}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,1,4,5,4,1,5,1,3,3,3,6,2,3,5,5,5,2,6,1,4,5,2,2,1,6,6,3,6,3,3,4,1,3,3,0,3,1,1,6,2,2,6,2,8,1,0,2,1,5,4,1,7,3,4,3,1,5,5,2,2,11,5,4,8,3,4,3,7,5,5,3,4,5,5,7,4,11,6,5,3,3,5,6,7,10,10,6,7,8,3,8,8,4,6,9,3,2,3,6,5,1,5,2,3],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,3,5,3,1,3,0,3,1,1,3,1,3,0,3,4,2,4,0,2,5,1,2,0,4,4,2,5,1,3,3,1,2,3,0,3,0,1,5,1,0,5,1,6,0,0,1,1,2,1,0,5,2,1,3,1,3,3,1,2,8,1,2,6,2,3,3,2,4,3,3,2,2,2,6,3,7,3,3,2,1,5,4,4,8,6,4,7,6,2,6,4,1,5,6,2,2,3,4,5,1,3,2,3]
+      },
+      "agencies": {
+        "directory": 87,
+        "directory_nibrs": 87,
+        "reporting": {"2020":82,"2021":78,"2022":66,"2023":85,"2024":86,"2025":78},
+        "with_cases": {"2020":21,"2021":16,"2022":32,"2023":29,"2024":34,"2025":21},
+        "table_offenses": {"2020":33,"2021":27,"2022":58,"2023":59,"2024":81,"2025":46}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "VA",
+      "name": "Virginia",
+      "slug": "va",
+      "fips": "51",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":7,"clearances":0,"coverage_pct":100.0,"population":8411808,"covered_population":8409280,"rate_per_100k":0.08,"clearance_rate":0.0},
+        {"year":2017,"months_reported":12,"offenses":6,"clearances":2,"coverage_pct":99.9,"population":8470020,"covered_population":8465064,"rate_per_100k":0.07,"clearance_rate":0.333},
+        {"year":2018,"months_reported":12,"offenses":20,"clearances":4,"coverage_pct":100.0,"population":8517685,"covered_population":8514372,"rate_per_100k":0.23,"clearance_rate":0.2},
+        {"year":2019,"months_reported":12,"offenses":1398,"clearances":338,"coverage_pct":99.9,"population":8535519,"covered_population":8530782,"rate_per_100k":16.39,"clearance_rate":0.242},
+        {"year":2020,"months_reported":12,"offenses":1179,"clearances":338,"coverage_pct":99.9,"population":8590563,"covered_population":8584267,"rate_per_100k":13.73,"clearance_rate":0.287},
+        {"year":2021,"months_reported":12,"offenses":1197,"clearances":402,"coverage_pct":99.9,"population":8642274,"covered_population":8635520,"rate_per_100k":13.86,"clearance_rate":0.336},
+        {"year":2022,"months_reported":12,"offenses":1263,"clearances":388,"coverage_pct":99.9,"population":8683619,"covered_population":8674929,"rate_per_100k":14.56,"clearance_rate":0.307},
+        {"year":2023,"months_reported":12,"offenses":1222,"clearances":424,"coverage_pct":99.9,"population":8715698,"covered_population":8708749,"rate_per_100k":14.03,"clearance_rate":0.347},
+        {"year":2024,"months_reported":12,"offenses":1543,"clearances":535,"coverage_pct":99.9,"population":8811195,"covered_population":8803162,"rate_per_100k":17.53,"clearance_rate":0.347},
+        {"year":2025,"months_reported":12,"offenses":1380,"clearances":503,"coverage_pct":100.0,"population":8880107,"covered_population":8878757,"rate_per_100k":15.54,"clearance_rate":0.364}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,1,1,0,1,0,1,0,0,1,1,1,0,1,0,0,0,0,0,1,0,2,1,1,1,1,1,1,0,3,2,0,2,4,3,2,24,25,76,105,132,188,231,128,145,120,113,111,123,114,95,68,75,92,142,98,92,89,74,117,83,70,92,91,100,135,131,129,93,87,90,96,101,73,112,95,126,124,121,122,80,83,102,124,112,94,88,84,87,109,127,116,106,100,94,105,100,122,112,130,133,154,164,141,120,143,112,112,128,101,126,106,124,134,111,126,98,107,106,113],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,3,0,6,5,8,16,26,37,61,45,47,34,26,27,29,30,18,15,28,27,44,39,26,32,19,31,23,19,30,22,42,47,52,59,27,29,19,33,29,12,26,30,48,53,40,43,22,26,22,37,39,30,24,26,31,40,52,55,36,35,25,31,43,35,26,45,39,67,66,57,45,47,33,32,50,41,40,52,38,46,44,49,30,45,36,32]
+      },
+      "agencies": {
+        "directory": 412,
+        "directory_nibrs": 412,
+        "reporting": {"2020":317,"2021":340,"2022":322,"2023":373,"2024":378,"2025":404},
+        "with_cases": {"2020":85,"2021":111,"2022":99,"2023":100,"2024":111,"2025":120},
+        "table_offenses": {"2020":1161,"2021":1183,"2022":1235,"2023":1202,"2024":1515,"2025":1360}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "WA",
+      "name": "Washington",
+      "slug": "wa",
+      "fips": "53",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":28,"clearances":10,"coverage_pct":89.9,"population":7288000,"covered_population":6548927,"rate_per_100k":0.43,"clearance_rate":0.357},
+        {"year":2017,"months_reported":12,"offenses":118,"clearances":39,"coverage_pct":92.4,"population":7405743,"covered_population":6841202,"rate_per_100k":1.72,"clearance_rate":0.331},
+        {"year":2018,"months_reported":12,"offenses":139,"clearances":44,"coverage_pct":96.6,"population":7535591,"covered_population":7278480,"rate_per_100k":1.91,"clearance_rate":0.317},
+        {"year":2019,"months_reported":12,"offenses":196,"clearances":58,"coverage_pct":99.5,"population":7614893,"covered_population":7576262,"rate_per_100k":2.59,"clearance_rate":0.296},
+        {"year":2020,"months_reported":12,"offenses":224,"clearances":76,"coverage_pct":99.6,"population":7693612,"covered_population":7659627,"rate_per_100k":2.92,"clearance_rate":0.339},
+        {"year":2021,"months_reported":12,"offenses":313,"clearances":87,"coverage_pct":99.3,"population":7738692,"covered_population":7688286,"rate_per_100k":4.07,"clearance_rate":0.278},
+        {"year":2022,"months_reported":12,"offenses":358,"clearances":112,"coverage_pct":99.2,"population":7785786,"covered_population":7721228,"rate_per_100k":4.64,"clearance_rate":0.313},
+        {"year":2023,"months_reported":12,"offenses":349,"clearances":93,"coverage_pct":99.1,"population":7812880,"covered_population":7745081,"rate_per_100k":4.51,"clearance_rate":0.266},
+        {"year":2024,"months_reported":12,"offenses":448,"clearances":128,"coverage_pct":99.4,"population":7958180,"covered_population":7914020,"rate_per_100k":5.66,"clearance_rate":0.286},
+        {"year":2025,"months_reported":12,"offenses":470,"clearances":154,"coverage_pct":97.5,"population":8001020,"covered_population":7803539,"rate_per_100k":6.02,"clearance_rate":0.328}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [4,2,2,2,0,3,3,4,3,2,1,2,13,8,8,11,11,12,13,11,3,8,9,11,11,8,6,12,10,12,19,19,11,7,14,10,22,9,13,15,32,30,16,25,11,8,8,7,11,18,18,16,18,19,20,21,16,20,20,27,29,18,26,27,31,36,22,19,24,26,31,24,32,23,42,21,28,34,41,30,28,34,23,22,25,22,25,19,44,26,43,41,37,22,19,26,32,34,35,40,33,39,37,46,40,37,39,36,34,34,40,42,40,38,46,53,32,43,34,34],
+        "clearances": [1,1,1,1,0,0,0,1,3,1,0,1,4,1,5,5,5,3,3,3,0,2,5,3,3,2,3,3,4,5,5,3,5,2,4,5,5,3,5,2,5,10,4,12,5,2,3,2,1,4,8,7,6,6,8,4,4,10,7,11,9,5,10,7,5,9,8,4,6,9,8,7,8,9,13,5,5,10,17,11,9,11,9,5,8,7,9,6,13,7,14,13,4,1,5,6,9,6,13,9,9,11,11,12,17,11,10,10,14,10,16,13,11,14,14,17,10,14,12,9]
+      },
+      "agencies": {
+        "directory": 270,
+        "directory_nibrs": 270,
+        "reporting": {"2020":216,"2021":211,"2022":227,"2023":227,"2024":229,"2025":222},
+        "with_cases": {"2020":62,"2021":75,"2022":88,"2023":80,"2024":86,"2025":87},
+        "table_offenses": {"2020":198,"2021":294,"2022":348,"2023":335,"2024":438,"2025":430}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "WV",
+      "name": "West Virginia",
+      "slug": "wv",
+      "fips": "54",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":0,"clearances":0,"coverage_pct":87.6,"population":1831102,"covered_population":1603630,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2017,"months_reported":12,"offenses":18,"clearances":5,"coverage_pct":87.8,"population":1815857,"covered_population":1594912,"rate_per_100k":1.13,"clearance_rate":0.278},
+        {"year":2018,"months_reported":12,"offenses":12,"clearances":5,"coverage_pct":86.3,"population":1805832,"covered_population":1557776,"rate_per_100k":0.77,"clearance_rate":0.417},
+        {"year":2019,"months_reported":12,"offenses":13,"clearances":4,"coverage_pct":87.2,"population":1792147,"covered_population":1563164,"rate_per_100k":0.83,"clearance_rate":0.308},
+        {"year":2020,"months_reported":12,"offenses":11,"clearances":4,"coverage_pct":87.5,"population":1784787,"covered_population":1562256,"rate_per_100k":0.7,"clearance_rate":0.364},
+        {"year":2021,"months_reported":12,"offenses":25,"clearances":9,"coverage_pct":87.7,"population":1782959,"covered_population":1563269,"rate_per_100k":1.6,"clearance_rate":0.36},
+        {"year":2022,"months_reported":12,"offenses":41,"clearances":16,"coverage_pct":88.9,"population":1775156,"covered_population":1577764,"rate_per_100k":2.6,"clearance_rate":0.39},
+        {"year":2023,"months_reported":12,"offenses":61,"clearances":33,"coverage_pct":90.6,"population":1770071,"covered_population":1603903,"rate_per_100k":3.8,"clearance_rate":0.541},
+        {"year":2024,"months_reported":12,"offenses":53,"clearances":26,"coverage_pct":92.1,"population":1769979,"covered_population":1629954,"rate_per_100k":3.25,"clearance_rate":0.491},
+        {"year":2025,"months_reported":12,"offenses":46,"clearances":23,"coverage_pct":87.3,"population":1766147,"covered_population":1542122,"rate_per_100k":2.98,"clearance_rate":0.5}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,0,0,0,0,0,0,0,0,1,3,1,3,3,1,1,0,2,1,2,0,1,1,0,1,1,1,1,2,0,0,1,3,1,0,1,1,2,2,0,0,1,1,4,0,2,0,2,1,0,3,0,1,1,0,0,1,1,0,3,1,4,3,3,3,3,1,0,3,2,1,2,6,4,4,6,9,2,1,0,4,4,3,3,4,6,6,7,9,10,2,3,4,4,0,8,3,3,5,4,12,6,2,5,1,6,2,5,4,3,5,2,6,2,4,1,6],
+        "clearances": [0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,1,0,1,0,0,0,1,0,0,1,0,1,1,1,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,2,0,0,1,0,0,0,0,0,0,0,1,1,0,1,0,2,1,1,1,1,0,0,1,0,0,2,3,0,1,3,5,0,1,0,1,2,1,1,3,3,4,2,5,8,1,1,2,0,0,4,1,2,3,1,5,3,2,4,1,2,1,1,4,1,4,1,3,1,1,1,3]
+      },
+      "agencies": {
+        "directory": 410,
+        "directory_nibrs": 406,
+        "reporting": {"2020":131,"2021":122,"2022":105,"2023":134,"2024":135,"2025":141},
+        "with_cases": {"2020":9,"2021":12,"2022":12,"2023":17,"2024":18,"2025":12},
+        "table_offenses": {"2020":9,"2021":22,"2022":27,"2023":48,"2024":43,"2025":36}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "WI",
+      "name": "Wisconsin",
+      "slug": "wi",
+      "fips": "55",
+      "annual": [
+        {"year":2016,"months_reported":12,"offenses":18,"clearances":8,"coverage_pct":49.9,"population":5778708,"covered_population":2882227,"rate_per_100k":0.62,"clearance_rate":0.444},
+        {"year":2017,"months_reported":12,"offenses":97,"clearances":52,"coverage_pct":54.2,"population":5795483,"covered_population":3142922,"rate_per_100k":3.09,"clearance_rate":0.536},
+        {"year":2018,"months_reported":12,"offenses":159,"clearances":81,"coverage_pct":62.7,"population":5813568,"covered_population":3647459,"rate_per_100k":4.36,"clearance_rate":0.509},
+        {"year":2019,"months_reported":12,"offenses":244,"clearances":102,"coverage_pct":72.7,"population":5822434,"covered_population":4234802,"rate_per_100k":5.76,"clearance_rate":0.418},
+        {"year":2020,"months_reported":12,"offenses":251,"clearances":107,"coverage_pct":84.7,"population":5832655,"covered_population":4940522,"rate_per_100k":5.08,"clearance_rate":0.426},
+        {"year":2021,"months_reported":12,"offenses":328,"clearances":115,"coverage_pct":95.9,"population":5895908,"covered_population":5656517,"rate_per_100k":5.8,"clearance_rate":0.351},
+        {"year":2022,"months_reported":12,"offenses":350,"clearances":144,"coverage_pct":96.9,"population":5892539,"covered_population":5708572,"rate_per_100k":6.13,"clearance_rate":0.411},
+        {"year":2023,"months_reported":12,"offenses":399,"clearances":162,"coverage_pct":97.4,"population":5910955,"covered_population":5756604,"rate_per_100k":6.93,"clearance_rate":0.406},
+        {"year":2024,"months_reported":12,"offenses":416,"clearances":186,"coverage_pct":97.7,"population":5960975,"covered_population":5822138,"rate_per_100k":7.15,"clearance_rate":0.447},
+        {"year":2025,"months_reported":12,"offenses":462,"clearances":217,"coverage_pct":97.1,"population":5972787,"covered_population":5798894,"rate_per_100k":7.97,"clearance_rate":0.47}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [0,0,0,0,2,3,0,3,1,1,6,2,9,4,5,4,11,12,13,10,8,5,5,11,14,12,4,13,11,15,21,20,15,16,11,7,19,10,18,19,20,34,30,17,20,20,22,15,17,16,17,12,22,25,33,23,19,26,17,24,11,29,28,21,32,31,35,35,18,32,31,25,28,24,23,25,23,35,40,32,24,30,28,38,29,26,29,34,36,37,45,41,37,33,35,17,25,21,40,26,40,38,50,46,30,43,32,25,41,36,44,27,30,46,60,35,32,37,39,35],
+        "clearances": [0,0,0,0,2,1,0,0,1,1,2,1,6,2,3,2,6,9,6,6,4,4,2,2,6,7,0,8,6,5,11,11,8,9,6,4,9,3,8,9,8,8,15,9,10,10,7,6,4,8,3,8,10,9,16,10,9,11,9,10,4,8,11,3,13,9,12,18,9,10,8,10,10,8,8,13,11,18,17,14,14,13,12,6,12,7,10,11,17,14,22,25,12,12,15,5,14,9,15,13,18,16,29,16,15,13,16,12,19,17,21,12,12,26,28,18,17,18,14,15]
+      },
+      "agencies": {
+        "directory": 464,
+        "directory_nibrs": 429,
+        "reporting": {"2020":233,"2021":267,"2022":302,"2023":301,"2024":305,"2025":300},
+        "with_cases": {"2020":73,"2021":80,"2022":102,"2023":112,"2024":112,"2025":128},
+        "table_offenses": {"2020":239,"2021":291,"2022":325,"2023":376,"2024":394,"2025":446}
+      },
+      "legacy": null
+    },
+    {
+      "abbr": "WY",
+      "name": "Wyoming",
+      "slug": "wy",
+      "fips": "56",
+      "annual": [
+        {"year":2016,"months_reported":0,"offenses":null,"clearances":null,"coverage_pct":0.0,"population":585501,"covered_population":null,"rate_per_100k":null,"clearance_rate":null},
+        {"year":2017,"months_reported":0,"offenses":null,"clearances":null,"coverage_pct":0.0,"population":579315,"covered_population":null,"rate_per_100k":null,"clearance_rate":null},
+        {"year":2018,"months_reported":2,"offenses":0,"clearances":0,"coverage_pct":0.3,"population":577737,"covered_population":11076,"rate_per_100k":0.0,"clearance_rate":null},
+        {"year":2019,"months_reported":12,"offenses":10,"clearances":7,"coverage_pct":6.8,"population":578759,"covered_population":39543,"rate_per_100k":25.29,"clearance_rate":0.7},
+        {"year":2020,"months_reported":12,"offenses":30,"clearances":8,"coverage_pct":16.4,"population":582328,"covered_population":95556,"rate_per_100k":31.4,"clearance_rate":0.267},
+        {"year":2021,"months_reported":12,"offenses":82,"clearances":35,"coverage_pct":77.2,"population":578803,"covered_population":446752,"rate_per_100k":18.35,"clearance_rate":0.427},
+        {"year":2022,"months_reported":12,"offenses":89,"clearances":35,"coverage_pct":77.8,"population":581381,"covered_population":452106,"rate_per_100k":19.69,"clearance_rate":0.393},
+        {"year":2023,"months_reported":12,"offenses":83,"clearances":35,"coverage_pct":88.3,"population":584057,"covered_population":515804,"rate_per_100k":16.09,"clearance_rate":0.422},
+        {"year":2024,"months_reported":12,"offenses":85,"clearances":44,"coverage_pct":89.9,"population":587618,"covered_population":528544,"rate_per_100k":16.08,"clearance_rate":0.518},
+        {"year":2025,"months_reported":12,"offenses":96,"clearances":46,"coverage_pct":92.5,"population":588753,"covered_population":544412,"rate_per_100k":17.63,"clearance_rate":0.479}
+      ],
+      "monthly": {
+        "start": "2016-01",
+        "offenses": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,0,null,null,1,0,1,1,1,0,2,1,1,2,0,0,0,0,1,1,1,2,1,4,7,3,7,3,5,2,6,7,9,10,5,12,8,6,2,10,4,11,6,3,4,8,12,8,6,13,11,3,4,6,6,4,7,12,11,8,8,6,5,6,6,8,6,3,5,5,15,13,4,4,7,9,8,6,10,7,10,11,14,6,10,7,4,3],
+        "clearances": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,0,null,null,0,0,1,0,1,0,2,1,1,1,0,0,0,0,1,0,0,0,1,2,1,1,1,1,2,0,4,5,4,8,3,2,1,1,1,4,1,5,4,1,1,3,5,4,5,3,2,1,1,2,2,2,3,4,6,2,5,3,2,3,3,3,4,1,1,3,7,6,3,0,7,6,2,3,5,0,8,4,10,4,6,1,3,0]
+      },
+      "agencies": {
+        "directory": 69,
+        "directory_nibrs": 61,
+        "reporting": {"2020":6,"2021":44,"2022":49,"2023":52,"2024":52,"2025":56},
+        "with_cases": {"2020":4,"2021":24,"2022":26,"2023":27,"2024":23,"2025":28},
+        "table_offenses": {"2020":16,"2021":74,"2022":89,"2023":83,"2024":80,"2025":93}
+      },
+      "legacy": null
+    }
+  ]
+}
