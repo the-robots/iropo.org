@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { ISSUE_FORM, NEW_ISSUE, REPO_FILE } from "../../lib/site";
+
+const needs = [
+  { title: "Hosting and infrastructure", text: "Today's static site runs on free hosting. A future registry needs a database, document storage and backups." },
+  { title: "Legal review", text: "Privacy and defamation review before any listing, plus help with nonprofit or fiscal sponsorship paperwork." },
+  { title: "Verification", text: "Paid or stipended reviewers once volunteer capacity cannot keep up with verification and disputes." },
+  { title: "Outreach", text: "Modest costs for launch materials and campaigns that bring in volunteers and partners." },
+];
+---
+
+<BaseLayout title="Support IROPO" description="How to support IROPO with in-kind help, sponsorships and, soon, donations.">
+  <PageHeader
+    eyebrow="Support"
+    title="Support the project"
+    lede="IROPO runs on volunteer time today. Support now goes furthest as expertise and in-kind help; donations will open once the project has a fiscal sponsor or nonprofit status."
+    crumbs={[{ label: "Support" }]}
+  />
+
+  <section class="section" aria-labelledby="ways">
+    <h2 id="ways" class="visually-hidden">Ways to support</h2>
+    <div class="container grid grid--3">
+      <div class="card">
+        <h3>Donate</h3>
+        <p class="small">
+          Not yet available. IROPO is choosing between fiscal sponsorship and forming a nonprofit so
+          that gifts can be tax-deductible and accounted for transparently.
+        </p>
+        <span class="badge badge--progress">Coming after fiscal sponsorship</span>
+      </div>
+      <div class="card">
+        <h3>Give in kind</h3>
+        <p class="small">
+          Nonprofit cloud credits, pro bono legal clinics, and design or engineering time reduce how
+          much cash the project needs.
+        </p>
+        <a href={ISSUE_FORM("volunteer")}>Offer in-kind support</a>
+      </div>
+      <div class="card">
+        <h3>Sponsor or partner</h3>
+        <p class="small">
+          Foundations, animal-welfare organizations and companies can sponsor hosting, legal review
+          or a milestone such as a verified public beta.
+        </p>
+        <a href={NEW_ISSUE("Partnership: ")}>Start a conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="needs">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="needs">What funding will pay for</h2>
+        <p>From the <a href={REPO_FILE("BUSINESS_PLAN.md")}>business plan</a>. The core registry will always be free.</p>
+      </div>
+      <div class="grid grid--4">
+        {needs.map((n) => (<div class="card"><h3>{n.title}</h3><p class="small muted">{n.text}</p></div>))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

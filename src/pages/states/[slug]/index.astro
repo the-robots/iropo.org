@@ -1,0 +1,316 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+import BarChart from "../../../components/charts/BarChart.astro";
+import LineChart from "../../../components/charts/LineChart.astro";
+import Sparkline from "../../../components/charts/Sparkline.astro";
+import SourceNote from "../../../components/SourceNote.astro";
+import { LATEST_TABLE_YEAR, TABLE_YEARS, agenciesFor, states, stateBySlug } from "../../../lib/data";
+import { TYPE_LABELS, fmt, fmtPct, fmtRate, fmtShare, ordinal } from "../../../lib/format";
+import {
+  LOW_COVERAGE_PCT,
+  agencyAnchor,
+  agencyTotal,
+  comparable,
+  firstFullYear,
+  latest,
+  qualityNotes,
+  rankStates,
+  registriesFor,
+  topAgencies,
+} from "../../../lib/stats";
+import { REPO_FILE } from "../../../lib/site";
+
+export function getStaticPaths() {
+  return states.map((s) => ({ params: { slug: s.slug } }));
+}
+
+const state = stateBySlug(Astro.params.slug!)!;
+const now = latest(state.annual);
+const ranking = rankStates(50);
+const rank = ranking.find((r) => r.state.abbr === state.abbr)?.rank ?? null;
+const rankedCount = ranking.filter((r) => r.rank !== null).length;
+const notes = qualityNotes(state);
+const first = firstFullYear(state.annual);
+const agencies = agenciesFor(state.abbr).agencies;
+const top = topAgencies(state.abbr, 15);
+const registries = registriesFor(state.abbr);
+const year = String(LATEST_TABLE_YEAR);
+const withCases = state.agencies.with_cases[year] ?? 0;
+const reporting = state.agencies.reporting[year] ?? 0;
+
+const monthlyStartIndex = (() => {
+  const i = state.monthly.offenses.findIndex((v) => v !== null && v > 0);
+  return i < 0 ? 0 : i - (i % 12);
+})();
+const monthlyStart = (() => {
+  if (!state.monthly.start) return null;
+  const y = Number(state.monthly.start.slice(0, 4)) + Math.floor(monthlyStartIndex / 12);
+  return `${y}-01`;
+})();
+
+const index = states.findIndex((s) => s.abbr === state.abbr);
+const prev = states[(index - 1 + states.length) % states.length];
+const next = states[(index + 1) % states.length];
+
+const lede =
+  now.offenses === null
+    ? `No animal cruelty data was reported through NIBRS for ${state.name} in ${now.year}.`
+    : `${fmt(now.offenses)} animal cruelty offenses were reported in ${state.name} in ${now.year}, or ${fmtRate(now.rate_per_100k)} per 100,000 residents served by NIBRS agencies${rank ? `, the ${ordinal(rank)} highest rate of ${rankedCount} comparable states` : ""}.`;
+---
+
+<BaseLayout
+  title={`${state.name} animal cruelty data`}
+  description={`${state.name}: reported animal cruelty offenses, rates, clearances and the agencies reporting them, ${state.annual[0].year}–${now.year}.`}
+>
+  <PageHeader eyebrow="State profile" title={state.name} lede={lede} crumbs={[{ href: "/states/", label: "States" }, { label: state.name }]}>
+    <div class="btn-row" style="margin-top: var(--space-5)">
+      <a class="btn btn--primary" href={`/states/${state.slug}/agencies/`}>All {fmt(agencies.length)} agencies</a>
+      <a class="btn btn--ghost" href="#top-agencies">Top reporting agencies</a>
+    </div>
+  </PageHeader>
+
+  {
+    notes.length > 0 && (
+      <section class="section section--tight">
+        <div class="container stack">
+          {notes.map((n) => (
+            <div class="callout callout--warn">
+              <strong>{n.kind === "gap" ? "Possible reporting gap" : n.kind === "coverage" ? "Incomplete coverage" : n.kind === "welfare" ? "Animal welfare agencies report here" : "Recent NIBRS coverage"}</strong>
+              {n.text}
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section section--tight">
+    <div class="container grid grid--4">
+      <div class="card stat">
+        <span class="stat__value">{fmt(now.offenses)}</span>
+        <span class="stat__label">offenses in {now.year}</span>
+        <span class="stat__note">{fmt(now.clearances)} cleared ({fmtShare(now.clearance_rate)})</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{fmtRate(now.rate_per_100k)}</span>
+        <span class="stat__label">per 100,000 residents</span>
+        <span class="stat__note">{rank ? `${ordinal(rank)} of ${rankedCount} comparable states` : comparable(now) ? "Not ranked" : "Not comparable across states"}</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{fmtPct(now.coverage_pct)}</span>
+        <span class="stat__label">NIBRS coverage</span>
+        <span class="stat__note">{first ? `Full-year reporting since ${first}` : "No full year of reporting yet"}</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{fmt(withCases)}</span>
+        <span class="stat__label">agencies recorded a case</span>
+        <span class="stat__note">of {fmt(reporting)} agencies in the FBI's {LATEST_TABLE_YEAR} tables</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="trend">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Trend</p>
+          <h2 id="trend">Reported offenses over time</h2>
+        </div>
+        <p>Lighter bars mark years when NIBRS agencies served less than {LOW_COVERAGE_PCT}% of residents.</p>
+      </div>
+      <div class="split split--even">
+        <div class="card">
+          <h3>Offenses per year</h3>
+          <BarChart
+            title={`${state.name} animal cruelty offenses by year`}
+            valueLabel="Offenses"
+            bars={state.annual.map((p) => ({
+              label: String(p.year),
+              value: p.offenses,
+              muted: p.coverage_pct < LOW_COVERAGE_PCT,
+              note: `${fmtPct(p.coverage_pct)} coverage`,
+            }))}
+            format={(v) => (v >= 10000 ? `${(v / 1000).toFixed(1)}k` : v.toLocaleString("en-US"))}
+            highlightLast
+          />
+        </div>
+        <div class="card">
+          <h3>Monthly offenses</h3>
+          {
+            monthlyStart ? (
+              <LineChart
+                values={state.monthly.offenses.slice(monthlyStartIndex)}
+                start={monthlyStart}
+                title={`${state.name} monthly animal cruelty offenses`}
+                caption={`Monthly offenses reported in ${state.name}.`}
+              />
+            ) : (
+              <p class="muted">No monthly data available.</p>
+            )
+          }
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top: var(--space-5)" tabindex="0" role="region" aria-label={`${state.name} yearly figures`}>
+        <table>
+          <caption>{state.name} by year</caption>
+          <thead>
+            <tr>
+              <th scope="col">Year</th>
+              <th scope="col" class="num">Offenses</th>
+              <th scope="col" class="num">Per 100,000</th>
+              <th scope="col" class="num">Clearance rate</th>
+              <th scope="col" class="num">Coverage</th>
+              <th scope="col" class="num">Agencies in FBI tables</th>
+              <th scope="col" class="num">Agencies with cases</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [...state.annual].reverse().map((p) => (
+                <tr>
+                  <th scope="row">{p.year}</th>
+                  <td class="num">{fmt(p.offenses)}</td>
+                  <td class="num">{fmtRate(p.rate_per_100k, 2)}</td>
+                  <td class="num">{fmtShare(p.clearance_rate)}</td>
+                  <td class="num">{fmtPct(p.coverage_pct, 1)}</td>
+                  <td class="num">{TABLE_YEARS.includes(p.year) ? fmt(state.agencies.reporting[String(p.year)]) : "—"}</td>
+                  <td class="num">{TABLE_YEARS.includes(p.year) ? fmt(state.agencies.with_cases[String(p.year)]) : "—"}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <SourceNote />
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="top-agencies">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Agencies</p>
+          <h2 id="top-agencies">Agencies reporting the most cases in {LATEST_TABLE_YEAR}</h2>
+        </div>
+        <a class="btn btn--ghost" href={`/states/${state.slug}/agencies/`}>Full agency directory</a>
+      </div>
+      {
+        top.length === 0 ? (
+          <p class="muted">No agency in {state.name} recorded an animal cruelty offense in the FBI's {LATEST_TABLE_YEAR} tables.</p>
+        ) : (
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Top agencies">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" class="num">#</th>
+                  <th scope="col">Agency</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">County</th>
+                  <th scope="col" class="num">{LATEST_TABLE_YEAR}</th>
+                  <th scope="col" class="num">{TABLE_YEARS[0]}–{LATEST_TABLE_YEAR}</th>
+                  <th scope="col">Trend</th>
+                </tr>
+              </thead>
+              <tbody>
+                {top.map((a, i) => (
+                  <tr>
+                    <td class="num">{i + 1}</td>
+                    <td>
+                      <a href={`/states/${state.slug}/agencies/#${agencyAnchor(a)}`}>{a.name}</a>
+                      {a.ori && <span class="cell-sub mono">{a.ori}</span>}
+                    </td>
+                    <td>{TYPE_LABELS[a.type]}</td>
+                    <td>{a.county ?? "—"}</td>
+                    <td class="num">{fmt(a.animal_cruelty?.[year])}</td>
+                    <td class="num">{fmt(agencyTotal(a))}</td>
+                    <td>
+                      <Sparkline values={TABLE_YEARS.map((y) => a.animal_cruelty?.[String(y)] ?? null)} width={80} height={24} label={`${a.name} yearly offenses`} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )
+      }
+      <SourceNote>FBI NIBRS Tables: Offense Type by Agency, {TABLE_YEARS[0]}–{LATEST_TABLE_YEAR}; ORIs from the FBI agency directory.</SourceNote>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="more">
+    <div class="container grid grid--2">
+      <div class="card">
+        <h2 id="more" class="h3">Official animal abuser registries</h2>
+        {
+          registries.length === 0 ? (
+            <p class="muted">
+              We are not aware of a government-run animal abuser registry in {state.name}. Know of one?
+              <a href="/get-involved/#sources">Tell us</a>.
+            </p>
+          ) : (
+            <ul class="plain">
+              {registries.map((r) => (
+                <li>
+                  <a href={r.url}>{r.name}</a>
+                  <span class="cell-sub">
+                    {r.jurisdiction} · {r.operator} · {r.access === "public" ? "Public search" : r.access === "restricted" ? "Restricted access" : "Access unknown"}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+        <p class="small muted">IROPO links to these registries and does not copy their listings.</p>
+      </div>
+      <div class="card">
+        <h2 class="h3">Agency directory</h2>
+        <p>
+          The FBI lists {fmt(state.agencies.directory)} law enforcement agencies in {state.name},
+          {fmt(state.agencies.directory_nibrs)} of which report through NIBRS.
+        </p>
+        {
+          state.legacy && (
+            <p>
+              Our legacy spreadsheet for {state.name}, transcribed from a 1977 NLETS directory, lists
+              {fmt(state.legacy.rows)} entries: {fmt(state.legacy.current ?? 0)} ORIs are still in use,
+              {fmt(state.legacy.likely_ocr_error ?? 0)} look like transcription errors,
+              {fmt(state.legacy.federal ?? 0)} are federal offices outside the state directory and
+              {fmt(state.legacy.not_found ?? 0)} could not be found.{" "}
+              <a href={REPO_FILE(`data/processed/legacy/${state.abbr}-crosswalk.csv`)}>View the crosswalk</a>.
+            </p>
+          )
+        }
+        <a class="btn btn--ghost" href={`/states/${state.slug}/agencies/`}>Browse {state.name} agencies</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="container state-nav" aria-label="Other states">
+    <a href={`/states/${prev.slug}/`}>← {prev.name}</a>
+    <a href="/states/">All states</a>
+    <a href={`/states/${next.slug}/`}>{next.name} →</a>
+  </nav>
+</BaseLayout>
+
+<style>
+  .h3 {
+    font-size: var(--step-1);
+  }
+  .plain {
+    list-style: none;
+    padding: 0;
+  }
+  .plain li + li {
+    margin-top: var(--space-3);
+  }
+  .state-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding-block: var(--space-5);
+    border-top: 1px solid var(--border);
+    font-weight: 600;
+  }
+</style>

@@ -1,0 +1,388 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import BarChart from "../../components/charts/BarChart.astro";
+import LineChart from "../../components/charts/LineChart.astro";
+import CompareBars from "../../components/charts/CompareBars.astro";
+import SourceNote from "../../components/SourceNote.astro";
+import { LATEST_TABLE_YEAR, national, stateByAbbr } from "../../lib/data";
+import { MONTH_NAMES, TYPE_LABELS, fmt, fmtPct, fmtRate, fmtShare } from "../../lib/format";
+import {
+  AGE_CATEGORY_LABELS,
+  LOW_COVERAGE_PCT,
+  RACE_LABELS,
+  SEX_LABELS,
+  latest,
+  latestOffenders,
+  seasonality,
+  shares,
+} from "../../lib/stats";
+
+const now = latest(national.annual);
+const { year: offenderYear, tables } = latestOffenders();
+const season = seasonality(national.monthly, 4);
+const peakMonth = season.indexOf(Math.max(...season));
+const lowMonth = season.indexOf(Math.min(...season));
+const summerPeak = [5, 6, 7].includes(peakMonth);
+
+const ageGroups: Record<string, string[]> = {
+  "Under 16": ["0-10", "11-15"],
+  "16–25": ["16-20", "21-25"],
+  "26–35": ["26-30", "31-35"],
+  "36–45": ["36-40", "41-45"],
+  "46–55": ["46-50", "51-55"],
+  "56–65": ["56-60", "61-65"],
+  "66 and over": ["66+"],
+};
+const groupedAge = {
+  animal_cruelty: Object.fromEntries(
+    Object.entries(ageGroups).map(([k, keys]) => [k, keys.reduce((s, key) => s + (tables.age.animal_cruelty[key] ?? 0), 0)]),
+  ),
+  all_offenses: Object.fromEntries(
+    Object.entries(ageGroups).map(([k, keys]) => [k, keys.reduce((s, key) => s + (tables.age.all_offenses[key] ?? 0), 0)]),
+  ),
+};
+const ageRows = shares(groupedAge, Object.fromEntries(Object.keys(ageGroups).map((k) => [k, k])));
+const sexRows = shares(tables.sex, SEX_LABELS);
+const raceRows = shares(tables.race, RACE_LABELS);
+const categoryRows = shares(tables.age_category, AGE_CATEGORY_LABELS);
+
+const femaleTrend = national.offenders.years.map((y) => {
+  const t = national.offenders.by_year[String(y)].sex;
+  const known = (x: Record<string, number>) => (x.male ?? 0) + (x.female ?? 0);
+  return {
+    year: y,
+    offenders: t.animal_cruelty.total,
+    female: (t.animal_cruelty.female ?? 0) / known(t.animal_cruelty),
+    femaleAll: (t.all_offenses.female ?? 0) / known(t.all_offenses),
+  };
+});
+
+const tableYear = national.tables[String(LATEST_TABLE_YEAR)];
+// Years in which NIBRS agencies served at least half of the population.
+const broadYears = national.annual.filter((p) => p.coverage_pct >= 50 && p.rate_per_100k !== null);
+const broadSince = broadYears[0]?.year;
+const broadRates = broadYears.map((p) => p.rate_per_100k as number);
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: "Animal cruelty offenses reported to the FBI, United States",
+  description: `Annual and monthly counts of NIBRS animal cruelty offenses (code 720) from ${national.annual[0].year} to ${now.year}, with clearances, coverage and offender demographics.`,
+  url: "https://iropo.org/data/",
+  license: "https://creativecommons.org/publicdomain/zero/1.0/",
+  isBasedOn: "https://cde.ucr.cjis.gov/",
+  temporalCoverage: `${national.annual[0].year}/${now.year}`,
+  spatialCoverage: "United States",
+  distribution: [
+    { "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: "https://iropo.org/data/animal-cruelty-by-state.csv" },
+    { "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: "https://iropo.org/data/animal-cruelty-offenders.csv" },
+  ],
+};
+---
+
+<BaseLayout
+  title="National animal cruelty data"
+  description={`${fmt(now.offenses)} animal cruelty offenses were reported to the FBI in ${now.year}. Explore trends, rates, clearances and offender demographics since ${national.annual[0].year}.`}
+  jsonLd={jsonLd}
+>
+  <PageHeader
+    eyebrow="National overview"
+    title="Animal cruelty in the United States"
+    lede={`Every animal cruelty offense reported by U.S. law enforcement through the FBI's National Incident-Based Reporting System (NIBRS), from ${national.annual[0].year}, when animal cruelty became its own offense category, through ${now.year}.`}
+    crumbs={[{ label: "Data" }]}
+  />
+
+  <section class="section section--tight">
+    <div class="container grid grid--4">
+      <div class="card stat">
+        <span class="stat__value">{fmt(now.offenses)}</span>
+        <span class="stat__label">offenses reported in {now.year}</span>
+        <span class="stat__note">{fmt(now.clearances)} cleared ({fmtShare(now.clearance_rate)})</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{fmtRate(now.rate_per_100k)}</span>
+        <span class="stat__label">per 100,000 residents</span>
+        <span class="stat__note">Of the {fmt(now.covered_population)} people covered by NIBRS agencies</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{fmtPct(now.coverage_pct)}</span>
+        <span class="stat__label">population coverage</span>
+        <span class="stat__note">Share of U.S. residents served by agencies reporting to NIBRS</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{fmt(tableYear.with_cases)}</span>
+        <span class="stat__label">agencies with at least one case</span>
+        <span class="stat__note">Out of {fmt(tableYear.agencies)} listed in the {LATEST_TABLE_YEAR} tables</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="trend">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Trend</p>
+          <h2 id="trend">Reported offenses by year</h2>
+        </div>
+        <p>
+          Counts climbed as agencies adopted NIBRS. Lighter bars mark years when agencies reporting
+          to NIBRS served less than {LOW_COVERAGE_PCT}% of Americans.
+        </p>
+      </div>
+      <div class="split split--even">
+        <div class="card">
+          <h3>Offenses</h3>
+          <BarChart
+            title="Animal cruelty offenses reported to NIBRS by year"
+            valueLabel="Offenses"
+            bars={national.annual.map((p) => ({
+              label: String(p.year),
+              value: p.offenses,
+              muted: p.coverage_pct < LOW_COVERAGE_PCT,
+              note: `${fmtPct(p.coverage_pct)} population coverage`,
+            }))}
+            format={(v) => (v >= 10000 ? `${(v / 1000).toFixed(1)}k` : v.toLocaleString("en-US"))}
+            highlightLast
+          />
+        </div>
+        <div class="card">
+          <h3>Rate per 100,000 covered residents</h3>
+          <BarChart
+            title="Animal cruelty offenses per 100,000 residents covered by NIBRS"
+            valueLabel="Rate per 100,000"
+            bars={national.annual.map((p) => ({
+              label: String(p.year),
+              value: p.rate_per_100k,
+              muted: p.coverage_pct < LOW_COVERAGE_PCT,
+            }))}
+            format={(v) => v.toFixed(1)}
+            highlightLast
+          />
+        </div>
+      </div>
+      <p class="muted small" style="margin-top: var(--space-4)">
+        The rate adjusts for coverage and has stayed between {fmtRate(Math.min(...broadRates))} and {fmtRate(Math.max(...broadRates))} offenses
+        per 100,000 residents since {broadSince}, so most of the growth in raw counts reflects
+        better reporting rather than a surge in cruelty.
+      </p>
+
+      <div class="table-wrap" style="margin-top: var(--space-5)" tabindex="0" role="region" aria-label="Yearly national figures">
+        <table>
+          <caption>National figures by year</caption>
+          <thead>
+            <tr>
+              <th scope="col">Year</th>
+              <th scope="col" class="num">Offenses</th>
+              <th scope="col" class="num">Per 100,000</th>
+              <th scope="col" class="num">Cleared</th>
+              <th scope="col" class="num">Clearance rate</th>
+              <th scope="col" class="num">Population coverage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [...national.annual].reverse().map((p) => (
+                <tr>
+                  <th scope="row">{p.year}</th>
+                  <td class="num">{fmt(p.offenses)}</td>
+                  <td class="num">{fmtRate(p.rate_per_100k, 2)}</td>
+                  <td class="num">{fmt(p.clearances)}</td>
+                  <td class="num">{fmtShare(p.clearance_rate)}</td>
+                  <td class="num">{fmtPct(p.coverage_pct, 1)}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <SourceNote />
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="season">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Seasonality</p>
+          <h2 id="season">{summerPeak ? "Cruelty reports peak in summer" : "Reports vary through the year"}</h2>
+        </div>
+        <p>
+          Averaged per day over the last four years, {MONTH_NAMES[peakMonth]} has the most reported
+          offenses and {MONTH_NAMES[lowMonth]} the fewest.{summerPeak && " The summer peak is consistent with more time outdoors and more heat-related neglect calls, though NIBRS does not record the circumstances."}
+        </p>
+      </div>
+      <div class="split split--even">
+        <div class="card">
+          <h3>Average offenses per day, by month</h3>
+          <BarChart
+            title="Average daily animal cruelty offenses by calendar month, last four years"
+            valueLabel="Average offenses per day"
+            bars={season.map((v, i) => ({ label: MONTH_NAMES[i].slice(0, 3), value: Math.round(v * 10) / 10 }))}
+            format={(v) => v.toFixed(0)}
+          />
+        </div>
+        <div class="card">
+          <h3>Every month since {national.monthly.start?.slice(0, 4)}</h3>
+          <LineChart
+            values={national.monthly.offenses}
+            start={national.monthly.start ?? "2016-01"}
+            title="Monthly animal cruelty offenses reported to NIBRS"
+            caption="Monthly offenses reported nationally."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="offenders">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Offenders</p>
+          <h2 id="offenders">Who is reported for animal cruelty</h2>
+        </div>
+        <p>
+          In {offenderYear}, agencies identified {fmt(tables.sex.animal_cruelty.total)} animal cruelty
+          offenders. Shares below exclude offenders whose age, sex or race was not recorded.
+        </p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Sex</h3>
+          <CompareBars rows={sexRows} title={`Sex of animal cruelty offenders compared with all offenders, ${offenderYear}`} />
+        </div>
+        <div class="card">
+          <h3>Adults and juveniles</h3>
+          <CompareBars rows={categoryRows} title={`Adult and juvenile offenders, ${offenderYear}`} />
+        </div>
+        <div class="card">
+          <h3>Age</h3>
+          <CompareBars rows={ageRows} title={`Age of animal cruelty offenders compared with all offenders, ${offenderYear}`} />
+        </div>
+        <div class="card">
+          <h3>Race</h3>
+          <CompareBars rows={raceRows} digits={1} title={`Race of animal cruelty offenders compared with all offenders, ${offenderYear}`} />
+          <p class="small muted" style="margin-top: var(--space-4)">
+            Race is recorded by the reporting officer. Differences reflect who is reported and
+            identified, which is shaped by where agencies report through NIBRS and by enforcement
+            patterns, not only by who commits cruelty.
+          </p>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top: var(--space-5)" tabindex="0" role="region" aria-label="Offenders by year">
+        <table>
+          <caption>Known animal cruelty offenders by year</caption>
+          <thead>
+            <tr>
+              <th scope="col">Year</th>
+              <th scope="col" class="num">Offenders</th>
+              <th scope="col" class="num">Women (animal cruelty)</th>
+              <th scope="col" class="num">Women (all offenses)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              femaleTrend.map((r) => (
+                <tr>
+                  <th scope="row">{r.year}</th>
+                  <td class="num">{fmt(r.offenders)}</td>
+                  <td class="num">{fmtShare(r.female, 1)}</td>
+                  <td class="num">{fmtShare(r.femaleAll, 1)}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <SourceNote>FBI NIBRS Tables: Offenders by sex, age, race and age category, {national.offenders.years[0]}–{offenderYear}.</SourceNote>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="top-agencies">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Agencies</p>
+          <h2 id="top-agencies">Agencies reporting the most cases in {LATEST_TABLE_YEAR}</h2>
+        </div>
+        <a class="btn btn--ghost" href="/agencies/">Search all agencies</a>
+      </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Top reporting agencies">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" class="num">#</th>
+              <th scope="col">Agency</th>
+              <th scope="col">State</th>
+              <th scope="col">Type</th>
+              <th scope="col" class="num">Offenses</th>
+              <th scope="col" class="num">Per 100,000 residents</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              national.top_agencies.map((a, i) => {
+                const st = stateByAbbr(a.state);
+                return (
+                  <tr>
+                    <td class="num">{i + 1}</td>
+                    <td>
+                      {a.ori && st ? <a href={`/states/${st.slug}/agencies/#${a.ori}`}>{a.name}</a> : a.name}
+                      {a.ori && <span class="cell-sub mono">{a.ori}</span>}
+                    </td>
+                    <td>{st ? <a href={`/states/${st.slug}/`}>{st.name}</a> : a.state}</td>
+                    <td>{TYPE_LABELS[a.type]}</td>
+                    <td class="num">{fmt(a.offenses)}</td>
+                    <td class="num">{a.population ? fmtRate((a.offenses / a.population) * 100000) : "—"}</td>
+                  </tr>
+                );
+              })
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin-top: var(--space-3)">
+        Per-resident rates are shown for city agencies only; the FBI publishes population figures
+        for cities. Large counts can also reflect dedicated animal-cruelty units that record cases
+        diligently.
+      </p>
+      <SourceNote>FBI NIBRS Tables: Offense Type by Agency, {LATEST_TABLE_YEAR}.</SourceNote>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="about-data">
+    <div class="container prose">
+      <h2 id="about-data">About this data</h2>
+      <ul>
+        <li>
+          <strong>These are reported offenses, not convictions.</strong> NIBRS records offenses known to
+          law enforcement. A case may be cleared by arrest or by exceptional means without ever
+          reaching a conviction.
+        </li>
+        <li>
+          <strong>Coverage matters.</strong> Only agencies that submit incident-based data to NIBRS are
+          counted. Coverage rose from {fmtPct(national.annual[0].coverage_pct)} of the population in
+          {national.annual[0].year} to {fmtPct(now.coverage_pct)} in {now.year}.
+        </li>
+        <li>
+          <strong>NIBRS animal cruelty (offense 720)</strong> covers simple or gross neglect,
+          intentional abuse and torture, organized abuse such as dog and cock fighting, and animal
+          sexual abuse. It became a standalone offense in January 2016, and agencies adopted it at
+          different speeds.
+        </li>
+        <li>
+          <strong>Two FBI products are used.</strong> Monthly counts come from the Crime Data Explorer
+          and include late submissions. Agency counts come from the annual publication tables, which
+          only include agencies meeting the FBI's reporting criteria, so the two totals differ
+          slightly ({fmt(now.offenses)} versus {fmt(tableYear.offenses)} in {now.year}).
+        </li>
+        <li>
+          <strong>Offenders are counted once per offense type.</strong> Demographics describe offenders
+          known to police, including those never arrested.
+        </li>
+      </ul>
+      <p><a href="/sources/">Sources, methodology and downloadable CSV files</a></p>
+    </div>
+  </section>
+</BaseLayout>

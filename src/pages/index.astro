@@ -1,0 +1,329 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Sparkline from "../components/charts/Sparkline.astro";
+import TileMap from "../components/charts/TileMap.astro";
+import SourceNote from "../components/SourceNote.astro";
+import { LATEST_TABLE_YEAR, national, registry, states } from "../lib/data";
+import { fmt, fmtPct, fmtRate, fmtShare, listJoin } from "../lib/format";
+import { binner, comparable, latest, offenderHighlights, point, rankStates } from "../lib/stats";
+import { SITE } from "../lib/site";
+
+const now = latest(national.annual);
+const baseline = point(national.annual, 2019);
+const tables = national.tables[String(LATEST_TABLE_YEAR)];
+const people = offenderHighlights();
+
+const ranked = rankStates(50);
+const mapItems = ranked.map(({ state, latest: p }) => ({
+  abbr: state.abbr,
+  name: state.name,
+  slug: state.slug,
+  value: comparable(p) ? p.rate_per_100k : null,
+  display: fmtRate(p.rate_per_100k),
+  note: `${fmt(p.offenses)} offenses, ${fmtPct(p.coverage_pct)} coverage`,
+}));
+const scale = binner(mapItems.map((i) => i.value).filter((v): v is number => v !== null));
+const top3 = ranked.filter((r) => r.rank !== null).sort((a, b) => a.rank! - b.rank!).slice(0, 3);
+
+const steps = [
+  { title: "Collect", status: "done", text: "Official FBI data for every state and DC is downloaded automatically, with checksums and retrieval dates." },
+  { title: "Normalize", status: "done", text: `${fmt(states.reduce((s, x) => s + x.agencies.directory, 0))} agencies are linked by their ORI codes and joined to yearly case counts.` },
+  { title: "Verify", status: "progress", text: "Two-reviewer verification and a dispute process are being designed before any individual record is accepted." },
+  { title: "Publish", status: "progress", text: "Aggregate statistics are live today. Individual listings wait for legal review." },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE.longName,
+    alternateName: "IROPO",
+    url: SITE.url,
+    logo: `${SITE.url}/favicon.svg`,
+    sameAs: [SITE.repo],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "IROPO",
+    url: SITE.url,
+  },
+];
+---
+
+<BaseLayout jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Open data for animal welfare</p>
+        <h1>Tracking animal cruelty across the United States, one verifiable record at a time.</h1>
+        <p class="lede">
+          IROPO, the International Registry of Pet Offenders, brings official crime data and public
+          records together into a single, transparent source of truth for advocates, shelters,
+          journalists and the public.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/data/">Explore the data</a>
+          <a class="btn btn--ghost" href="/registry/">How the registry works</a>
+        </div>
+      </div>
+      <aside class="hero__stat card" aria-labelledby="hero-stat">
+        <p class="eyebrow">{now.year} · United States</p>
+        <p class="hero__number num" id="hero-stat">{fmt(now.offenses)}</p>
+        <p class="hero__text">
+          animal cruelty offenses were reported to the FBI by agencies serving {fmtPct(now.coverage_pct)} of
+          Americans.
+        </p>
+        <div class="hero__trend">
+          <Sparkline
+            values={national.annual.map((p) => p.offenses)}
+            width={150}
+            height={40}
+            label={`Reported offenses per year, ${national.annual[0].year} to ${now.year}`}
+          />
+          {
+            baseline && (
+              <span class="small muted">
+                Up from {fmt(baseline.offenses)} in {baseline.year}, as more agencies joined NIBRS
+              </span>
+            )
+          }
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--tight" aria-labelledby="at-a-glance">
+    <div class="container">
+      <h2 id="at-a-glance" class="visually-hidden">At a glance</h2>
+      <div class="grid grid--4">
+        <div class="card stat">
+          <span class="stat__value">{fmtRate(now.rate_per_100k)}</span>
+          <span class="stat__label">offenses per 100,000 residents</span>
+          <span class="stat__note">Among populations covered by NIBRS reporting, {now.year}</span>
+        </div>
+        <div class="card stat">
+          <span class="stat__value">{fmtShare(now.clearance_rate)}</span>
+          <span class="stat__label">cleared by arrest or exception</span>
+          <span class="stat__note">{fmt(now.clearances)} clearances recorded in {now.year}</span>
+        </div>
+        <div class="card stat">
+          <span class="stat__value">{fmt(tables.with_cases)}</span>
+          <span class="stat__label">agencies recorded at least one case</span>
+          <span class="stat__note">of {fmt(tables.agencies)} agencies in the FBI's {LATEST_TABLE_YEAR} tables</span>
+        </div>
+        <div class="card stat">
+          <span class="stat__value">{fmt(people.total)}</span>
+          <span class="stat__label">known offenders</span>
+          <span class="stat__note">{fmtShare(people.female.cruelty)} women, compared with {fmtShare(people.female.all)} across all crimes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="map-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Where it is reported</p>
+          <h2 id="map-title">Animal cruelty offenses per 100,000 residents, {now.year}</h2>
+        </div>
+        <a class="btn btn--ghost" href="/states/">All states</a>
+      </div>
+      <div class="split">
+        <div class="stack">
+          <p>
+            Reported rates vary widely. {listJoin(top3.map((r) => r.state.name))} report the highest rates,
+            but a high rate can reflect how thoroughly agencies record and submit cruelty cases, not
+            only how often cruelty happens.
+          </p>
+          <p class="muted small">
+            Hatched states either have NIBRS coverage below half the population or report almost no
+            cruelty despite broad coverage, a sign of a reporting gap. Select any state to see its
+            trend, the agencies reporting cases and data caveats.
+          </p>
+          <SourceNote />
+        </div>
+        <TileMap
+          items={mapItems}
+          thresholds={scale.thresholds}
+          legendTitle="Per 100,000"
+          emptyLabel="Not comparable"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="people-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Who is reported</p>
+          <h2 id="people-title">Animal cruelty offenders don't look like other offenders</h2>
+        </div>
+        <a class="btn btn--ghost" href="/data/#offenders">Offender demographics</a>
+      </div>
+      <div class="grid grid--3">
+        <div class="card highlight">
+          <p class="highlight__num">{fmtShare(people.female.cruelty)}</p>
+          <p>of known animal cruelty offenders in {people.year} were women, compared with {fmtShare(people.female.all)} of offenders across all crimes.</p>
+        </div>
+        <div class="card highlight">
+          <p class="highlight__num">{fmtShare(people.over55.cruelty)}</p>
+          <p>were over 55, more than double the share among all offenders ({fmtShare(people.over55.all)}).</p>
+        </div>
+        <div class="card highlight">
+          <p class="highlight__num">{fmtShare(people.juvenile.cruelty)}</p>
+          <p>were juveniles, versus {fmtShare(people.juvenile.all)} of all offenders. Most reported cruelty is committed by adults.</p>
+        </div>
+      </div>
+      <SourceNote>FBI NIBRS Tables, Offenders by age, sex and age category, {people.year}.</SourceNote>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Building the registry responsibly</h2>
+        </div>
+        <a class="btn btn--ghost" href="/roadmap/">Roadmap</a>
+      </div>
+      <ol class="steps">
+        {
+          steps.map((step, i) => (
+            <li class="card">
+              <span class="steps__n">{i + 1}</span>
+              <h3>{step.title}</h3>
+              <span class:list={["badge", step.status === "done" ? "badge--done" : "badge--progress"]}>
+                {step.status === "done" ? "Live" : "In progress"}
+              </span>
+              <p>{step.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+      <div class="callout" style="margin-top: var(--space-5)">
+        <strong>No individuals are listed yet ({registry.published} published records).</strong>
+        Publishing names carries real legal and ethical risk. IROPO will only list adjudicated cases
+        backed by court records or official registries, after two-person review, with a working
+        correction and removal process. <a href="/registry/">Read the registry policy</a>.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="involve-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Get involved</p>
+          <h2 id="involve-title">Help build a trustworthy registry</h2>
+        </div>
+      </div>
+      <div class="grid grid--3">
+        <a class="card" href="/get-involved/#sources">
+          <h3>Share a data source</h3>
+          <p class="muted">Know of court portals, state registries or agency records we should evaluate? Tell us.</p>
+        </a>
+        <a class="card" href="/get-involved/#build">
+          <h3>Volunteer your skills</h3>
+          <p class="muted">Engineers, designers, researchers and legal professionals all have a place on the project.</p>
+        </a>
+        <a class="card" href="/support/">
+          <h3>Support the work</h3>
+          <p class="muted">Hosting credits, pro bono legal review and sponsorships keep IROPO independent.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-block: var(--space-8) var(--space-7);
+    background:
+      radial-gradient(50rem 22rem at 90% 0%, color-mix(in srgb, var(--accent-soft) 85%, transparent), transparent),
+      radial-gradient(45rem 20rem at 0% 10%, color-mix(in srgb, var(--brand-soft) 85%, transparent), transparent);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero__grid {
+    display: grid;
+    gap: var(--space-6);
+    align-items: center;
+  }
+  @media (min-width: 60rem) {
+    .hero__grid {
+      grid-template-columns: 1.4fr 1fr;
+      gap: var(--space-7);
+    }
+  }
+  .hero h1 {
+    font-size: clamp(2.1rem, 1.4rem + 3vw, 3.7rem);
+  }
+  .hero__stat {
+    padding: var(--space-6);
+    box-shadow: var(--shadow);
+  }
+  .hero__number {
+    font-size: clamp(3rem, 2rem + 4vw, 4.75rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    color: var(--accent);
+    margin: 0 0 var(--space-3);
+  }
+  .hero__text {
+    font-size: var(--step-1);
+    color: var(--text-2);
+  }
+  .hero__trend {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--border);
+  }
+  .highlight__num {
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: var(--space-3);
+  }
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    counter-reset: step;
+  }
+  .steps li {
+    margin: 0;
+    position: relative;
+  }
+  .steps h3 {
+    display: inline-block;
+    margin-right: var(--space-2);
+  }
+  .steps p {
+    margin-top: var(--space-3);
+    color: var(--text-2);
+    font-size: var(--step--1);
+  }
+  .steps__n {
+    display: inline-grid;
+    place-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: var(--brand);
+    color: var(--on-brand);
+    font-weight: 750;
+    margin-bottom: var(--space-3);
+  }
+</style>

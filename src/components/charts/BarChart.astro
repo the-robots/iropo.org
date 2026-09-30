@@ -1,0 +1,117 @@
+---
+/**
+ * Vertical bar chart rendered with HTML/CSS so labels stay legible at any width.
+ * A visually hidden table carries the same data for assistive technology.
+ */
+interface Bar {
+  label: string;
+  value: number | null;
+  muted?: boolean;
+  note?: string;
+}
+interface Props {
+  bars: Bar[];
+  title: string;
+  valueLabel?: string;
+  format?: (value: number) => string;
+  height?: number;
+  caption?: string;
+  highlightLast?: boolean;
+}
+
+const {
+  bars,
+  title,
+  valueLabel = "Value",
+  format = (v: number) => v.toLocaleString("en-US"),
+  height = 220,
+  caption,
+  highlightLast = false,
+} = Astro.props;
+const max = Math.max(1, ...bars.map((b) => b.value ?? 0));
+---
+
+<figure class="chart bar-chart">
+  <div class="bar-chart__plot" style={`--h:${height}px`} aria-hidden="true">
+    {
+      bars.map((bar, i) => {
+        const pct = bar.value === null ? 0 : Math.max((bar.value / max) * 100, bar.value > 0 ? 1.5 : 0);
+        const last = highlightLast && i === bars.length - 1;
+        return (
+          <div class:list={["bar", { "bar--muted": bar.muted, "bar--last": last }]} title={bar.note}>
+            <span class="bar__value">{bar.value === null ? "n/a" : format(bar.value)}</span>
+            <span class="bar__fill" style={`height:${pct}%`} />
+            <span class="bar__label">{bar.label}</span>
+          </div>
+        );
+      })
+    }
+  </div>
+  <div class="visually-hidden">
+  <table>
+    <caption>{title}</caption>
+    <thead><tr><th scope="col">Period</th><th scope="col">{valueLabel}</th><th scope="col">Note</th></tr></thead>
+    <tbody>
+      {
+        bars.map((bar) => (
+          <tr>
+            <th scope="row">{bar.label}</th>
+            <td>{bar.value === null ? "Not available" : format(bar.value)}</td>
+            <td>{bar.note ?? ""}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .bar-chart__plot {
+    display: flex;
+    align-items: stretch;
+    gap: clamp(3px, 1vw, 10px);
+    height: calc(var(--h) + 3.2rem);
+    padding-top: 0.25rem;
+  }
+  .bar {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .bar__fill {
+    width: 100%;
+    max-width: 4.5rem;
+    background: var(--chart-bar);
+    border-radius: 5px 5px 2px 2px;
+    min-height: 0;
+  }
+  .bar--muted .bar__fill {
+    background: var(--chart-bar-muted);
+  }
+  .bar--last .bar__fill {
+    background: var(--accent-strong);
+  }
+  .bar__value {
+    font-size: clamp(0.62rem, 1.6vw, 0.8rem);
+    font-weight: 700;
+    color: var(--text-2);
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+  }
+  .bar__label {
+    margin-top: 0.4rem;
+    font-size: clamp(0.62rem, 1.6vw, 0.8rem);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .bar--muted .bar__value {
+    color: var(--muted);
+    font-weight: 500;
+  }
+</style>

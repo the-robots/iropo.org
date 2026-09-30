@@ -1,0 +1,226 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { officialRegistries, registry, stateByAbbr } from "../../lib/data";
+import { fmtDate } from "../../lib/format";
+import { ISSUE_FORM, REPO_FILE } from "../../lib/site";
+
+const byState = [...officialRegistries.registries].sort(
+  (a, b) => a.state.localeCompare(b.state) || a.level.localeCompare(b.level) || a.jurisdiction.localeCompare(b.jurisdiction),
+);
+const publicCount = byState.filter((r) => r.access === "public" && r.status === "active").length;
+
+const criteria = [
+  { title: "Adjudicated cases only", text: "A conviction, guilty plea or no-contest plea for an animal cruelty offense. Arrests, charges, dismissed and pending cases are never listed." },
+  { title: "Official sources", text: "Every record cites at least one court record or government registry. News coverage can support a record but can never establish one." },
+  { title: "Two-person verification", text: "Two independent reviewers confirm the person's identity and the case details against the official source before anything is published." },
+  { title: "Full provenance", text: "Each record keeps its sources, retrieval dates, reviewers and a complete change history, so anyone can trace where it came from." },
+  { title: "Time limits", text: "Listings follow the retention rules of the jurisdiction that decided the case and expire automatically. Expunged, sealed or overturned cases come down." },
+  { title: "Right to respond", text: "Anyone listed can dispute a record. Disputed records are hidden while they are reviewed, with a published response time." },
+];
+
+const fields = [
+  ["Subject", "Full name and known aliases, and whether the subject is a person or an organization (for example, a commercial breeder)."],
+  ["Birth year", "Only when printed in the official source, to avoid mistaken identity. No addresses, phone numbers or photos."],
+  ["Jurisdiction and agency", "State, county and city, plus the investigating agency's ORI code."],
+  ["Court and case number", "The court that decided the case and its public case number."],
+  ["Offense", "Statute citation, felony or misdemeanor level, and the NIBRS animal cruelty type (neglect, intentional abuse, organized abuse or animal sexual abuse)."],
+  ["Animals", "Species involved and number of animals, where recorded."],
+  ["Dates and disposition", "Offense, charge, adjudication and sentencing dates, and how the case was resolved."],
+  ["Sentence", "A summary, including any court-ordered ban on owning animals and when it ends."],
+  ["Sources", "Every official document relied on, with archived copies and retrieval dates."],
+  ["Verification and listing", "Reviewers, verification date, publication and expiry dates, and any removal reason."],
+];
+---
+
+<BaseLayout
+  title="The registry"
+  description="How IROPO's registry of animal cruelty offenders will work: publication criteria, record format and links to official government animal abuser registries."
+>
+  <PageHeader
+    eyebrow="The registry"
+    title="A registry built on verified public records"
+    lede="IROPO's long-term goal is a searchable registry of people and organizations found responsible for animal cruelty. Getting it wrong could harm innocent people, so no one is listed until every safeguard below is in place."
+    crumbs={[{ label: "Registry" }]}
+  />
+
+  <section class="section">
+    <div class="container split">
+      <div class="card status">
+        <p class="eyebrow">Current status</p>
+        <p class="status__num">{registry.published}</p>
+        <p class="status__label">individual records published</p>
+        <p class="muted small">
+          Today IROPO publishes aggregate statistics only. Individual listings begin after legal
+          review, a tested verification workflow and a working correction process.
+        </p>
+      </div>
+      <div class="prose">
+        <h2 style="margin-top: 0">Why there are no names yet</h2>
+        <p>
+          Publishing information about identifiable people carries privacy, defamation and
+          jurisdiction-specific legal risk. Records can be wrong, outdated, sealed or expunged, and a
+          mistaken listing can follow someone for years.
+        </p>
+        <p>
+          IROPO's <a href="/roadmap/">roadmap</a> puts legal review, governance and a dispute process
+          before any public listing. Until then, the most reliable place to check a person is a
+          registry run by a government, listed below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="official">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Check today</p>
+          <h2 id="official">Official government animal abuser registries</h2>
+        </div>
+        <p>
+          {byState.length > 0
+            ? `${byState.length} registries run by state and local governments, ${publicCount} of them searchable by the public. IROPO links to them and never copies their listings. Last verified ${fmtDate(officialRegistries.verified_on)}.`
+            : "We are compiling a verified list of registries run by state and local governments."}
+        </p>
+      </div>
+      <div class="grid grid--2">
+        {
+          byState.map((r) => (
+            <article class="card registry">
+              <div class="registry__top">
+                <span class="badge">{stateByAbbr(r.state)?.name ?? r.state}</span>
+                <span class="badge">{r.level === "state" ? "Statewide" : r.level === "county" ? "County" : "City"}</span>
+                <span class:list={["badge", r.access === "public" ? "badge--brand" : "badge--accent"]}>
+                  {r.access === "public" ? "Public search" : r.access === "restricted" ? "Restricted access" : "Access unclear"}
+                </span>
+                {r.status !== "active" && <span class="badge">{r.status === "defunct" ? "Defunct" : "Status unclear"}</span>}
+              </div>
+              <h3><a href={r.url}>{r.name}</a></h3>
+              <p class="muted small">{r.jurisdiction} · {r.operator}</p>
+              <dl class="kv small">
+                {r.established && (<><dt>Established</dt><dd>{r.established}</dd></>)}
+                {r.legal_citation && (<><dt>Law</dt><dd>{r.legal_citation}</dd></>)}
+                {r.retention && (<><dt>Listing period</dt><dd>{r.retention}</dd></>)}
+              </dl>
+              {r.notes && <p class="small">{r.notes}</p>}
+            </article>
+          ))
+        }
+      </div>
+      <p class="small muted" style="margin-top: var(--space-4)">
+        Know of a registry we are missing, or one that has changed?
+        <a href={ISSUE_FORM("data-source")}>Open an issue</a>. The catalog lives in
+        <a href={REPO_FILE("data/curated/official-registries.json")}><code>official-registries.json</code></a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="criteria">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Publication policy</p>
+          <h2 id="criteria">What it will take to be listed</h2>
+        </div>
+        <p>These rules are enforced in code: the data pipeline refuses to publish any record that does not meet them.</p>
+      </div>
+      <ol class="criteria">
+        {criteria.map((c) => (<li class="card"><h3>{c.title}</h3><p>{c.text}</p></li>))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="format">
+    <div class="container split">
+      <div class="prose">
+        <p class="eyebrow">Record format</p>
+        <h2 id="format" style="margin-top: 0">What a record will contain</h2>
+        <p>
+          The canonical record is defined as a JSON Schema so every importer, reviewer and tool uses
+          the same fields.
+        </p>
+        <p>
+          <a href={REPO_FILE("data/schema/registry-record.schema.json")}>View the registry record schema</a>
+        </p>
+        <h3>Never published</h3>
+        <ul>
+          <li>Home addresses, phone numbers, email or social media accounts</li>
+          <li>Photos that do not come from an official source</li>
+          <li>The identities of juveniles or of human victims and witnesses</li>
+          <li>Allegations, arrests or charges without an adjudication of guilt</li>
+        </ul>
+      </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Record fields">
+        <table>
+          <thead><tr><th scope="col">Field</th><th scope="col">What it holds</th></tr></thead>
+          <tbody>
+            {fields.map(([f, d]) => (<tr><th scope="row" class="nowrap">{f}</th><td>{d}</td></tr>))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container callout">
+      <strong>Help make the registry possible</strong>
+      We especially need attorneys familiar with privacy and defamation law, people with experience
+      in court records systems, and partners at shelters and rescues who can shape how the registry
+      is used. <a href="/get-involved/">Get involved</a> or read the <a href="/corrections/">corrections policy</a>.
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .status {
+    text-align: center;
+    padding: var(--space-7) var(--space-5);
+  }
+  .status__num {
+    font-size: clamp(4rem, 3rem + 5vw, 7rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: var(--brand);
+    margin: 0;
+  }
+  .status__label {
+    font-size: var(--step-1);
+    font-weight: 650;
+  }
+  .registry__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: var(--space-3);
+  }
+  .registry h3 {
+    font-size: var(--step-1);
+    margin-bottom: 0.25rem;
+  }
+  .registry .kv {
+    margin-top: var(--space-3);
+  }
+  .criteria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    counter-reset: c;
+  }
+  .criteria li {
+    margin: 0;
+    counter-increment: c;
+  }
+  .criteria h3::before {
+    content: counter(c) ". ";
+    color: var(--accent);
+  }
+  .criteria p {
+    margin: 0;
+    color: var(--text-2);
+  }
+</style>

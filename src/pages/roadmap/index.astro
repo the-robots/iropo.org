@@ -1,0 +1,237 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { meta, states } from "../../lib/data";
+import { fmt } from "../../lib/format";
+import { REPO_FILE } from "../../lib/site";
+
+type Status = "done" | "progress" | "planned";
+interface Item {
+  text: string;
+  status: Status;
+  link?: string;
+}
+interface Phase {
+  name: string;
+  summary: string;
+  status: Status;
+  items: Item[];
+}
+
+const phases: Phase[] = [
+  {
+    name: "Phase 0: Foundation",
+    summary: "Legal footing, governance and the rules that protect people from mistaken listings.",
+    status: "progress",
+    items: [
+      { text: "Define the canonical offender and case record schema", status: "done", link: REPO_FILE("data/schema/registry-record.schema.json") },
+      { text: "Draft publication, verification and correction policies", status: "done", link: "/registry/" },
+      { text: "Choose fiscal sponsorship or file for nonprofit status", status: "planned" },
+      { text: "Scope and obtain legal review of privacy and defamation risk", status: "planned" },
+      { text: "Define governance: who can add, correct and remove records, and how appeals work", status: "progress", link: "/corrections/" },
+    ],
+  },
+  {
+    name: "Phase 1: Data aggregation",
+    summary: "One reviewable source of truth, assembled from official data for every state.",
+    status: "progress",
+    items: [
+      { text: "Catalog and evaluate FBI NIBRS sources and the agency directory", status: "done", link: "/sources/" },
+      { text: "Build a U.S. state coverage matrix", status: "done", link: "/coverage/" },
+      { text: `Automate imports for all ${states.length} jurisdictions, replacing the NC, ND and NY spreadsheets`, status: "done", link: "/states/" },
+      { text: "Cross-check legacy 1977 ORIs against today's FBI directory", status: "done", link: "/data/legacy-ori-crosswalk.csv" },
+      { text: "Record provenance, retrieval dates and checksums for every dataset", status: "done", link: "/data/sources.json" },
+      { text: "Catalog official government animal abuser registries", status: "done", link: "/registry/#official" },
+      { text: "Evaluate state and county court record systems as sources", status: "progress" },
+      { text: "Stand up a private intake store and two-person verification workflow", status: "planned" },
+    ],
+  },
+  {
+    name: "Phase 2: Platform and interface",
+    summary: "A fast, accessible public site with citations on every figure.",
+    status: "progress",
+    items: [
+      { text: "Choose the framework: a static Astro site on GitHub Pages, built from a Python data pipeline", status: "done" },
+      { text: "Public browse and search for states and agencies", status: "done", link: "/agencies/" },
+      { text: "Accessibility, responsive design and SEO basics", status: "done" },
+      { text: "Open data: CSV downloads and a static JSON API", status: "done", link: "/sources/#downloads" },
+      { text: "Monthly automated data refresh proposed as reviewable pull requests", status: "done" },
+      { text: "Searchable individual registry, after Phase 0 legal review", status: "planned", link: "/registry/" },
+    ],
+  },
+  {
+    name: "Phase 3: Launch and growth",
+    summary: "Partnerships, outreach and a sustainable way to keep the data current.",
+    status: "planned",
+    items: [
+      { text: "Privacy-respecting analytics, contact paths and feedback channels", status: "planned" },
+      { text: "Data-access partnerships with shelters, rescues and researchers", status: "planned" },
+      { text: "Promote across social media and animal-welfare communities", status: "planned" },
+      { text: "Long-term maintenance plan for updates, reviews and corrections", status: "progress" },
+    ],
+  },
+];
+
+const LABEL: Record<Status, string> = { done: "Done", progress: "In progress", planned: "Planned" };
+const done = phases.flatMap((p) => p.items).filter((i) => i.status === "done").length;
+const total = phases.flatMap((p) => p.items).length;
+
+const flow = [
+  { title: "Official sources", text: "FBI agency directory, NIBRS series and tables; official registries" },
+  { title: "Collect", text: "Scheduled downloads with checksums" },
+  { title: "Normalize", text: "One schema, ORIs linked" },
+  { title: "Verify", text: "Schemas, tests, human review" },
+  { title: "Source of truth", text: "data/processed, versioned in Git" },
+  { title: "Publish", text: "iropo.org, CSV and JSON" },
+];
+---
+
+<BaseLayout title="Roadmap" description="IROPO's phased plan: foundation, data aggregation, platform and launch, with what is done and what comes next.">
+  <PageHeader
+    eyebrow="Roadmap"
+    title="Where the project is headed"
+    lede={`IROPO is being built in phases, each gated on the funding and safeguards it needs. ${done} of ${total} milestones are complete.`}
+    crumbs={[{ label: "Roadmap" }]}
+  />
+
+  <section class="section" aria-labelledby="flow">
+    <div class="container">
+      <h2 id="flow" class="h3">How data moves through IROPO</h2>
+      <ol class="flow">
+        {flow.map((f) => (<li><strong>{f.title}</strong><span>{f.text}</span></li>))}
+      </ol>
+      <p class="small muted">
+        Feedback from the public, advocates and agencies flows back into source discovery and
+        corrections. {fmt(meta.counts.directory_agencies)} agencies and {fmt(meta.counts.agency_year_rows)} agency-year
+        records are in the source of truth today.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container stack-lg">
+      {
+        phases.map((phase) => (
+          <article class="card phase">
+            <header class="phase__head">
+              <div>
+                <h2>{phase.name}</h2>
+                <p class="muted">{phase.summary}</p>
+              </div>
+              <span class={`badge badge--${phase.status}`}>{LABEL[phase.status]}</span>
+            </header>
+            <ul class="items">
+              {phase.items.map((item) => (
+                <li class={`item item--${item.status}`}>
+                  <span class="item__icon" aria-hidden="true">{item.status === "done" ? "✓" : item.status === "progress" ? "◐" : "○"}</span>
+                  <span>{item.link ? <a href={item.link}>{item.text}</a> : item.text}<span class="visually-hidden"> ({LABEL[item.status]})</span></span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+      <p class="small muted">
+        The <a href={REPO_FILE("BUSINESS_PLAN.md")}>business plan</a> describes the funding each phase
+        needs. Each phase begins only when its funding is secured or credibly committed.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .h3 {
+    font-size: var(--step-1);
+  }
+  .flow {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-4) 0;
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    counter-reset: f;
+  }
+  .flow li {
+    position: relative;
+    margin: 0;
+    padding: var(--space-4);
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .flow li:nth-child(5) {
+    background: var(--brand-soft);
+    border-color: transparent;
+  }
+  .flow span {
+    font-size: var(--step--1);
+    color: var(--muted);
+  }
+  .flow li:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--border-strong);
+    font-weight: 700;
+    z-index: 1;
+  }
+  .phase__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  .phase h2 {
+    font-size: var(--step-2);
+    margin-bottom: 0.3rem;
+  }
+  .phase__head p {
+    margin: 0;
+  }
+  .items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+  .item {
+    display: flex;
+    gap: 0.65rem;
+    align-items: baseline;
+    margin: 0;
+  }
+  .item__icon {
+    flex: none;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    transform: translateY(0.15rem);
+  }
+  .item--done .item__icon {
+    background: #16a34a;
+    color: #fff;
+  }
+  .item--progress .item__icon {
+    background: #fde68a;
+    color: #92400e;
+  }
+  .item--planned .item__icon {
+    border: 1px solid var(--border-strong);
+    color: var(--muted);
+  }
+  .item--planned {
+    color: var(--text-2);
+  }
+</style>

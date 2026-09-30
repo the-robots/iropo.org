@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { ISSUE_FORM } from "../../lib/site";
+
+const removal = [
+  "The conviction was expunged, sealed, vacated or overturned",
+  "The listing identifies the wrong person",
+  "The source jurisdiction's retention period has ended",
+  "The official source removed or corrected the record",
+  "The record did not meet IROPO's publication criteria",
+];
+---
+
+<BaseLayout title="Corrections and removals" description="How to report an error in IROPO's data and how corrections, disputes and removals are handled.">
+  <PageHeader
+    eyebrow="Corrections"
+    title="Corrections and removals"
+    lede="Accuracy is the point of this project. When something is wrong, we want to know, and we will explain what we changed."
+    crumbs={[{ label: "Corrections" }]}
+  />
+
+  <section class="section">
+    <div class="container split">
+      <div class="prose">
+        <h2 style="margin-top: 0">Errors in statistics or agency data</h2>
+        <p>
+          IROPO republishes figures from the FBI. Errors fall into two groups, handled differently:
+        </p>
+        <ul>
+          <li>
+            <strong>Processing errors</strong>, such as an agency linked to the wrong ORI, a wrong name,
+            or a number that does not match the FBI source. We fix these in the pipeline and note the
+            change in the project's history.
+          </li>
+          <li>
+            <strong>Source errors</strong>, where the FBI's own data is wrong or incomplete. Agencies
+            submit their data through their state's reporting program; corrections must be made there
+            and will appear here after the next refresh. We can annotate known problems in the
+            meantime.
+          </li>
+        </ul>
+        <a class="btn btn--primary" href={ISSUE_FORM("correction")}>Report a correction</a>
+        <p class="small muted" style="margin-top: var(--space-3)">
+          Include the page address, what is wrong and a link to the official source if you have one.
+          Reports are public on GitHub, so please do not include personal information.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Our commitments</h3>
+        <ul class="small">
+          <li>Every report gets a public response.</li>
+          <li>Confirmed processing errors are fixed in the next data release.</li>
+          <li>Every change to published data is recorded in version control.</li>
+          <li>Methods changes are documented on the <a href="/sources/">sources page</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="disputes">
+    <div class="container split">
+      <div class="prose">
+        <p class="eyebrow">For future individual records</p>
+        <h2 id="disputes" style="margin-top: 0">Disputes and removal</h2>
+        <p>
+          IROPO does not list any individuals today. Before the first record is published, the
+          following process will be in place and staffed:
+        </p>
+        <ol>
+          <li>Anyone named in a record, or their representative, can file a dispute through a private channel.</li>
+          <li>The record is hidden from public view while the dispute is reviewed.</li>
+          <li>Two reviewers who did not verify the original record check it against the official source.</li>
+          <li>The outcome, and any change, is recorded in the record's history and communicated to the requester.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>A record comes down when</h3>
+        <ul class="small">{removal.map((r) => <li>{r}</li>)}</ul>
+        <p class="small muted">
+          The <a href="/registry/">registry policy</a> describes what it takes to be listed in the first
+          place.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

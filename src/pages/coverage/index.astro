@@ -1,0 +1,166 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { LATEST_TABLE_YEAR, LATEST_YEAR, registry, states } from "../../lib/data";
+import { fmt, fmtPct } from "../../lib/format";
+import { firstFullYear, latest, qualityNotes, registriesFor } from "../../lib/stats";
+
+const rows = states.map((state) => {
+  const now = latest(state.annual);
+  const notes = qualityNotes(state);
+  return {
+    state,
+    now,
+    first: firstFullYear(state.annual),
+    notes,
+    registries: registriesFor(state.abbr),
+    reporting: state.agencies.reporting[String(LATEST_TABLE_YEAR)] ?? 0,
+    withCases: state.agencies.with_cases[String(LATEST_TABLE_YEAR)] ?? 0,
+  };
+});
+const broad = rows.filter((r) => r.now.coverage_pct >= 90).length;
+const gaps = rows.filter((r) => r.notes.some((n) => n.kind === "gap" || n.kind === "coverage")).length;
+const withRegistry = rows.filter((r) => r.registries.length > 0).length;
+const legacy = rows.filter((r) => r.state.legacy).length;
+---
+
+<BaseLayout
+  title="Coverage matrix"
+  description="Which data IROPO has for each state: FBI agency directories, NIBRS coverage, animal cruelty counts, legacy records and official registries."
+>
+  <PageHeader
+    eyebrow="Coverage"
+    title="Coverage matrix"
+    lede="Where IROPO has data today, how complete it is, and what is still missing for each of the 50 states and the District of Columbia."
+    crumbs={[{ label: "Coverage" }]}
+  />
+
+  <section class="section section--tight">
+    <div class="container grid grid--4">
+      <div class="card stat">
+        <span class="stat__value">{rows.length}</span>
+        <span class="stat__label">jurisdictions imported automatically</span>
+        <span class="stat__note">FBI agency directory and NIBRS animal cruelty counts</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{broad}</span>
+        <span class="stat__label">with 90%+ NIBRS coverage</span>
+        <span class="stat__note">Share of residents served by reporting agencies, {LATEST_YEAR}</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{gaps}</span>
+        <span class="stat__label">with coverage caveats</span>
+        <span class="stat__note">Low coverage or an apparent reporting gap</span>
+      </div>
+      <div class="card stat">
+        <span class="stat__value">{withRegistry}</span>
+        <span class="stat__label">with an official registry</span>
+        <span class="stat__note">Government-run, statewide or local</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" data-table-tools>
+      <div class="table-tools">
+        <div class="field">
+          <label for="coverage-filter">Filter states</label>
+          <input id="coverage-filter" type="search" placeholder="e.g. Ohio" data-filter-text autocomplete="off" />
+        </div>
+        <span class="status" data-filter-status aria-live="polite"></span>
+      </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Coverage matrix">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" data-sort="text"><button type="button">State</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">FBI agencies</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">On NIBRS</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Population coverage</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Full-year data since</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Agencies with cases</button></th>
+              <th scope="col" class="num" data-sort="num"><button type="button">Offenses {LATEST_YEAR}</button></th>
+              <th scope="col">Legacy records</th>
+              <th scope="col">Official registry</th>
+              <th scope="col" class="num">Verified records</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              rows.map((r) => (
+                <tr data-search={`${r.state.name} ${r.state.abbr}`}>
+                  <th scope="row">
+                    <a href={`/states/${r.state.slug}/`}>{r.state.name}</a>
+                    {r.notes.some((n) => n.kind === "gap") && <span class="cell-sub">Reporting gap</span>}
+                    {r.notes.some((n) => n.kind === "coverage") && <span class="cell-sub">Low coverage</span>}
+                  </th>
+                  <td class="num">{fmt(r.state.agencies.directory)}</td>
+                  <td class="num" data-value={r.state.agencies.directory ? r.state.agencies.directory_nibrs / r.state.agencies.directory : 0}>
+                    {fmtPct(r.state.agencies.directory ? (r.state.agencies.directory_nibrs / r.state.agencies.directory) * 100 : null)}
+                  </td>
+                  <td class="num" data-value={r.now.coverage_pct}>
+                    <span class="meter" style={`--v:${r.now.coverage_pct}%`} aria-hidden="true" />
+                    {fmtPct(r.now.coverage_pct)}
+                  </td>
+                  <td class="num">{r.first ?? "—"}</td>
+                  <td class="num" data-value={r.withCases}>{fmt(r.withCases)}<span class="cell-sub">of {fmt(r.reporting)}</span></td>
+                  <td class="num">{fmt(r.now.offenses)}</td>
+                  <td>{r.state.legacy ? <span class="badge badge--done">1977 NLETS list</span> : <span class="muted">—</span>}</td>
+                  <td>
+                    {r.registries.length ? (
+                      <span class="badge badge--brand">{r.registries.length === 1 ? (r.registries[0].level === "state" ? "Statewide" : "1 local") : `${r.registries.length} local`}</span>
+                    ) : (
+                      <span class="muted">—</span>
+                    )}
+                  </td>
+                  <td class="num muted">0</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid grid--2" style="margin-top: var(--space-6)">
+        <div class="prose small">
+          <h2 class="h3">Reading the matrix</h2>
+          <ul>
+            <li><strong>FBI agencies</strong> counts every agency in the FBI's directory; <strong>On NIBRS</strong> is the share that report incident-based data.</li>
+            <li><strong>Population coverage</strong> is the share of residents served by agencies that reported to NIBRS in {LATEST_YEAR}.</li>
+            <li><strong>Legacy records</strong> marks the {legacy} states with agency spreadsheets transcribed from the 1977 NLETS directory, now cross-checked against current ORIs.</li>
+            <li><strong>Verified records</strong> is the number of individual registry records published ({registry.published} nationwide). See <a href="/registry/">the registry policy</a>.</li>
+          </ul>
+        </div>
+        <div class="prose small">
+          <h2 class="h3">What is missing</h2>
+          <ul>
+            <li>Court records: state and county court portals vary widely in what they publish and how they may be reused. Evaluating them state by state is the next phase of the <a href="/roadmap/">roadmap</a>.</li>
+            <li>Agencies outside NIBRS, such as many animal control and humane law enforcement units, which report elsewhere or not at all.</li>
+            <li>Countries other than the United States.</li>
+          </ul>
+          <p><a href="/get-involved/#sources">Suggest a source for your state</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import "../../scripts/table-tools";
+</script>
+
+<style>
+  .h3 {
+    font-size: var(--step-1);
+    margin-top: 0;
+  }
+  .meter {
+    display: inline-block;
+    width: 3rem;
+    height: 0.45rem;
+    border-radius: 999px;
+    margin-right: 0.45rem;
+    vertical-align: middle;
+    background: linear-gradient(90deg, var(--brand) var(--v), var(--surface-3) var(--v));
+  }
+</style>

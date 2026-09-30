@@ -1,0 +1,150 @@
+---
+import Logo from "./Logo.astro";
+import { meta } from "../lib/data";
+import { fmtCdeDate, fmtDate } from "../lib/format";
+import { REPO_FILE, SITE } from "../lib/site";
+
+const columns = [
+  {
+    title: "Data",
+    links: [
+      { href: "/data/", label: "National overview" },
+      { href: "/states/", label: "States" },
+      { href: "/agencies/", label: "Agency search" },
+      { href: "/coverage/", label: "Coverage matrix" },
+      { href: "/sources/", label: "Sources & downloads" },
+    ],
+  },
+  {
+    title: "Project",
+    links: [
+      { href: "/about/", label: "About IROPO" },
+      { href: "/registry/", label: "The registry" },
+      { href: "/roadmap/", label: "Roadmap" },
+      { href: "/corrections/", label: "Corrections policy" },
+      { href: REPO_FILE("BUSINESS_PLAN.md"), label: "Business plan" },
+    ],
+  },
+  {
+    title: "Participate",
+    links: [
+      { href: "/get-involved/", label: "Get involved" },
+      { href: "/support/", label: "Support the project" },
+      { href: SITE.repo, label: "GitHub repository" },
+      { href: REPO_FILE("CONTRIBUTING.md"), label: "Contributing guide" },
+    ],
+  },
+];
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="brand" href="/">
+          <Logo size={32} />
+          <strong>IROPO</strong>
+        </a>
+        <p>
+          An open-data, animal-welfare project that turns official records into one verifiable source
+          of truth on animal cruelty.
+        </p>
+      </div>
+      {
+        columns.map((col) => (
+          <nav aria-label={col.title}>
+            <h2>{col.title}</h2>
+            <ul>
+              {col.links.map((link) => (
+                <li>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))
+      }
+    </div>
+    <div class="site-footer__bottom">
+      <p>
+        IROPO publishes aggregate statistics from official public sources and does not list
+        individuals. Figures are counts of reported offenses, not convictions. Nothing on this site is
+        legal advice.
+      </p>
+      <p>
+        FBI data retrieved {fmtDate(meta.data_retrieved_at)} (Crime Data Explorer refreshed {
+          fmtCdeDate(meta.cde_last_refresh)
+        }). Content and data are dedicated to the public domain under
+        <a href={REPO_FILE("LICENSE")}>CC0 1.0</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--space-8);
+    background: var(--surface-2);
+    border-top: 1px solid var(--border);
+    font-size: var(--step--1);
+    color: var(--text-2);
+  }
+  .site-footer__top {
+    display: grid;
+    gap: var(--space-6);
+    padding-block: var(--space-7) var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .site-footer__brand {
+    grid-column: span 2;
+    max-width: 24rem;
+  }
+  @media (max-width: 40rem) {
+    .site-footer__brand {
+      grid-column: 1 / -1;
+    }
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-3);
+  }
+  h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: var(--space-3);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li + li {
+    margin-top: 0.45rem;
+  }
+  a {
+    color: var(--text-2);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--brand);
+    text-decoration: underline;
+  }
+  .site-footer__bottom {
+    border-top: 1px solid var(--border);
+    padding-block: var(--space-5) var(--space-6);
+    color: var(--muted);
+    max-width: 60rem;
+  }
+  .site-footer__bottom a {
+    color: var(--muted);
+    text-decoration: underline;
+  }
+</style>

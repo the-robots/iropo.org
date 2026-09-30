@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { REPO_FILE, SITE } from "../../lib/site";
+
+const values = [
+  { title: "Accuracy before speed", text: "Every figure is traceable to an official source, and nothing is published faster than it can be verified." },
+  { title: "Public and official sources only", text: "IROPO uses records published by governments and courts, never rumors, social media posts or tips." },
+  { title: "A path to correction", text: "Anyone can report an error. Future listings will carry a dispute and removal process from day one." },
+  { title: "Privacy and legal care", text: "The project minimizes personal data and treats defamation, privacy and jurisdictional rules as design constraints." },
+  { title: "Open by default", text: "Code, data, methods and decisions are public, and everything is dedicated to the public domain." },
+];
+---
+
+<BaseLayout title="About" description="IROPO is an open-data animal-welfare project building a verifiable source of truth on animal cruelty from official records.">
+  <PageHeader
+    eyebrow="About"
+    title="About IROPO"
+    lede="IROPO, the International Registry of Pet Offenders, is an open-data animal-welfare project. It gathers public and official records about animal cruelty into a single, verifiable source of truth for advocates, shelters, rescues, journalists, policymakers and the public."
+    crumbs={[{ label: "About" }]}
+  />
+
+  <section class="section">
+    <div class="container split">
+      <div class="prose">
+        <h2 style="margin-top: 0">Mission</h2>
+        <p>
+          Give the public and the animal-welfare community a reliable, well-sourced record of animal
+          cruelty that supports accountability, safer adoptions and informed advocacy.
+        </p>
+        <h2>Vision</h2>
+        <p>
+          Become the standard reference that shelters, rescues, journalists and policymakers check
+          before making decisions about animal welfare and animal cruelty offenders.
+        </p>
+        <h2>Why it matters</h2>
+        <p>
+          Animal cruelty data already exists, but it is scattered across thousands of agencies,
+          incompatible formats and systems that are hard for the public to use. Since 2016 the FBI has
+          tracked animal cruelty as its own offense, but its data lives in large spreadsheets and
+          technical APIs. IROPO turns those sources into something anyone can explore, with the
+          sourcing visible at every step.
+        </p>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <h3>What IROPO is</h3>
+          <ul>
+            <li>A public, open-data project run by volunteers</li>
+            <li>A consolidated view of official animal cruelty statistics for every state</li>
+            <li>A directory of the law enforcement agencies that report them</li>
+            <li>A carefully designed foundation for a future registry of adjudicated cases</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What IROPO is not</h3>
+          <ul>
+            <li>A government agency or an official registry</li>
+            <li>A place to report suspected cruelty. Contact local animal control or police, or call 911 in an emergency</li>
+            <li>A source of allegations about individuals</li>
+            <li>Legal advice</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="values">
+    <div class="container">
+      <h2 id="values">Values</h2>
+      <div class="grid grid--3">
+        {values.map((v) => (<div class="card"><h3>{v.title}</h3><p class="muted">{v.text}</p></div>))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="plan">
+    <div class="container split">
+      <div class="prose">
+        <h2 id="plan" style="margin-top: 0">How IROPO will be sustained</h2>
+        <p>
+          The core registry and statistics will always be free and public. The
+          <a href={REPO_FILE("BUSINESS_PLAN.md")}>business plan</a> outlines how the project will fund
+          itself without compromising that:
+        </p>
+        <ul>
+          <li><strong>Grants</strong> from animal-welfare foundations, once fiscal sponsorship or nonprofit status is in place</li>
+          <li><strong>Donations and crowdfunding</strong> tied to concrete milestones, such as a verified public beta</li>
+          <li><strong>In-kind support</strong> such as nonprofit cloud credits and pro bono legal review</li>
+          <li><strong>Institutional data access</strong> for shelters, rescues and researchers who need bulk or structured data</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Legal and ethical considerations</h3>
+        <p class="small">
+          Because this project concerns identifiable people and alleged or adjudicated harm to animals,
+          contributors work conservatively: data must come from public, official or otherwise reviewable
+          records; accuracy, verification and provenance matter more than speed; any listing needs a
+          correction or removal path; and contributors stay mindful of privacy, defamation and
+          jurisdiction-specific legal risk.
+        </p>
+        <p class="small muted">These points are not legal advice.</p>
+        <p class="small">
+          License: <a href={REPO_FILE("LICENSE")}>CC0 1.0</a> · Community:
+          <a href={REPO_FILE("CODE_OF_CONDUCT.md")}>Code of conduct</a> · Code:
+          <a href={SITE.repo}>GitHub</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

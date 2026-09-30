@@ -1,0 +1,143 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { LATEST_TABLE_YEAR, national, stateByAbbr, states } from "../../lib/data";
+import { TYPE_LABELS, fmt } from "../../lib/format";
+import type { AgencyType } from "../../lib/types";
+
+const total = states.reduce((s, x) => s + x.agencies.directory, 0);
+const types = Object.entries(TYPE_LABELS).filter(([k]) => k !== "federal") as [AgencyType, string][];
+---
+
+<BaseLayout
+  title="Search law enforcement agencies"
+  description={`Search ${fmt(total)} U.S. law enforcement agencies by name, county or ORI and see the animal cruelty offenses each reported to the FBI.`}
+>
+  <PageHeader
+    eyebrow="Agencies"
+    title="Find a law enforcement agency"
+    lede={`Search ${fmt(total)} agencies in all 50 states and DC by name, city, county or ORI, and see how many animal cruelty offenses each reported to the FBI.`}
+    crumbs={[{ label: "Agencies" }]}
+  />
+
+  <section class="section">
+    <div class="container">
+      <form id="agency-search" class="search card" role="search">
+        <div class="field search__q">
+          <label for="q">Agency, city, county or ORI</label>
+          <input id="q" name="q" type="search" placeholder="e.g. Houston, Moore County, NC0630100" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="state">State</label>
+          <select id="state" name="state">
+            <option value="">All states</option>
+            {states.map((s) => <option value={s.abbr}>{s.name}</option>)}
+          </select>
+        </div>
+        <div class="field">
+          <label for="type">Type</label>
+          <select id="type" name="type">
+            <option value="">All types</option>
+            {types.map(([value, label]) => <option value={value}>{label}</option>)}
+          </select>
+        </div>
+        <label class="check search__cases"><input id="cases" type="checkbox" /> Recorded animal cruelty since 2020</label>
+      </form>
+
+      <p id="results-status" class="results-status" aria-live="polite"></p>
+      <ol id="results" class="results"></ol>
+
+      <noscript>
+        <p class="callout">Search needs JavaScript. You can still browse every agency from its <a href="/states/">state page</a>.</p>
+      </noscript>
+
+      <div id="default-results">
+        <h2 class="h3">Agencies reporting the most animal cruelty offenses in {LATEST_TABLE_YEAR}</h2>
+        <ol class="results">
+          {
+            national.top_agencies.slice(0, 12).map((a) => {
+              const st = stateByAbbr(a.state)!;
+              return (
+                <li class="result card">
+                  <a class="result__name" href={`/states/${st.slug}/agencies/#${a.ori ?? ""}`}>{a.name}</a>
+                  <p class="result__meta">
+                    <span class="mono">{a.ori ?? "No ORI"}</span>
+                    <span>{TYPE_LABELS[a.type]}</span>
+                    <span>{st.name}</span>
+                  </p>
+                  <p class="result__counts"><strong>{fmt(a.offenses)}</strong> in {LATEST_TABLE_YEAR}</p>
+                </li>
+              );
+            })
+          }
+        </ol>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import "../../scripts/agency-search";
+</script>
+
+<style>
+  .search {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: 1fr;
+    align-items: end;
+  }
+  @media (min-width: 48rem) {
+    .search {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    .search__cases {
+      grid-column: 1 / -1;
+    }
+  }
+  .search input[type="search"] {
+    width: 100%;
+  }
+  .results-status {
+    margin: var(--space-5) 0 var(--space-3);
+    color: var(--muted);
+    min-height: 1.5em;
+  }
+  .h3 {
+    font-size: var(--step-1);
+    margin-top: var(--space-5);
+  }
+  :global(.results) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  }
+  :global(.result) {
+    margin: 0 !important;
+    padding: var(--space-4) var(--space-5) !important;
+  }
+  :global(.result__name) {
+    font-weight: 700;
+    font-size: var(--step-0);
+  }
+  :global(.result__meta) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.9rem;
+    font-size: var(--step--1);
+    color: var(--muted);
+    margin: 0.35rem 0;
+  }
+  :global(.result__counts) {
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--text-2);
+  }
+  :global(.result__counts strong) {
+    color: var(--accent);
+    font-size: var(--step-0);
+  }
+</style>
