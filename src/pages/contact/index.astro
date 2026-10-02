@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { EMAIL, ISSUE_FORM } from "../../lib/site";
+---
+
+<BaseLayout
+  title="Contact"
+  description="How to reach IROPO: email the project, or use GitHub to suggest a data source, report a correction or volunteer."
+>
+  <PageHeader
+    eyebrow="Contact"
+    title="Contact IROPO"
+    lede="Email the project, or use GitHub to suggest a data source, report a correction or volunteer."
+    crumbs={[{ label: "Contact" }]}
+  />
+
+  <section class="section">
+    <div class="container split">
+      <div class="prose">
+        <h2 style="margin-top: 0">Email</h2>
+        <p>
+          For partnerships, press, legal expertise, questions about the data or anything that should
+          stay private, write to:
+        </p>
+        <p class="email">
+          <a data-user={EMAIL.user} data-tag={EMAIL.tag} data-domain={EMAIL.domain} hidden></a>
+          <noscript>Turn on JavaScript to see the email address, or use GitHub instead.</noscript>
+        </p>
+        <p class="callout callout--warn small">
+          <strong>IROPO cannot take reports about individuals.</strong> Please do not send names, tips
+          or allegations about specific people. To report suspected cruelty, contact local animal
+          control or police, or call 911 in an emergency.
+        </p>
+      </div>
+      <div class="card">
+        <h3>On GitHub</h3>
+        <p class="small">
+          Suggestions, corrections and offers of help are tracked in public, so please leave out
+          personal information.
+        </p>
+        <ul class="small">
+          <li><a href={ISSUE_FORM("data-source")}>Suggest a data source</a></li>
+          <li><a href={ISSUE_FORM("correction")}>Report a correction</a></li>
+          <li><a href={ISSUE_FORM("volunteer")}>Volunteer</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Join the address in the browser so it never appears whole in the HTML.
+  for (const link of document.querySelectorAll<HTMLAnchorElement>("a[data-domain]")) {
+    const { user, tag, domain } = link.dataset;
+    const address = user + "+" + tag + "@" + domain;
+    link.href = "mailto:" + address;
+    link.textContent = address;
+    link.hidden = false;
+  }
+</script>
+
+<style>
+  .email {
+    font-size: var(--step-1);
+    min-height: 1lh;
+  }
+  .email a {
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+</style>

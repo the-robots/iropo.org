@@ -37,6 +37,7 @@ Laws on animal cruelty, court records and personal data differ from country to c
 | [Coverage](https://iropo.org/coverage/) | The US coverage matrix: what data exists for each state and how complete it is |
 | [Sources](https://iropo.org/sources/) | Provenance, methodology, CSV and JSON downloads, and the reference library |
 | [Roadmap](https://iropo.org/roadmap/) | Phased plan with what is done and what comes next |
+| [Contact](https://iropo.org/contact/) | How to email the project, plus the GitHub forms for sources, corrections and volunteers |
 
 All data is available as CSV and static JSON (for example `https://iropo.org/data/states.json` or `https://iropo.org/data/agencies/NC.json`), dedicated to the public domain.
 
@@ -216,7 +217,7 @@ The [roadmap page](https://iropo.org/roadmap/) tracks the same milestones.
 ### Launch & outreach
 
 - [ ] Set up privacy-respecting analytics.
-- [x] Set up contact paths and feedback mechanisms (GitHub issue forms for sources, corrections and volunteers).
+- [x] Set up contact paths and feedback mechanisms (GitHub issue forms for sources, corrections and volunteers, and a [contact page](https://iropo.org/contact/)).
 - [ ] Promote the project across social media and relevant animal-welfare communities.
 - [ ] Establish an ongoing maintenance plan for reviews, corrections and archival decisions (the monthly data refresh is automated).
 - [x] Publish clear expectations for what has and has not been verified.
@@ -259,4 +260,4 @@ This project is licensed under [CC0-1.0](LICENSE). FBI data is a U.S. government
 
 ## Contact / community
 
-Use [GitHub issues](https://github.com/the-robots/iropo.org/issues) or pull requests. Additional channels can be added if the project adopts a mailing list, GitHub Discussions or another option.
+Email the project through the [contact page](https://iropo.org/contact/), or use [GitHub issues](https://github.com/the-robots/iropo.org/issues) and pull requests for anything that can be public. Additional channels can be added if the project adopts a mailing list, GitHub Discussions or another option.
