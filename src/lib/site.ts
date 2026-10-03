@@ -7,12 +7,6 @@ export const SITE = {
   repo: "https://github.com/the-robots/iropo.org",
 };
 
-/**
- * The project's email address in parts. The contact page joins them in the browser, so the
- * complete address never appears in the repository or the HTML, which deters simple scrapers.
- */
-export const EMAIL = { user: "melanie.stewart", tag: "iropo", domain: "gmail.com" };
-
 export const REPO_FILE = (path: string) => `${SITE.repo}/blob/main/${encodeURI(path)}`;
 export const REPO_TREE = (path: string) => `${SITE.repo}/tree/main/${encodeURI(path)}`;
 /** Link to one of the issue forms in .github/ISSUE_TEMPLATE. */

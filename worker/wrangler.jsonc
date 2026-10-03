@@ -1,0 +1,28 @@
+// Contact form backend for iropo.org. See "Contact form" in the README to deploy it.
+{
+  "name": "iropo-contact",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+
+  // Only the form endpoint runs here. Every other path goes to GitHub Pages through Cloudflare.
+  "routes": [{ "pattern": "iropo.org/api/*", "zone_name": "iropo.org" }],
+
+  // No *.workers.dev or preview URLs: they would expose the account's workers.dev subdomain.
+  "workers_dev": false,
+  "preview_urls": false,
+
+  // Email Routing delivers to verified destination addresses for free. The destination is the
+  // CONTACT_TO secret (set with `wrangler secret put`), so it is never committed.
+  "send_email": [{ "name": "EMAIL", "allowed_sender_addresses": ["form@iropo.org"] }],
+
+  // At most 5 messages a minute from one IP address, counted per Cloudflare location.
+  "ratelimits": [{ "name": "LIMITER", "namespace_id": "47676", "simple": { "limit": 5, "period": 60 } }],
+
+  "vars": {
+    "CONTACT_FROM": "form@iropo.org",
+    "ALLOWED_ORIGINS": "https://iropo.org,https://www.iropo.org"
+  },
+
+  // Keep error logs, but skip per-request invocation logs so visitors' request details aren't kept.
+  "observability": { "enabled": true, "logs": { "enabled": true, "invocation_logs": false } }
+}

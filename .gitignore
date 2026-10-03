@@ -17,6 +17,9 @@ node_modules/
 dist/
 .astro/
 
+# Cloudflare Wrangler local state
+.wrangler/
+
 # Pipeline download cache (raw FBI files are re-downloadable; processed data is committed)
 data/cache/
 

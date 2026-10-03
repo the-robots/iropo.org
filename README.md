@@ -37,7 +37,7 @@ Laws on animal cruelty, court records and personal data differ from country to c
 | [Coverage](https://iropo.org/coverage/) | The US coverage matrix: what data exists for each state and how complete it is |
 | [Sources](https://iropo.org/sources/) | Provenance, methodology, CSV and JSON downloads, and the reference library |
 | [Roadmap](https://iropo.org/roadmap/) | Phased plan with what is done and what comes next |
-| [Contact](https://iropo.org/contact/) | How to email the project, plus the GitHub forms for sources, corrections and volunteers |
+| [Contact](https://iropo.org/contact/) | A contact form that emails the project, plus the GitHub forms for sources, corrections and volunteers |
 
 All data is available as CSV and static JSON (for example `https://iropo.org/data/states.json` or `https://iropo.org/data/agencies/NC.json`), dedicated to the public domain.
 
@@ -78,6 +78,7 @@ An **ORI** is a nine-character **Originating Agency Identifier** used in NCIC an
 | Path | Purpose |
 | --- | --- |
 | `src/` | Astro website: pages, components, charts, styles and client scripts |
+| `worker/` | Cloudflare Worker behind the contact form, and its tests |
 | `public/` | Static assets (favicon, social image, `CNAME`, `robots.txt`) |
 | `pipeline/` | Python data pipeline (`iropo-data` CLI) and its tests |
 | `data/processed/` | Source-of-truth datasets built by the pipeline and read by the site |
@@ -112,13 +113,28 @@ The site reads only `data/processed/`, so you can work on it without running the
 ### Deployment and automation
 
 - **Deploy site** builds and publishes to GitHub Pages on every push to `main`.
-- **CI** runs the pipeline's lint, tests and data validation plus the site's type check and build on pull requests.
+- **CI** runs the pipeline's lint, tests and data validation plus the site's type check and build, and type-checks and tests the contact form Worker, on pull requests.
 - **Refresh FBI data** runs monthly (and on demand), rebuilds `data/processed` and opens a pull request with any changes. It requires *Allow GitHub Actions to create and approve pull requests* in the repository's Actions settings, and optionally an `FBI_API_KEY` secret.
+
+### Contact form
+
+The site is static, so the [contact form](https://iropo.org/contact/) posts to a small Cloudflare Worker in [`worker/`](worker). iropo.org's DNS is on Cloudflare, which proxies the site from GitHub Pages and runs the Worker on `iropo.org/api/*` only. The Worker checks each message (allowed origin, field validation, a honeypot field, a minimum fill time, a link limit and a per-IP rate limit), then emails it through Cloudflare Email Routing with the sender as Reply-To. It stores nothing. Without JavaScript the form still works: the Worker redirects to `/contact/sent/` or shows an error page.
+
+Messages go to the Worker's `CONTACT_TO` secret, which must be a verified destination address in Email Routing. The Worker is deployed by hand:
+
+```bash
+cd worker
+npx wrangler@4 login                      # once
+npx wrangler@4 deploy
+npx wrangler@4 secret put CONTACT_TO      # only when the destination changes
+node --test "test/*.test.mjs"             # unit tests (Node 23.6+)
+```
 
 ## Security and secrets
 
 - Never commit API keys, access tokens, account IDs or personal account email addresses.
 - `FBI_API_KEY` is optional. Use a local `.env` file (see `.env.example`) for development and a GitHub Actions secret for automation.
+- The contact form's destination address lives only in the Worker's `CONTACT_TO` secret. Never commit it.
 - Never commit unverified records about individuals to this public repository.
 
 ## Data flow and growth plan
@@ -217,7 +233,7 @@ The [roadmap page](https://iropo.org/roadmap/) tracks the same milestones.
 ### Launch & outreach
 
 - [ ] Set up privacy-respecting analytics.
-- [x] Set up contact paths and feedback mechanisms (GitHub issue forms for sources, corrections and volunteers, and a [contact page](https://iropo.org/contact/)).
+- [x] Set up contact paths and feedback mechanisms (GitHub issue forms for sources, corrections and volunteers, and a [contact form](https://iropo.org/contact/)).
 - [ ] Promote the project across social media and relevant animal-welfare communities.
 - [ ] Establish an ongoing maintenance plan for reviews, corrections and archival decisions (the monthly data refresh is automated).
 - [x] Publish clear expectations for what has and has not been verified.
@@ -260,4 +276,4 @@ This project is licensed under [CC0-1.0](LICENSE). FBI data is a U.S. government
 
 ## Contact / community
 
-Email the project through the [contact page](https://iropo.org/contact/), or use [GitHub issues](https://github.com/the-robots/iropo.org/issues) and pull requests for anything that can be public. Additional channels can be added if the project adopts a mailing list, GitHub Discussions or another option.
+Send the project a message with the [contact form](https://iropo.org/contact/), or use [GitHub issues](https://github.com/the-robots/iropo.org/issues) and pull requests for anything that can be public. Additional channels can be added if the project adopts a mailing list, GitHub Discussions or another option.
