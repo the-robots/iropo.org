@@ -9,7 +9,7 @@ export default defineConfig({
   compressHTML: false,
   integrations: [
     sitemap({
-      filter: (page) => !page.includes("/404"),
+      filter: (page) => !page.includes("/404") && !page.includes("/contact/sent"),
     }),
   ],
   build: {

@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+---
+
+<BaseLayout title="Message sent" description="Your message to IROPO was sent." noindex>
+  <PageHeader
+    eyebrow="Contact"
+    title="Message sent"
+    lede="Thank you for writing to IROPO. Your message is on its way to the project."
+    crumbs={[{ href: "/contact/", label: "Contact" }, { label: "Message sent" }]}
+  >
+    <div class="btn-row" style="margin-top: var(--space-5)">
+      <a class="btn btn--primary" href="/">Back to the home page</a>
+      <a class="btn btn--ghost" href="/data/">Explore the data</a>
+    </div>
+  </PageHeader>
+</BaseLayout>

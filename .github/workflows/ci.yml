@@ -56,3 +56,9 @@ jobs:
       - run: npm run check
 
       - run: npm run build
+
+      - name: Type-check contact form Worker
+        run: npx tsc -p worker
+
+      - name: Test contact form Worker
+        run: node --test "worker/test/*.test.mjs"

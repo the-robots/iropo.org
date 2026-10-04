@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { CONTACT_LIMITS, CONTACT_TOPICS } from "../../lib/contact";
+import { ISSUE_FORM } from "../../lib/site";
+---
+
+<BaseLayout
+  title="Contact"
+  description="Send IROPO a message, or use GitHub to suggest a data source, report a correction or volunteer."
+>
+  <PageHeader
+    eyebrow="Contact"
+    title="Contact IROPO"
+    lede="Send the project a message, or use GitHub to suggest a data source, report a correction or volunteer."
+    crumbs={[{ label: "Contact" }]}
+  />
+
+  <section class="section">
+    <div class="container split">
+      <div class="prose">
+        <h2 style="margin-top: 0">Send a message</h2>
+        <p>
+          For partnerships, press, legal expertise, questions about the data or anything that should
+          stay private. Messages go to the project by email and are never published.
+        </p>
+        <p class="callout callout--warn small">
+          <strong>IROPO cannot take reports about individuals.</strong> Please do not send names, tips
+          or allegations about specific people. To report suspected cruelty, contact local animal
+          control or police, or call 911 in an emergency.
+        </p>
+        <form class="stack" method="post" action="/api/contact" data-contact-form>
+          <div class="field">
+            <label for="contact-name">Name</label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              maxlength={CONTACT_LIMITS.name}
+            />
+          </div>
+          <div class="field">
+            <label for="contact-email">Email</label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              maxlength={CONTACT_LIMITS.email}
+            />
+          </div>
+          <div class="field">
+            <label for="contact-topic">Topic</label>
+            <select id="contact-topic" name="topic" required>
+              <option value="">Choose a topic</option>
+              {CONTACT_TOPICS.map((topic) => <option>{topic}</option>)}
+            </select>
+          </div>
+          <div class="field">
+            <label for="contact-message">Message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="7"
+              required
+              minlength={CONTACT_LIMITS.messageMin}
+              maxlength={CONTACT_LIMITS.message}></textarea>
+          </div>
+          <div class="trap" aria-hidden="true">
+            <label for="contact-website">Leave this field empty</label>
+            <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <input type="hidden" name="started" />
+          <div class="actions">
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="status small" role="status" data-contact-status></p>
+          </div>
+        </form>
+      </div>
+      <div class="card">
+        <h3>On GitHub</h3>
+        <p class="small">
+          Suggestions, corrections and offers of help are tracked in public, so please leave out
+          personal information.
+        </p>
+        <ul class="small">
+          <li><a href={ISSUE_FORM("data-source")}>Suggest a data source</a></li>
+          <li><a href={ISSUE_FORM("correction")}>Report a correction</a></li>
+          <li><a href={ISSUE_FORM("volunteer")}>Volunteer</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import "../../scripts/contact-form";
+</script>
+
+<style>
+  .trap {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3) var(--space-4);
+  }
+  .status {
+    margin: 0;
+  }
+  .status[data-state="success"] {
+    color: var(--brand-strong);
+    font-weight: 650;
+  }
+  .status[data-state="error"] {
+    color: var(--accent-strong);
+    font-weight: 650;
+  }
+</style>

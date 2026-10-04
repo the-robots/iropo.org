@@ -638,7 +638,9 @@ th[data-sort] button:focus-visible {
 }
 input[type="search"],
 input[type="text"],
-select {
+input[type="email"],
+select,
+textarea {
   font: inherit;
   font-size: var(--step-0);
   color: var(--text);
@@ -647,6 +649,10 @@ select {
   border-radius: var(--radius-sm);
   padding: 0.55rem 0.75rem;
   min-width: 0;
+}
+textarea {
+  line-height: 1.5;
+  resize: vertical;
 }
 input[type="search"] {
   min-width: min(100%, 20rem);

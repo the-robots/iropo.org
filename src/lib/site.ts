@@ -22,4 +22,5 @@ export const NAV = [
   { href: "/registry/", label: "Registry" },
   { href: "/sources/", label: "Sources" },
   { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
 ];
