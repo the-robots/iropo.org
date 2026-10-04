@@ -7,6 +7,11 @@ updates:
     groups:
       astro:
         patterns: ["astro", "@astrojs/*"]
+    ignore:
+      # @astrojs/check only supports TypeScript 5 and 6 (peer dependency), so a TypeScript 7
+      # update breaks `npm ci`. Remove this once @astrojs/check supports TypeScript 7.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: uv
     directory: /pipeline
