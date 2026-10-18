@@ -8,7 +8,7 @@
     "used_for": "ORIs, agency names and types, counties, coordinates and NIBRS status",
     "coverage": "51 jurisdictions (50 states and DC)",
     "license": "Public domain (U.S. federal government work)",
-    "retrieved_at": "2026-09-30T03:28:44Z",
+    "retrieved_at": "2026-10-18T13:25:29Z",
     "files": 51
   },
   {
@@ -20,7 +20,7 @@
     "used_for": "Offenses, clearances, population coverage and rates by month and year",
     "coverage": "2016 onward, national and 51 jurisdictions",
     "license": "Public domain (U.S. federal government work)",
-    "retrieved_at": "2026-09-30T03:29:23Z",
+    "retrieved_at": "2026-10-18T13:26:08Z",
     "files": 52
   },
   {
@@ -31,7 +31,7 @@
     "used_for": "Animal cruelty and total offenses reported by each agency, per year",
     "coverage": "2020-2025",
     "license": "Public domain (U.S. federal government work)",
-    "retrieved_at": "2026-09-30T03:29:40Z",
+    "retrieved_at": "2026-10-18T13:26:25Z",
     "checksums": {
       "2020-agencies.zip": "874cd7984276fb80f6476b029c966a826b14020abff73fcd717ced4611ce765b",
       "2021-agencies.zip": "e79732020cda3fd251b6016291017722bff65ae84b883b0290fa30cdc150f8ec",
@@ -49,7 +49,7 @@
     "used_for": "Demographics of known animal cruelty offenders compared with all offenses",
     "coverage": "2020-2025",
     "license": "Public domain (U.S. federal government work)",
-    "retrieved_at": "2026-09-30T03:29:41Z",
+    "retrieved_at": "2026-10-18T13:26:26Z",
     "checksums": {
       "2020-offenders.zip": "87535c2077783cbaf41a76eef264d231f91f0b54bbf06b6c9dcc505a59ba6806",
       "2021-offenders.zip": "1dc3ca5bc9c4e82ea4523de027cee4f6ae82a0659653f735dce5af2ca324b521",

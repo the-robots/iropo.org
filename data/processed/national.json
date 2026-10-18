@@ -3,21 +3,21 @@
   "series_first_year": 2016,
   "table_years": [2020,2021,2022,2023,2024,2025],
   "annual": [
-    {"year":2016,"months_reported":12,"offenses":379,"clearances":139,"coverage_pct":38.4,"population":323127513,"covered_population":124165259,"rate_per_100k":0.31,"clearance_rate":0.367},
-    {"year":2017,"months_reported":12,"offenses":3487,"clearances":1077,"coverage_pct":39.5,"population":329056355,"covered_population":129903119,"rate_per_100k":2.68,"clearance_rate":0.309},
-    {"year":2018,"months_reported":12,"offenses":5453,"clearances":1576,"coverage_pct":43.9,"population":330362587,"covered_population":144960982,"rate_per_100k":3.76,"clearance_rate":0.289},
-    {"year":2019,"months_reported":12,"offenses":11026,"clearances":2991,"coverage_pct":51.8,"population":331433049,"covered_population":171830909,"rate_per_100k":6.42,"clearance_rate":0.271},
-    {"year":2020,"months_reported":12,"offenses":12246,"clearances":3020,"coverage_pct":60.8,"population":332726731,"covered_population":202335372,"rate_per_100k":6.05,"clearance_rate":0.247},
-    {"year":2021,"months_reported":12,"offenses":18318,"clearances":4687,"coverage_pct":74.7,"population":335395039,"covered_population":250537948,"rate_per_100k":7.31,"clearance_rate":0.256},
-    {"year":2022,"months_reported":12,"offenses":21583,"clearances":5699,"coverage_pct":80.8,"population":336746447,"covered_population":272168627,"rate_per_100k":7.93,"clearance_rate":0.264},
-    {"year":2023,"months_reported":12,"offenses":23791,"clearances":6454,"coverage_pct":84.9,"population":338357687,"covered_population":287098614,"rate_per_100k":8.29,"clearance_rate":0.271},
-    {"year":2024,"months_reported":12,"offenses":26170,"clearances":7597,"coverage_pct":87.4,"population":343551384,"covered_population":300270744,"rate_per_100k":8.72,"clearance_rate":0.29},
-    {"year":2025,"months_reported":12,"offenses":26799,"clearances":8089,"coverage_pct":88.7,"population":345206793,"covered_population":306234939,"rate_per_100k":8.75,"clearance_rate":0.302}
+    {"year":2016,"months_reported":12,"offenses":379,"clearances":139,"coverage_pct":38.5,"population":323127513,"covered_population":124259184,"rate_per_100k":0.31,"clearance_rate":0.367},
+    {"year":2017,"months_reported":12,"offenses":3487,"clearances":1077,"coverage_pct":39.5,"population":329056355,"covered_population":129922533,"rate_per_100k":2.68,"clearance_rate":0.309},
+    {"year":2018,"months_reported":12,"offenses":5453,"clearances":1576,"coverage_pct":43.9,"population":330362587,"covered_population":145047928,"rate_per_100k":3.76,"clearance_rate":0.289},
+    {"year":2019,"months_reported":12,"offenses":11023,"clearances":2990,"coverage_pct":51.9,"population":331433049,"covered_population":171945924,"rate_per_100k":6.41,"clearance_rate":0.271},
+    {"year":2020,"months_reported":12,"offenses":12246,"clearances":3021,"coverage_pct":60.9,"population":332726731,"covered_population":202469947,"rate_per_100k":6.05,"clearance_rate":0.247},
+    {"year":2021,"months_reported":12,"offenses":18318,"clearances":4686,"coverage_pct":74.7,"population":335395039,"covered_population":250596933,"rate_per_100k":7.31,"clearance_rate":0.256},
+    {"year":2022,"months_reported":12,"offenses":21575,"clearances":5697,"coverage_pct":80.9,"population":336746447,"covered_population":272450424,"rate_per_100k":7.92,"clearance_rate":0.264},
+    {"year":2023,"months_reported":12,"offenses":23793,"clearances":6457,"coverage_pct":84.9,"population":338357687,"covered_population":287400528,"rate_per_100k":8.28,"clearance_rate":0.271},
+    {"year":2024,"months_reported":12,"offenses":26160,"clearances":7596,"coverage_pct":87.5,"population":343551384,"covered_population":300573790,"rate_per_100k":8.7,"clearance_rate":0.29},
+    {"year":2025,"months_reported":12,"offenses":26849,"clearances":8129,"coverage_pct":88.9,"population":345206793,"covered_population":306922976,"rate_per_100k":8.75,"clearance_rate":0.303}
   ],
   "monthly": {
     "start": "2016-01",
-    "offenses": [17,14,19,19,17,41,37,51,48,33,43,40,224,204,258,239,283,348,423,363,286,284,262,313,382,311,380,337,447,591,629,583,496,461,407,429,731,584,692,698,839,1037,1408,1217,1059,974,934,853,1038,979,939,763,981,1124,1347,1154,991,978,930,1022,1184,1311,1355,1377,1568,1918,1938,1908,1539,1427,1405,1388,1614,1373,1649,1523,1906,2215,2290,2106,1780,1682,1641,1804,1825,1604,1814,1862,2085,2277,2596,2400,1980,1881,1775,1692,2043,1870,1894,2026,2310,2552,2744,2635,2253,2187,1831,1825,2172,1772,2090,2054,2295,2587,2944,2498,2220,2244,1934,1989],
-    "clearances": [6,6,6,9,11,13,14,19,17,9,15,14,72,58,90,62,96,127,131,99,105,85,73,79,101,102,104,99,135,185,194,180,151,113,113,99,194,160,163,171,218,288,459,410,291,232,213,192,259,232,198,183,250,310,393,316,234,216,200,229,250,317,355,322,408,561,543,548,374,350,306,353,361,330,436,393,513,624,672,601,503,442,378,446,462,385,499,448,558,618,803,743,515,489,487,447,564,512,520,569,655,757,901,829,683,590,484,533,614,546,633,604,687,853,948,790,657,662,558,537]
+    "offenses": [17,14,19,19,17,41,37,51,48,33,43,40,224,204,258,239,283,348,423,363,286,284,262,313,382,311,380,337,447,591,629,583,496,461,407,429,731,584,692,698,839,1036,1408,1216,1059,974,933,853,1038,978,939,763,980,1124,1347,1155,992,978,930,1022,1184,1311,1355,1377,1568,1917,1938,1908,1539,1428,1405,1388,1614,1373,1647,1523,1905,2215,2290,2105,1780,1681,1641,1801,1826,1605,1814,1862,2085,2277,2596,2400,1979,1882,1775,1692,2042,1870,1892,2026,2308,2550,2744,2636,2253,2186,1830,1823,2176,1774,2092,2055,2302,2588,2945,2504,2233,2247,1939,1994],
+    "clearances": [6,6,6,9,11,13,14,19,17,9,15,14,72,58,90,62,96,127,131,99,105,85,73,79,101,102,104,99,135,185,194,180,151,113,113,99,194,160,163,171,218,288,459,409,291,232,213,192,259,231,198,183,250,310,393,317,235,216,200,229,249,317,355,322,408,561,543,548,374,350,306,353,361,330,435,393,512,624,672,601,503,441,379,446,462,387,499,448,558,618,803,743,515,490,487,447,565,512,519,569,653,757,901,830,684,589,484,533,614,546,637,606,690,857,950,794,667,663,561,544]
   },
   "tables": {
     "2020": {"agencies":7382,"with_cases":1741,"offenses":10750,"states":45},

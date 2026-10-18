@@ -135,7 +135,7 @@
     {"name":"District 1 Narcotics Task Force","type":"other","table_name":"District 1 Narcotics Task Force","animal_cruelty":{"2020":0,"2021":0,"2022":0,"2023":0,"2024":0},"total_offenses":{"2020":14,"2021":13,"2022":8,"2023":8,"2024":7},"match":"none"},
     {"name":"District 8 Narcotics Task Force","type":"other","table_name":"District 8 Narcotics Task Force","animal_cruelty":{"2021":0,"2022":0,"2023":0,"2024":0},"total_offenses":{"2021":53,"2022":28,"2023":38,"2024":39},"match":"none"},
     {"ori":"OK070015A","name":"District Attorneys Council: Drug Task Force 1","type":"other","county":"Texas","nibrs":true,"nibrs_since":"2018-10-01","table_name":"District Attorneys Council, Drug Task Force 1","animal_cruelty":{"2025":0},"total_offenses":{"2025":7},"match":"exact"},
-    {"ori":"OK040015A","name":"District Attorneys Council: Drug Task Force 16","type":"other_state","nibrs":false},
+    {"ori":"OK040015A","name":"District Attorneys Council: Drug Task Force 16","type":"other_state","nibrs":true,"nibrs_since":"2026-01-01"},
     {"ori":"OK063015A","name":"District Attorneys Council: Drug Task Force 23","type":"other","county":"Pottawatomie","nibrs":true,"nibrs_since":"2024-06-01","table_name":"District Attorneys Council, Drug Task Force 23","animal_cruelty":{"2025":0},"total_offenses":{"2025":54},"match":"exact"},
     {"ori":"OK068015A","name":"District Attorneys Council: Drug Task Force 27","type":"other_state","nibrs":true,"nibrs_since":"2025-04-01"},
     {"ori":"OK033013A","name":"District Attorneys Council: Drug Task Force 3","type":"other","county":"Jackson","nibrs":true,"nibrs_since":"2023-01-01","table_name":"District Attorneys Council, Drug Task Force 3","animal_cruelty":{"2025":0},"total_offenses":{"2025":6},"match":"exact"},
