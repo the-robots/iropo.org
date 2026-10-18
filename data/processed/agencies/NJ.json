@@ -393,7 +393,7 @@
     {"ori":"NJ0201200","name":"Plainfield Police Department","type":"city","county":"Union","lat":40.61861,"lon":-74.41885,"nibrs":false},
     {"ori":"NJ0121800","name":"Plainsboro Township Police Department","type":"city","county":"Middlesex","lat":40.43959,"lon":-74.40758,"nibrs":true,"nibrs_since":"2025-01-01","table_name":"Plainsboro Township","population":24663,"animal_cruelty":{"2025":0},"total_offenses":{"2025":185},"match":"normalized"},
     {"ori":"NJ0011900","name":"Pleasantville Police Department","type":"city","county":"Atlantic","lat":39.46935,"lon":-74.63376,"nibrs":true,"nibrs_since":"2023-07-01","table_name":"Pleasantville","population":21008,"animal_cruelty":{"2024":0,"2025":0},"total_offenses":{"2024":997,"2025":895},"match":"normalized"},
-    {"ori":"NJ0152300","name":"Plumsted Township Police Department","type":"city","county":"Ocean","lat":40.06676,"lon":-74.52342,"nibrs":false},
+    {"ori":"NJ0152300","name":"Plumsted Township Police Department","type":"city","county":"Ocean","lat":40.06676,"lon":-74.52342,"nibrs":true,"nibrs_since":"2025-01-01"},
     {"ori":"NJ0212000","name":"Pohatcong Township Police Department","type":"city","county":"Warren","lat":40.64938,"lon":-75.14311,"nibrs":false},
     {"ori":"NJ0152500","name":"Point Pleasant Beach Police Department","type":"city","county":"Ocean","lat":40.08722,"lon":-74.04756,"nibrs":true,"nibrs_since":"2021-05-01","table_name":"Point Pleasant Beach","population":4993,"animal_cruelty":{"2022":0,"2023":0,"2024":0,"2025":1},"total_offenses":{"2022":243,"2023":318,"2024":318,"2025":270},"match":"normalized"},
     {"ori":"NJ0152400","name":"Point Pleasant Police Department","type":"city","county":"Ocean","lat":40.07197,"lon":-74.06825,"nibrs":false},

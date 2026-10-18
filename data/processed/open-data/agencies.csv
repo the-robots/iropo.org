@@ -13,6 +13,7 @@ ALDPS0000,Alabama Highway Patrol Department of Public Safety Headquarters,state_
 AL0013200,Alabama Historic Ironworks Commission Police,other_state,AL,Jefferson,33.55344,-86.89654,yes,2021-01-01
 ALLEA0000,Alabama Law Enforcement Agency,other_state,AL,,,,yes,2021-01-01
 ALSBI0000,"Alabama Law Enforcement Agency, State Bureau of Investigation Headquarters",other_state,AL,,,,yes,2019-01-01
+AL0021800,Alabama Port Authority,other_state,AL,Mobile,,,yes,2025-01-01
 AL0030600,Alabama State University,university,AL,Montgomery,32.20365,-86.20383,yes,2022-01-01
 AL0590400,Alabaster Police Department,city,AL,Shelby,33.24704,-86.81563,yes,2020-08-01
 AL0500100,Albertville Police Department,city,AL,Marshall,34.30956,-86.32167,yes,2022-09-01
@@ -342,7 +343,7 @@ AL0560000,Randolph County Sheriff's Office,county,AL,Randolph,33.29648,-85.46407
 AL0330300,Red Bay Police Department,city,AL,Franklin,34.44199,-87.84281,yes,2020-01-01
 AL0230500,Red Level Police Department,city,AL,Covington,31.24399,-86.44872,yes,2019-01-01
 AL0540300,Reform Police Department,city,AL,Pickens,33.29681,-88.09688,yes,2021-01-01
-AL0210400,Reid State Technical College,university,AL,Conecuh,,,yes,2022-09-01
+AL0210400,Reid State Technical College,university,AL,Conecuh,,,yes,2021-01-01
 AL0210300,Repton Police Department,city,AL,Conecuh,31.42829,-86.99203,yes,2021-08-01
 AL0230700,River Falls Police Department,city,AL,Covington,31.24399,-86.44872,yes,2020-03-01
 AL0580700,Riverside Police Department,city,AL,St Clair,33.71296,-86.31566,yes,2020-08-01
@@ -363,7 +364,7 @@ AL0270100,Selma Police Department,city,AL,Dallas,32.33354,-87.11436,yes,2021-03-
 AL0022200,Semmes Police Department,city,AL,Mobile,,,yes,2022-01-01
 AL0200100,Sheffield Police Department,city,AL,Colbert,34.70311,-87.80146,yes,2020-01-01
 AL0590000,Shelby County Sheriff's Office,county,AL,Shelby,33.26294,-86.6781,yes,2018-01-01
-AL0630900,Shelton State Community College,university,AL,Tuscaloosa,,,yes,2024-07-01
+AL0630900,Shelton State Community College,university,AL,Tuscaloosa,,,yes,2021-01-01
 AL0460600,Shorter Police Department,city,AL,Macon,32.38703,-85.69289,yes,2022-01-01
 AL0050700,Silverhill Police Department,city,AL,Baldwin,30.65922,-87.74607,yes,2020-01-01
 AL0390900,Skyline Police Department,city,AL,Jackson,34.76409,-85.97996,yes,2021-01-01
@@ -401,7 +402,7 @@ AL0160200,Thomasville Police Department,city,AL,Clarke,31.68552,-87.81862,yes,20
 AL0140400,Thorsby Police Department,city,AL,Chilton,32.85405,-86.72661,yes,2021-01-01
 AL0420200,Town Creek Police Department,city,AL,Lawrence,34.52978,-87.32187,yes,2020-01-01
 AL0012500,Trafford Police Department,city,AL,Jefferson,33.55344,-86.89654,yes,2020-12-01
-AL0032300,Trenholm State Community College,university,AL,Montgomery,,,yes,2023-07-01
+AL0032300,Trenholm State Community College,university,AL,Montgomery,,,yes,2021-01-01
 AL0470600,Triana Police Department,city,AL,Madison,34.58361,-86.73393,yes,2020-01-01
 AL0520700,Trinity Police Department,city,AL,"Lawrence, Morgan",34.61078,-87.08653,yes,2020-01-01
 AL0550100,Troy Police Department,city,AL,Pike,31.79865,-85.9416,yes,2016-03-01
@@ -1128,7 +1129,7 @@ CA0130300,Calipatria Police Department,city,CA,Imperial,33.04082,-115.3554,yes,2
 CA0280100,Calistoga Police Department,city,CA,Napa,38.57867,-122.57926,yes,2022-07-01
 CA0560100,Camarillo Police Department,city,CA,Ventura,34.26795,-119.21287,yes,2024-01-01
 CA0430200,Campbell Police Department,city,CA,Santa Clara,37.28805,-121.94482,yes,2023-04-01
-CA033410X,Canyon Lake Police Department,city,CA,Riverside,33.67169,-117.26131,yes,2026-01-01
+CA033A200,Canyon Lake Police Department,city,CA,Riverside,,,yes,2026-01-01
 CA0440100,Capitola Police Department,city,CA,Santa Cruz,36.97404,-121.95333,yes,2023-11-01
 CA0370100,Carlsbad Police Department,city,CA,San Diego,33.13735,-117.26598,yes,2021-01-01
 CA0270100,Carmel Police Department,city,CA,Monterey,36.24011,-121.31557,yes,2021-02-01
@@ -1573,7 +1574,7 @@ CA037A700,Palomar Community College,university,CA,San Diego,,,yes,2025-07-01
 CA0195100,Palos Verdes Estates Police Department,city,CA,Los Angeles,34.1964,-118.26186,yes,2021-01-01
 CA0040500,Paradise Police Department,city,CA,Butte,39.75336,-121.62395,yes,2022-02-01
 CA0195200,Paramount Police Department,city,CA,Los Angeles,34.06067,-118.16788,no,
-CA0101100,Parlier Police Department,city,CA,Fresno,36.76101,-119.65502,no,
+CA0101100,Parlier Police Department,city,CA,Fresno,36.76101,-119.65502,yes,2026-06-01
 CA0190R00,Pasadena Community College,university,CA,Los Angeles,34.1964,-118.26186,yes,2023-12-01
 CA0195300,Pasadena Police Department,city,CA,Los Angeles,34.14944,-118.1443,yes,2022-06-01
 CA0400400,Paso Robles Police Department,city,CA,San Luis Obispo,35.62364,-120.68984,yes,2022-10-01
@@ -1673,6 +1674,7 @@ CA0074000,San Ramon Police Department,city,CA,Contra Costa,,,yes,2022-07-01
 CA0270900,Sand City Police Department,city,CA,Monterey,36.61363,-121.84962,yes,2021-01-01
 CA0101300,Sanger Police Department,city,CA,Fresno,36.70591,-119.56111,yes,2026-06-01
 CA0301900,Santa Ana Police Department,city,CA,Orange,33.67569,-117.77721,yes,2022-08-01
+CA0304600,Santa Ana Unified School District,other,CA,Orange,,,no,
 CA0420000,Santa Barbara County Sheriff's Office,county,CA,Santa Barbara,34.53725,-120.03791,yes,2025-10-01
 CA0420300,Santa Barbara Police Department,city,CA,Santa Barbara,34.53725,-120.03791,yes,2022-07-01
 CA0430000,Santa Clara County Sheriff's Office,county,CA,Santa Clara,37.3542,-121.90724,yes,2026-01-01
@@ -1822,7 +1824,7 @@ CA0562400,Ventura County Community College District,university,CA,Ventura,,,yes,
 CA0560000,Ventura County Sheriff's Office,county,CA,Ventura,34.26795,-119.21287,yes,2024-01-01
 CA0560800,Ventura Police Department,city,CA,Ventura,34.26,-119.2226,yes,2022-07-01
 CA0197300,Vernon Police Department,city,CA,Los Angeles,34.1964,-118.26186,yes,2021-02-01
-CA0365400,Victor Valley Union High School District,other,CA,San Bernardino,37.79876,-122.24971,no,
+CA0365400,Victor Valley Union High School District,other,CA,San Bernardino,37.79876,-122.24971,yes,2026-01-01
 CA0361200,Victorville Police Department,city,CA,San Bernardino,34.85722,-116.1812,no,
 CA0302300,Villa Park Police Department,city,CA,Orange,33.67569,-117.77721,yes,2021-05-01
 CA0540700,Visalia Police Department,city,CA,Tulare,36.32839,-119.29881,yes,2022-01-01
@@ -2794,7 +2796,7 @@ FL0159000,Highway Patrol: Dixie County,state_police,FL,Dixie,29.5809,-83.19567,y
 FL0169000,Highway Patrol: Duval County,state_police,FL,Duval,30.29793,-81.77027,yes,2026-02-01
 FL0179000,Highway Patrol: Escambia County,state_police,FL,Escambia,30.61165,-87.33895,yes,2026-02-01
 FL0189000,Highway Patrol: Flagler County,state_police,FL,Flagler,28.54372,-81.31053,yes,2026-02-01
-FL0199000,Highway Patrol: Franklin County,state_police,FL,Franklin,29.81018,-84.79917,no,
+FL0199000,Highway Patrol: Franklin County,state_police,FL,Franklin,29.81018,-84.79917,yes,2026-02-01
 FL0209000,Highway Patrol: Gadsden County,state_police,FL,Gadsden,30.57917,-84.61278,yes,2026-02-01
 FL0219000,Highway Patrol: Gilchrist County,state_police,FL,Gilchrist,29.72346,-82.7958,yes,2026-02-01
 FL0229000,Highway Patrol: Glades County,state_police,FL,Glades,27.44632,-82.49824,no,
@@ -2814,8 +2816,8 @@ FL0359000,Highway Patrol: Lake County,state_police,FL,Lake,28.76411,-81.71228,ye
 FL0369000,Highway Patrol: Lee County,state_police,FL,Lee,26.59156,-81.86315,no,
 FL0379000,Highway Patrol: Leon County,state_police,FL,Leon,30.45313,-84.24729,yes,2026-02-01
 FL0389000,Highway Patrol: Levy County,state_police,FL,Levy,30.33491,-81.66451,yes,2026-02-01
-FL0399000,Highway Patrol: Liberty County,state_police,FL,Liberty,30.45313,-84.24729,no,
-FL0409000,Highway Patrol: Madison County,state_police,FL,Madison,30.44723,-83.47042,no,
+FL0399000,Highway Patrol: Liberty County,state_police,FL,Liberty,30.45313,-84.24729,yes,2026-02-01
+FL0409000,Highway Patrol: Madison County,state_police,FL,Madison,30.44723,-83.47042,yes,2026-02-01
 FL0419000,Highway Patrol: Manatee County,state_police,FL,Manatee,27.48139,-82.36578,yes,2026-02-01
 FL0429000,Highway Patrol: Marion County,state_police,FL,Marion,29.18499,-82.10319,yes,2026-02-01
 FL0439000,Highway Patrol: Martin County,state_police,FL,Martin,27.48004,-80.34986,yes,2026-02-01
@@ -2838,7 +2840,7 @@ FL0559000,Highway Patrol: St. Johns County,state_police,FL,St Johns,29.89065,-81
 FL0569000,Highway Patrol: St. Lucie County,state_police,FL,St Lucie,27.48004,-80.34986,yes,2026-02-01
 FL0609000,Highway Patrol: Sumter County,state_police,FL,Sumter,28.71429,-82.07471,yes,2026-02-01
 FL0619000,Highway Patrol: Suwannee County,state_police,FL,Suwannee,30.18924,-82.99275,yes,2026-02-01
-FL0629000,Highway Patrol: Taylor County,state_police,FL,Taylor,30.00991,-83.60948,no,
+FL0629000,Highway Patrol: Taylor County,state_police,FL,Taylor,30.00991,-83.60948,yes,2026-02-01
 FL0639000,Highway Patrol: Union County,state_police,FL,Union,30.05428,-82.36692,no,
 FL0649000,Highway Patrol: Volusia County,state_police,FL,Volusia,29.0577,-81.1618,yes,2026-02-01
 FL0659000,Highway Patrol: Wakulla County,state_police,FL,Wakulla,30.45313,-84.24729,yes,2026-02-01
@@ -2958,13 +2960,13 @@ FL0460300,Niceville Police Department,city,FL,Okaloosa,30.51834,-86.48268,yes,20
 FL0131700,North Bay Village Police Department,city,FL,Miami-dade,25.61049,-80.49904,yes,2022-07-01
 FL0062300,North Lauderdale Police Department,city,FL,Broward,26.19354,-80.47668,no,
 FL0131000,North Miami Beach Police Department,city,FL,Miami-dade,25.61049,-80.49904,yes,2023-01-01
-FL0131800,North Miami Police Department,city,FL,Miami-dade,25.88943,-80.18439,no,
+FL0131800,North Miami Police Department,city,FL,Miami-dade,25.88943,-80.18439,yes,2025-01-01
 FL0502300,North Palm Beach Police Department,city,FL,Palm Beach,26.64576,-80.44867,yes,2021-01-01
 FL0580300,North Port Police Department,city,FL,Sarasota,27.18439,-82.36584,yes,2025-03-01
 FL0522600,North Redington Beach Police Department,city,FL,Pinellas,27.90312,-82.73952,yes,2021-01-01
 FL0031300,Northwest Florida Beaches International Airport,other,FL,Bay,30.20508,-85.68739,no,
 FL0461300,Northwest Florida State College,university,FL,Okaloosa,,,no,
-FL0640900,Oak Hill Police Department,city,FL,Volusia,28.85927,-80.85097,no,
+FL0640900,Oak Hill Police Department,city,FL,Volusia,28.85927,-80.85097,yes,2026-09-01
 FL0062400,Oakland Park Police Department,city,FL,Broward,26.19354,-80.47668,no,
 FL0480800,Oakland Police Department,city,FL,Orange,28.51443,-81.3233,yes,2026-01-01
 FL0420100,Ocala Police Department,city,FL,Marion,29.18327,-82.14036,yes,2021-01-01
@@ -4761,7 +4763,7 @@ IL0601500,Venice Police Department,city,IL,Madison,38.82708,-89.90019,no,
 IL0920000,Vermilion County Sheriff's Office,county,IL,Vermilion,40.12253,-87.62982,yes,2021-01-01
 IL0492600,Vernon Hills Police Department,city,IL,Lake,42.23807,-87.95805,yes,2022-01-01
 IL0440100,Vienna Police Department,city,IL,Johnson,37.41625,-88.89602,yes,2023-01-01
-IL0210600,Villa Grove Police Department,city,IL,Douglas,39.76608,-88.22287,no,
+IL0210600,Villa Grove Police Department,city,IL,Douglas,39.76608,-88.22287,yes,2026-01-01
 IL0221700,Villa Park Police Department,city,IL,Dupage,41.88882,-87.98179,yes,2021-05-01
 IL0660700,Viola Police Department,city,IL,Mercer,,,no,
 IL0591000,Virden Police Department,city,IL,"Macoupin, Sangamon",39.2659,-89.92634,yes,2021-07-01
@@ -5424,6 +5426,7 @@ IA0970200,Sergeant Bluff Police Department,city,IA,Woodbury,42.39322,-96.0533,ye
 IA0830000,Shelby County Sheriff's Office,county,IA,Shelby,41.6577,-95.31791,yes,1992-02-01
 IA0710300,Sheldon Police Department,city,IA,"O'brien, Sioux",43.08375,-95.62562,yes,1992-01-01
 IA0730200,Shenandoah Police Department,city,IA,Page,40.76593,-95.36995,yes,1992-01-01
+IA0540100,Sigourney Police Department,city,IA,Keokuk,41.33371,-92.20513,yes,2013-01-01
 IA0840500,Sioux Center Police Department,city,IA,Sioux,43.08015,-96.17705,yes,1992-09-01
 IA0970100,Sioux City Police Department,city,IA,"Plymouth, Woodbury",42.49636,-96.40646,yes,1992-01-01
 IA0840000,Sioux County Sheriff's Office,county,IA,Sioux,43.01772,-96.07656,yes,1992-01-01
@@ -5438,7 +5441,6 @@ IA0850300,Story City Police Department,city,IA,Story,42.03754,-93.46609,yes,1992
 IA0850000,Story County Sheriff's Office,county,IA,Story,42.03754,-93.46609,yes,1992-01-01
 IA0090100,Sumner Police Department,city,IA,"Bremer, Fayette",,,yes,2020-01-01
 IA0860000,Tama County Sheriff's Office,county,IA,Tama,42.07485,-92.52941,yes,1992-01-01
-IA0860200,Tama Police Department,city,IA,Tama,42.07485,-92.52941,yes,1992-01-01
 IA0870000,Taylor County Sheriff's Office,county,IA,Taylor,40.73795,-94.69711,yes,1992-01-01
 IA0160100,Tipton Police Department,city,IA,Cedar,41.76907,-91.12984,yes,1992-03-01
 IA0860100,Toledo Police Department,city,IA,Tama,41.99561,-92.58011,yes,2012-01-01
@@ -6150,7 +6152,7 @@ KY0590700,Ludlow Police Department,city,KY,Kenton,38.93048,-84.53349,yes,2009-01
 KY0480400,Lynch Police Department,city,KY,Harlan,36.85922,-83.2215,yes,2009-01-01
 KY0565000,Lyndon Police Department,city,KY,Jefferson,38.18953,-85.65762,yes,2009-01-01
 KY0720000,Lyon County Sheriff's Office,county,KY,Lyon,37.02398,-88.08339,yes,2009-01-01
-KY0761000,Madison County Public Schools,other,KY,Madison,,,no,
+KY0761000,Madison County Public Schools,other,KY,Madison,,,yes,2026-01-01
 KY0760000,Madison County Sheriff's Office,county,KY,Madison,37.74488,-84.27752,yes,2009-01-01
 KY0540100,Madisonville Police Department,city,KY,Hopkins,37.32837,-87.50038,yes,2007-01-01
 KY0770500,Magoffin County Schools,other,KY,Magoffin,,,no,
@@ -8127,7 +8129,7 @@ MN0370000,Lac qui Parle County Sheriff's Office,county,MN,Lac Qui Parle,45.01436
 MN0790100,Lake City Police Department,city,MN,"Goodhue, Wabasha",44.28969,-92.23334,yes,2018-11-01
 MN0380000,Lake County Sheriff's Office,county,MN,Lake,47.02179,-91.67129,yes,2020-07-01
 MN0070500,Lake Crystal Police Department,city,MN,Blue Earth,44.03371,-94.06401,yes,2018-04-01
-MN0390000,Lake of the Woods County Sheriff's Office,county,MN,Lake Of The Woods,48.70967,-94.58508,no,
+MN0390000,Lake of the Woods County Sheriff's Office,county,MN,Lake Of The Woods,48.70967,-94.58508,yes,2025-12-01
 MN0030400,Lake Park Police Department,city,MN,Becker,,,yes,2017-02-01
 MN0110800,Lake Shore Police Department,city,MN,Cass,46.49111,-94.07121,yes,2019-02-01
 MN0320200,Lakefield Police Department,city,MN,Jackson,43.67752,-95.17208,yes,2019-02-01
@@ -8443,10 +8445,10 @@ MS0300600,Gautier Police Department,city,MS,Jackson,30.39358,-88.66361,yes,2020-
 MS0200000,George County Sheriff's Office,county,MS,George,30.85543,-88.64227,yes,2019-01-01
 MS0030100,Gloster Police Department,city,MS,Amite,31.20393,-90.79554,no,
 MS0450700,Gluckstadt Police Department,city,MS,Madison,,,yes,2025-06-01
-MS0710400,Golden Police Department,city,MS,Tishomingo,,,no,
+MS0710400,Golden Police Department,city,MS,Tishomingo,,,yes,2025-10-01
 MS0210000,Greene County Sheriff's Office,county,MS,Greene,31.21285,-88.63481,yes,2022-01-01
 MS0760100,Greenville Police Department,city,MS,Washington,33.27313,-90.94443,no,
-MS0420100,Greenwood Police Department,city,MS,Leflore,33.54979,-90.29493,no,
+MS0420100,Greenwood Police Department,city,MS,Leflore,33.54979,-90.29493,yes,2026-01-01
 MS0220000,Grenada County Sheriff's Office,county,MS,Grenada,33.78531,-89.80379,yes,2020-01-01
 MS0220100,Grenada Police Department,city,MS,Grenada,33.78707,-89.80123,yes,2025-01-01
 MS0240200,Gulfport Police Department,city,MS,Harrison,30.36925,-89.08911,yes,2008-01-01
@@ -8473,7 +8475,7 @@ MS0670100,Indianola Police Department,city,MS,Sunflower,33.44991,-90.64602,no,
 MS0670500,Inverness Police Department,city,MS,Sunflower,33.60553,-90.59509,no,
 MS0280000,Issaquena County Sheriff's Office,county,MS,Issaquena,32.75498,-90.98855,no,
 MS0290200,Itawamba Community College,university,MS,Itawamba,34.28108,-88.36313,no,
-MS0290000,Itawamba County Sheriff's Office,county,MS,Itawamba,34.27285,-88.40914,no,
+MS0290000,Itawamba County Sheriff's Office,county,MS,Itawamba,34.27285,-88.40914,yes,2026-01-01
 MS0420200,Itta Bena Police Department,city,MS,Leflore,33.54979,-90.29493,no,
 MS0710100,Iuka Police Department,city,MS,Tishomingo,34.81205,-88.1916,yes,2021-02-01
 MS0300000,Jackson County Sheriff's Office,county,MS,Jackson,30.45849,-88.61999,yes,2025-01-01
@@ -8602,7 +8604,7 @@ MS0190400,Roxie Police Department,city,MS,Franklin,31.4778,-90.89588,no,
 MS0670300,Ruleville Police Department,city,MS,Sunflower,33.60553,-90.59509,no,
 MS0410800,Saltillo Police Department,city,MS,Lee,34.28896,-88.68089,no,
 MS0340300,Sandersville Police Department,city,MS,Jones,31.62104,-89.16726,yes,2020-01-01
-MS0620000,Scott County Sheriff's Office,county,MS,Scott,32.35458,-89.48547,no,
+MS0620000,Scott County Sheriff's Office,county,MS,Scott,32.35458,-89.48547,yes,2026-01-01
 MS0160300,Seminary Police Department,city,MS,Covington,,,yes,2021-01-01
 MS0690100,Senatobia Police Department,city,MS,Tate,34.64955,-89.94311,yes,2022-01-01
 MS0630000,Sharkey County Sheriff's Office,county,MS,Sharkey,32.89249,-90.82739,yes,2023-01-01
@@ -8658,7 +8660,7 @@ MS0150300,Wesson Police Department,city,MS,"Copiah, Lincoln",,,yes,2023-05-01
 MS0130100,West Point Police Department,city,MS,Clay,33.66173,-88.78333,yes,2021-01-01
 MS0660100,Wiggins Police Department,city,MS,Stone,30.79018,-89.1123,yes,2021-01-01
 MS0790000,Wilkinson County Sheriff's Office,county,MS,Wilkinson,31.16025,-91.32557,no,
-MS0490100,Winona Police Department,city,MS,Montgomery,33.48273,-89.73748,no,
+MS0490100,Winona Police Department,city,MS,Montgomery,33.48273,-89.73748,yes,2025-11-01
 MS0800000,Winston County Sheriff's Office,county,MS,Winston,33.07872,-89.03739,yes,2020-01-01
 MS0810000,Yalobusha County Sheriff's Office,county,MS,Yalobusha,34.03067,-89.70381,no,
 MS0820100,Yazoo City Police Department,city,MS,Yazoo,32.85157,-90.40994,no,
@@ -8674,7 +8676,6 @@ MO0020000,Andrew County Sheriff's Office,county,MO,Andrew,39.94046,-94.82884,yes
 MO0470300,Annapolis Police Department,city,MO,Iron,37.62596,-90.69963,yes,2021-02-01
 MO0930100,Appleton City Police Department,city,MO,St Clair,38.03907,-93.77308,yes,2023-05-01
 MO0350900,Arbyrd Police Department,city,MO,Dunklin,36.15302,-90.06225,yes,2021-01-01
-MO0470400,Arcadia Police Department,city,MO,Iron,37.62596,-90.69963,yes,2021-01-01
 MO0190100,Archie Police Department,city,MO,Cass,38.64716,-94.35424,yes,2017-06-01
 MO0500700,Arnold Police Department,city,MO,Jefferson,38.42095,-90.37512,yes,2020-12-01
 MO0390100,Ash Grove Police Department,city,MO,Greene,37.2582,-93.34064,yes,2020-08-01
@@ -8740,7 +8741,7 @@ MO0150000,Camden County Sheriff's Office,county,MO,Camden,38.00633,-92.74487,yes
 MO0890400,Camden Police Department,city,MO,Ray,39.3084,-93.99575,yes,2025-01-01
 MO0150100,Camdenton Police Department,city,MO,Camden,38.00394,-92.75243,yes,2016-10-01
 MO0250100,Cameron Police Department,city,MO,"Clinton, Dekalb",39.74026,-94.23696,yes,2019-09-01
-MO0251000,Cameron School,other,MO,Clinton,,,no,
+MO0251000,Cameron School,other,MO,Clinton,,,yes,2022-11-01
 MO0350100,Campbell Police Department,city,MO,Dunklin,36.49435,-90.07307,yes,2021-01-01
 MO0720700,Canalou Police Department,city,MO,New Madrid,36.59426,-89.65595,yes,2021-01-01
 MO0560100,Canton Police Department,city,MO,Lewis,40.08456,-91.7288,yes,2020-10-01
@@ -8822,6 +8823,7 @@ MO0502100,Dunklin R-5 School District,other,MO,Jefferson,,,yes,2020-01-01
 MO0491500,Duquesne Police Department,city,MO,Jasper,37.2052,-94.33726,yes,2013-01-01
 MO0191200,East Lynne Police Department,city,MO,Cass,38.64716,-94.35424,yes,2021-01-01
 MO0670200,East Prairie Police Department,city,MO,Mississippi,36.82626,-89.29593,yes,2021-06-01
+MO0110400,Easton Police Department,city,MO,Buchanan,39.72245,-94.64106,no,
 MO0810600,Edgar Springs Police Department,city,MO,Phelps,37.86633,-91.79035,yes,2020-01-01
 MO0831100,Edgerton Police Department,city,MO,Platte,39.3787,-94.76147,no,
 MO0520200,Edina Police Department,city,MO,Knox,40.16849,-92.1764,yes,2026-01-01
@@ -8894,7 +8896,6 @@ MO0370200,Hermann Police Department,city,MO,Gasconade,38.69058,-91.44862,yes,201
 MO0430000,Hickory County Sheriff's Office,county,MO,Hickory,37.9367,-93.32283,yes,2021-02-01
 MO0540400,Higginsville Police Department,city,MO,Lafayette,39.07575,-93.71704,yes,2019-05-01
 MO0700600,High Hill Police Department,city,MO,Montgomery,38.93516,-91.46544,yes,2022-11-01
-MO0220800,Highlandville Police Department,city,MO,Christian,36.96974,-93.18761,yes,2021-01-01
 MO0500400,Hillsboro Police Department,city,MO,Jefferson,38.25741,-90.54314,yes,2020-05-01
 MO0953900,Hillsdale Police Department,city,MO,St Louis,38.6865,-90.29227,yes,2020-01-01
 MO0350800,Holcomb Police Department,city,MO,Dunklin,36.15302,-90.06225,yes,2021-11-01
@@ -9145,6 +9146,7 @@ MO0210400,Salisbury Police Department,city,MO,Chariton,39.42384,-92.80188,yes,20
 MO0490500,Sarcoxie Police Department,city,MO,Jasper,37.2052,-94.33726,yes,2021-01-01
 MO0020100,Savannah Police Department,city,MO,Andrew,39.98886,-94.80355,yes,2021-01-01
 MO0990000,Schuyler County Sheriff's Office,county,MO,Schuyler,40.46936,-92.51902,yes,2020-03-01
+MO0990600,Schuyler R-1 School District,other,MO,Schuyler,,,no,
 MO1000000,Scotland County Sheriff's Office,county,MO,Scotland,40.45912,-92.16938,yes,2025-01-01
 MO1010500,Scott City Police Department,city,MO,Scott,37.21912,-89.51521,yes,2019-06-01
 MO1010000,Scott County Sheriff's Office,county,MO,Scott,37.04779,-89.5681,yes,2025-01-01
@@ -9305,6 +9307,7 @@ MT0150000,Flathead County Sheriff's Office,county,MT,Flathead,48.18966,-114.3104
 MTDI00000,Flathead Tribal,tribal,MT,,47.6429,-114.08369,yes,2021-01-01
 MTDI05400,Fort Belknap Tribal,tribal,MT,,48.42828,-108.96765,yes,2021-01-01
 MTDI05500,Fort Peck Assiniboine and Sioux Tribes,tribal,MT,,48.28275,-104.99517,yes,2021-01-01
+MT0160700,Gallatin Airport Authority,other,MT,Gallatin,,,no,
 MT0160000,Gallatin County Sheriff's Office,county,MT,Gallatin,45.67336,-111.06,yes,2005-01-01
 MT0250500,Gambling Investigations Bureau,other_state,MT,,47.12215,-112.38295,yes,2017-01-01
 MT0170000,Garfield County Sheriff's Office,county,MT,Garfield,47.28117,-106.98221,yes,2005-01-01
@@ -10333,7 +10336,7 @@ NJ0081500,Pitman Police Department,city,NJ,Gloucester,39.73292,-75.13134,yes,202
 NJ0201200,Plainfield Police Department,city,NJ,Union,40.61861,-74.41885,no,
 NJ0121800,Plainsboro Township Police Department,city,NJ,Middlesex,40.43959,-74.40758,yes,2025-01-01
 NJ0011900,Pleasantville Police Department,city,NJ,Atlantic,39.46935,-74.63376,yes,2023-07-01
-NJ0152300,Plumsted Township Police Department,city,NJ,Ocean,40.06676,-74.52342,no,
+NJ0152300,Plumsted Township Police Department,city,NJ,Ocean,40.06676,-74.52342,yes,2025-01-01
 NJ0212000,Pohatcong Township Police Department,city,NJ,Warren,40.64938,-75.14311,no,
 NJ0152500,Point Pleasant Beach Police Department,city,NJ,Ocean,40.08722,-74.04756,yes,2021-05-01
 NJ0152400,Point Pleasant Police Department,city,NJ,Ocean,40.07197,-74.06825,no,
@@ -10849,7 +10852,7 @@ NY0542200,Groton Village Police Department,city,NY,Tompkins,42.59068,-76.36532,y
 NY0015200,Guilderland Town Police Department,city,NY,Albany,42.58827,-73.97401,no,
 NY0146500,Hamburg Town Police Department,city,NY,Erie,42.72899,-78.82561,yes,2023-02-01
 NY0143000,Hamburg Village Police Department,city,NY,Erie,42.71606,-78.83262,yes,2023-01-01
-NY0200000,Hamilton County Sheriff's Office,county,NY,Hamilton,43.65788,-74.50246,no,
+NY0200000,Hamilton County Sheriff's Office,county,NY,Hamilton,43.65788,-74.50246,yes,2023-11-01
 NY0262500,Hamilton Village Police Department,city,NY,Madison,42.82693,-75.54349,yes,2023-05-01
 NY0502800,Hammondsport Village Police Department,city,NY,Steuben,42.26673,-77.38553,no,
 NY0122400,Hancock Village Police Department,city,NY,Delaware,41.95519,-75.26945,no,
@@ -10911,7 +10914,7 @@ NY0555600,Lloyd Town Police Department,city,NY,Ulster,41.7192,-73.96555,yes,2020
 NY0310100,Lockport Police Department,city,NY,Niagara,43.45673,-78.79214,no,
 NY0290200,Long Beach Police Department,city,NY,Nassau,40.5894,-73.66595,no,
 NY0242400,Lowville Village Police Department,city,NY,Lewis,43.79684,-75.4833,no,
-NY0290700,Lynbrook Village Police Department,city,NY,Nassau,40.65772,-73.67409,no,
+NY0290700,Lynbrook Village Police Department,city,NY,Nassau,40.65772,-73.67409,yes,2025-08-01
 NY0583000,Macedon Town and Village Police Department,city,NY,Wayne,43.06654,-77.36103,no,
 NY0260000,Madison County Sheriff's Office,county,NY,Madison,42.91003,-75.66357,yes,2023-05-01
 NY0162400,Malone Village Police Department,city,NY,Franklin,44.85008,-74.28859,no,
@@ -10941,13 +10944,13 @@ NY0052600,Moravia Village Police Department,city,NY,Cayuga,43.00855,-76.57459,no
 NY0155100,Moriah Town Police Department,city,NY,Essex,44.0431,-73.45808,no,
 NY0355000,Mount Hope Town Police Department,city,NY,Orange,41.40241,-74.30625,yes,2026-02-01
 NY0252600,Mount Morris Village Police Department,city,NY,Livingston,42.72365,-77.87283,no,
-NY0595700,Mount Pleasant Town Police Department,city,NY,Westchester,41.15277,-73.74591,no,
+NY0595700,Mount Pleasant Town Police Department,city,NY,Westchester,41.15277,-73.74591,yes,2025-11-01
 NY0590300,Mount Vernon Police Department,city,NY,Westchester,40.9127,-73.8375,yes,2025-05-01
 NY0299700,Muttontown Police Department,city,NY,Nassau,,,no,
 NY0290000,Nassau County Police Department,county,NY,Nassau,40.73739,-73.63862,no,
 NY0412100,Nassau Village Police Department,city,NY,Rensselaer,42.71042,-73.51385,no,
 NY0082800,New Berlin Town Police Department,city,NY,Chenango,42.6227,-75.33214,no,
-NY0595800,New Castle Town Police Department,city,NY,Westchester,41.16523,-73.76829,no,
+NY0595800,New Castle Town Police Department,city,NY,Westchester,41.16523,-73.76829,yes,2026-05-01
 NY0324100,New Hartford Town and Village Police Department,city,NY,Oneida,43.05529,-75.27844,yes,2019-01-01
 NY0552700,New Paltz Town and Village Police Department,city,NY,Ulster,41.94722,-74.26546,yes,2021-01-01
 NY0590400,New Rochelle Police Department,city,NY,Westchester,41.15277,-73.74591,yes,2020-01-01
@@ -10964,7 +10967,7 @@ NY0324000,New York Mills Village Police Department,city,NY,Oneida,43.24273,-75.4
 NY1010000,New York State Police,state_police,NY,,,,yes,2026-01-01
 NY0582000,Newark Village Police Department,city,NY,Wayne,43.04588,-77.0914,yes,2025-08-01
 NY0350200,Newburgh Police Department,city,NY,Orange,41.53165,-74.06472,no,
-NY0356300,Newburgh Town Police Department,city,NY,Orange,41.53165,-74.06472,no,
+NY0356300,Newburgh Town Police Department,city,NY,Orange,41.53165,-74.06472,yes,2026-04-01
 NY0310000,Niagara County Sheriff's Office,county,NY,Niagara,43.18164,-78.73824,yes,2019-05-01
 NY0310200,Niagara Falls Police Department,city,NY,Niagara,43.45673,-78.79214,yes,2021-01-01
 NY0143700,Niagara Frontier Transportation Authority,other,NY,Erie,,,no,
@@ -10995,13 +10998,13 @@ NY0260100,Oneida Police Department,city,NY,Madison,43.09671,-75.65287,yes,2023-0
 NY0380100,Oneonta City Police Department,city,NY,Otsego,42.45113,-75.0639,yes,2020-09-01
 NY433PR0X,Onondaga County Parks,other,NY,Onondaga,43.10136,-76.20629,yes,2023-12-01
 NY0330000,Onondaga County Sheriff's Office,county,NY,Onondaga,43.04765,-76.14745,yes,2026-01-01
-NY0340000,Ontario County Sheriff's Office,county,NY,Ontario,42.88988,-77.27641,no,
+NY0340000,Ontario County Sheriff's Office,county,NY,Ontario,42.88988,-77.27641,yes,2026-03-01
 NY0350000,Orange County Sheriff's Office,county,NY,Orange,41.40554,-74.35576,yes,2026-05-01
 NY0435200,Orangetown Town Police Department,city,NY,Rockland,41.04481,-73.966,yes,2019-01-01
 NY0146000,Orchard Park Town Police Department,city,NY,Erie,42.7661,-78.74385,yes,2026-01-01
 NY0323900,Oriskany Village Police Department,city,NY,Oneida,43.24273,-75.43428,no,
-NY0360000,Orleans County Sheriff's Office,county,NY,Orleans,43.50229,-78.22973,no,
-NY0590500,Ossining Village Police Department,city,NY,Westchester,41.15827,-73.86388,no,
+NY0360000,Orleans County Sheriff's Office,county,NY,Orleans,43.50229,-78.22973,yes,2026-06-01
+NY0590500,Ossining Village Police Department,city,NY,Westchester,41.15827,-73.86388,yes,2026-04-01
 NY0370200,Oswego City Police Department,city,NY,Oswego,43.46144,-76.20926,yes,2021-01-01
 NY0370000,Oswego County Sheriff's Office,county,NY,Oswego,43.46144,-76.20926,yes,2021-01-01
 NY0380000,Otsego County Sheriff's Office,county,NY,Otsego,42.59707,-74.93378,yes,2022-01-01
@@ -11182,7 +11185,7 @@ NY0052100,Weedsport Village Police Department,city,NY,Cayuga,43.04768,-76.56141,
 NY0022800,Wellsville Village Police Department,city,NY,Allegany,42.11885,-77.94299,no,
 NY0222700,West Carthage Village Police Department,city,NY,Jefferson,43.97324,-75.62325,no,
 NY0147400,West Seneca Town Police Department,city,NY,Erie,42.83239,-78.75372,yes,2023-01-01
-NY0590000,Westchester Public Safety County Sheriff's Office,county,NY,Westchester,41.09963,-73.81091,no,
+NY0590000,Westchester Public Safety County Sheriff's Office,county,NY,Westchester,41.09963,-73.81091,yes,2026-04-01
 NY0063200,Westfield Village Police Department,city,NY,Chautauqua,42.30422,-79.4076,yes,2020-08-01
 NY0514000,Westhampton Beach Village Police Department,city,NY,Suffolk,40.81428,-72.64655,yes,2024-06-01
 NY0590200,White Plains Police Department,city,NY,Westchester,41.02954,-73.77193,no,
@@ -11297,7 +11300,7 @@ NC0230000,Cleveland County Sheriff's Office,county,NC,Cleveland,35.33463,-81.557
 NC0800900,Cleveland Police Department,city,NC,Rowan,35.63922,-80.52534,yes,2019-01-01
 NC0820100,Clinton Police Department,city,NC,Sampson,34.99057,-78.37138,yes,2019-01-01
 NC0430300,Coats Police Department,city,NC,Harnett,35.36863,-78.87161,yes,2019-01-01
-NC0240000,Columbus County Sheriff's Office,county,NC,Columbus,34.26047,-78.63638,no,
+NC0240000,Columbus County Sheriff's Office,county,NC,Columbus,34.26047,-78.63638,yes,2023-09-01
 NC0750300,Columbus Police Department,city,NC,Polk,35.2779,-82.16762,yes,2019-01-01
 NC0130100,Concord Police Department,city,NC,Cabarrus,35.38784,-80.55287,yes,2019-01-01
 NC0180100,Conover Police Department,city,NC,Catawba,35.66318,-81.21415,yes,2019-05-01
@@ -12833,7 +12836,7 @@ OK0440600,Dibble Police Department,city,OK,McClain,35.01643,-97.4498,yes,2008-01
 OK0100500,Dickson Police Department,city,OK,Carter,,,yes,2017-01-01
 OK0490500,Disney Police Department,city,OK,Mayes,,,yes,2019-04-01
 OK070015A,District Attorneys Council: Drug Task Force 1,other,OK,Texas,,,yes,2018-10-01
-OK040015A,District Attorneys Council: Drug Task Force 16,other_state,OK,,,,no,
+OK040015A,District Attorneys Council: Drug Task Force 16,other_state,OK,,,,yes,2026-01-01
 OK063015A,District Attorneys Council: Drug Task Force 23,other,OK,Pottawatomie,,,yes,2024-06-01
 OK068015A,District Attorneys Council: Drug Task Force 27,other_state,OK,,,,yes,2025-04-01
 OK033013A,District Attorneys Council: Drug Task Force 3,other,OK,Jackson,,,yes,2023-01-01
@@ -13997,7 +14000,7 @@ PA0150500,Kennett Square Police Department,city,PA,Chester,39.97396,-75.74973,ye
 PA0156500,Kennett Township Police Department,city,PA,Chester,39.97396,-75.74973,no,
 PA0130900,Kidder Township Police Department,city,PA,Carbon,40.91837,-75.70504,no,
 PA0400800,Kingston Police Department,city,PA,Luzerne,41.17279,-75.97603,no,
-PA0405100,Kingston Township Police Department,city,PA,Luzerne,41.32737,-75.9308,no,
+PA0405100,Kingston Township Police Department,city,PA,Luzerne,41.32737,-75.9308,yes,2026-09-01
 PA0030800,Kiskiminetas Township Police Department,city,PA,Armstrong,40.81238,-79.46413,no,
 PA0030400,Kittanning Police Department,city,PA,Armstrong,40.81238,-79.46413,no,
 PA0543800,Kline Township Police Department,city,PA,Schuylkill,40.70368,-76.21779,no,
@@ -14041,7 +14044,7 @@ PA0480600,"Lehigh Township Police Department, Northampton County",city,PA,Northa
 PA048359E,Lehigh University,university,PA,Northampton,,,no,
 PA0392100,Lehigh Valley International Airport,other,PA,Lehigh,40.65514,-75.42878,yes,2026-05-01
 PA0130400,Lehighton Police Department,city,PA,Carbon,40.91837,-75.70504,no,
-PA0403300,Lehman Township Police Department,city,PA,Luzerne,41.17279,-75.97603,no,
+PA0403300,Lehman Township Police Department,city,PA,Luzerne,41.17279,-75.97603,yes,2026-08-01
 PA0441200,Lewistown Police Department,city,PA,Mifflin,40.59855,-77.57556,yes,2024-07-01
 PA0027700,Liberty Police Department,city,PA,Allegheny,40.32548,-79.85654,yes,2024-12-01
 PA0011200,"Liberty Township Police Department, Adams County",city,PA,Adams,,,yes,2020-01-01
@@ -14845,7 +14848,7 @@ PA0221800,Wiconisco Township Police Department,city,PA,Dauphin,40.41257,-76.7926
 PA040859E,Wilkes University,university,PA,Luzerne,,,no,
 PA0401300,Wilkes-Barre Police Department,city,PA,Luzerne,41.27237,-75.91723,no,
 PA0402700,Wilkes-Barre Township Police Department,city,PA,Luzerne,41.22712,-75.87171,no,
-PA0020L00,Wilkins Township Police Department,city,PA,Allegheny,40.41826,-79.82886,no,
+PA0020L00,Wilkins Township Police Department,city,PA,Allegheny,40.41826,-79.82886,yes,2025-03-01
 PA0022700,Wilkinsburg Police Department,city,PA,Allegheny,40.46892,-79.98092,yes,2022-01-01
 PA0071000,Williamsburg Police Department,city,PA,Blair,40.46079,-78.2003,no,
 PA0410500,Williamsport Police Department,city,PA,Lycoming,41.24036,-77.00589,yes,2024-11-01
@@ -16473,6 +16476,7 @@ TX2350800,Fire Marshal's Office: Victoria,other,TX,Victoria,,,yes,2025-10-01
 TX2350700,Fire Marshal's Office: Victoria County,other,TX,Victoria,,,yes,2024-01-01
 TX2371300,Fire Marshal's Office: Waller County,other,TX,Waller,,,yes,2024-01-01
 TX1019100,Fire Marshal's Office: Webster,other,TX,Harris,,,yes,2024-11-01
+TX2501000,Fire Marshal's Office: Wood County,other,TX,Wood,,,yes,2026-10-01
 TX0760000,Fisher County Sheriff's Office,county,TX,Fisher,32.74047,-100.40312,yes,2022-01-01
 TX0750800,Flatonia Police Department,city,TX,Fayette,29.87789,-96.92123,yes,2020-08-01
 TX2460100,Florence Police Department,city,TX,Williamson,30.64903,-97.60507,yes,2018-10-01
@@ -16716,6 +16720,7 @@ TX0312400,Independent School District: Brownsville,other,TX,Cameron,25.93469,-97
 TX1451400,Independent School District: Buffalo,other,TX,Leon,,,yes,2025-11-01
 TX2122300,Independent School District: Bullard,other,TX,Smith,,,yes,2023-01-01
 TX2431500,Independent School District: Burkburnett,other,TX,Wichita,,,yes,2021-07-01
+TX0271500,Independent School District: Burnet Consolidated,other,TX,Burnet,,,yes,2026-10-01
 TX1782600,Independent School District: Calallen,other,TX,Nueces,,,yes,2024-11-01
 TX0290900,Independent School District: Calhoun County,other,TX,Calhoun,28.44537,-96.5833,yes,2017-09-01
 TX0640200,Independent School District: Carrizo Springs Consolidated,other,TX,Dimmit,,,yes,2024-07-01
@@ -16880,6 +16885,7 @@ TX2450900,Independent School District: Raymondville,other,TX,Willacy,26.48109,-9
 TX0191900,Independent School District: Red Lick,other,TX,Bowie,,,yes,2025-10-01
 TX0702000,Independent School District: Red Oak,other,TX,Ellis,,,yes,2026-06-01
 TX0192300,Independent School District: Red Water,other,TX,Bowie,,,yes,2023-09-01
+TX2060300,Independent School District: Richland Springs,other,TX,San Saba,,,yes,2026-09-01
 TX2141000,Independent School District: Rio Grande City,other,TX,Starr,26.54633,-98.7158,yes,2021-01-01
 TX1940500,Independent School District: Rivercrest,other,TX,Red River,,,yes,2023-09-01
 TX1782500,Independent School District: Robstown,other,TX,Nueces,,,yes,2024-05-01
@@ -16932,6 +16938,7 @@ TX2410900,Independent School District: Wharton,other,TX,Wharton,,,yes,2019-10-01
 TX2205300,Independent School District: White Settlement,other,TX,Tarrant,,,yes,2024-08-01
 TX0912800,Independent School District: Whitesboro,other,TX,Grayson,,,yes,2021-01-01
 TX2431200,Independent School District: Wichita Falls,other,TX,Wichita,,,yes,2021-10-01
+TX2341500,Independent School District: Wills Point,other,TX,Van Zandt,,,yes,2026-09-01
 TX2480700,Independent School District: Wink-Loving,other,TX,Winkler,,,yes,2023-01-01
 TX2500900,Independent School District: Winnsboro,other,TX,Wood,,,yes,2025-10-01
 TX1741000,Independent School District: Woden,other,TX,Nacogdoches,,,yes,2025-06-01
@@ -17377,6 +17384,8 @@ TX1930000,Real County Sheriff's Office,county,TX,Real,29.82303,-99.8053,yes,2018
 TX0700800,Red Oak Police Department,city,TX,Ellis,32.53055,-96.80486,yes,2019-09-01
 TX1940200,Red River County Constable: Precinct 1,other,TX,Red River,,,yes,2023-09-01
 TX1940000,Red River County Sheriff's Office,county,TX,Red River,33.61365,-95.05185,yes,2019-07-01
+TX1950800,Reeves County Constable: Precinct 1,other,TX,Reeves,,,yes,2026-10-01
+TX1950300,Reeves County Constable: Precinct 2,other,TX,Reeves,,,yes,2026-09-01
 TX1950400,Reeves County Constable: Precinct 3,other,TX,Reeves,,,yes,2026-02-01
 TX1950500,Reeves County Constable: Precinct 4,other,TX,Reeves,,,yes,2026-08-01
 TX1950000,Reeves County Sheriff's Office,county,TX,Reeves,31.30837,-103.71271,yes,2023-01-01
@@ -17894,7 +17903,7 @@ UT0230100,Tooele Police Department,city,UT,Tooele,40.53688,-112.29851,yes,2020-0
 UT0021700,Tremonton Garland Police Department,city,UT,Box Elder,,,yes,2020-02-01
 UT0240200,Uintah and Ouray Tribal,tribal,UT,,40.12589,-109.51775,yes,2021-01-01
 UT0240000,Uintah County Sheriff's Office,county,UT,Uintah,40.45717,-109.52571,yes,2007-04-01
-UT0183300,Unified Fire Authority Investigations Bureau,other,UT,Salt Lake,,,no,
+UT0183300,Unified Fire Authority Investigations Bureau,other,UT,Salt Lake,,,yes,2026-08-01
 UT0185200,Unified Police Department,county,UT,Salt Lake,,,yes,2024-06-01
 UT0180700,University of Utah,university,UT,Salt Lake,40.75927,-111.84247,yes,2021-01-01
 UT0252100,"Utah County Attorney, Investigations Division",other,UT,Utah,40.12041,-111.66867,yes,2020-03-01

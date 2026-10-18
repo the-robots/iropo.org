@@ -1104,7 +1104,7 @@ year,state,ori,agency_name,agency_type,population,total_offenses,animal_cruelty,
 2020,IA,IA0110100,Storm Lake,city,10282,600,0,normalized
 2020,IA,IA0850000,Story,metro_county,,287,0,normalized
 2020,IA,IA0850300,Story City,city,3307,117,0,normalized
-2020,IA,IA0860200,Tama,city,2717,76,0,normalized
+2020,IA,,Tama,city,2717,76,0,none
 2020,IA,IA0860000,Tama,nonmetro_county,,115,0,normalized
 2020,IA,IA0870000,Taylor,nonmetro_county,,65,0,normalized
 2020,IA,IA0160100,Tipton,city,3224,57,0,normalized
@@ -11514,7 +11514,7 @@ year,state,ori,agency_name,agency_type,population,total_offenses,animal_cruelty,
 2021,MO,MO0420000,Henry,nonmetro_county,,652,5,normalized
 2021,MO,MO0500800,Herculaneum,city,4346,252,0,normalized
 2021,MO,MO0370200,Hermann,city,2311,118,0,normalized
-2021,MO,MO0220800,Highlandville,city,1070,0,0,normalized
+2021,MO,,Highlandville,city,1070,0,0,none
 2021,MO,MO0500400,Hillsboro,city,3404,182,0,normalized
 2021,MO,MO0953900,Hillsdale,city,1542,128,1,normalized
 2021,MO,MO0510100,Holden,city,2232,116,0,normalized
@@ -21460,7 +21460,7 @@ year,state,ori,agency_name,agency_type,population,total_offenses,animal_cruelty,
 2022,MO,MO0070100,Adrian,city,1734,41,0,normalized
 2022,MO,MO0540100,Alma,city,394,0,0,normalized
 2022,MO,MO0020000,Andrew,metro_county,,374,6,normalized
-2022,MO,MO0470400,Arcadia,city,606,0,0,normalized
+2022,MO,,Arcadia,city,606,0,0,none
 2022,MO,MO0500700,Arnold,city,20794,829,0,normalized
 2022,MO,MO0390100,Ash Grove,city,1506,98,0,normalized
 2022,MO,MO0100500,Ashland,city,4948,130,0,normalized
@@ -29670,7 +29670,7 @@ year,state,ori,agency_name,agency_type,population,total_offenses,animal_cruelty,
 2023,IA,IA0830000,Shelby,nonmetro_county,,244,0,normalized
 2023,IA,IA0710300,Sheldon,city,5447,273,0,normalized
 2023,IA,IA0730200,Shenandoah,city,4872,211,2,normalized
-2023,IA,,Sigourney,city,1978,0,0,none
+2023,IA,IA0540100,Sigourney,city,1978,0,0,normalized
 2023,IA,IA0840000,Sioux,nonmetro_county,,258,1,normalized
 2023,IA,IA0840500,Sioux Center,city,8517,104,0,normalized
 2023,IA,IA0970100,Sioux City,city,85365,7507,6,normalized
@@ -41489,7 +41489,7 @@ year,state,ori,agency_name,agency_type,population,total_offenses,animal_cruelty,
 2024,IA,IA0830000,Shelby,nonmetro_county,,119,0,normalized
 2024,IA,IA0710300,Sheldon,city,5396,227,0,normalized
 2024,IA,IA0730200,Shenandoah,city,4872,218,0,normalized
-2024,IA,,Sigourney,city,1980,0,0,none
+2024,IA,IA0540100,Sigourney,city,1980,0,0,normalized
 2024,IA,IA0840000,Sioux,nonmetro_county,,248,0,normalized
 2024,IA,IA0840500,Sioux Center,city,8643,69,1,normalized
 2024,IA,IA0970100,Sioux City,city,85711,7418,1,normalized
@@ -44867,7 +44867,7 @@ year,state,ori,agency_name,agency_type,population,total_offenses,animal_cruelty,
 2024,MO,MO1040100,Advance,city,1331,53,4,normalized
 2024,MO,MO0540100,Alma,city,391,0,0,normalized
 2024,MO,MO0020000,Andrew,metro_county,,216,6,normalized
-2024,MO,MO0470400,Arcadia,city,605,2,0,normalized
+2024,MO,,Arcadia,city,605,2,0,none
 2024,MO,MO0190100,Archie,city,1259,13,0,normalized
 2024,MO,MO0390100,Ash Grove,city,1501,73,2,normalized
 2024,MO,MO0100500,Ashland,city,5076,86,0,normalized
@@ -57343,7 +57343,7 @@ year,state,ori,agency_name,agency_type,population,total_offenses,animal_cruelty,
 2025,MO,MO0020000,Andrew,metro_county,,243,2,normalized
 2025,MO,MO0470300,Annapolis,city,244,1,0,normalized
 2025,MO,MO0930100,Appleton City,city,1093,0,0,normalized
-2025,MO,MO0470400,Arcadia,city,605,0,0,normalized
+2025,MO,,Arcadia,city,605,0,0,none
 2025,MO,MO0190100,Archie,city,1281,11,0,normalized
 2025,MO,MO0500700,Arnold,city,21068,367,1,normalized
 2025,MO,MO0390100,Ash Grove,city,1525,56,2,normalized
